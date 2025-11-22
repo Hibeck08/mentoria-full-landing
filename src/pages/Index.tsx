@@ -51,9 +51,9 @@ const Index = () => {
             </div>
             
             {/* Right side - Photo with gradient effect */}
-            <div className="animate-fade-in-up relative" style={{
+            <div style={{
             animationDelay: "0.3s"
-          }}>
+          }} className="animate-fade-in-up relative text-2xl text-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-3xl blur-2xl"></div>
                 <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative rounded-3xl shadow-premium w-full h-auto" />

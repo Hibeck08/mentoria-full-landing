@@ -131,7 +131,7 @@ const Index = () => {
         <div className="absolute top-0 left-1/2 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-10 -translate-x-1/2" />
         <div className="container relative z-10 mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            O Que Você Vai <span className="bg-gradient-primary bg-clip-text text-transparent">Receber</span>
+            O Que Você Vai <span className="bg-gradient-primary bg-clip-text text-transparent">O que Você Vai</span>
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
             Todo o arsenal necessário para sua aprovação está aqui.

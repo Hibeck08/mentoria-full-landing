@@ -24,7 +24,7 @@ const Index = () => {
         animationDelay: "1.5s"
       }} />
         
-        <div className="container relative z-10 mx-auto px-4 py-20">
+        <div className="container relative z-10 mx-auto px-4 py-20 opacity-100 shadow-glow-purple">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left side - Copy */}
             <div className="animate-fade-in-up space-y-8">

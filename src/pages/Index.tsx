@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 import mentoriaLogo from "@/assets/mentoria-logo.png";
-import heroVisual from "@/assets/hero-visual.png";
+import heroPhoto from "@/assets/hero-photo.jpg";
 import studyDesk from "@/assets/study-desk.png";
 import student1 from "@/assets/student-1.png";
 import student2 from "@/assets/student-2.png";
@@ -32,45 +32,50 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute inset-0 opacity-20">
-          <img 
-            src={heroVisual} 
-            alt="Study materials" 
-            className="w-full h-full object-cover animate-float"
-          />
-        </div>
         
         {/* Glow effects */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-[120px] opacity-20 animate-glow-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent rounded-full blur-[120px] opacity-20 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent rounded-full blur-[120px] opacity-30 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
         
-        <div className="container relative z-10 mx-auto px-4 py-20 text-center">
-          <div className="mb-12 animate-fade-in-up">
-            <img 
-              src={mentoriaLogo} 
-              alt="Mentoria FULL Logo" 
-              className="w-32 h-32 mx-auto mb-8 drop-shadow-2xl"
-            />
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Mentoria FULL
-              </span>
-            </h1>
-            <p className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Sua Aprovação Começa Aqui
-            </p>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Mentoria premium para AFA, EN, EFOMM e EEAR com estratégia, disciplina e acompanhamento real.
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <Button variant="gold" size="lg" className="text-lg px-12 py-7 h-auto">
-              QUERO ENTRAR AGORA
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-12 py-7 h-auto">
-              VER DETALHES
-            </Button>
+        <div className="container relative z-10 mx-auto px-4 py-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left side - Copy */}
+            <div className="animate-fade-in-up space-y-8">
+              <img 
+                src={mentoriaLogo} 
+                alt="Mentoria FULL Logo" 
+                className="w-24 h-24 drop-shadow-2xl"
+              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!
+                </span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                <Button variant="gold" size="lg" className="text-lg px-12 py-7 h-auto shadow-glow-gold">
+                  QUERO ENTRAR AGORA
+                </Button>
+                <Button variant="outline" size="lg" className="text-lg px-12 py-7 h-auto">
+                  VER DETALHES
+                </Button>
+              </div>
+            </div>
+            
+            {/* Right side - Photo with gradient effect */}
+            <div className="animate-fade-in-up relative" style={{ animationDelay: "0.3s" }}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-3xl blur-2xl"></div>
+                <img 
+                  src={heroPhoto} 
+                  alt="Mentor aprovado em múltiplas academias militares" 
+                  className="relative rounded-3xl shadow-premium w-full h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

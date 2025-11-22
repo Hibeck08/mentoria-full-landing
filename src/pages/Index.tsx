@@ -30,7 +30,7 @@ const Index = () => {
             <div className="animate-fade-in-up space-y-8">
               <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-24 h-24 drop-shadow-2xl" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-primary bg-clip-text text-transparent text-left">
+                <span className="bg-gradient-primary bg-clip-text text-transparent text-6xl font-extrabold text-center">
                   ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!
                 </span>
               </h1>

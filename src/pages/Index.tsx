@@ -30,7 +30,7 @@ const Index = () => {
             <div className="animate-fade-in-up space-y-8">
               <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-24 h-24 drop-shadow-2xl" />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-primary bg-clip-text text-transparent text-6xl font-extrabold text-center">
+                <span className="bg-gradient-hero-text bg-clip-text text-transparent text-6xl font-extrabold">
                   ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!
                 </span>
               </h1>
@@ -41,20 +41,19 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{
               animationDelay: "0.2s"
             }}>
-                <Button variant="gold" size="lg" className="text-lg h-auto mx-0 rounded-sm shadow-glow-gold text-center py-[20px] px-[75px] mr-0 ml-0">
+                <Button variant="gold" size="lg" className="text-lg h-auto shadow-glow-gold text-center py-[20px] px-[75px]">
                   QUERO ENTRAR AGORA!
                 </Button>
                 
               </div>
             </div>
             
-            {/* Right side - Photo with gradient effect */}
+            {/* Right side - Photo integrated with background */}
             <div style={{
             animationDelay: "0.3s"
-          }} className="animate-fade-in-up relative text-2xl text-center">
+          }} className="animate-fade-in-up relative">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-3xl blur-2xl"></div>
-                <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative rounded-3xl shadow-premium w-full h-auto" />
+                <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative w-full h-auto object-cover" />
               </div>
             </div>
           </div>

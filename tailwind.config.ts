@@ -125,6 +125,7 @@ export default {
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-hero-text": "var(--gradient-hero-text)",
       },
       boxShadow: {
         "premium": "var(--shadow-premium)",

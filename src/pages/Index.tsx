@@ -41,12 +41,10 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{
               animationDelay: "0.2s"
             }}>
-                <Button variant="gold" size="lg" className="text-lg px-12 py-7 h-auto shadow-glow-gold">
-                  QUERO ENTRAR AGORA
+                <Button variant="gold" size="lg" className="text-lg h-auto mx-0 rounded-sm shadow-glow-gold text-center py-[20px] px-[75px] mr-0 ml-0">
+                  QUERO ENTRAR AGORA!
                 </Button>
-                <Button variant="outline" size="lg" className="text-lg px-12 py-7 h-auto">
-                  VER DETALHES
-                </Button>
+                
               </div>
             </div>
             

@@ -24,7 +24,7 @@ const Index = () => {
         animationDelay: "1.5s"
       }} />
         
-        <div className="container relative z-10 mx-auto px-4 py-20 opacity-100 shadow-glow-purple">
+        <div className="container relative z-10 mx-auto px-4 py-20 opacity-100 rounded-none shadow">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left side - Copy */}
             <div className="animate-fade-in-up space-y-8">
@@ -41,7 +41,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{
               animationDelay: "0.2s"
             }}>
-                <Button variant="gold" size="lg" className="text-lg h-auto shadow-glow-gold text-center py-[20px] px-[75px]">
+                <Button variant="gold" size="lg" className="text-lg h-auto shadow-glow-gold text-center py-[20px] px-[75px] rounded-full">
                   QUERO ENTRAR AGORA!
                 </Button>
                 
@@ -67,12 +67,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                O Que é a <span className="bg-gradient-primary bg-clip-text text-transparent">Mentoria FULL</span>
+                O que é a <span className="bg-gradient-primary bg-clip-text text-transparent">Mentoria FULL?  </span>
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  A Mentoria FULL é um programa premium de acompanhamento individual e em grupo, 
-                  projetado para transformar sua preparação militar em resultados concretos.
+                  A Mentoria FULL é um acompanhamento individual e em grupo, projetado para transformar sua preparação para concursos militares em resultados concretos.
                 </p>
                 <ul className="space-y-3">
                   {["Acompanhamento 1:1 e em grupo exclusivo", "Método FULL focado em explosão de resultados", "Aulas direcionadas para AFA, EN, EFOMM e EEAR", "Checklists semanais e metas diárias", "Revisões de alto nível com professores especializados", "Acesso completo a PDFs, simulados, resumos e listas"].map((item, index) => <li key={index} className="flex items-start gap-3">
@@ -95,7 +94,7 @@ const Index = () => {
       <section className="py-24 bg-secondary/20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Para Quem é a <span className="bg-gradient-primary bg-clip-text text-transparent">Mentoria FULL</span>
+            Para quem é a <span className="bg-gradient-primary bg-clip-text text-transparent">Mentoria FULL?</span>
           </h2>
           <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
             Se você se identifica com algum desses perfis, essa mentoria foi feita para você.

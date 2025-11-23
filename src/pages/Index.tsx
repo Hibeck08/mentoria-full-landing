@@ -21,7 +21,10 @@ const Index = () => {
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
-          <img src={heroMain} alt="Background" className="w-full h-full object-cover object-center md:object-cover brightness-90 contrast-110 saturate-110" />
+          {/* Mobile image */}
+          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" />
+          {/* Desktop image */}
+          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" />
           {/* Gradient overlay for better text readability and depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           {/* Subtle vignette effect */}

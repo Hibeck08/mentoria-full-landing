@@ -643,44 +643,44 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
         </div>
         
-        <div className="container relative z-10 mx-auto px-6 md:px-4">
+        <div className="container relative z-10 mx-auto px-4 md:px-6">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-8 md:mb-16">
               Planos da <span className="text-accent">​Mentoria FULL </span>
             </h2>
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto items-stretch">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-sm md:max-w-6xl mx-auto items-stretch">
             <ScrollReveal variant="left" className="h-full">
-              <div className="bg-card border border-border rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col h-full">
-                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6 w-fit">
-                  <span className="text-sm font-semibold text-muted-foreground">Plano Mensal</span>
-                  <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-4 h-4 text-background" />
+              <div className="bg-card border border-border rounded-xl md:rounded-3xl p-4 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col h-full">
+                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-3 py-1.5 mb-4 md:mb-6 w-fit text-xs md:text-sm">
+                  <span className="font-semibold text-muted-foreground">Plano Mensal</span>
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-accent rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-3 h-3 md:w-4 md:h-4 text-background" />
                   </div>
                 </div>
                 
-                <h3 className="text-3xl md:text-3xl font-bold mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">
                   Mentoria <span className="text-accent">FULL</span>
                 </h3>
                 
-                <p className="text-sm md:text-sm text-muted-foreground mb-4 md:mb-6">Pagamento Mensal</p>
+                <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-6">Pagamento Mensal</p>
                 
-                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso aos materiais durante a assinatura", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-foreground">{item}</span>
+                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8 flex-grow">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso aos materiais durante a assinatura", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2 md:gap-3">
+                      <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-foreground">{item}</span>
                     </li>)}
                 </ul>
                 
-                <div className="mb-4 md:mb-6 mt-auto">
-                  <p className="text-sm md:text-sm text-muted-foreground mb-1 md:mb-2">de R$ 129,90 por</p>
-                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-1">R$109,90</p>
-                  <p className="text-sm md:text-sm text-muted-foreground">/mês</p>
+                <div className="mb-3 md:mb-6 mt-auto">
+                  <p className="text-xs md:text-sm text-muted-foreground mb-1 md:mb-2">de R$ 129,90 por</p>
+                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-accent mb-1">R$109,90</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">/mês</p>
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="gold" className="w-full py-5 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
+                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
                     ASSINAR PLANO MENSAL →
                   </Button>
                   
@@ -689,58 +689,58 @@ const Index = () => {
             </ScrollReveal>
             
             <ScrollReveal variant="right" className="h-full">
-              <div className="bg-gradient-beige-premium border-2 border-accent rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full">
+              <div className="bg-gradient-beige-premium border-2 border-accent rounded-xl md:rounded-3xl p-4 md:p-8 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full">
                 <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-primary text-primary-foreground px-4 md:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-sm font-bold shadow-lg">
+                  <div className="bg-primary text-primary-foreground px-3 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm font-bold shadow-lg">
                     MAIS POPULAR   
                   </div>
                 </div>
                 
-                <div className="inline-flex items-center gap-2 bg-background/90 border border-background rounded-full px-3 md:px-4 py-1.5 mb-4 md:mb-6 w-fit">
-                  <span className="text-sm font-semibold text-foreground">Plano Semestral</span>
-                  <div className="w-6 h-6 bg-background rounded-lg flex items-center justify-center">
-                    <Trophy className="w-4 h-4 text-accent" />
+                <div className="inline-flex items-center gap-2 bg-background/90 border border-background rounded-full px-3 py-1.5 mb-4 md:mb-6 w-fit text-xs md:text-sm">
+                  <span className="font-semibold text-foreground">Plano Semestral</span>
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-background rounded-lg flex items-center justify-center">
+                    <Trophy className="w-3 h-3 md:w-4 md:h-4 text-accent" />
                   </div>
                 </div>
                 
-                <h3 className="text-3xl md:text-3xl font-bold mb-2 text-background">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-background">
                   Mentoria <span className="text-background">FULL</span>
                 </h3>
                 
-                <p className="text-sm md:text-sm text-background/80 mb-4 md:mb-6">Pagamento Semestral</p>
+                <p className="text-xs md:text-sm text-background/80 mb-3 md:mb-6">Pagamento Semestral</p>
                 
-                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-background font-medium">{item}</span>
+                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8 flex-grow">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2 md:gap-3">
+                      <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-background flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base text-background font-medium">{item}</span>
                     </li>)}
                 </ul>
                 
-                <div className="mb-4 md:mb-6 mt-auto">
-                  <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 109,90 por apenas</p>
-                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$98,87</p>
-                  <p className="text-sm md:text-sm text-background/80">   /mês ou R$ 527,00 à vista                           </p>
+                <div className="mb-3 md:mb-6 mt-auto">
+                  <p className="text-xs md:text-sm text-background/80 mb-1 md:mb-2">de R$ 109,90 por apenas</p>
+                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$98,87</p>
+                  <p className="text-xs md:text-sm text-background/80">   /mês ou R$ 527,00 à vista                           </p>
                 </div>
                 
                 <div className="space-y-2 md:space-y-3">
-                  <Button variant="default" className="w-full py-5 md:py-6 text-base md:text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
+                  <Button variant="default" className="w-full py-4 md:py-6 text-sm md:text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
                     GARANTIR PLANO SEMESTRAL →
                   </Button>
-                  <p className="text-xs md:text-xs text-center text-background/90 font-medium">
-                    Economize 10%         <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
+                  <p className="text-xs text-center text-background/90 font-medium">
+                    Economize 10%         <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
                   </p>
-                  <div className="flex items-center justify-center gap-2 md:gap-3 pt-1 md:pt-2">
+                  <div className="flex items-center justify-center gap-2 md:gap-3 pt-1 md:pt-2 flex-wrap">
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-xs font-bold text-accent">MASTERCARD</span>
+                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">MASTERCARD</span>
                     </div>
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-xs font-bold text-accent">VISA</span>
+                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">VISA</span>
                     </div>
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-xs font-bold text-accent">PIX</span>
+                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">PIX</span>
                     </div>
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-xs font-bold text-accent">BOLETO</span>
+                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">BOLETO</span>
                     </div>
                   </div>
                 </div>
@@ -749,77 +749,77 @@ const Index = () => {
           </div>
           
           {/* Third Card - Book Only */}
-          <div className="mt-8 md:mt-12 max-w-md mx-auto">
+          <div className="mt-6 md:mt-12 max-w-sm md:max-w-md mx-auto">
             <ScrollReveal>
-              <div className="bg-card border-[3px] border-accent/40 rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col shadow-lg">
-                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6 w-fit mx-auto">
-                  <span className="text-sm font-semibold text-muted-foreground">Livro Digital</span>
-                  <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-4 h-4 text-background" />
+              <div className="bg-card border-[3px] border-accent/40 rounded-xl md:rounded-3xl p-4 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col shadow-lg">
+                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-3 py-1.5 mb-4 md:mb-6 w-fit mx-auto text-xs md:text-sm">
+                  <span className="font-semibold text-muted-foreground">Livro Digital</span>
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-accent rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-3 h-3 md:w-4 md:h-4 text-background" />
                   </div>
                 </div>
                 
-                <h3 className="text-3xl md:text-3xl font-bold mb-2 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-center">
                   Livro  <span className="text-accent">Método Hibeck </span>
                 </h3>
                 
-                <p className="text-sm md:text-sm text-muted-foreground mb-4 md:mb-6 text-center">Pagamento Único</p>
+                <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-6 text-center">Pagamento Único</p>
                 
-                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Mentoria 1:1 personalizada</span>
+                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8">
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Mentoria 1:1 personalizada</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Acompanhamento diário exclusivo</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Acompanhamento diário exclusivo</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">PDFs completos + bônus premium</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">PDFs completos + bônus premium</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Simulados mensais + correção detalhada</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Simulados mensais + correção detalhada</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Aulas ao vivo e gravadas</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Aulas ao vivo e gravadas</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-foreground font-medium">Livro com a minha metodologia</span>
+                  <li className="flex items-start gap-2 md:gap-3">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-foreground font-medium">Livro com a minha metodologia</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-foreground font-medium">Estratégias para AFA, EN, EFOMM, EEAR</span>
+                  <li className="flex items-start gap-2 md:gap-3">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-foreground font-medium">Estratégias para AFA, EN, EFOMM, EEAR</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Revisões com professores especializados</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Revisões com professores especializados</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Suporte direto com mentores</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Suporte direto com mentores</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-foreground font-medium">Acesso vitalício</span>
+                  <li className="flex items-start gap-2 md:gap-3">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-foreground font-medium">Acesso vitalício</span>
                   </li>
-                  <li className="flex items-start gap-3 opacity-40">
-                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Comunidade de aprovados</span>
+                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
+                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm md:text-base text-muted-foreground line-through">Comunidade de aprovados</span>
                   </li>
                 </ul>
                 
-                <div className="mb-6">
-                  <p className="text-sm text-muted-foreground mb-2 text-center">por apenas 12x de   </p>
-                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1 text-center">R$8,26</p>
-                  <p className="text-sm text-muted-foreground text-center">ou 79,90 à vista   </p>
+                <div className="mb-4 md:mb-6">
+                  <p className="text-xs md:text-sm text-muted-foreground mb-2 text-center">por apenas 12x de   </p>
+                  <p className="text-4xl md:text-6xl font-bold text-accent mb-1 text-center">R$8,26</p>
+                  <p className="text-xs md:text-sm text-muted-foreground text-center">ou 79,90 à vista   </p>
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
+                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
                     ADQUIRIR LIVRO DIGITAL →
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
@@ -827,7 +827,7 @@ const Index = () => {
                   </p>
                 </div>
                 
-                <div className="mt-4 flex items-center justify-center gap-2 text-sm text-accent">
+                <div className="mt-3 md:mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-accent">
                   <Shield className="w-4 h-4" />
                   <span className="font-semibold">Garantia de 7 dias</span>
                 </div>
@@ -947,8 +947,8 @@ const Index = () => {
       </section>
 
       {/* Floating Contact Button */}
-      <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-sm md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
+      <div className="fixed bottom-20 right-4 md:bottom-8 md:right-8 z-50 animate-float">
+        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
           💬 Fale Comigo
         </Button>
       </div>

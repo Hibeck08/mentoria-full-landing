@@ -38,6 +38,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          dark: "hsl(var(--accent-dark))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -139,7 +140,8 @@ export default {
       boxShadow: {
         "premium": "var(--shadow-premium)",
         "glow-purple": "var(--glow-purple)",
-        "glow-gold": "var(--glow-gold)",
+        "glow-beige": "var(--glow-beige)",
+        "glow-gold": "var(--shadow-glow-beige)",
       },
     },
   },

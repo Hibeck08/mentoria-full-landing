@@ -86,10 +86,10 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 bg-accent py-4 overflow-hidden">
-          <div className="flex animate-scroll-left" style={{ width: 'fit-content' }}>
-            <span className="inline-block text-background font-bold text-lg px-8 whitespace-nowrap">
-              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR •
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-primary py-4 border-t-2 border-accent-dark/30">
+          <div className="flex justify-center items-center">
+            <span className="inline-block text-accent-foreground font-bold text-lg px-8 whitespace-nowrap tracking-wider">
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR ⭐
             </span>
           </div>
         </div>

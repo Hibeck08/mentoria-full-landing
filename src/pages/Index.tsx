@@ -19,10 +19,12 @@ const Index = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-mentoria');
     if (plansSection) {
-      plansSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      plansSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
-
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
@@ -664,9 +666,7 @@ const Index = () => {
                   <Button variant="outline" className="w-full py-5 md:py-6 text-base md:text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
                     ASSINAR PLANO MENSAL →
                   </Button>
-                  <p className="text-xs md:text-xs text-center text-muted-foreground">
-                    Por apenas <span className="font-bold text-accent">12x de R$29,70</span> ou R$297 à vista
-                  </p>
+                  
                 </div>
               </div>
             </ScrollReveal>
@@ -700,7 +700,7 @@ const Index = () => {
                 </ul>
                 
                 <div className="mb-4 md:mb-6 mt-auto">
-                  <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 1.997,00 por apenas</p>
+                  <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 659,40 por apenas</p>
                   <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$997</p>
                   <p className="text-sm md:text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
                 </div>

@@ -138,7 +138,7 @@ export default {
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out",
-        "scroll-left": "scroll-left 20s linear infinite",
+        "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 20s linear infinite",
       },
       backgroundImage: {

@@ -105,18 +105,14 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Horizontal banner strips with seamless infinite scroll */}
+        {/* Static Horizontal banner strips */}
         <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden pointer-events-none">
           {/* Background strip (faded) */}
           <div className="absolute inset-0 translate-y-4">
             <div className="bg-gradient-primary/30 backdrop-blur-sm py-6 border-y-2 border-accent-dark/20">
-              <div className="flex whitespace-nowrap animate-scroll-left">
-                {/* Duplicate content for seamless loop */}
-                <span className="inline-block text-accent-foreground/50 font-bold text-lg px-8 tracking-wider">
-                  ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR
-                </span>
-                <span className="inline-block text-accent-foreground/50 font-bold text-lg px-8 tracking-wider">
-                  ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR
+              <div className="flex justify-center">
+                <span className="text-accent-foreground/50 font-bold text-lg tracking-wider">
+                  ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
             </div>
@@ -125,13 +121,9 @@ const Index = () => {
           {/* Foreground strip (bright) */}
           <div className="absolute inset-0 translate-y-12">
             <div className="bg-gradient-primary py-6 border-y-2 border-accent-dark/30">
-              <div className="flex whitespace-nowrap animate-scroll-right">
-                {/* Duplicate content for seamless loop */}
-                <span className="inline-block text-accent-foreground font-bold text-lg px-8 tracking-wider">
-                  ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR
-                </span>
-                <span className="inline-block text-accent-foreground font-bold text-lg px-8 tracking-wider">
-                  ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR ⭐ MENTORIA FULL ⭐ AFA ⭐ EFOMM ⭐ EN ⭐ EEAR
+              <div className="flex justify-center">
+                <span className="text-accent-foreground font-bold text-lg tracking-wider">
+                  ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
             </div>
@@ -433,7 +425,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Results with Testimonials - Infinite Scroll */}
+      {/* Results with Testimonials - True Infinite Scroll */}
       <section className="py-24 bg-secondary/20 overflow-hidden">
         <div className="container mx-auto px-4 mb-12">
           <ScrollReveal>
@@ -446,10 +438,10 @@ const Index = () => {
           </ScrollReveal>
         </div>
         
-        {/* Infinite horizontal scroll */}
-        <div className="relative w-full">
-          <div className="flex gap-0 animate-scroll-left">
-            {/* First set of images */}
+        {/* True infinite horizontal scroll with huge images side by side */}
+        <div className="relative w-full h-[80vh] overflow-hidden">
+          <div className="absolute inset-0 flex animate-scroll-left" style={{ width: 'max-content' }}>
+            {/* First set of images - HUGE and side by side */}
             {[
               "/lovable-uploads/feedback-1.png",
               "/lovable-uploads/feedback-2.png",
@@ -457,15 +449,15 @@ const Index = () => {
               "/lovable-uploads/feedback-4.png",
               "/lovable-uploads/feedback-5.png"
             ].map((image, index) => (
-              <div key={index} className="flex-shrink-0 w-[90vw] md:w-[600px] h-[70vh] md:h-[600px]">
+              <div key={index} className="h-[80vh] w-auto flex-shrink-0">
                 <img 
                   src={image} 
                   alt={`Depoimento ${index + 1}`}
-                  className="w-full h-full object-contain"
+                  className="h-full w-auto object-contain"
                 />
               </div>
             ))}
-            {/* Duplicate for seamless loop */}
+            {/* Duplicate for seamless infinite loop */}
             {[
               "/lovable-uploads/feedback-1.png",
               "/lovable-uploads/feedback-2.png",
@@ -473,11 +465,11 @@ const Index = () => {
               "/lovable-uploads/feedback-4.png",
               "/lovable-uploads/feedback-5.png"
             ].map((image, index) => (
-              <div key={`dup-${index}`} className="flex-shrink-0 w-[90vw] md:w-[600px] h-[70vh] md:h-[600px]">
+              <div key={`dup-${index}`} className="h-[80vh] w-auto flex-shrink-0">
                 <img 
                   src={image} 
                   alt={`Depoimento ${index + 1}`}
-                  className="w-full h-full object-contain"
+                  className="h-full w-auto object-contain"
                 />
               </div>
             ))}

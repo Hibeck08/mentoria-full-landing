@@ -66,8 +66,8 @@ All colors MUST be HSL.
     /* Premium Shadows with Glow */
     --shadow-premium: 0 20px 60px -10px hsl(266 80% 35% / 0.4), 0 10px 30px -10px hsl(42 71% 68% / 0.3), 0 0 80px hsl(266 80% 35% / 0.2);
     --glow-purple: 0 0 40px hsl(266 80% 35% / 0.6), 0 0 80px hsl(266 80% 35% / 0.4), 0 0 120px hsl(266 80% 35% / 0.2);
-    --glow-beige: 0 0 40px hsl(42 71% 68% / 0.6), 0 0 80px hsl(42 71% 68% / 0.4), 0 0 120px hsl(42 71% 68% / 0.2);
-    --shadow-glow-beige: 0 8px 32px hsl(42 71% 68% / 0.5), 0 0 60px hsl(42 71% 68% / 0.3);
+    --glow-beige: 0 0 60px hsl(42 71% 68% / 0.8), 0 0 100px hsl(42 71% 68% / 0.6), 0 0 140px hsl(42 71% 68% / 0.4), 0 0 200px hsl(42 71% 68% / 0.2);
+    --shadow-glow-beige: 0 10px 40px hsl(42 71% 68% / 0.7), 0 0 80px hsl(42 71% 68% / 0.5), 0 0 120px hsl(42 71% 68% / 0.3);
   }
 
   .dark {

@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-lg hover:shadow-glow-beige transition-all duration-300",
+        default: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige hover:shadow-glow-beige transition-all duration-300",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-accent bg-transparent text-accent hover:bg-gradient-primary hover:text-accent-foreground transition-all duration-300",
+        outline: "border-2 border-accent bg-transparent text-accent hover:bg-gradient-primary hover:text-accent-foreground hover:shadow-glow-beige transition-all duration-300",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent/10 hover:text-accent",
         link: "text-accent underline-offset-4 hover:underline",
-        hero: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige font-bold text-base transition-all duration-300 hover:scale-[1.02]",
-        gold: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-lg hover:shadow-glow-beige font-bold transition-all duration-300",
+        hero: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige font-bold text-base transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-beige",
+        gold: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige hover:shadow-glow-beige font-bold transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

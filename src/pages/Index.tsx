@@ -113,7 +113,7 @@ const Index = () => {
         }} />
         </div>
         
-        <div className="container relative z-10 mx-auto px-6 py-8 md:py-20 h-full">
+        <div className="container relative z-10 mx-auto px-6 pt-24 pb-8 md:py-20 h-full">
           <div className="max-w-7xl mx-auto h-full">
             {/* Logo - Fixed top left */}
             <div className="absolute top-4 md:top-8 left-4 md:left-8 animate-fade-in-up z-20">
@@ -139,7 +139,7 @@ const Index = () => {
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
-            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-28 md:pt-0 md:pb-0">
+            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-20 md:pt-0 md:pb-0">
               <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
@@ -172,7 +172,7 @@ const Index = () => {
         </div>
         
         {/* Static Horizontal banner strip */}
-        <div className="absolute bottom-14 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
+        <div className="absolute bottom-8 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
           <div className="bg-gradient-primary py-2 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center">
               <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">

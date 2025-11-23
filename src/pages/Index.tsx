@@ -727,7 +727,7 @@ const Index = () => {
                     GARANTIR PLANO SEMESTRAL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">
-                    Economize 10%         <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
+                    Economize 10%                       <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
                   </p>
                   <div className="flex items-center justify-center gap-2 md:gap-3 pt-1 md:pt-2 flex-wrap">
                     <div className="bg-background/90 rounded px-2 py-1">

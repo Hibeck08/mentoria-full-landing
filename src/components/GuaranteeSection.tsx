@@ -45,7 +45,7 @@ export const GuaranteeSection = ({ onScrollToPlans }: { onScrollToPlans?: () => 
                   variant="gold" 
                   size="lg" 
                   onClick={onScrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-6 py-4 sm:px-10 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full max-w-xs sm:max-w-sm mx-auto"
+                  className="text-sm sm:text-base md:text-lg font-bold px-6 py-4 sm:px-10 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto mx-auto"
                 >
                   COMEÇAR AGORA COM GARANTIA →
                 </Button>

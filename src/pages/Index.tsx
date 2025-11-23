@@ -416,7 +416,7 @@ const Index = () => {
                   variant="gold"
                   size="lg"
                   onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
                 >
                   GARANTIR MINHA VAGA AGORA →
                 </Button>
@@ -591,7 +591,7 @@ const Index = () => {
                   variant="gold"
                   size="lg"
                   onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
                 >
                   QUERO FAZER PARTE AGORA →
                 </Button>
@@ -676,7 +676,7 @@ const Index = () => {
                   variant="gold"
                   size="lg"
                   onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
                 >
                   QUERO FAZER PARTE AGORA →
                 </Button>
@@ -979,7 +979,7 @@ const Index = () => {
                   variant="gold"
                   size="lg"
                   onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
                 >
                   QUERO TODOS OS BÔNUS AGORA →
                 </Button>

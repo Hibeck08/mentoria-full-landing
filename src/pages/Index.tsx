@@ -11,7 +11,7 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { 
   Target, BookOpen, Users, Trophy, CheckCircle2, 
   FileText, Zap, Award, Instagram, TrendingUp, 
-  Brain, Clock, Rocket, Shield
+  Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown
 } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
@@ -96,10 +96,13 @@ const Index = () => {
                   Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 pt-4" style={{ animationDelay: "0.5s" }}>
+                <div className="flex flex-col items-center gap-4 pt-4" style={{ animationDelay: "0.5s" }}>
                   <Button variant="gold" size="lg" className="text-base shadow-glow-beige text-center rounded-full transition-all font-semibold px-12 py-8 text-lg">
                     QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
+                  <p className="text-sm text-muted-foreground/80">
+                    ⚡ Vagas limitadas • Comece agora mesmo
+                  </p>
                 </div>
               </div>
             </div>
@@ -131,6 +134,14 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-primary/5">
+        <div className="flex flex-col items-center gap-2 animate-bounce">
+          <ChevronDown className="w-6 h-6 text-accent" />
+          <ChevronDown className="w-6 h-6 text-accent -mt-4 opacity-50" />
+        </div>
+      </div>
 
       {/* Who Am I Section */}
       <section className="py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
@@ -253,13 +264,23 @@ const Index = () => {
           
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
-                GARANTA SUA VAGA AGORA →
-              </Button>
+              <div className="flex flex-col items-center gap-3">
+                <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                  GARANTA SUA VAGA AGORA →
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  💳 Parcelamento disponível • Satisfação garantida
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
+        <ArrowDown className="w-8 h-8 text-accent animate-pulse" />
+      </div>
 
       {/* Target Audience Section */}
       <section className="py-24 bg-secondary/20">
@@ -304,13 +325,29 @@ const Index = () => {
           
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
-                GARANTIR MINHA VAGA AGORA →
-              </Button>
+              <div className="flex flex-col items-center gap-3">
+                <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                  GARANTIR MINHA VAGA AGORA →
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  🚀 Transforme seu estudo • Método comprovado
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="flex items-center gap-3">
+          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-accent"></div>
+          <div className="flex flex-col items-center">
+            <ArrowDown className="w-6 h-6 text-accent animate-bounce" />
+          </div>
+          <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-accent"></div>
+        </div>
+      </div>
 
       {/* Comparison Section - Antes vs Depois */}
       <section className="py-32 relative overflow-hidden bg-background">
@@ -352,6 +389,15 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/10">
+        <div className="flex items-center gap-2">
+          <ChevronDown className="w-5 h-5 text-accent opacity-30" />
+          <ChevronDown className="w-6 h-6 text-accent" />
+          <ChevronDown className="w-5 h-5 text-accent opacity-30" />
+        </div>
+      </div>
 
       {/* What You Will Learn Section */}
       <section className="py-32 relative overflow-hidden bg-secondary/10">
@@ -405,6 +451,15 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/10 to-background">
+        <div className="flex items-center gap-2">
+          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-accent/50 to-accent"></div>
+          <Shield className="w-6 h-6 text-accent" />
+          <div className="w-20 h-0.5 bg-gradient-to-l from-transparent via-accent/50 to-accent"></div>
+        </div>
+      </div>
+
       {/* Guarantee Section */}
       <GuaranteeSection />
 
@@ -447,6 +502,18 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-xs text-accent font-semibold tracking-wider">VEJA OS RESULTADOS</p>
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+          </div>
+        </div>
+      </div>
 
       {/* Results with Testimonials - True Infinite Scroll */}
       <section className="py-24 bg-secondary/20 overflow-hidden">
@@ -502,13 +569,27 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
-                QUERO FAZER PARTE AGORA →
-              </Button>
+              <div className="flex flex-col items-center gap-3">
+                <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                  QUERO FAZER PARTE AGORA →
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  🎯 Junte-se aos aprovados • Resultados comprovados
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="flex items-center gap-2">
+          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-accent"></div>
+          <ChevronDown className="w-6 h-6 text-accent" />
+          <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-accent"></div>
+        </div>
+      </div>
 
       {/* Fun Stats Section */}
       <section className="py-32 bg-gradient-to-br from-background via-primary/5 to-background">
@@ -572,13 +653,30 @@ const Index = () => {
           
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
-                QUERO FAZER PARTE AGORA →
-              </Button>
+              <div className="flex flex-col items-center gap-3">
+                <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                  QUERO FAZER PARTE AGORA →
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  ✨ Seja um dos próximos aprovados • Método FULL validado
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Section Transition - Pricing Highlight */}
+      <div className="flex justify-center py-12 bg-gradient-to-b from-background to-background">
+        <div className="flex flex-col items-center gap-3 animate-bounce">
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full bg-accent"></div>
+            <p className="text-sm text-accent font-bold tracking-widest">PLANOS E INVESTIMENTO</p>
+            <div className="w-3 h-3 rounded-full bg-accent"></div>
+          </div>
+          <ArrowDown className="w-8 h-8 text-accent" />
+        </div>
+      </div>
 
       {/* Pricing Section */}
       <section className="py-32 bg-background relative overflow-hidden">
@@ -640,9 +738,14 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">/mês</p>
                 </div>
                 
-                <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
-                  ASSINAR PLANO MENSAL →
-                </Button>
+                <div className="space-y-2">
+                  <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
+                    ASSINAR PLANO MENSAL →
+                  </Button>
+                  <p className="text-xs text-center text-muted-foreground">
+                    Por apenas <span className="font-bold text-accent">12x de R$29,70</span> ou R$297 à vista
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
             
@@ -693,9 +796,14 @@ const Index = () => {
                   <p className="text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
                 </div>
                 
-                <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90">
-                  GARANTIR PLANO SEMESTRAL →
-                </Button>
+                <div className="space-y-2">
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90">
+                    GARANTIR PLANO SEMESTRAL →
+                  </Button>
+                  <p className="text-xs text-center text-background/90 font-medium">
+                    Economize 40% • <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -770,11 +878,16 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground text-center">pagamento único</p>
                 </div>
                 
-                <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
-                  ADQUIRIR LIVRO DIGITAL →
-                </Button>
+                <div className="space-y-2">
+                  <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
+                    ADQUIRIR LIVRO DIGITAL →
+                  </Button>
+                  <p className="text-xs text-center text-muted-foreground">
+                    Pagamento único • Acesso imediato após compra
+                  </p>
+                </div>
                 
-                <div className="mt-6 flex items-center justify-center gap-2 text-sm text-accent">
+                <div className="mt-4 flex items-center justify-center gap-2 text-sm text-accent">
                   <Shield className="w-4 h-4" />
                   <span className="font-semibold">Garantia de 7 dias</span>
                 </div>
@@ -789,6 +902,18 @@ const Index = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/10">
+        <div className="flex flex-col items-center gap-1">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+            <ArrowDown className="w-5 h-5 text-accent" />
+            <div className="w-8 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+          </div>
+          <p className="text-xs text-accent font-semibold">BÔNUS EXCLUSIVOS</p>
+        </div>
+      </div>
 
       {/* Bonus Section */}
       <section className="py-24 bg-secondary/10">
@@ -832,6 +957,13 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/10 to-background">
+        <div className="flex items-center gap-2 animate-pulse">
+          <ChevronDown className="w-6 h-6 text-accent" />
+        </div>
+      </div>
 
       {/* FAQ Section */}
       <section className="py-24 bg-background">

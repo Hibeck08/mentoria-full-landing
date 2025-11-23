@@ -700,7 +700,7 @@ const Index = () => {
                 </ul>
                 
                 <div className="mb-4 md:mb-6 mt-auto">
-                  <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 659,40 por apenas</p>
+                  <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 109,90 por apenas</p>
                   <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$997</p>
                   <p className="text-sm md:text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
                 </div>

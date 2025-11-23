@@ -29,14 +29,14 @@ const Index = () => {
   };
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative min-h-[115vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
           <img 
-            src="/lovable-uploads/hero-mobile.png" 
+            src="/lovable-uploads/hero-mobile-new.png" 
             alt="Background" 
-            className="block md:hidden w-full h-full object-cover object-[center_5%] brightness-90 contrast-110 saturate-110"
+            className="block md:hidden w-full h-full object-cover object-[center_top] brightness-90 contrast-110 saturate-110"
             loading="eager"
             fetchPriority="high"
           />
@@ -139,7 +139,7 @@ const Index = () => {
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
-            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-60 pb-16 md:pt-0 md:pb-0">
+            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-28 md:pt-0 md:pb-0">
               <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
@@ -172,7 +172,7 @@ const Index = () => {
         </div>
         
         {/* Static Horizontal banner strip */}
-        <div className="absolute bottom-6 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
+        <div className="absolute bottom-14 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
           <div className="bg-gradient-primary py-2 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center">
               <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">

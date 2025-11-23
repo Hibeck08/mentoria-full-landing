@@ -15,9 +15,9 @@ interface PricingCardProps {
 export const PricingCard = ({ featured, title, price, features }: PricingCardProps) => {
   return (
     <div 
-      className={`relative bg-card border rounded-2xl p-8 transition-all duration-300 ${
+      className={`relative w-full max-w-sm mx-auto bg-card border rounded-2xl p-6 md:p-8 transition-all duration-300 ${
         featured 
-          ? "border-accent shadow-glow-beige scale-105" 
+          ? "border-accent shadow-glow-beige md:scale-105" 
           : "border-border hover:border-accent/50"
       }`}
     >
@@ -50,7 +50,7 @@ export const PricingCard = ({ featured, title, price, features }: PricingCardPro
       </ul>
 
       <Button 
-        className={`w-full ${featured ? "bg-accent text-accent-foreground hover:bg-accent/90" : "bg-accent text-accent-foreground hover:bg-accent/90"}`}
+        className={`w-full max-w-xs mx-auto text-sm sm:text-base ${featured ? "bg-accent text-accent-foreground hover:bg-accent/90" : "bg-accent text-accent-foreground hover:bg-accent/90"}`}
         size="lg"
       >
         GARANTIR MINHA VAGA

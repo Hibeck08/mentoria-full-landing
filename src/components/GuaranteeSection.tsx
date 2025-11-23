@@ -8,7 +8,7 @@ export const GuaranteeSection = ({ onScrollToPlans }: { onScrollToPlans?: () => 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <div className="bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-3xl p-12 shadow-glow-gold">
+            <div className="bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-3xl p-6 md:p-10 lg:p-12 shadow-glow-gold">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="flex-shrink-0">
                   <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center">
@@ -45,7 +45,7 @@ export const GuaranteeSection = ({ onScrollToPlans }: { onScrollToPlans?: () => 
                   variant="gold" 
                   size="lg" 
                   onClick={onScrollToPlans}
-                  className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all"
+                  className="text-sm sm:text-base md:text-lg font-bold px-6 py-4 sm:px-10 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full max-w-xs sm:max-w-sm mx-auto"
                 >
                   COMEÇAR AGORA COM GARANTIA →
                 </Button>

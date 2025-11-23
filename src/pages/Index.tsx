@@ -57,7 +57,7 @@ const Index = () => {
         {/* Floating decorative elements */}
         <div className="absolute inset-0 z-5 pointer-events-none">
           {/* Mobile minimal floating icons - Reduced for performance */}
-          <div className="absolute top-1/3 right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          <div className="absolute top-[30%] right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
           animationDelay: "0.5s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
@@ -65,7 +65,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="absolute top-1/2 left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          <div className="absolute top-[45%] left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
           animationDelay: "1s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
@@ -139,8 +139,8 @@ const Index = () => {
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
-            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-56 pb-4 md:pt-0 md:pb-0">
-              <div className="space-y-5 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
+            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-48 pb-20 md:pt-0 md:pb-0">
+              <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
                 <h1 className="text-[1.35rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.2] text-left md:text-left">
@@ -172,7 +172,7 @@ const Index = () => {
         </div>
         
         {/* Static Horizontal banner strip */}
-        <div className="absolute bottom-20 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
+        <div className="absolute bottom-0 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
           <div className="bg-gradient-primary py-2 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center">
               <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">

@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
+import heroMentor from "@/assets/hero-mentor.png";
 import certificates from "@/assets/certificates.png";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -23,22 +24,31 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-        <div className="absolute top-1/2 right-1/3 w-[600px] h-[600px] bg-primary rounded-full blur-[150px] opacity-40 animate-glow-pulse" />
-        <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[120px] opacity-30 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+        {/* Grid Pattern Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(hsl(var(--accent) / 0.1) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent) / 0.1) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+        
+        {/* Glow Effects */}
+        <div className="absolute top-1/2 right-1/2 w-[800px] h-[800px] bg-accent rounded-full blur-[200px] opacity-20 animate-glow-pulse" />
+        <div className="absolute bottom-1/4 left-1/4 w-[600px] h-[600px] bg-primary rounded-full blur-[180px] opacity-15 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
         
         <div className="container relative z-10 mx-auto px-4 py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="absolute top-8 left-8 animate-fade-in-up">
+            <div className="absolute top-8 left-8 animate-fade-in-up z-20">
               <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-16 h-16 md:w-20 md:h-20 drop-shadow-2xl" />
             </div>
             
-            <div className="absolute top-8 right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2" style={{ animationDelay: "0.2s" }}>
+            <div className="absolute top-8 right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{ animationDelay: "0.2s" }}>
               <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" />
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
             
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 min-h-[80vh]">
-              <div className="flex-1 space-y-6 md:space-y-8 animate-fade-in-up max-w-2xl" style={{ animationDelay: "0.3s" }}>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12 min-h-[80vh]">
+              <div className="flex-1 space-y-6 md:space-y-8 animate-fade-in-up max-w-2xl z-10" style={{ animationDelay: "0.3s" }}>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
                   <span className="bg-gradient-hero-text bg-clip-text text-transparent">
                     ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO
@@ -53,31 +63,48 @@ const Index = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4" style={{ animationDelay: "0.5s" }}>
-                  <Button variant="gold" size="lg" className="text-base shadow-glow-gold text-center rounded-full hover:shadow-glow-gold/70 transition-all font-semibold px-12 py-8 text-lg">
-                    QUERO ENTRAR AGORA! →
+                  <Button variant="gold" size="lg" className="text-base shadow-glow-beige text-center rounded-full transition-all font-semibold px-12 py-8 text-lg">
+                    QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
                 </div>
               </div>
               
-              <div className="flex-1 relative animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                <div className="relative">
-                  <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative z-10 w-full max-w-md mx-auto h-auto object-fill opacity-0" />
+              <div className="flex-1 relative animate-fade-in-up z-10" style={{ animationDelay: "0.4s" }}>
+                <div className="relative flex items-center justify-center">
+                  {/* Large Glow Circle Behind */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-[500px] h-[500px] rounded-full bg-gradient-primary opacity-30 blur-3xl animate-glow-pulse" />
+                  </div>
                   
-                  <div className="absolute -top-10 -left-10 animate-float opacity-80" style={{ animationDelay: "0.5s" }}>
-                    <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
-                      <Trophy className="w-8 h-8 text-accent" />
+                  {/* Decorative Circles */}
+                  <div className="absolute top-10 right-10 w-20 h-20 rounded-full border-2 border-accent/30 animate-float" style={{ animationDelay: "0.5s" }} />
+                  <div className="absolute bottom-20 left-10 w-16 h-16 rounded-full bg-accent/10 backdrop-blur-sm border border-accent/30 animate-float" style={{ animationDelay: "1s" }} />
+                  
+                  {/* Main Image */}
+                  <div className="relative">
+                    <img 
+                      src={heroMentor} 
+                      alt="Mentor aprovado em múltiplas academias militares" 
+                      className="relative z-10 w-full max-w-lg mx-auto h-auto object-contain drop-shadow-2xl"
+                    />
+                  </div>
+                  
+                  {/* Floating Icons */}
+                  <div className="absolute -top-5 -left-5 animate-float opacity-90" style={{ animationDelay: "0.5s" }}>
+                    <div className="bg-gradient-primary backdrop-blur-sm rounded-2xl p-4 shadow-glow-beige">
+                      <Trophy className="w-8 h-8 text-accent-foreground" />
                     </div>
                   </div>
                   
-                  <div className="absolute -bottom-10 -right-10 animate-float opacity-80" style={{ animationDelay: "1s" }}>
-                    <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
-                      <BookOpen className="w-8 h-8 text-accent" />
+                  <div className="absolute -bottom-5 -right-5 animate-float opacity-90" style={{ animationDelay: "1s" }}>
+                    <div className="bg-gradient-primary backdrop-blur-sm rounded-2xl p-4 shadow-glow-beige">
+                      <Target className="w-8 h-8 text-accent-foreground" />
                     </div>
                   </div>
                   
-                  <div className="absolute top-20 -right-16 animate-float opacity-80 hidden lg:block" style={{ animationDelay: "1.5s" }}>
-                    <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
-                      <Target className="w-8 h-8 text-accent" />
+                  <div className="absolute top-1/3 -right-10 animate-float opacity-90 hidden lg:block" style={{ animationDelay: "1.5s" }}>
+                    <div className="bg-gradient-primary backdrop-blur-sm rounded-2xl p-4 shadow-glow-beige">
+                      <BookOpen className="w-8 h-8 text-accent-foreground" />
                     </div>
                   </div>
                 </div>

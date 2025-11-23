@@ -59,7 +59,7 @@ const Index = () => {
                 <div className="flex flex-col sm:flex-row gap-4 pt-4" style={{
                 animationDelay: "0.5s"
               }}>
-                  <Button variant="gold" size="lg" className="text-base md:text-lg shadow-glow-gold text-center py-6 px-12 rounded-full hover:shadow-glow-gold/70 transition-all font-semibold pr-[35px] pl-[40px] pt-[30px] pb-[30px]">
+                  <Button variant="gold" size="lg" className="text-base shadow-glow-gold text-center rounded-full hover:shadow-glow-gold/70 transition-all font-semibold pr-[35px] pl-[40px] pt-[30px] pb-[30px] md:text-lg py-[40px] mx-[100px] px-[90px]">
                     QUERO ENTRAR AGORA! →
                   </Button>
                 </div>
@@ -146,22 +146,22 @@ const Index = () => {
               </p>
               
               <p className="text-base md:text-lg text-foreground leading-relaxed font-semibold">
-                A Mentoria FULL é um método validado, usado por centenas de aprovados para conquistar suas vagas nas academias militares, com um passo a passo simples e direto ao ponto.
+                A Mentoria FULL é um método validado, usado por concurseiros para conquistar suas vagas nas academias militares, com um passo a passo simples e direto ao ponto.
               </p>
               
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Mesmo que você não tenha experiência com métodos de estudo estruturados, vai conseguir criar resultados extraordinários que realmente levam à aprovação.
+                Mesmo que você não tenha experiência com o estudo em si, vai conseguir criar resultados extraordinários que realmente levam à aprovação.
               </p>
               
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Com planejamento pronto, checklists e um passo a passo validado, você nunca mais vai estudar no escuro!
+                Com planejamento pronto, plano de metas e um passo a passo, você nunca mais vai estudar no escuro!
               </p>
             </div>
             
             {/* Right side - Photo with glow */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-              <img src={studyDesk} alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" />
+              <img alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.png" />
             </div>
           </div>
         </div>

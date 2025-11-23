@@ -372,7 +372,12 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
+                <Button
+                  variant="gold"
+                  size="lg"
+                  onClick={scrollToPlans}
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                >
                   GARANTIR MINHA VAGA AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -530,7 +535,12 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
+                <Button
+                  variant="gold"
+                  size="lg"
+                  onClick={scrollToPlans}
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                >
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -610,7 +620,12 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
+                <Button
+                  variant="gold"
+                  size="lg"
+                  onClick={scrollToPlans}
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                >
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -680,7 +695,11 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
+                  <Button
+                    variant="gold"
+                    className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto"
+                    onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}
+                  >
                     ASSINAR PLANO MENSAL →
                   </Button>
                   
@@ -819,7 +838,11 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
+                  <Button
+                    variant="gold"
+                    className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto"
+                    onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}
+                  >
                     ADQUIRIR LIVRO DIGITAL →
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
@@ -894,7 +917,12 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
+                <Button
+                  variant="gold"
+                  size="lg"
+                  onClick={scrollToPlans}
+                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:max-w-none"
+                >
                   QUERO TODOS OS BÔNUS AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">

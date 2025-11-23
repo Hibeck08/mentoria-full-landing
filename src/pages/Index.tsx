@@ -14,48 +14,118 @@ import student3 from "@/assets/student-3.png";
 import certificates from "@/assets/certificates.png";
 const Index = () => {
   return <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Hero Section - Modelo Premium com Glow */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+        {/* Glow effects atrás da foto */}
+        <div className="absolute top-1/2 right-1/3 w-[600px] h-[600px] bg-primary rounded-full blur-[150px] opacity-40 animate-glow-pulse" />
+        <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[120px] opacity-30 animate-glow-pulse" style={{
+          animationDelay: "1.5s"
+        }} />
         
-        {/* Glow effects */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent rounded-full blur-[120px] opacity-30 animate-glow-pulse" style={{
-        animationDelay: "1.5s"
-      }} />
-        
-        <div className="container relative z-10 mx-auto px-4 py-20 opacity-100 rounded-none shadow">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            {/* Left side - Copy */}
-            <div className="animate-fade-in-up space-y-8">
-              <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-24 h-24 drop-shadow-2xl" />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-hero-text bg-clip-text text-transparent text-6xl font-extrabold">
-                  ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!
-                </span>
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed md:text-lg font-thin">
-                Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{
-              animationDelay: "0.2s"
-            }}>
-                <Button variant="gold" size="lg" className="text-lg h-auto shadow-glow-gold text-center py-[20px] px-[75px] rounded-full">
-                  QUERO ENTRAR AGORA!
-                </Button>
-                
-              </div>
+        <div className="container relative z-10 mx-auto px-4 py-20">
+          <div className="max-w-7xl mx-auto">
+            {/* Logo no topo */}
+            <div className="absolute top-8 left-8 animate-fade-in-up">
+              <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-16 h-16 md:w-20 md:h-20 drop-shadow-2xl" />
             </div>
             
-            {/* Right side - Photo integrated with background */}
-            <div style={{
-            animationDelay: "0.3s"
-          }} className="animate-fade-in-up relative">
-              <div className="relative">
-                <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative w-full h-auto object-cover" />
+            {/* Badge no canto superior direito */}
+            <div className="absolute top-8 right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2" style={{
+              animationDelay: "0.2s"
+            }}>
+              <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" />
+              <span className="text-sm font-semibold text-foreground">@mentoriafull</span>
+            </div>
+            
+            {/* Conteúdo principal */}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8 min-h-[80vh]">
+              {/* Left side - Copy */}
+              <div className="flex-1 space-y-6 md:space-y-8 animate-fade-in-up max-w-2xl" style={{
+                animationDelay: "0.3s"
+              }}>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
+                  <span className="bg-gradient-hero-text bg-clip-text text-transparent">
+                    ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO
+                  </span>{" "}
+                  <span className="text-foreground">
+                    NA AFA, EPCAR, EEAR e EFOMM!
+                  </span>
+                </h1>
+                
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
+                  Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 pt-4" style={{
+                  animationDelay: "0.5s"
+                }}>
+                  <Button 
+                    variant="gold" 
+                    size="lg" 
+                    className="text-base md:text-lg font-bold shadow-glow-gold text-center py-6 px-12 rounded-full hover:shadow-glow-gold/70 transition-all"
+                  >
+                    QUERO ENTRAR AGORA! →
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Right side - Foto com elementos flutuantes */}
+              <div className="flex-1 relative animate-fade-in-up" style={{
+                animationDelay: "0.4s"
+              }}>
+                <div className="relative">
+                  {/* Foto principal */}
+                  <img 
+                    src={heroPhoto} 
+                    alt="Mentor aprovado em múltiplas academias militares" 
+                    className="relative z-10 w-full max-w-md mx-auto h-auto object-cover"
+                  />
+                  
+                  {/* Elementos flutuantes */}
+                  <div className="absolute -top-10 -left-10 animate-float opacity-80" style={{
+                    animationDelay: "0.5s"
+                  }}>
+                    <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
+                      <Trophy className="w-8 h-8 text-accent" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute -bottom-10 -right-10 animate-float opacity-80" style={{
+                    animationDelay: "1s"
+                  }}>
+                    <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
+                      <BookOpen className="w-8 h-8 text-accent" />
+                    </div>
+                  </div>
+                  
+                  <div className="absolute top-20 -right-16 animate-float opacity-80 hidden lg:block" style={{
+                    animationDelay: "1.5s"
+                  }}>
+                    <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
+                      <Target className="w-8 h-8 text-accent" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Faixa animada na parte inferior */}
+        <div className="absolute bottom-0 left-0 right-0 bg-accent py-4 overflow-hidden">
+          <div className="animate-scroll-left whitespace-nowrap">
+            <span className="inline-block text-background font-bold text-lg px-8">
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
+            </span>
+            <span className="inline-block text-background font-bold text-lg px-8">
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
+            </span>
+            <span className="inline-block text-background font-bold text-lg px-8">
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
+            </span>
+            <span className="inline-block text-background font-bold text-lg px-8">
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
+            </span>
           </div>
         </div>
       </section>

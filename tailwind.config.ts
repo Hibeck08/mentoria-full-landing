@@ -114,6 +114,14 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "scroll-left": {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-50%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -121,6 +129,7 @@ export default {
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out",
+        "scroll-left": "scroll-left 20s linear infinite",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",

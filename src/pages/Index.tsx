@@ -82,12 +82,12 @@ const Index = () => {
             
             <div className="flex flex-col items-start justify-center gap-12 min-h-[80vh]">
               <div className="space-y-6 md:space-y-8 animate-fade-in-up max-w-2xl z-10" style={{ animationDelay: "0.3s" }}>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
-                  <span className="bg-gradient-hero-text bg-clip-text text-transparent">
-                    ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO
-                  </span>{" "}
+                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
                   <span className="text-foreground">
-                    NA AFA, EPCAR, EEAR e EFOMM!
+                    ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER{" "}
+                  </span>
+                  <span className="bg-gradient-hero-text bg-clip-text text-transparent">
+                    CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!
                   </span>
                 </h1>
                 
@@ -105,11 +105,28 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-primary py-4 border-t-2 border-accent-dark/30 overflow-hidden">
-          <div className="flex whitespace-nowrap">
-            <span className="inline-block text-accent-foreground font-bold text-lg px-4 tracking-wider">
-              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR •
-            </span>
+        {/* X-shaped banner strips */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden pointer-events-none">
+          {/* Background strip (faded) */}
+          <div className="absolute inset-0 -rotate-6 translate-y-8">
+            <div className="bg-gradient-primary/30 backdrop-blur-sm py-6 border-y-2 border-accent-dark/20">
+              <div className="flex whitespace-nowrap animate-scroll-left">
+                <span className="inline-block text-accent-foreground/50 font-bold text-lg px-4 tracking-wider">
+                  ⭐ GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS •
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Foreground strip (bright) */}
+          <div className="absolute inset-0 rotate-6 translate-y-8">
+            <div className="bg-gradient-primary py-6 border-y-2 border-accent-dark/30">
+              <div className="flex whitespace-nowrap animate-scroll-right">
+                <span className="inline-block text-accent-foreground font-bold text-lg px-4 tracking-wider">
+                  ⭐ GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS •
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

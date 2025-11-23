@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent/10 hover:text-accent",
         link: "text-accent underline-offset-4 hover:underline",
         hero: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige font-bold text-base transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-beige before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/40 before:via-white/10 before:to-transparent before:pointer-events-none",
-        gold: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige hover:shadow-glow-beige font-bold transition-all duration-300 before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/40 before:via-white/10 before:to-transparent before:pointer-events-none",
+        gold: "bg-gradient-primary text-accent-foreground hover:opacity-95 shadow-glow-beige hover:shadow-glow-beige font-bold transition-all duration-300 before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/50 before:via-white/20 before:to-transparent before:pointer-events-none",
       },
       size: {
         default: "h-10 px-4 py-2",

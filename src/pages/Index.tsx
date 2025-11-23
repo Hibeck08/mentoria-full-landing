@@ -663,7 +663,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="outline" className="w-full py-5 md:py-6 text-base md:text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
+                  <Button variant="gold" className="w-full py-5 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
                     ASSINAR PLANO MENSAL →
                   </Button>
                   
@@ -672,7 +672,7 @@ const Index = () => {
             </ScrollReveal>
             
             <ScrollReveal variant="right" className="h-full">
-              <div className="bg-accent/95 border-2 border-accent rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full">
+              <div className="bg-gradient-beige-premium border-2 border-accent rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full">
                 <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2">
                   <div className="bg-primary text-primary-foreground px-4 md:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-sm font-bold shadow-lg">
                     MAIS POPULAR   
@@ -802,7 +802,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
+                  <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
                     ADQUIRIR LIVRO DIGITAL →
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">

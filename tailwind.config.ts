@@ -143,6 +143,7 @@ export default {
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
+        "gradient-beige-premium": "var(--gradient-beige-premium)",
         "gradient-hero": "var(--gradient-hero)",
         "gradient-hero-text": "var(--gradient-hero-text)",
         "gradient-radial": "radial-gradient(circle, var(--tw-gradient-stops))",

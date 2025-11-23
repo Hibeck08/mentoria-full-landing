@@ -11,7 +11,7 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { 
   Target, BookOpen, Users, Trophy, CheckCircle2, 
   FileText, Zap, Award, Instagram, TrendingUp, 
-  Brain, Clock, Rocket
+  Brain, Clock, Rocket, Shield
 } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
@@ -582,9 +582,13 @@ const Index = () => {
 
       {/* Pricing Section */}
       <section className="py-32 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary rounded-full blur-[150px]" />
-          <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-accent rounded-full blur-[150px]" />
+        <div className="absolute inset-0">
+          <img 
+            src="/lovable-uploads/military-background.png" 
+            alt="Military background" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
         </div>
         
         <div className="container relative z-10 mx-auto px-4">
@@ -692,6 +696,88 @@ const Index = () => {
                 <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90">
                   GARANTIR PLANO SEMESTRAL →
                 </Button>
+              </div>
+            </ScrollReveal>
+          </div>
+          
+          {/* Third Card - Book Only */}
+          <div className="mt-12 max-w-md mx-auto">
+            <ScrollReveal>
+              <div className="bg-card border border-border rounded-3xl p-8 hover:shadow-premium transition-all duration-300 flex flex-col">
+                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6 w-fit mx-auto">
+                  <span className="text-xs font-semibold text-muted-foreground">Livro Digital</span>
+                  <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-4 h-4 text-background" />
+                  </div>
+                </div>
+                
+                <h3 className="text-3xl font-bold mb-2 text-center">
+                  Livro com <span className="text-accent">Metodologia</span>
+                </h3>
+                
+                <p className="text-sm text-muted-foreground mb-6 text-center">Pagamento Único</p>
+                
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Mentoria 1:1 personalizada</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Acompanhamento diário exclusivo</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">PDFs completos + bônus premium</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Simulados semanais + correção detalhada</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Aulas ao vivo e gravadas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground font-medium">Livro com a minha metodologia</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground font-medium">Estratégias para AFA, EN, EFOMM, EEAR</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Revisões com professores especializados</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Suporte direto com mentores</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground font-medium">Acesso vitalício</span>
+                  </li>
+                  <li className="flex items-start gap-3 opacity-40">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through">Comunidade de aprovados</span>
+                  </li>
+                </ul>
+                
+                <div className="mb-6">
+                  <p className="text-sm text-muted-foreground mb-2 text-center">de R$ 297,00 por apenas</p>
+                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1 text-center">R$97</p>
+                  <p className="text-sm text-muted-foreground text-center">pagamento único</p>
+                </div>
+                
+                <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
+                  ADQUIRIR LIVRO DIGITAL →
+                </Button>
+                
+                <div className="mt-6 flex items-center justify-center gap-2 text-sm text-accent">
+                  <Shield className="w-4 h-4" />
+                  <span className="font-semibold">Garantia de 7 dias</span>
+                </div>
               </div>
             </ScrollReveal>
           </div>

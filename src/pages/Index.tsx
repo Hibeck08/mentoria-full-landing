@@ -181,7 +181,7 @@ const Index = () => {
             {[{
             icon: Target,
             title: "Perdido no Caminho",
-            description: "Quer um plano claro e estruturado para sua aprovação militar"
+            description: "Quer um plano claro e estruturado para sua aprovação"
           }, {
             icon: Zap,
             title: "Busca Disciplina",

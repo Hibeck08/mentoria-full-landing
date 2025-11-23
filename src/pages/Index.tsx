@@ -887,8 +887,8 @@ const Index = () => {
             description: "Simulados exclusivos para testar se a sua preparação está progredindo"
           }, {
             icon: Zap,
-            title: "Acesso Antecipado",
-            description: "Receba novos materiais antes de todos"
+            title: "Acesso Imediato",
+            description: "Receba todos os materiais imediatamente ao realizar o pagamento"
           }].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <FeatureCard {...item} />
               </ScrollReveal>)}

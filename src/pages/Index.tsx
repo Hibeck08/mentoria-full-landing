@@ -876,7 +876,7 @@ const Index = () => {
             {[{
             icon: FileText,
             title: "Oficina de Redação",
-            description: "Técnicas avançadas para nota máxima na redação militar"
+            description: "Técnicas de redação que me renderam nota 9,1 no concurso da AFA"
           }, {
             icon: BookOpen,
             title: "Física do Zero ao Halliday",

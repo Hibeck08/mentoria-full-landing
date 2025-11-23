@@ -123,6 +123,14 @@ export default {
             transform: "translateX(-50%)",
           },
         },
+        "scroll-right": {
+          "0%": {
+            transform: "translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateX(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -131,6 +139,7 @@ export default {
         "float": "float 6s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "scroll-left": "scroll-left 20s linear infinite",
+        "scroll-right": "scroll-right 20s linear infinite",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",

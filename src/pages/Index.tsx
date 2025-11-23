@@ -71,7 +71,7 @@ const Index = () => {
             }}>
                 <div className="relative">
                   {/* Foto principal */}
-                  <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative z-10 w-full max-w-md mx-auto h-auto object-cover" />
+                  <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative z-10 w-full max-w-md mx-auto h-auto object-fill" />
                   
                   {/* Elementos flutuantes */}
                   <div className="absolute -top-10 -left-10 animate-float opacity-80" style={{

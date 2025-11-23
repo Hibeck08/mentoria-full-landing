@@ -857,7 +857,7 @@ const Index = () => {
               Bônus <span className="bg-gradient-primary bg-clip-text text-transparent">Exclusivos</span>
             </h2>
             <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-              Além de tudo, você recebe conteúdos especiais sem custo adicional.
+              Método Hibeck 
             </p>
           </ScrollReveal>
           

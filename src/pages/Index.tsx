@@ -701,8 +701,8 @@ const Index = () => {
                 
                 <div className="mb-4 md:mb-6 mt-auto">
                   <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 109,90 por apenas</p>
-                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$997</p>
-                  <p className="text-sm md:text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
+                  <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$98,87</p>
+                  <p className="text-sm md:text-sm text-background/80">   /mês ou R$ 527,00 à vista                           </p>
                 </div>
                 
                 <div className="space-y-2 md:space-y-3">
@@ -710,7 +710,7 @@ const Index = () => {
                     GARANTIR PLANO SEMESTRAL →
                   </Button>
                   <p className="text-xs md:text-xs text-center text-background/90 font-medium">
-                    Economize 40% • <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
+                    Economize 10%         <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
                   </p>
                   <div className="flex items-center justify-center gap-2 md:gap-3 pt-1 md:pt-2">
                     <div className="bg-background/90 rounded px-2 py-1">
@@ -796,9 +796,9 @@ const Index = () => {
                 </ul>
                 
                 <div className="mb-6">
-                  <p className="text-sm text-muted-foreground mb-2 text-center">de R$ 99,90 por apenas</p>
-                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1 text-center">R$79,90</p>
-                  <p className="text-sm text-muted-foreground text-center">pagamento único em até 12x      </p>
+                  <p className="text-sm text-muted-foreground mb-2 text-center">por apenas 12x de   </p>
+                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1 text-center">R$8,26</p>
+                  <p className="text-sm text-muted-foreground text-center">ou 79,90 à vista   </p>
                 </div>
                 
                 <div className="space-y-2">

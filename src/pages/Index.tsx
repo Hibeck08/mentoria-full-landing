@@ -699,7 +699,7 @@ const Index = () => {
                   Mentoria <span className="text-background">FULL</span>
                 </h3>
                 
-                <p className="text-sm text-background/80 mb-6">Pagamento Único Semestral</p>
+                <p className="text-sm text-background/80 mb-6">Pagamento Semestral</p>
                 
                 <ul className="space-y-3 mb-8 flex-grow">
                   {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados semanais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
@@ -752,7 +752,7 @@ const Index = () => {
                 </div>
                 
                 <h3 className="text-3xl font-bold mb-2 text-center">
-                  Livro  <span className="text-accent">Metodologia</span>
+                  Livro  <span className="text-accent">Método Hibeck </span>
                 </h3>
                 
                 <p className="text-sm text-muted-foreground mb-6 text-center">Pagamento Único</p>
@@ -805,9 +805,9 @@ const Index = () => {
                 </ul>
                 
                 <div className="mb-6">
-                  <p className="text-sm text-muted-foreground mb-2 text-center">de R$ 297,00 por apenas</p>
-                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1 text-center">R$97</p>
-                  <p className="text-sm text-muted-foreground text-center">pagamento único</p>
+                  <p className="text-sm text-muted-foreground mb-2 text-center">de R$ 99,90 por apenas</p>
+                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1 text-center">R$79,90</p>
+                  <p className="text-sm text-muted-foreground text-center">pagamento único em até 12x      </p>
                 </div>
                 
                 <div className="space-y-2">

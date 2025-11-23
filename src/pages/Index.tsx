@@ -608,7 +608,7 @@ const Index = () => {
         <div className="container relative z-10 mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16">
-              Planos de <span className="text-accent">Investimento</span>
+              Planos da <span className="text-accent">​Mentoria FULL </span>
             </h2>
           </ScrollReveal>
           

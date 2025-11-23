@@ -460,7 +460,7 @@ const Index = () => {
       </div>
 
       {/* Guarantee Section */}
-      <GuaranteeSection />
+      <GuaranteeSection onScrollToPlans={scrollToPlans} />
 
       {/* Section Transition */}
       <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">

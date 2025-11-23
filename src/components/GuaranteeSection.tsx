@@ -2,7 +2,7 @@ import { Shield, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { ScrollReveal } from "./ScrollReveal";
 
-export const GuaranteeSection = () => {
+export const GuaranteeSection = ({ onScrollToPlans }: { onScrollToPlans?: () => void }) => {
   return (
     <section className="py-24 bg-gradient-to-br from-accent/5 via-background to-primary/5">
       <div className="container mx-auto px-4">
@@ -44,6 +44,7 @@ export const GuaranteeSection = () => {
                 <Button 
                   variant="gold" 
                   size="lg" 
+                  onClick={onScrollToPlans}
                   className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all"
                 >
                   COMEÇAR AGORA COM GARANTIA →

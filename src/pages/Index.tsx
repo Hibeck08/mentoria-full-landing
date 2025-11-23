@@ -564,7 +564,7 @@ const Index = () => {
               Por que a Mentoria <span className="text-accent">FULL?</span>
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-2xl mx-auto">
-              Conheça os diferenciais que fazem a diferença
+              Conheça os benefícios que fazem a diferença
             </p>
           </ScrollReveal>
           

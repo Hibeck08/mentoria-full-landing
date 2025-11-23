@@ -16,6 +16,13 @@ import certificates from "@/assets/certificates.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
+  const scrollToPlans = () => {
+    const plansSection = document.getElementById('planos-mentoria');
+    if (plansSection) {
+      plansSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
@@ -126,7 +133,7 @@ const Index = () => {
                 <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{
                 animationDelay: "0.5s"
               }}>
-                  <Button variant="gold" size="lg" className="text-lg md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-10 py-7 md:px-12 md:py-8 w-full sm:w-auto">
+                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-10 py-7 md:px-12 md:py-8 w-full sm:w-auto">
                     QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
                   <p className="text-sm md:text-sm text-muted-foreground/80 text-center md:text-left">
@@ -283,7 +290,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   GARANTA SUA VAGA AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -346,7 +353,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   GARANTIR MINHA VAGA AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -504,7 +511,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -584,7 +591,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -611,7 +618,7 @@ const Index = () => {
       </div>
 
       {/* Pricing Section */}
-      <section className="py-16 md:py-32 bg-background relative overflow-hidden">
+      <section id="planos-mentoria" className="py-16 md:py-32 bg-background relative overflow-hidden">
         <div className="absolute inset-0">
           <img src="/lovable-uploads/military-background.png" alt="Military background" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
@@ -654,7 +661,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="outline" className="w-full py-5 md:py-6 text-base md:text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
+                  <Button variant="outline" className="w-full py-5 md:py-6 text-base md:text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
                     ASSINAR PLANO MENSAL →
                   </Button>
                   <p className="text-xs md:text-xs text-center text-muted-foreground">
@@ -699,7 +706,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2 md:space-y-3">
-                  <Button variant="default" className="w-full py-5 md:py-6 text-base md:text-base font-bold bg-background text-accent hover:bg-background/90">
+                  <Button variant="default" className="w-full py-5 md:py-6 text-base md:text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
                     GARANTIR PLANO SEMESTRAL →
                   </Button>
                   <p className="text-xs md:text-xs text-center text-background/90 font-medium">
@@ -795,7 +802,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
+                  <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
                     ADQUIRIR LIVRO DIGITAL →
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
@@ -870,7 +877,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   QUERO TODOS OS BÔNUS AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -924,7 +931,7 @@ const Index = () => {
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all px-6 py-4 md:px-8 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+        <Button variant="gold" size="lg" className="rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all px-6 py-4 md:px-8 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
           💬 Fale Comigo
         </Button>
       </div>

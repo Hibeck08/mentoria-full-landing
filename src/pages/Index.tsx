@@ -135,11 +135,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-primary/5">
-        <div className="flex flex-col items-center gap-2 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-accent" />
-          <ChevronDown className="w-6 h-6 text-accent -mt-4 opacity-50" />
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-background to-primary/5">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Users className="w-6 h-6 text-accent" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -277,9 +283,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
-        <ArrowDown className="w-8 h-8 text-accent animate-pulse" />
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-background to-secondary/20">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Target className="w-6 h-6 text-accent" />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Target Audience Section */}
@@ -582,12 +597,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/20 to-background">
-        <div className="flex items-center gap-2">
-          <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-accent"></div>
-          <ChevronDown className="w-6 h-6 text-accent" />
-          <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-accent"></div>
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-secondary/20 px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Rocket className="w-6 h-6 text-accent" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -666,15 +686,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Transition - Pricing Highlight */}
-      <div className="flex justify-center py-12 bg-gradient-to-b from-background to-background">
-        <div className="flex flex-col items-center gap-3 animate-bounce">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-accent"></div>
-            <p className="text-sm text-accent font-bold tracking-widest">PLANOS E INVESTIMENTO</p>
-            <div className="w-3 h-3 rounded-full bg-accent"></div>
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-background to-background">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Trophy className="w-6 h-6 text-accent" />
+            </div>
           </div>
-          <ArrowDown className="w-8 h-8 text-accent" />
         </div>
       </div>
 
@@ -796,13 +818,27 @@ const Index = () => {
                   <p className="text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
                 </div>
                 
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90">
                     GARANTIR PLANO SEMESTRAL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">
                     Economize 40% • <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
                   </p>
+                  <div className="flex items-center justify-center gap-3 pt-2">
+                    <div className="bg-background/90 rounded px-2 py-1">
+                      <span className="text-[10px] font-bold text-accent">MASTERCARD</span>
+                    </div>
+                    <div className="bg-background/90 rounded px-2 py-1">
+                      <span className="text-[10px] font-bold text-accent">VISA</span>
+                    </div>
+                    <div className="bg-background/90 rounded px-2 py-1">
+                      <span className="text-[10px] font-bold text-accent">PIX</span>
+                    </div>
+                    <div className="bg-background/90 rounded px-2 py-1">
+                      <span className="text-[10px] font-bold text-accent">BOLETO</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
@@ -811,7 +847,7 @@ const Index = () => {
           {/* Third Card - Book Only */}
           <div className="mt-12 max-w-md mx-auto">
             <ScrollReveal>
-              <div className="bg-card border border-border rounded-3xl p-8 hover:shadow-premium transition-all duration-300 flex flex-col">
+              <div className="bg-card border-[3px] border-accent/40 rounded-3xl p-8 hover:shadow-premium transition-all duration-300 flex flex-col shadow-lg">
                 <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6 w-fit mx-auto">
                   <span className="text-xs font-semibold text-muted-foreground">Livro Digital</span>
                   <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
@@ -903,15 +939,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/10">
-        <div className="flex flex-col items-center gap-1">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-            <ArrowDown className="w-5 h-5 text-accent" />
-            <div className="w-8 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-background to-secondary/10">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Award className="w-6 h-6 text-accent" />
+            </div>
           </div>
-          <p className="text-xs text-accent font-semibold">BÔNUS EXCLUSIVOS</p>
         </div>
       </div>
 
@@ -958,10 +996,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/10 to-background">
-        <div className="flex items-center gap-2 animate-pulse">
-          <ChevronDown className="w-6 h-6 text-accent" />
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-secondary/10 to-background">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-secondary/10 px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Brain className="w-6 h-6 text-accent" />
+            </div>
+          </div>
         </div>
       </div>
 

@@ -151,15 +151,10 @@ const Index = () => {
         {/* Static Horizontal banner strip */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
           <div className="bg-gradient-primary py-3 md:py-6 border-y-2 border-accent-dark/30">
-            <div className="flex justify-center overflow-hidden">
-              <div className="animate-scroll-left flex whitespace-nowrap">
-                <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
-                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
-                </span>
-                <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
-                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
-                </span>
-              </div>
+            <div className="flex justify-center">
+              <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
+                ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
+              </span>
             </div>
           </div>
         </div>
@@ -242,61 +237,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Military Heritage Section */}
-      <section className="relative py-16 md:py-32 overflow-hidden bg-gradient-to-br from-background via-accent-dark/30 to-background">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-20">
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-background to-primary/5">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Users className="w-6 h-6 text-accent" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Who Am I Section */}
+      <section className="py-12 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
+        {/* Background Military Heritage Image */}
+        <div className="absolute inset-0 opacity-[0.07]">
           <img 
             src={militaryHeritage} 
             alt="Tradição Militar" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-background"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background"></div>
         </div>
         
-        <div className="container relative z-10 mx-auto px-6 md:px-4">
-          <ScrollReveal>
-            <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
-              <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2 mb-4">
-                <Shield className="w-5 h-5 text-accent" />
-                <span className="text-sm font-semibold text-foreground">Tradição e Excelência</span>
-              </div>
-              
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight">
-                Uma Jornada de <span className="text-accent">Disciplina e Honra</span>
-              </h2>
-              
-              <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Seguir a carreira militar é mais do que uma escolha profissional – é abraçar uma tradição de excelência, disciplina e serviço. A Mentoria FULL te prepara não apenas tecnicamente, mas também mentalmente para essa jornada transformadora.
-              </p>
-              
-              <div className="grid sm:grid-cols-3 gap-6 md:gap-8 pt-8 md:pt-12">
-                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
-                  <Target className="w-10 h-10 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-foreground mb-2">Foco</h3>
-                  <p className="text-sm text-muted-foreground">Direcionamento claro para sua aprovação</p>
-                </div>
-                
-                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
-                  <Zap className="w-10 h-10 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-foreground mb-2">Disciplina</h3>
-                  <p className="text-sm text-muted-foreground">Método estruturado e consistente</p>
-                </div>
-                
-                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
-                  <Trophy className="w-10 h-10 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-foreground mb-2">Resultado</h3>
-                  <p className="text-sm text-muted-foreground">Aprovação nas academias militares</p>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-12 md:py-32 relative overflow-hidden bg-background">
-        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-20" />
+        <div className="absolute top-1/2 right-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
         <div className="container relative z-10 mx-auto px-6 md:px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center max-w-7xl mx-auto">
             <ScrollReveal variant="left">

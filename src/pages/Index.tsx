@@ -116,7 +116,7 @@ const Index = () => {
               ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR •     
             </span>
             <span className="inline-block text-background font-bold text-lg px-8">
-              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • 
             </span>
           </div>
         </div>

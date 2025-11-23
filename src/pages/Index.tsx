@@ -15,6 +15,7 @@ import heroMain from "@/assets/hero-main.png";
 import certificates from "@/assets/certificates.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryHeritage from "@/assets/military-heritage.png";
+import militaryWallpaper from "@/assets/military-wallpaper.png";
 import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
   const scrollToPlans = () => {
@@ -252,14 +253,14 @@ const Index = () => {
       </div>
 
       {/* Who Am I Section */}
-      <section className="py-12 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
-        {/* Background Military Heritage Image */}
-        <div className="absolute inset-0 opacity-[0.07]">
-          <img src={militaryHeritage} alt="Tradição Militar" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background"></div>
+      <section className="py-12 md:py-32 relative overflow-hidden">
+        {/* Background Military Wallpaper */}
+        <div className="absolute inset-0">
+          <img src={militaryWallpaper} alt="Military Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/95"></div>
         </div>
         
-        <div className="absolute top-1/2 right-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+        <div className="absolute top-1/2 right-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
         <div className="container relative z-10 mx-auto px-6 md:px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center max-w-7xl mx-auto">
             <ScrollReveal variant="left">

@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
-import heroMentor from "@/assets/hero-mentor.png";
+import heroMain from "@/assets/hero-main.png";
 import certificates from "@/assets/certificates.png";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -83,7 +83,7 @@ const Index = () => {
                   {/* Main Image */}
                   <div className="relative">
                     <img 
-                      src={heroMentor} 
+                      src={heroMain} 
                       alt="Mentor aprovado em múltiplas academias militares" 
                       className="relative z-10 w-full max-w-lg mx-auto h-auto object-contain drop-shadow-2xl"
                     />

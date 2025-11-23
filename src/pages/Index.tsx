@@ -57,7 +57,7 @@ const Index = () => {
         {/* Floating decorative elements */}
         <div className="absolute inset-0 z-5 pointer-events-none">
           {/* Mobile minimal floating icons - Reduced for performance */}
-          <div className="absolute top-20 right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          <div className="absolute top-1/3 right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
           animationDelay: "0.5s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
@@ -65,7 +65,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="absolute bottom-32 left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          <div className="absolute top-1/2 left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
           animationDelay: "1s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">

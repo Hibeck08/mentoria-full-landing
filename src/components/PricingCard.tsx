@@ -17,13 +17,13 @@ export const PricingCard = ({ featured, title, price, features }: PricingCardPro
     <div 
       className={`relative bg-card border rounded-2xl p-8 transition-all duration-300 ${
         featured 
-          ? "border-primary shadow-premium scale-105" 
-          : "border-border hover:border-primary/50"
+          ? "border-accent shadow-glow-beige scale-105" 
+          : "border-border hover:border-accent/50"
       }`}
     >
       {featured && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="bg-gradient-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+          <span className="bg-accent text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-glow-beige">
             MAIS POPULAR
           </span>
         </div>
@@ -32,7 +32,7 @@ export const PricingCard = ({ featured, title, price, features }: PricingCardPro
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold text-foreground mb-4">{title}</h3>
         <div className="flex items-baseline justify-center gap-2">
-          <span className="text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <span className="text-5xl font-bold text-accent">
             {price}
           </span>
         </div>
@@ -50,8 +50,7 @@ export const PricingCard = ({ featured, title, price, features }: PricingCardPro
       </ul>
 
       <Button 
-        variant={featured ? "default" : "outline"}
-        className="w-full"
+        className={`w-full ${featured ? "bg-accent text-accent-foreground hover:bg-accent/90" : "bg-accent text-accent-foreground hover:bg-accent/90"}`}
         size="lg"
       >
         GARANTIR MINHA VAGA

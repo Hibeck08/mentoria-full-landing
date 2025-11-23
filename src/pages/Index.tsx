@@ -17,6 +17,7 @@ import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
 import certificates from "@/assets/certificates.png";
+import bryanPhoto from "@/assets/bryan-photo.jpg";
 import Autoplay from "embla-carousel-autoplay";
 
 const Index = () => {
@@ -112,7 +113,7 @@ const Index = () => {
             <div className="bg-gradient-primary/30 backdrop-blur-sm py-6 border-y-2 border-accent-dark/20">
               <div className="flex justify-center">
                 <span className="text-accent-foreground/50 font-bold text-lg tracking-wider">
-                  ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
+                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
             </div>
@@ -123,7 +124,7 @@ const Index = () => {
             <div className="bg-gradient-primary py-6 border-y-2 border-accent-dark/30">
               <div className="flex justify-center">
                 <span className="text-accent-foreground font-bold text-lg tracking-wider">
-                  ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
+                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
             </div>
@@ -131,53 +132,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Who We Are Section */}
+      {/* Who Am I Section */}
       <section className="py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         <div className="absolute top-1/2 right-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
         <div className="container relative z-10 mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              Quem <span className="bg-gradient-primary bg-clip-text text-transparent">Somos Nós</span>
+              Quem <span className="bg-gradient-primary bg-clip-text text-transparent">Sou Eu</span>
             </h2>
             <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-              Conheça quem está por trás da sua aprovação
+              Conheça quem vai te guiar até a aprovação
             </p>
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <ScrollReveal variant="scale" delay={100}>
-              <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-premium transition-all duration-300 text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-primary mx-auto mb-6 flex items-center justify-center">
-                  <Trophy className="w-10 h-10 text-accent-foreground" />
+          <div className="max-w-5xl mx-auto">
+            <ScrollReveal variant="scale">
+              <div className="bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-3xl p-8 md:p-12 hover:shadow-premium transition-all duration-300">
+                <div className="grid md:grid-cols-[350px_1fr] gap-8 md:gap-12 items-center">
+                  {/* Foto */}
+                  <div className="relative mx-auto md:mx-0">
+                    <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-30" />
+                    <img 
+                      src={bryanPhoto} 
+                      alt="Bryan Hibeck" 
+                      className="relative rounded-3xl w-full h-auto object-cover shadow-premium border-2 border-accent/20"
+                    />
+                  </div>
+                  
+                  {/* Descrição */}
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center gap-2 bg-gradient-primary rounded-full px-4 py-2 mb-2">
+                      <Trophy className="w-5 h-5 text-accent-foreground" />
+                      <span className="text-sm font-bold text-accent-foreground">Mentor e Aprovado</span>
+                    </div>
+                    
+                    <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                      Bryan Hibeck
+                    </h3>
+                    
+                    <p className="text-sm text-accent font-semibold mb-4">
+                      Nascido em 17/03/2004
+                    </p>
+                    
+                    <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
+                      <p>
+                        Ganhei destaque no mundo dos concursos por ter feito <strong className="text-accent">mais de 20 mil questões</strong> durante os meus 8 meses de preparação no ano de 2024.
+                      </p>
+                      
+                      <p>
+                        Consegui aprovação na <strong className="text-foreground">AFA</strong>, sendo o <strong className="text-accent">10º colocado geral</strong> (01 de infantaria, 04 de intendência e 05 de aviação), <strong className="text-foreground">EFOMM</strong> sendo o <strong className="text-accent">08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT)</strong> sendo o <strong className="text-accent">15º colocado</strong>.
+                      </p>
+                      
+                      <p>
+                        Estudo desde o ano de 2021 e consegui minha primeira classificação no concurso da <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses no ano de 2021.
+                      </p>
+                      
+                      <p className="text-foreground font-semibold pt-2">
+                        Minha missão agora é compartilhar esse método que me levou ao sucesso e ajudar você a conquistar sua aprovação! 🎯
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Mentores Aprovados</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Nossa equipe é formada exclusivamente por aprovados nas principais academias militares do Brasil. Quem ensina aqui já passou pelo que você está passando.
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal variant="scale" delay={200}>
-              <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-premium transition-all duration-300 text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-primary mx-auto mb-6 flex items-center justify-center">
-                  <Target className="w-10 h-10 text-accent-foreground" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Método Comprovado</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Desenvolvemos uma metodologia testada e aprovada por centenas de alunos. Não é teoria, é prática que funciona e gera resultados reais.
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal variant="scale" delay={300}>
-              <div className="bg-card border border-border rounded-2xl p-8 hover:shadow-premium transition-all duration-300 text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-primary mx-auto mb-6 flex items-center justify-center">
-                  <Users className="w-10 h-10 text-accent-foreground" />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Comunidade Forte</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Mais do que uma mentoria, somos uma família. Nossa comunidade apoia, motiva e celebra cada conquista junto com você até a aprovação.
-                </p>
               </div>
             </ScrollReveal>
           </div>
@@ -235,6 +250,14 @@ const Index = () => {
               </div>
             </ScrollReveal>
           </div>
+          
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                GARANTA SUA VAGA AGORA →
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -546,6 +569,14 @@ const Index = () => {
               </ScrollReveal>
             ))}
           </div>
+          
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                QUERO FAZER PARTE AGORA →
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -761,6 +792,18 @@ const Index = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Floating Contact Button */}
+      <div className="fixed bottom-8 right-8 z-50 animate-float">
+        <Button 
+          variant="gold" 
+          size="lg"
+          className="rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all px-8 py-6 text-base font-bold"
+          onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
+        >
+          💬 Fale Comigo
+        </Button>
+      </div>
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">

@@ -1,0 +1,459 @@
+<?php
+/**
+ * Template Name: Página Inicial (Landing Page)
+ * 
+ * Template para a landing page da Mentoria FULL
+ * 
+ * @package Mentoria_FULL
+ */
+
+get_header();
+?>
+
+<main id="primary" class="site-main">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        
+        <!-- Background -->
+        <div style="position: absolute; inset: 0; z-index: 0;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/hero-main.png" alt="Background Hero" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.9) contrast(1.1);">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(15, 10, 23, 0.6) 0%, rgba(15, 10, 23, 0.4) 50%, rgba(15, 10, 23, 0.8) 100%);"></div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div style="position: absolute; top: 32px; right: 80px; z-index: 5;" class="animate-float">
+            <div style="background: linear-gradient(135deg, #e4c384 0%, #ffffff 100%); backdrop-filter: blur(12px); border-radius: 16px; padding: 20px; box-shadow: 0 0 60px rgba(228, 195, 132, 0.6); border: 1px solid rgba(228, 195, 132, 0.2);">
+                <i data-lucide="trophy" style="width: 40px; height: 40px; color: #0f0a17;"></i>
+            </div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 10; padding: 80px 20px;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                
+                <!-- Logo -->
+                <div style="position: absolute; top: 32px; left: 32px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/mentoria-logo.png" alt="Mentoria FULL" style="width: 80px; height: 80px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));">
+                </div>
+                
+                <!-- Badge Mentor -->
+                <div style="position: absolute; top: 32px; right: 32px; display: flex; align-items: center; gap: 12px; background: rgba(20, 16, 29, 0.8); backdrop-filter: blur(8px); border: 1px solid rgba(228, 195, 132, 0.3); border-radius: 9999px; padding: 8px 16px;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/hero-photo.jpg" alt="Mentor" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent);">
+                    <span style="font-size: 0.875rem; font-weight: 700;">@hibeck_</span>
+                </div>
+                
+                <!-- Conteúdo Principal -->
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 32px; padding-top: 120px; padding-bottom: 80px;">
+                    <div style="max-width: 800px; text-align: center;">
+                        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 24px;">
+                            <span style="color: var(--foreground);">
+                                ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER 
+                            </span>
+                            <span style="background: linear-gradient(135deg, #ffffff 0%, #e4c384 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!
+                            </span>
+                        </h1>
+                        
+                        <p style="font-size: 1.125rem; color: #b0b0b0; line-height: 1.6; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                            Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                            <a href="#planos-mentoria" class="btn btn-gold" style="font-size: 1.125rem; padding: 20px 48px;">
+                                QUERO ME INSCREVER AGORA MESMO! →
+                            </a>
+                            <p style="font-size: 0.875rem; color: rgba(176, 176, 176, 0.8);">
+                                ⚡ Vagas limitadas • Comece agora mesmo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Banner Inferior -->
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden; pointer-events: none;">
+            <div style="background: linear-gradient(135deg, #e4c384 0%, #ffffff 100%); padding: 24px 0; border-top: 2px solid rgba(143, 114, 80, 0.3); border-bottom: 2px solid rgba(143, 114, 80, 0.3);">
+                <div style="text-align: center;">
+                    <span style="color: #0f0a17; font-weight: 700; font-size: 1.125rem; letter-spacing: 0.05em;">
+                        ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: QUEM SOU EU -->
+    <section id="sobre" class="scroll-reveal" style="padding: 120px 0; background: linear-gradient(to bottom right, var(--background) 0%, rgba(124, 58, 237, 0.05) 50%, var(--background) 100%); position: relative; overflow: hidden;">
+        
+        <div style="position: absolute; top: 50%; right: 33%; width: 500px; height: 500px; background: var(--accent); border-radius: 50%; filter: blur(150px); opacity: 0.15;"></div>
+        
+        <div class="container">
+            <h2 class="section-title">
+                Quem <span class="gradient-text">sou eu?</span>
+            </h2>
+            <p class="section-subtitle">
+                Conheça quem vai te guiar até a aprovação
+            </p>
+            
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div class="card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center;">
+                    
+                    <!-- Foto -->
+                    <div style="position: relative;">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #e4c384 0%, #ffffff 100%); border-radius: 24px; filter: blur(40px); opacity: 0.3;"></div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/bryan-photo.jpg" alt="Bryan Hibeck" style="position: relative; border-radius: 24px; width: 100%; height: auto; object-fit: cover; box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4); border: 2px solid rgba(228, 195, 132, 0.2);">
+                    </div>
+                    
+                    <!-- Descrição -->
+                    <div>
+                        <div style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #e4c384 0%, #ffffff 100%); border-radius: 9999px; padding: 8px 16px; margin-bottom: 16px;">
+                            <i data-lucide="trophy" style="width: 20px; height: 20px; color: #0f0a17;"></i>
+                            <span style="font-size: 0.875rem; font-weight: 700; color: #0f0a17;">Mentor e Aprovado</span>
+                        </div>
+                        
+                        <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">
+                            Bryan Hibeck
+                        </h3>
+                        
+                        <p style="font-size: 0.875rem; color: var(--accent); font-weight: 600; margin-bottom: 24px;">
+                            Nascido em 17/03/2004
+                        </p>
+                        
+                        <div style="space-y: 16px; font-size: 1rem; color: #b0b0b0; line-height: 1.8;">
+                            <p>
+                                Ganhei destaque no mundo dos concursos por ter feito <strong style="color: var(--accent);">mais de 20 mil questões</strong> durante os meus 8 meses de preparação no ano de 2024.
+                            </p>
+                            
+                            <p>
+                                Consegui aprovação na <strong style="color: var(--foreground);">AFA</strong>, sendo o <strong style="color: var(--accent);">10º colocado geral</strong> (01 de infantaria, 04 de intendência e 05 de aviação), <strong style="color: var(--foreground);">EFOMM</strong> sendo o <strong style="color: var(--accent);">08º colocado</strong> e na <strong style="color: var(--foreground);">EEAr (BCT)</strong> sendo o <strong style="color: var(--accent);">15º colocado</strong>.
+                            </p>
+                            
+                            <p>
+                                Estudo desde o ano de 2021 e consegui minha primeira classificação no concurso da <strong style="color: var(--foreground);">EPCAr</strong> estudando apenas 3 meses no ano de 2021.
+                            </p>
+                            
+                            <p style="color: var(--foreground); font-weight: 600; margin-top: 16px;">
+                                Minha missão agora é compartilhar esse método que me levou ao sucesso e ajudar você a conquistar sua aprovação! 🎯
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: O MÉTODO -->
+    <section id="metodo" class="scroll-reveal" style="padding: 120px 0; position: relative; overflow: hidden;">
+        
+        <!-- Background Wallpaper -->
+        <div style="position: absolute; inset: 0;">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/military-wallpaper.png" alt="Military Background" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(15, 10, 23, 0.95) 0%, rgba(15, 10, 23, 0.85) 50%, rgba(15, 10, 23, 0.95) 100%);"></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 10;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 1200px; margin: 0 auto;">
+                
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(20, 16, 29, 0.8); backdrop-filter: blur(8px); border: 1px solid rgba(228, 195, 132, 0.3); border-radius: 9999px; padding: 8px 24px; margin-bottom: 24px;">
+                        <span style="font-size: 1rem; font-weight: 600;">Mentoria FULL</span>
+                        <div style="width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                            <i data-lucide="trophy" style="width: 20px; height: 20px; color: var(--background);"></i>
+                        </div>
+                    </div>
+                    
+                    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2;">
+                        O PASSO A PASSO QUE TRANSFORMA O ESTUDO EM RESULTADO REAL
+                    </h2>
+                    
+                    <div style="space-y: 16px; font-size: 1rem; color: #b0b0b0; line-height: 1.6;">
+                        <p>
+                            Se você já tentou estudar para concursos militares e não teve resultado, não foi culpa sua.
+                        </p>
+                        
+                        <p>
+                            A verdade é que não basta só estudar, você precisa de um <strong style="color: var(--foreground);">método validado</strong> que realmente funcione.
+                        </p>
+                        
+                        <p style="color: var(--foreground); font-weight: 600;">
+                            A Mentoria FULL é um método validado, usado por concurseiros para conquistar suas vagas nas academias militares, com um passo a passo simples e direto ao ponto.
+                        </p>
+                        
+                        <p>
+                            Mesmo que você não tenha experiência com o estudo em si, vai conseguir criar resultados extraordinários que realmente levam à aprovação.
+                        </p>
+                        
+                        <p>
+                            Com planejamento pronto, plano de metas e um passo a passo, você nunca mais vai estudar no escuro!
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="position: relative;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(124, 58, 237, 0.3) 0%, rgba(228, 195, 132, 0.2) 100%); border-radius: 24px; filter: blur(40px);"></div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/study-setup.png" alt="Setup de estudos" style="position: relative; border-radius: 24px; width: 100%; box-shadow: 0 20px 60px rgba(124, 58, 237, 0.4); border: 1px solid rgba(228, 195, 132, 0.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: PLANOS -->
+    <section id="planos-mentoria" class="scroll-reveal" style="padding: 120px 0; background: var(--background);">
+        <div class="container">
+            <h2 class="section-title">
+                Escolha Seu <span class="gradient-text">Plano</span>
+            </h2>
+            <p class="section-subtitle">
+                Invista no seu futuro com o método que já aprovou centenas de alunos
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto;">
+                
+                <?php
+                // Query para buscar planos
+                $args = array(
+                    'post_type' => 'pricing_plan',
+                    'posts_per_page' => -1,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC'
+                );
+                
+                $plans_query = new WP_Query($args);
+                
+                if ($plans_query->have_posts()) :
+                    while ($plans_query->have_posts()) : $plans_query->the_post();
+                        
+                        $price = get_post_meta(get_the_ID(), '_price', true);
+                        $original_price = get_post_meta(get_the_ID(), '_original_price', true);
+                        $payment_link = get_post_meta(get_the_ID(), '_payment_link', true);
+                        $features = get_post_meta(get_the_ID(), '_features', true);
+                        $is_popular = get_post_meta(get_the_ID(), '_is_popular', true);
+                        
+                        $features_array = $features ? explode("\n", $features) : array();
+                        ?>
+                        
+                        <div class="card" style="<?php echo $is_popular ? 'border-color: var(--accent); box-shadow: 0 0 60px rgba(228, 195, 132, 0.6);' : ''; ?> position: relative;">
+                            
+                            <?php if ($is_popular) : ?>
+                                <div style="position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--background); padding: 6px 20px; border-radius: 9999px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase;">
+                                    Mais Popular
+                                </div>
+                            <?php endif; ?>
+                            
+                            <div style="text-align: center; margin-bottom: 32px;">
+                                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 16px;">
+                                    <?php the_title(); ?>
+                                </h3>
+                                
+                                <?php if ($original_price) : ?>
+                                    <p style="text-decoration: line-through; color: #888; margin-bottom: 8px;">
+                                        De R$ <?php echo esc_html($original_price); ?>
+                                    </p>
+                                <?php endif; ?>
+                                
+                                <p style="font-size: 2.5rem; font-weight: 900; color: var(--accent); margin-bottom: 8px;">
+                                    R$ <?php echo esc_html($price); ?>
+                                </p>
+                                
+                                <?php if (has_excerpt()) : ?>
+                                    <p style="color: #b0b0b0; font-size: 0.875rem;">
+                                        <?php the_excerpt(); ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <ul style="list-style: none; padding: 0; margin-bottom: 32px;">
+                                <?php foreach ($features_array as $feature) : 
+                                    $feature = trim($feature);
+                                    if (!empty($feature)) :
+                                ?>
+                                    <li style="display: flex; align-items: start; gap: 12px; margin-bottom: 16px;">
+                                        <i data-lucide="check-circle" style="width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; margin-top: 2px;"></i>
+                                        <span style="color: #b0b0b0;"><?php echo esc_html($feature); ?></span>
+                                    </li>
+                                <?php 
+                                    endif;
+                                endforeach; ?>
+                            </ul>
+                            
+                            <a href="<?php echo esc_url($payment_link); ?>" target="_blank" class="btn btn-gold" style="width: 100%; text-align: center;">
+                                Assinar Agora
+                            </a>
+                        </div>
+                        
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: DEPOIMENTOS -->
+    <section id="depoimentos" class="scroll-reveal" style="padding: 120px 0; background: linear-gradient(to bottom, var(--background) 0%, var(--secondary) 100%);">
+        <div class="container">
+            <h2 class="section-title">
+                O Que Nossos <span class="gradient-text">Alunos Dizem</span>
+            </h2>
+            <p class="section-subtitle">
+                Resultados reais de quem seguiu o método
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto;">
+                
+                <?php
+                // Query para buscar depoimentos
+                $testimonials_args = array(
+                    'post_type' => 'testimonial',
+                    'posts_per_page' => 6,
+                    'orderby' => 'date',
+                    'order' => 'DESC'
+                );
+                
+                $testimonials_query = new WP_Query($testimonials_args);
+                
+                if ($testimonials_query->have_posts()) :
+                    while ($testimonials_query->have_posts()) : $testimonials_query->the_post();
+                        
+                        $student_name = get_post_meta(get_the_ID(), '_student_name', true);
+                        $achievement = get_post_meta(get_the_ID(), '_achievement', true);
+                        $rating = get_post_meta(get_the_ID(), '_rating', true);
+                        ?>
+                        
+                        <div class="card">
+                            <div style="margin-bottom: 16px;">
+                                <?php
+                                // Exibir estrelas
+                                for ($i = 0; $i < 5; $i++) {
+                                    if ($i < intval($rating)) {
+                                        echo '<i data-lucide="star" style="width: 20px; height: 20px; color: var(--accent); fill: var(--accent); display: inline-block;"></i>';
+                                    } else {
+                                        echo '<i data-lucide="star" style="width: 20px; height: 20px; color: #888; display: inline-block;"></i>';
+                                    }
+                                }
+                                ?>
+                            </div>
+                            
+                            <div style="color: #b0b0b0; line-height: 1.6; margin-bottom: 24px;">
+                                <?php the_content(); ?>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(228, 195, 132, 0.2);">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('thumbnail', array('style' => 'width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent);')); ?>
+                                <?php endif; ?>
+                                
+                                <div>
+                                    <p style="font-weight: 700; margin-bottom: 4px;">
+                                        <?php echo esc_html($student_name); ?>
+                                    </p>
+                                    <p style="font-size: 0.875rem; color: var(--accent);">
+                                        <?php echo esc_html($achievement); ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: FAQ -->
+    <section id="faq" class="scroll-reveal" style="padding: 120px 0; background: var(--background);">
+        <div class="container">
+            <h2 class="section-title">
+                Perguntas <span class="gradient-text">Frequentes</span>
+            </h2>
+            <p class="section-subtitle">
+                Tire suas dúvidas sobre a mentoria
+            </p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-accordion">
+                    
+                    <!-- FAQ 1 -->
+                    <div class="faq-item card" style="margin-bottom: 16px;">
+                        <button class="faq-question" style="width: 100%; text-align: left; background: none; border: none; color: var(--foreground); font-size: 1.125rem; font-weight: 700; padding: 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="this.parentElement.classList.toggle('active');">
+                            Para quem é a mentoria?
+                            <i data-lucide="chevron-down" style="width: 24px; height: 24px; transition: transform 0.3s;"></i>
+                        </button>
+                        <div class="faq-answer" style="padding: 0 24px 24px; color: #b0b0b0; line-height: 1.6; display: none;">
+                            <p>A Mentoria FULL é para quem está se preparando para concursos militares como AFA, EFOMM, EEAR, EPCAr e EN. Seja você iniciante ou já tenha experiência, o método se adapta ao seu nível.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="faq-item card" style="margin-bottom: 16px;">
+                        <button class="faq-question" style="width: 100%; text-align: left; background: none; border: none; color: var(--foreground); font-size: 1.125rem; font-weight: 700; padding: 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="this.parentElement.classList.toggle('active');">
+                            Por quanto tempo terei acesso?
+                            <i data-lucide="chevron-down" style="width: 24px; height: 24px; transition: transform 0.3s;"></i>
+                        </button>
+                        <div class="faq-answer" style="padding: 0 24px 24px; color: #b0b0b0; line-height: 1.6; display: none;">
+                            <p>O acesso é válido pelo período da assinatura escolhida. Apenas o Livro Digital possui acesso vitalício.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 3 -->
+                    <div class="faq-item card" style="margin-bottom: 16px;">
+                        <button class="faq-question" style="width: 100%; text-align: left; background: none; border: none; color: var(--foreground); font-size: 1.125rem; font-weight: 700; padding: 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="this.parentElement.classList.toggle('active');">
+                            Como funciona o suporte?
+                            <i data-lucide="chevron-down" style="width: 24px; height: 24px; transition: transform 0.3s;"></i>
+                        </button>
+                        <div class="faq-answer" style="padding: 0 24px 24px; color: #b0b0b0; line-height: 1.6; display: none;">
+                            <p>Você terá acesso a um grupo exclusivo no WhatsApp onde poderá tirar dúvidas diretamente comigo e com outros alunos. Respondemos em até 24h.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="scroll-reveal" style="padding: 100px 0; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; font-weight: 900; color: var(--background); margin-bottom: 20px;">
+                Pronto para Mudar Sua História?
+            </h2>
+            <p style="font-size: 1.25rem; color: rgba(15, 10, 23, 0.8); margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Junte-se aos centenas de alunos que já estão conquistando seus objetivos
+            </p>
+            <a href="#planos-mentoria" class="btn" style="background: var(--background); color: var(--foreground); font-size: 1.25rem; padding: 20px 48px;">
+                COMEÇAR AGORA →
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<script>
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = this.querySelector('[data-lucide="chevron-down"]');
+        
+        // Toggle answer
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+            if (icon) icon.style.transform = 'rotate(180deg)';
+        } else {
+            answer.style.display = 'none';
+            if (icon) icon.style.transform = 'rotate(0deg)';
+        }
+    });
+});
+</script>
+
+<?php
+get_footer();

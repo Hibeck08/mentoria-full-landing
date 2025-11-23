@@ -163,7 +163,7 @@ const Index = () => {
         <div className="container relative z-10 mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              Quem <span className="bg-gradient-primary bg-clip-text text-transparent">Sou Eu</span>
+              Quem <span className="bg-gradient-primary bg-clip-text text-transparent">sou eu?</span>
             </h2>
             <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
               Conheça quem vai te guiar até a aprovação

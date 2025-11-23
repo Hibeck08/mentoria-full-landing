@@ -139,7 +139,7 @@ const Index = () => {
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
-            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-20 pb-24 md:pt-0 md:pb-0">
+            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-32 pb-8 md:pt-0 md:pb-0">
               <div className="space-y-5 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>

@@ -85,7 +85,7 @@ const Index = () => {
               <div className="space-y-6 md:space-y-8 animate-fade-in-up max-w-2xl z-10" style={{ animationDelay: "0.3s" }}>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
                   <span className="text-foreground">
-                    ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER{" "}
+                    ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER{" "}
                   </span>
                   <span className="bg-gradient-hero-text bg-clip-text text-transparent">
                     CLASSIFICADO NA AFA, EPCAR, EEAR e EFOMM!

@@ -255,11 +255,7 @@ const Index = () => {
       <section className="py-12 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background relative overflow-hidden">
         {/* Background Military Heritage Image */}
         <div className="absolute inset-0 opacity-[0.07]">
-          <img 
-            src={militaryHeritage} 
-            alt="Tradição Militar" 
-            className="w-full h-full object-cover"
-          />
+          <img src={militaryHeritage} alt="Tradição Militar" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background/90 to-background"></div>
         </div>
         
@@ -969,17 +965,17 @@ const Index = () => {
             <div>
               <h3 className="text-base md:text-base font-bold text-foreground mb-3 md:mb-4">Links Úteis</h3>
               <ul className="space-y-1.5 md:space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Sobre</a></li>
+                
                 <li><a href="#" className="hover:text-primary transition-colors">Contato</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Termos de Uso</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Política de Privacidade</a></li>
+                
+                
               </ul>
             </div>
             <div>
               <h3 className="text-base md:text-base font-bold text-foreground mb-3 md:mb-4">Redes Sociais</h3>
               <a href="#" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-4 h-4 md:w-5 md:h-5" />
-                <span>@mentoriafull</span>
+                <span>​@hibeck_</span>
               </a>
             </div>
           </div>

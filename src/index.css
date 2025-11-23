@@ -20,9 +20,10 @@ All colors MUST be HSL.
     --secondary: 266 40% 12%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Accent - Premium Gold */
-    --accent: 45 100% 55%;
+    /* Accent - Premium Beige */
+    --accent: 42 71% 68%;
     --accent-foreground: 0 0% 10%;
+    --accent-dark: 33 34% 39%;
 
     /* Muted */
     --muted: 266 20% 20%;
@@ -58,15 +59,15 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(266 80% 35%) 0%, hsl(266 60% 45%) 50%, hsl(45 100% 55%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(42 71% 68%) 0%, hsl(33 34% 39%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(266 30% 6%) 0%, hsl(266 40% 10%) 50%, hsl(266 30% 6%) 100%);
-    --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(45 100% 55%) 100%);
+    --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(42 71% 68%) 100%);
 
     /* Premium Shadows with Glow */
-    --shadow-premium: 0 20px 60px -10px hsl(266 80% 35% / 0.4), 0 10px 30px -10px hsl(45 100% 55% / 0.3), 0 0 80px hsl(266 80% 35% / 0.2);
+    --shadow-premium: 0 20px 60px -10px hsl(266 80% 35% / 0.4), 0 10px 30px -10px hsl(42 71% 68% / 0.3), 0 0 80px hsl(266 80% 35% / 0.2);
     --glow-purple: 0 0 40px hsl(266 80% 35% / 0.6), 0 0 80px hsl(266 80% 35% / 0.4), 0 0 120px hsl(266 80% 35% / 0.2);
-    --glow-gold: 0 0 40px hsl(45 100% 55% / 0.6), 0 0 80px hsl(45 100% 55% / 0.4), 0 0 120px hsl(45 100% 55% / 0.2);
-    --shadow-glow-gold: 0 8px 32px hsl(45 100% 55% / 0.5), 0 0 60px hsl(45 100% 55% / 0.3);
+    --glow-beige: 0 0 40px hsl(42 71% 68% / 0.6), 0 0 80px hsl(42 71% 68% / 0.4), 0 0 120px hsl(42 71% 68% / 0.2);
+    --shadow-glow-beige: 0 8px 32px hsl(42 71% 68% / 0.5), 0 0 60px hsl(42 71% 68% / 0.3);
   }
 
   .dark {

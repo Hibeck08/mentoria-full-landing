@@ -14,6 +14,7 @@ import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
 import certificates from "@/assets/certificates.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
+import militaryHeritage from "@/assets/military-heritage.png";
 import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
   const scrollToPlans = () => {
@@ -153,10 +154,10 @@ const Index = () => {
             <div className="flex justify-center overflow-hidden">
               <div className="animate-scroll-left flex whitespace-nowrap">
                 <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
-                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
+                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
                 <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
-                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
+                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
             </div>
@@ -241,6 +242,58 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Military Heritage Section */}
+      <section className="relative py-16 md:py-32 overflow-hidden bg-gradient-to-br from-background via-accent-dark/30 to-background">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src={militaryHeritage} 
+            alt="Tradição Militar" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-background"></div>
+        </div>
+        
+        <div className="container relative z-10 mx-auto px-6 md:px-4">
+          <ScrollReveal>
+            <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-8">
+              <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2 mb-4">
+                <Shield className="w-5 h-5 text-accent" />
+                <span className="text-sm font-semibold text-foreground">Tradição e Excelência</span>
+              </div>
+              
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight">
+                Uma Jornada de <span className="text-accent">Disciplina e Honra</span>
+              </h2>
+              
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                Seguir a carreira militar é mais do que uma escolha profissional – é abraçar uma tradição de excelência, disciplina e serviço. A Mentoria FULL te prepara não apenas tecnicamente, mas também mentalmente para essa jornada transformadora.
+              </p>
+              
+              <div className="grid sm:grid-cols-3 gap-6 md:gap-8 pt-8 md:pt-12">
+                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
+                  <Target className="w-10 h-10 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-foreground mb-2">Foco</h3>
+                  <p className="text-sm text-muted-foreground">Direcionamento claro para sua aprovação</p>
+                </div>
+                
+                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
+                  <Zap className="w-10 h-10 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-foreground mb-2">Disciplina</h3>
+                  <p className="text-sm text-muted-foreground">Método estruturado e consistente</p>
+                </div>
+                
+                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-6">
+                  <Trophy className="w-10 h-10 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-foreground mb-2">Resultado</h3>
+                  <p className="text-sm text-muted-foreground">Aprovação nas academias militares</p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-12 md:py-32 relative overflow-hidden bg-background">
         <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-20" />
@@ -292,7 +345,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
                   GARANTA SUA VAGA AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -355,7 +408,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
                   GARANTIR MINHA VAGA AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -513,7 +566,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -593,7 +646,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -877,7 +930,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
                   QUERO TODOS OS BÔNUS AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -931,7 +984,7 @@ const Index = () => {
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all px-6 py-4 md:px-8 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
+        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-6 py-4 md:px-8 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
           💬 Fale Comigo
         </Button>
       </div>

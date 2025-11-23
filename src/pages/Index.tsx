@@ -18,20 +18,37 @@ import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
-          <img src={heroMain} alt="Background" className="w-full h-full object-cover brightness-90 contrast-110 saturate-110" />
+          <img src={heroMain} alt="Background" className="w-full h-full object-cover object-center md:object-cover brightness-90 contrast-110 saturate-110" />
           {/* Gradient overlay for better text readability and depth */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/50 to-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           {/* Subtle vignette effect */}
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40" />
         </div>
         
         {/* Floating decorative elements */}
         <div className="absolute inset-0 z-5 pointer-events-none">
-          {/* Top right floating icon */}
-          <div className="absolute top-32 right-20 animate-float opacity-80 hidden lg:block" style={{
+          {/* Mobile minimal floating icons */}
+          <div className="absolute top-20 right-6 animate-float opacity-60 md:hidden" style={{
+          animationDelay: "0.5s"
+        }}>
+            <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
+              <Trophy className="w-6 h-6 text-accent-foreground" />
+            </div>
+          </div>
+          
+          <div className="absolute bottom-32 left-6 animate-float opacity-60 md:hidden" style={{
+          animationDelay: "1s"
+        }}>
+            <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
+              <Target className="w-6 h-6 text-accent-foreground" />
+            </div>
+          </div>
+          
+          {/* Desktop floating icons */}
+          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block" style={{
           animationDelay: "0.5s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
@@ -39,8 +56,7 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Bottom left floating icon */}
-          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden lg:block" style={{
+          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden md:block lg:block" style={{
           animationDelay: "1s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
@@ -48,7 +64,6 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Middle right floating icon */}
           <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{
           animationDelay: "1.5s"
         }}>
@@ -72,12 +87,14 @@ const Index = () => {
         }} />
         </div>
         
-        <div className="container relative z-10 mx-auto px-4 py-12 md:py-20">
-          <div className="max-w-7xl mx-auto">
+        <div className="container relative z-10 mx-auto px-4 py-8 md:py-20 h-full">
+          <div className="max-w-7xl mx-auto h-full">
+            {/* Logo - Fixed top left */}
             <div className="absolute top-4 md:top-8 left-4 md:left-8 animate-fade-in-up z-20">
               <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl" />
             </div>
             
+            {/* Badge - Desktop only */}
             <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
             animationDelay: "0.2s"
           }}>
@@ -85,11 +102,12 @@ const Index = () => {
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
             
-            <div className="flex flex-col items-start justify-center gap-8 md:gap-12 min-h-[70vh] md:min-h-[80vh] pt-16 md:pt-0">
-              <div className="space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10" style={{
+            {/* Mobile Layout: Centered image with text below */}
+            <div className="flex flex-col items-center justify-end md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-20 pb-24 md:pt-0 md:pb-0">
+              <div className="space-y-5 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-center md:text-left">
                   <span className="text-foreground">
                     ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER{" "}
                   </span>
@@ -98,17 +116,17 @@ const Index = () => {
                   </span>
                 </h1>
                 
-                <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl">
+                <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
                   Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
                 </p>
                 
-                <div className="flex flex-col items-center gap-3 md:gap-4 pt-2 md:pt-4" style={{
+                <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{
                 animationDelay: "0.5s"
               }}>
-                  <Button variant="gold" size="lg" className="text-sm md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-semibold px-8 py-6 md:px-12 md:py-8 w-full sm:w-auto">
+                  <Button variant="gold" size="lg" className="text-base md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-10 py-7 md:px-12 md:py-8 w-full sm:w-auto">
                     QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
-                  <p className="text-xs md:text-sm text-muted-foreground/80 text-center">
+                  <p className="text-xs md:text-sm text-muted-foreground/80 text-center md:text-left">
                     ⚡ Vagas limitadas • Comece agora mesmo
                   </p>
                 </div>
@@ -117,25 +135,16 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Static Horizontal banner strips */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 md:h-32 overflow-hidden pointer-events-none">
-          {/* Background strip (faded) */}
-          <div className="absolute inset-0 translate-y-2 md:translate-y-4">
-            <div className="bg-gradient-primary/30 backdrop-blur-sm py-3 md:py-6 border-y border-accent-dark/20">
-              <div className="flex justify-center">
-                <span className="text-accent-foreground/50 font-bold text-xs md:text-base lg:text-lg tracking-wider whitespace-nowrap">
-                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
+        {/* Static Horizontal banner strip */}
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
+          <div className="bg-gradient-primary py-3 md:py-6 border-y-2 border-accent-dark/30">
+            <div className="flex justify-center overflow-hidden">
+              <div className="animate-scroll-left flex whitespace-nowrap">
+                <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">
+                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
-              </div>
-            </div>
-          </div>
-          
-          {/* Foreground strip (bright) */}
-          <div className="absolute inset-0 translate-y-8 md:translate-y-12">
-            <div className="bg-gradient-primary py-3 md:py-6 border-y-2 border-accent-dark/30">
-              <div className="flex justify-center">
-                <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider whitespace-nowrap">
-                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
+                <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">
+                  ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
             </div>

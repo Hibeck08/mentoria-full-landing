@@ -561,7 +561,7 @@ const Index = () => {
         <div className="container mx-auto px-6 md:px-4">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-4">
-              Por Que a Mentoria <span className="text-accent">FULL?</span>
+              Por que a Mentoria <span className="text-accent">FULL?</span>
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-2xl mx-auto">
               Conheça os diferenciais que fazem a diferença

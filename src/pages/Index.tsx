@@ -105,10 +105,10 @@ const Index = () => {
           </div>
         </div>
         
-        {/* X-shaped banner strips */}
+        {/* Horizontal banner strips */}
         <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden pointer-events-none">
           {/* Background strip (faded) */}
-          <div className="absolute inset-0 -rotate-6 translate-y-8">
+          <div className="absolute inset-0 translate-y-4">
             <div className="bg-gradient-primary/30 backdrop-blur-sm py-6 border-y-2 border-accent-dark/20">
               <div className="flex whitespace-nowrap animate-scroll-left">
                 <span className="inline-block text-accent-foreground/50 font-bold text-lg px-4 tracking-wider">
@@ -119,7 +119,7 @@ const Index = () => {
           </div>
           
           {/* Foreground strip (bright) */}
-          <div className="absolute inset-0 rotate-6 translate-y-8">
+          <div className="absolute inset-0 translate-y-12">
             <div className="bg-gradient-primary py-6 border-y-2 border-accent-dark/30">
               <div className="flex whitespace-nowrap animate-scroll-right">
                 <span className="inline-block text-accent-foreground font-bold text-lg px-4 tracking-wider">

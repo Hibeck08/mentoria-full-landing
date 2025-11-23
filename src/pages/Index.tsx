@@ -36,7 +36,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/hero-mobile.png" 
             alt="Background" 
-            className="block md:hidden w-full h-full object-cover object-[center_35%] brightness-90 contrast-110 saturate-110"
+            className="block md:hidden w-full h-full object-cover object-[center_20%] brightness-90 contrast-110 saturate-110"
             loading="eager"
             fetchPriority="high"
           />

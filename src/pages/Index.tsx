@@ -110,7 +110,7 @@ const Index = () => {
               <div className="space-y-5 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-center md:text-left">
+                <h1 className="text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-center md:text-left">
                   <span className="text-foreground">
                     ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER{" "}
                   </span>
@@ -119,17 +119,17 @@ const Index = () => {
                   </span>
                 </h1>
                 
-                <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
+                <p className="text-base md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
                   Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
                 </p>
                 
                 <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{
                 animationDelay: "0.5s"
               }}>
-                  <Button variant="gold" size="lg" className="text-base md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-10 py-7 md:px-12 md:py-8 w-full sm:w-auto">
+                  <Button variant="gold" size="lg" className="text-lg md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-10 py-7 md:px-12 md:py-8 w-full sm:w-auto">
                     QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
-                  <p className="text-xs md:text-sm text-muted-foreground/80 text-center md:text-left">
+                  <p className="text-sm md:text-sm text-muted-foreground/80 text-center md:text-left">
                     ⚡ Vagas limitadas • Comece agora mesmo
                   </p>
                 </div>
@@ -143,10 +143,10 @@ const Index = () => {
           <div className="bg-gradient-primary py-3 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center overflow-hidden">
               <div className="animate-scroll-left flex whitespace-nowrap">
-                <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">
+                <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
                   ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
-                <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">
+                <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
                   ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐ MENTORIA AFA EFOMM EN EEAR ⭐
                 </span>
               </div>
@@ -174,10 +174,10 @@ const Index = () => {
         <div className="absolute top-1/2 right-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
         <div className="container relative z-10 mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
               Quem <span className="bg-gradient-primary bg-clip-text text-transparent">sou eu?</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
+            <p className="text-lg md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
               Conheça quem vai te guiar até a aprovação
             </p>
           </ScrollReveal>
@@ -199,15 +199,15 @@ const Index = () => {
                       <span className="text-xs md:text-sm font-bold text-accent-foreground">Mentor e Aprovado</span>
                     </div>
                     
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-1 md:mb-2">
+                    <h3 className="text-3xl md:text-3xl lg:text-4xl font-bold text-foreground mb-1 md:mb-2">
                       Bryan Hibeck
                     </h3>
                     
-                    <p className="text-xs md:text-sm text-accent font-semibold mb-3 md:mb-4">
+                    <p className="text-sm md:text-sm text-accent font-semibold mb-3 md:mb-4">
                       Nascido em 17/03/2004
                     </p>
                     
-                    <div className="space-y-3 md:space-y-4 text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
+                    <div className="space-y-3 md:space-y-4 text-base md:text-base lg:text-lg text-muted-foreground leading-relaxed">
                       <p>
                         Ganhei destaque no mundo dos concursos por ter feito <strong className="text-accent">mais de 20 mil questões</strong> durante os meus 8 meses de preparação no ano de 2024.
                       </p>
@@ -240,17 +240,17 @@ const Index = () => {
             <ScrollReveal variant="left">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2">
-                  <span className="text-sm font-semibold text-foreground">Mentoria FULL</span>
+                  <span className="text-base font-semibold text-foreground">Mentoria FULL</span>
                   <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
                     <Trophy className="w-5 h-5 text-background" />
                   </div>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
+                <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
                   O PASSO A PASSO QUE TRANSFORMA O ESTUDO EM RESULTADO REAL
                 </h2>
                 
-                <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base md:text-base lg:text-lg text-muted-foreground leading-relaxed">
                   Se você já tentou estudar para concursos militares e não teve resultado, não foi culpa sua.
                 </p>
                 
@@ -283,10 +283,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-base md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   GARANTA SUA VAGA AGORA →
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">
+                <p className="text-sm md:text-sm text-muted-foreground text-center">
                   💳 Parcelamento em até 12x • Satisfação garantida
                 </p>
               </div>
@@ -313,10 +313,10 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-secondary/20">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
               Para quem é a <span className="bg-gradient-primary bg-clip-text text-transparent">Mentoria FULL?</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
+            <p className="text-lg md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
               Se você se identifica com algum desses perfis, essa mentoria foi feita para você.
             </p>
           </ScrollReveal>
@@ -346,10 +346,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-base md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   GARANTIR MINHA VAGA AGORA →
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">
+                <p className="text-sm md:text-sm text-muted-foreground text-center">
                   🚀 Transforme seu estudo • Método comprovado
                 </p>
               </div>
@@ -373,7 +373,7 @@ const Index = () => {
       <section className="py-16 md:py-32 relative overflow-hidden bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16">
               A Transformação é <span className="text-accent">Real</span>
             </h2>
           </ScrollReveal>
@@ -405,14 +405,14 @@ const Index = () => {
           <ScrollReveal>
             <div className="flex justify-center mb-8 md:mb-12">
               <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 md:px-6 py-2">
-                <span className="text-xs md:text-sm font-semibold text-foreground">Mentoria FULL</span>
+                <span className="text-sm md:text-sm font-semibold text-foreground">Mentoria FULL</span>
                 <div className="w-6 h-6 md:w-8 md:h-8 bg-accent rounded-lg flex items-center justify-center">
                   <Target className="w-4 h-4 md:w-5 md:h-5 text-background" />
                 </div>
               </div>
             </div>
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 md:mb-16">
               O que <span className="text-accent">você vai Aprender?</span>
             </h2>
           </ScrollReveal>
@@ -426,14 +426,14 @@ const Index = () => {
                         <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                       </div>
                     </div>
-                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground">{item}</p>
+                    <p className="text-base md:text-base lg:text-lg text-muted-foreground">{item}</p>
                   </div>
                 </div>
               </ScrollReveal>)}
           </div>
           
           <ScrollReveal>
-            <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-center mt-12 md:mt-16 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-lg md:text-lg lg:text-xl xl:text-2xl text-center mt-12 md:mt-16 max-w-4xl mx-auto leading-relaxed px-4">
               <span className="font-bold text-foreground">E o melhor?</span>{" "}
               <span className="text-muted-foreground">
                 Nada de ficar perdido! Você recebe planejamento pronto, checklists e um passo a passo validado para seguir e aplicar.
@@ -458,7 +458,7 @@ const Index = () => {
       {/* Section Transition */}
       <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
         <div className="flex flex-col items-center gap-2">
-          <p className="text-xs text-accent font-semibold tracking-wider">VEJA OS RESULTADOS</p>
+          <p className="text-sm text-accent font-semibold tracking-wider">VEJA OS RESULTADOS</p>
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{
@@ -475,10 +475,10 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-secondary/20 overflow-hidden">
         <div className="container mx-auto px-4 mb-8 md:mb-12">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
               Resultados que <span className="bg-gradient-primary bg-clip-text text-transparent">comprovam</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-lg lg:text-xl text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
               A prova de que o método realmente funciona
             </p>
           </ScrollReveal>
@@ -504,10 +504,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-base md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">
+                <p className="text-sm md:text-sm text-muted-foreground text-center">
                   🎯 Junte-se aos aprovados • Resultados comprovados
                 </p>
               </div>
@@ -534,10 +534,10 @@ const Index = () => {
       <section className="py-16 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
               Por Que a Mentoria <span className="text-accent">FULL?</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
+            <p className="text-lg md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
               Conheça os diferenciais que fazem a diferença
             </p>
           </ScrollReveal>
@@ -574,8 +574,8 @@ const Index = () => {
                     <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center mb-4">
                       {item.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-base text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               </ScrollReveal>)}
@@ -584,10 +584,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-base md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">
+                <p className="text-sm md:text-sm text-muted-foreground text-center">
                   ✨ Seja um dos próximos aprovados • Método FULL 
                 </p>
               </div>
@@ -619,7 +619,7 @@ const Index = () => {
         
         <div className="container relative z-10 mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-12 md:mb-16">
               Planos da <span className="text-accent">​Mentoria FULL </span>
             </h2>
           </ScrollReveal>
@@ -628,36 +628,36 @@ const Index = () => {
             <ScrollReveal variant="left" className="h-full">
               <div className="bg-card border border-border rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col h-full">
                 <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6 w-fit">
-                  <span className="text-xs font-semibold text-muted-foreground">Plano Mensal</span>
+                  <span className="text-sm font-semibold text-muted-foreground">Plano Mensal</span>
                   <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
                     <BookOpen className="w-4 h-4 text-background" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="text-3xl md:text-3xl font-bold mb-2">
                   Mentoria <span className="text-accent">FULL</span>
                 </h3>
                 
-                <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6">Pagamento Mensal</p>
+                <p className="text-sm md:text-sm text-muted-foreground mb-4 md:mb-6">Pagamento Mensal</p>
                 
                 <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
                   {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados semanais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso aos materiais durante a assinatura", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-foreground">{item}</span>
+                      <span className="text-base text-foreground">{item}</span>
                     </li>)}
                 </ul>
                 
                 <div className="mb-4 md:mb-6 mt-auto">
-                  <p className="text-xs md:text-sm text-muted-foreground mb-1 md:mb-2">de R$ 129,90 por</p>
+                  <p className="text-sm md:text-sm text-muted-foreground mb-1 md:mb-2">de R$ 129,90 por</p>
                   <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent mb-1">R$109,90</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">/mês</p>
+                  <p className="text-sm md:text-sm text-muted-foreground">/mês</p>
                 </div>
                 
                 <div className="space-y-2">
-                  <Button variant="outline" className="w-full py-5 md:py-6 text-sm md:text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
+                  <Button variant="outline" className="w-full py-5 md:py-6 text-base md:text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
                     ASSINAR PLANO MENSAL →
                   </Button>
-                  <p className="text-[10px] md:text-xs text-center text-muted-foreground">
+                  <p className="text-xs md:text-xs text-center text-muted-foreground">
                     Por apenas <span className="font-bold text-accent">12x de R$29,70</span> ou R$297 à vista
                   </p>
                 </div>
@@ -667,56 +667,56 @@ const Index = () => {
             <ScrollReveal variant="right" className="h-full">
               <div className="bg-accent/95 border-2 border-accent rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full">
                 <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-primary text-primary-foreground px-4 md:px-6 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-bold shadow-lg">
+                  <div className="bg-primary text-primary-foreground px-4 md:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-sm font-bold shadow-lg">
                     MAIS POPULAR   
                   </div>
                 </div>
                 
                 <div className="inline-flex items-center gap-2 bg-background/90 border border-background rounded-full px-3 md:px-4 py-1.5 mb-4 md:mb-6 w-fit">
-                  <span className="text-xs font-semibold text-foreground">Plano Semestral</span>
+                  <span className="text-sm font-semibold text-foreground">Plano Semestral</span>
                   <div className="w-6 h-6 bg-background rounded-lg flex items-center justify-center">
                     <Trophy className="w-4 h-4 text-accent" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-background">
+                <h3 className="text-3xl md:text-3xl font-bold mb-2 text-background">
                   Mentoria <span className="text-background">FULL</span>
                 </h3>
                 
-                <p className="text-xs md:text-sm text-background/80 mb-4 md:mb-6">Pagamento Semestral</p>
+                <p className="text-sm md:text-sm text-background/80 mb-4 md:mb-6">Pagamento Semestral</p>
                 
                 <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
                   {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados semanais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-background font-medium">{item}</span>
+                      <span className="text-base text-background font-medium">{item}</span>
                     </li>)}
                 </ul>
                 
                 <div className="mb-4 md:mb-6 mt-auto">
-                  <p className="text-xs md:text-sm text-background/80 mb-1 md:mb-2">de R$ 1.997,00 por apenas</p>
+                  <p className="text-sm md:text-sm text-background/80 mb-1 md:mb-2">de R$ 1.997,00 por apenas</p>
                   <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$997</p>
-                  <p className="text-xs md:text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
+                  <p className="text-sm md:text-sm text-background/80">à vista ou 12x de R$ 97,00</p>
                 </div>
                 
                 <div className="space-y-2 md:space-y-3">
-                  <Button variant="default" className="w-full py-5 md:py-6 text-sm md:text-base font-bold bg-background text-accent hover:bg-background/90">
+                  <Button variant="default" className="w-full py-5 md:py-6 text-base md:text-base font-bold bg-background text-accent hover:bg-background/90">
                     GARANTIR PLANO SEMESTRAL →
                   </Button>
-                  <p className="text-[10px] md:text-xs text-center text-background/90 font-medium">
+                  <p className="text-xs md:text-xs text-center text-background/90 font-medium">
                     Economize 40% • <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
                   </p>
                   <div className="flex items-center justify-center gap-2 md:gap-3 pt-1 md:pt-2">
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[10px] font-bold text-accent">MASTERCARD</span>
+                      <span className="text-xs font-bold text-accent">MASTERCARD</span>
                     </div>
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[10px] font-bold text-accent">VISA</span>
+                      <span className="text-xs font-bold text-accent">VISA</span>
                     </div>
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[10px] font-bold text-accent">PIX</span>
+                      <span className="text-xs font-bold text-accent">PIX</span>
                     </div>
                     <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[10px] font-bold text-accent">BOLETO</span>
+                      <span className="text-xs font-bold text-accent">BOLETO</span>
                     </div>
                   </div>
                 </div>
@@ -729,62 +729,62 @@ const Index = () => {
             <ScrollReveal>
               <div className="bg-card border-[3px] border-accent/40 rounded-2xl md:rounded-3xl p-6 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col shadow-lg">
                 <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6 w-fit mx-auto">
-                  <span className="text-xs font-semibold text-muted-foreground">Livro Digital</span>
+                  <span className="text-sm font-semibold text-muted-foreground">Livro Digital</span>
                   <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
                     <BookOpen className="w-4 h-4 text-background" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-center">
+                <h3 className="text-3xl md:text-3xl font-bold mb-2 text-center">
                   Livro  <span className="text-accent">Método Hibeck </span>
                 </h3>
                 
-                <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6 text-center">Pagamento Único</p>
+                <p className="text-sm md:text-sm text-muted-foreground mb-4 md:mb-6 text-center">Pagamento Único</p>
                 
                 <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Mentoria 1:1 personalizada</span>
+                    <span className="text-base text-muted-foreground line-through">Mentoria 1:1 personalizada</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Acompanhamento diário exclusivo</span>
+                    <span className="text-base text-muted-foreground line-through">Acompanhamento diário exclusivo</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">PDFs completos + bônus premium</span>
+                    <span className="text-base text-muted-foreground line-through">PDFs completos + bônus premium</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Simulados semanais + correção detalhada</span>
+                    <span className="text-base text-muted-foreground line-through">Simulados semanais + correção detalhada</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Aulas ao vivo e gravadas</span>
+                    <span className="text-base text-muted-foreground line-through">Aulas ao vivo e gravadas</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground font-medium">Livro com a minha metodologia</span>
+                    <span className="text-base text-foreground font-medium">Livro com a minha metodologia</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground font-medium">Estratégias para AFA, EN, EFOMM, EEAR</span>
+                    <span className="text-base text-foreground font-medium">Estratégias para AFA, EN, EFOMM, EEAR</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Revisões com professores especializados</span>
+                    <span className="text-base text-muted-foreground line-through">Revisões com professores especializados</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Suporte direto com mentores</span>
+                    <span className="text-base text-muted-foreground line-through">Suporte direto com mentores</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground font-medium">Acesso vitalício</span>
+                    <span className="text-base text-foreground font-medium">Acesso vitalício</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground line-through">Comunidade de aprovados</span>
+                    <span className="text-base text-muted-foreground line-through">Comunidade de aprovados</span>
                   </li>
                 </ul>
                 
@@ -812,7 +812,7 @@ const Index = () => {
           </div>
           
           <ScrollReveal>
-            <p className="text-center text-muted-foreground mt-6 md:mt-8 text-xs md:text-sm">
+            <p className="text-center text-muted-foreground mt-6 md:mt-8 text-sm md:text-sm">
               🔒 Garantia de 7 dias • Pagamento 100% seguro
             </p>
           </ScrollReveal>
@@ -837,10 +837,10 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-secondary/10">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
               Bônus <span className="bg-gradient-primary bg-clip-text text-transparent">Exclusivos</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
+            <p className="text-lg md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
               Método Hibeck 
             </p>
           </ScrollReveal>
@@ -870,10 +870,10 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button variant="gold" size="lg" className="text-base md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
+                <Button variant="gold" size="lg" className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all w-full sm:w-auto">
                   QUERO TODOS OS BÔNUS AGORA →
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground text-center">
+                <p className="text-sm md:text-sm text-muted-foreground text-center">
                   🎁 Bônus exclusivos inclusos • Valor inestimável
                 </p>
               </div>
@@ -900,10 +900,10 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
+            <h2 className="text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4">
               Perguntas <span className="bg-gradient-primary bg-clip-text text-transparent">Frequentes</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
+            <p className="text-lg md:text-lg lg:text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
               Tire suas dúvidas sobre a Mentoria FULL.
             </p>
           </ScrollReveal>
@@ -924,7 +924,7 @@ const Index = () => {
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all px-6 py-4 md:px-8 md:py-6 text-sm md:text-base font-bold" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
+        <Button variant="gold" size="lg" className="rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all px-6 py-4 md:px-8 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://wa.me/5511999999999', '_blank')}>
           💬 Fale Comigo
         </Button>
       </div>
@@ -935,12 +935,12 @@ const Index = () => {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
               <img src={mentoriaLogo} alt="Mentoria FULL" className="w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4" />
-              <p className="text-sm md:text-base text-muted-foreground italic font-semibold">
+              <p className="text-base md:text-base text-muted-foreground italic font-semibold">
                 "Transformando disciplina em aprovação."
               </p>
             </div>
             <div>
-              <h3 className="text-sm md:text-base font-bold text-foreground mb-3 md:mb-4">Links Úteis</h3>
+              <h3 className="text-base md:text-base font-bold text-foreground mb-3 md:mb-4">Links Úteis</h3>
               <ul className="space-y-1.5 md:space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Sobre</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Contato</a></li>
@@ -949,7 +949,7 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm md:text-base font-bold text-foreground mb-3 md:mb-4">Redes Sociais</h3>
+              <h3 className="text-base md:text-base font-bold text-foreground mb-3 md:mb-4">Redes Sociais</h3>
               <a href="#" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="w-4 h-4 md:w-5 md:h-5" />
                 <span>@mentoriafull</span>
@@ -957,7 +957,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-border pt-6 md:pt-8 text-center text-muted-foreground">
-            <p className="text-xs md:text-sm">&copy; 2024 Mentoria FULL. Todos os direitos reservados.</p>
+            <p className="text-sm md:text-sm">&copy; 2024 Mentoria FULL. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

@@ -33,7 +33,7 @@ const Index = () => {
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image */}
-          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" />
+          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_35%] brightness-90 contrast-110 saturate-110" />
           {/* Desktop image */}
           <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" />
           {/* Gradient overlay for better text readability and depth */}
@@ -117,12 +117,12 @@ const Index = () => {
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
-            <div className="flex flex-col items-center justify-end md:justify-center md:items-start gap-8 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-20 pb-28 md:pt-0 md:pb-0">
-              <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
+            <div className="flex flex-col items-start md:justify-center md:items-start gap-6 md:gap-12 min-h-[85vh] md:min-h-[80vh] pt-20 pb-32 md:pt-0 md:pb-0">
+              <div className="space-y-5 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
-                <h1 className="text-[1.5rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.15] text-center md:text-left">
-                  <span className="text-foreground text-justify">
+                <h1 className="text-[1.35rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.2] text-left md:text-left">
+                  <span className="text-foreground">
                     ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER{" "}
                   </span>
                   <span className="bg-gradient-hero-text bg-clip-text text-transparent">
@@ -130,17 +130,17 @@ const Index = () => {
                   </span>
                 </h1>
                 
-                <p className="text-[0.875rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
+                <p className="text-[0.85rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-left md:text-left">
                   Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
                 </p>
                 
-                <div className="flex flex-col items-center md:items-start gap-4 md:gap-4 pt-4 md:pt-4 animate-fade-in-up" style={{
+                <div className="flex flex-col items-start md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{
                 animationDelay: "0.5s"
               }}>
-                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-[0.9rem] leading-tight md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
+                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-[0.85rem] leading-tight md:text-base lg:text-lg shadow-glow-beige rounded-full transition-all font-bold px-6 py-4 md:px-12 md:py-8 w-full sm:w-auto">
                     QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
-                  <p className="text-sm md:text-sm text-muted-foreground/80 text-center md:text-left">
+                  <p className="text-xs md:text-sm text-muted-foreground/80 text-left md:text-left">
                     ⚡ Vagas limitadas • Comece agora mesmo
                   </p>
                 </div>
@@ -150,7 +150,7 @@ const Index = () => {
         </div>
         
         {/* Static Horizontal banner strip */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
+        <div className="absolute bottom-20 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
           <div className="bg-gradient-primary py-2 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center">
               <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">

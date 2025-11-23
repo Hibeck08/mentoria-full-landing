@@ -648,7 +648,7 @@ const Index = () => {
                 <p className="text-sm md:text-sm text-muted-foreground mb-4 md:mb-6">Pagamento Mensal</p>
                 
                 <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados semanais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso aos materiais durante a assinatura", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso aos materiais durante a assinatura", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-base text-foreground">{item}</span>
                     </li>)}
@@ -693,7 +693,7 @@ const Index = () => {
                 <p className="text-sm md:text-sm text-background/80 mb-4 md:mb-6">Pagamento Semestral</p>
                 
                 <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados semanais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
                       <span className="text-base text-background font-medium">{item}</span>
                     </li>)}
@@ -763,7 +763,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-base text-muted-foreground line-through">Simulados semanais + correção detalhada</span>
+                    <span className="text-base text-muted-foreground line-through">Simulados mensais + correção detalhada</span>
                   </li>
                   <li className="flex items-start gap-3 opacity-40">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />

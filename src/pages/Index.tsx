@@ -537,7 +537,7 @@ const Index = () => {
               {
                 icon: <Clock className="w-6 h-6 text-primary-foreground" />,
                 title: "Flexível para Você",
-                description: "Estude no seu ritmo, com acesso vitalício aos materiais"
+                description: "Estude no seu ritmo, com acesso longo aos materiais"
               },
               {
                 icon: <TrendingUp className="w-6 h-6 text-primary-foreground" />,

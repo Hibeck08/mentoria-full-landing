@@ -24,14 +24,49 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           <img 
             src={heroMain} 
             alt="Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-90 contrast-110 saturate-110"
           />
-          <div className="absolute inset-0 bg-background/40" />
+          {/* Gradient overlay for better text readability and depth */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/60 via-background/50 to-background/70" />
+          {/* Subtle vignette effect */}
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40" />
+        </div>
+        
+        {/* Floating decorative elements */}
+        <div className="absolute inset-0 z-5 pointer-events-none">
+          {/* Top right floating icon */}
+          <div className="absolute top-32 right-20 animate-float opacity-80 hidden lg:block" style={{ animationDelay: "0.5s" }}>
+            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
+              <Trophy className="w-10 h-10 text-accent-foreground" />
+            </div>
+          </div>
+          
+          {/* Bottom left floating icon */}
+          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden lg:block" style={{ animationDelay: "1s" }}>
+            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
+              <Target className="w-10 h-10 text-accent-foreground" />
+            </div>
+          </div>
+          
+          {/* Middle right floating icon */}
+          <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{ animationDelay: "1.5s" }}>
+            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
+              <BookOpen className="w-10 h-10 text-accent-foreground" />
+            </div>
+          </div>
+          
+          {/* Decorative circles */}
+          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full border-2 border-accent/20 animate-float hidden lg:block" style={{ animationDelay: "0.8s" }} />
+          <div className="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-accent/20 animate-float hidden lg:block" style={{ animationDelay: "1.2s" }} />
+          
+          {/* Subtle glow effects */}
+          <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
+          <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
         </div>
         
         <div className="container relative z-10 mx-auto px-4 py-20">

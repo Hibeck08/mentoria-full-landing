@@ -443,34 +443,6 @@ const Index = () => {
       {/* Guarantee Section */}
       <GuaranteeSection />
 
-      {/* Big Numbers Section */}
-      <section className="py-32 relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-              Números que <span className="text-accent">Impressionam</span>
-            </h2>
-            <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-              Resultados reais de quem confia no método FULL
-            </p>
-          </ScrollReveal>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <ScrollReveal delay={0}>
-              <NumberStat number="+1.500" label="Alunos Impactados" icon={<Users className="w-8 h-8 text-primary-foreground" />} />
-            </ScrollReveal>
-            
-            <ScrollReveal delay={100}>
-              <NumberStat number="+300" label="Aprovações Diretas" icon={<Trophy className="w-8 h-8 text-primary-foreground" />} />
-            </ScrollReveal>
-            
-            <ScrollReveal delay={200}>
-              <NumberStat number="95%" label="Taxa de Satisfação" icon={<Award className="w-8 h-8 text-primary-foreground" />} />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* Section Transition */}
       <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
         <div className="flex flex-col items-center gap-2">
@@ -882,6 +854,19 @@ const Index = () => {
                 <FeatureCard {...item} />
               </ScrollReveal>)}
           </div>
+          
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <div className="flex flex-col items-center gap-3">
+                <Button variant="gold" size="lg" className="text-lg font-bold px-12 py-8 rounded-full shadow-glow-gold hover:shadow-glow-gold/70 transition-all">
+                  QUERO TODOS OS BÔNUS AGORA →
+                </Button>
+                <p className="text-sm text-muted-foreground">
+                  🎁 Bônus exclusivos inclusos • Valor inestimável
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

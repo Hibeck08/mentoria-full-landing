@@ -1,0 +1,217 @@
+<?php
+/**
+ * Mentoria FULL Theme Functions
+ * 
+ * @package Mentoria_FULL
+ * @since 1.0.0
+ */
+
+// Adicionar suporte ao tema
+function mentoria_full_setup() {
+    // Suporte a título do documento
+    add_theme_support('title-tag');
+    
+    // Suporte a imagens destacadas
+    add_theme_support('post-thumbnails');
+    
+    // Suporte a HTML5
+    add_theme_support('html5', array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+    ));
+    
+    // Registrar menus
+    register_nav_menus(array(
+        'primary' => __('Menu Principal', 'mentoria-full'),
+    ));
+}
+add_action('after_setup_theme', 'mentoria_full_setup');
+
+// Enfileirar estilos e scripts
+function mentoria_full_scripts() {
+    // CSS principal
+    wp_enqueue_style('mentoria-full-style', get_stylesheet_uri(), array(), '1.0.0');
+    
+    // Lucide Icons CDN
+    wp_enqueue_script('lucide-icons', 'https://unpkg.com/lucide@latest/dist/umd/lucide.js', array(), null, true);
+    
+    // Scripts personalizados
+    wp_enqueue_script('mentoria-full-script', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'mentoria_full_scripts');
+
+// Registrar áreas de widgets
+function mentoria_full_widgets_init() {
+    register_sidebar(array(
+        'name'          => __('Sidebar', 'mentoria-full'),
+        'id'            => 'sidebar-1',
+        'description'   => __('Adicione widgets aqui.', 'mentoria-full'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action('widgets_init', 'mentoria_full_widgets_init');
+
+// Custom Post Types (se necessário)
+function mentoria_full_custom_post_types() {
+    // Depoimentos
+    register_post_type('testimonial', array(
+        'labels' => array(
+            'name' => __('Depoimentos', 'mentoria-full'),
+            'singular_name' => __('Depoimento', 'mentoria-full'),
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'menu_icon' => 'dashicons-format-quote',
+    ));
+    
+    // Planos
+    register_post_type('pricing_plan', array(
+        'labels' => array(
+            'name' => __('Planos', 'mentoria-full'),
+            'singular_name' => __('Plano', 'mentoria-full'),
+        ),
+        'public' => true,
+        'has_archive' => false,
+        'supports' => array('title', 'editor'),
+        'menu_icon' => 'dashicons-cart',
+    ));
+}
+add_action('init', 'mentoria_full_custom_post_types');
+
+// Adicionar Custom Fields (se usar ACF ou similar, adapte conforme necessário)
+function mentoria_full_add_meta_boxes() {
+    // Meta box para depoimentos
+    add_meta_box(
+        'testimonial_details',
+        'Detalhes do Depoimento',
+        'mentoria_full_testimonial_meta_box',
+        'testimonial',
+        'normal',
+        'high'
+    );
+    
+    // Meta box para planos
+    add_meta_box(
+        'pricing_plan_details',
+        'Detalhes do Plano',
+        'mentoria_full_pricing_meta_box',
+        'pricing_plan',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'mentoria_full_add_meta_boxes');
+
+function mentoria_full_testimonial_meta_box($post) {
+    $student_name = get_post_meta($post->ID, '_student_name', true);
+    $achievement = get_post_meta($post->ID, '_achievement', true);
+    $rating = get_post_meta($post->ID, '_rating', true);
+    ?>
+    <p>
+        <label for="student_name">Nome do Aluno:</label><br>
+        <input type="text" id="student_name" name="student_name" value="<?php echo esc_attr($student_name); ?>" style="width: 100%;">
+    </p>
+    <p>
+        <label for="achievement">Conquista:</label><br>
+        <input type="text" id="achievement" name="achievement" value="<?php echo esc_attr($achievement); ?>" style="width: 100%;">
+    </p>
+    <p>
+        <label for="rating">Avaliação (1-5):</label><br>
+        <input type="number" id="rating" name="rating" value="<?php echo esc_attr($rating); ?>" min="1" max="5">
+    </p>
+    <?php
+}
+
+function mentoria_full_pricing_meta_box($post) {
+    $price = get_post_meta($post->ID, '_price', true);
+    $original_price = get_post_meta($post->ID, '_original_price', true);
+    $payment_link = get_post_meta($post->ID, '_payment_link', true);
+    $features = get_post_meta($post->ID, '_features', true);
+    $is_popular = get_post_meta($post->ID, '_is_popular', true);
+    ?>
+    <p>
+        <label for="price">Preço:</label><br>
+        <input type="text" id="price" name="price" value="<?php echo esc_attr($price); ?>" style="width: 100%;">
+    </p>
+    <p>
+        <label for="original_price">Preço Original (riscado):</label><br>
+        <input type="text" id="original_price" name="original_price" value="<?php echo esc_attr($original_price); ?>" style="width: 100%;">
+    </p>
+    <p>
+        <label for="payment_link">Link de Pagamento:</label><br>
+        <input type="url" id="payment_link" name="payment_link" value="<?php echo esc_attr($payment_link); ?>" style="width: 100%;">
+    </p>
+    <p>
+        <label for="features">Recursos (um por linha):</label><br>
+        <textarea id="features" name="features" rows="10" style="width: 100%;"><?php echo esc_textarea($features); ?></textarea>
+    </p>
+    <p>
+        <label>
+            <input type="checkbox" name="is_popular" value="1" <?php checked($is_popular, '1'); ?>>
+            Marcar como "Mais Popular"
+        </label>
+    </p>
+    <?php
+}
+
+// Salvar custom fields
+function mentoria_full_save_meta_boxes($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+    
+    // Salvar depoimento
+    if (isset($_POST['student_name'])) {
+        update_post_meta($post_id, '_student_name', sanitize_text_field($_POST['student_name']));
+    }
+    if (isset($_POST['achievement'])) {
+        update_post_meta($post_id, '_achievement', sanitize_text_field($_POST['achievement']));
+    }
+    if (isset($_POST['rating'])) {
+        update_post_meta($post_id, '_rating', sanitize_text_field($_POST['rating']));
+    }
+    
+    // Salvar plano
+    if (isset($_POST['price'])) {
+        update_post_meta($post_id, '_price', sanitize_text_field($_POST['price']));
+    }
+    if (isset($_POST['original_price'])) {
+        update_post_meta($post_id, '_original_price', sanitize_text_field($_POST['original_price']));
+    }
+    if (isset($_POST['payment_link'])) {
+        update_post_meta($post_id, '_payment_link', esc_url_raw($_POST['payment_link']));
+    }
+    if (isset($_POST['features'])) {
+        update_post_meta($post_id, '_features', sanitize_textarea_field($_POST['features']));
+    }
+    
+    $is_popular = isset($_POST['is_popular']) ? '1' : '0';
+    update_post_meta($post_id, '_is_popular', $is_popular);
+}
+add_action('save_post', 'mentoria_full_save_meta_boxes');
+
+// Limitar excerpt
+function mentoria_full_excerpt_length($length) {
+    return 30;
+}
+add_filter('excerpt_length', 'mentoria_full_excerpt_length');
+
+// Shortcodes úteis
+function mentoria_full_cta_button($atts) {
+    $atts = shortcode_atts(array(
+        'text' => 'QUERO ME INSCREVER AGORA!',
+        'link' => '#planos-mentoria',
+    ), $atts);
+    
+    return '<a href="' . esc_url($atts['link']) . '" class="btn btn-gold">' . esc_html($atts['text']) . '</a>';
+}
+add_shortcode('cta_button', 'mentoria_full_cta_button');
+
+// Desabilitar Gutenberg se necessário (opcional)
+// add_filter('use_block_editor_for_post', '__return_false', 10);

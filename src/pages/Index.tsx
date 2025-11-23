@@ -884,7 +884,7 @@ const Index = () => {
           }, {
             icon: Award,
             title: "Intensivo de Simulados",
-            description: "Bateria extra de testes para acelerar resultados"
+            description: "Simulados exclusivos para testar se a sua preparação está progredindo"
           }, {
             icon: Zap,
             title: "Acesso Antecipado",

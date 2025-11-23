@@ -19,8 +19,8 @@ const Index = () => {
         {/* Glow effects atrás da foto */}
         <div className="absolute top-1/2 right-1/3 w-[600px] h-[600px] bg-primary rounded-full blur-[150px] opacity-40 animate-glow-pulse" />
         <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[120px] opacity-30 animate-glow-pulse" style={{
-          animationDelay: "1.5s"
-        }} />
+        animationDelay: "1.5s"
+      }} />
         
         <div className="container relative z-10 mx-auto px-4 py-20">
           <div className="max-w-7xl mx-auto">
@@ -31,18 +31,18 @@ const Index = () => {
             
             {/* Badge no canto superior direito */}
             <div className="absolute top-8 right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2" style={{
-              animationDelay: "0.2s"
-            }}>
+            animationDelay: "0.2s"
+          }}>
               <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" />
-              <span className="text-sm font-semibold text-foreground">@mentoriafull</span>
+              <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
             
             {/* Conteúdo principal */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-8 min-h-[80vh]">
               {/* Left side - Copy */}
               <div className="flex-1 space-y-6 md:space-y-8 animate-fade-in-up max-w-2xl" style={{
-                animationDelay: "0.3s"
-              }}>
+              animationDelay: "0.3s"
+            }}>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
                   <span className="bg-gradient-hero-text bg-clip-text text-transparent">
                     ENTENDA A FORMA DE ESTUDOS QUE ME LEVOU A SER CLASSIFICADO
@@ -57,13 +57,9 @@ const Index = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4" style={{
-                  animationDelay: "0.5s"
-                }}>
-                  <Button 
-                    variant="gold" 
-                    size="lg" 
-                    className="text-base md:text-lg font-bold shadow-glow-gold text-center py-6 px-12 rounded-full hover:shadow-glow-gold/70 transition-all"
-                  >
+                animationDelay: "0.5s"
+              }}>
+                  <Button variant="gold" size="lg" className="text-base md:text-lg shadow-glow-gold text-center py-6 px-12 rounded-full hover:shadow-glow-gold/70 transition-all font-semibold pr-[35px] pl-[40px] pt-[30px] pb-[30px]">
                     QUERO ENTRAR AGORA! →
                   </Button>
                 </div>
@@ -71,36 +67,32 @@ const Index = () => {
               
               {/* Right side - Foto com elementos flutuantes */}
               <div className="flex-1 relative animate-fade-in-up" style={{
-                animationDelay: "0.4s"
-              }}>
+              animationDelay: "0.4s"
+            }}>
                 <div className="relative">
                   {/* Foto principal */}
-                  <img 
-                    src={heroPhoto} 
-                    alt="Mentor aprovado em múltiplas academias militares" 
-                    className="relative z-10 w-full max-w-md mx-auto h-auto object-cover"
-                  />
+                  <img src={heroPhoto} alt="Mentor aprovado em múltiplas academias militares" className="relative z-10 w-full max-w-md mx-auto h-auto object-cover" />
                   
                   {/* Elementos flutuantes */}
                   <div className="absolute -top-10 -left-10 animate-float opacity-80" style={{
-                    animationDelay: "0.5s"
-                  }}>
+                  animationDelay: "0.5s"
+                }}>
                     <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
                       <Trophy className="w-8 h-8 text-accent" />
                     </div>
                   </div>
                   
                   <div className="absolute -bottom-10 -right-10 animate-float opacity-80" style={{
-                    animationDelay: "1s"
-                  }}>
+                  animationDelay: "1s"
+                }}>
                     <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
                       <BookOpen className="w-8 h-8 text-accent" />
                     </div>
                   </div>
                   
                   <div className="absolute top-20 -right-16 animate-float opacity-80 hidden lg:block" style={{
-                    animationDelay: "1.5s"
-                  }}>
+                  animationDelay: "1.5s"
+                }}>
                     <div className="bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 shadow-premium">
                       <Target className="w-8 h-8 text-accent" />
                     </div>
@@ -115,7 +107,7 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 bg-accent py-4 overflow-hidden">
           <div className="animate-scroll-left whitespace-nowrap">
             <span className="inline-block text-background font-bold text-lg px-8">
-              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
+              ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR •         
             </span>
             <span className="inline-block text-background font-bold text-lg px-8">
               ⭐ MENTORIA FULL • AFA • EN • EFOMM • EEAR • +1.500 ALUNOS • +300 APROVAÇÕES
@@ -169,11 +161,7 @@ const Index = () => {
             {/* Right side - Photo with glow */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-              <img 
-                src={studyDesk} 
-                alt="Setup de estudos premium" 
-                className="relative rounded-3xl shadow-premium border border-accent/20"
-              />
+              <img src={studyDesk} alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" />
             </div>
           </div>
         </div>
@@ -233,17 +221,7 @@ const Index = () => {
           </h2>
           
           <div className="max-w-5xl mx-auto space-y-4">
-            {[
-              "Método validado para explodir sua nota e ganhar classificação todos os dias",
-              "Estratégias avançadas que fazem você dominar física, matemática e redação",
-              "Técnicas para criar planos de estudo que realmente funcionam sem precisar depender de cursinho",
-              "Sistema completo para revisão e memorização de longo prazo",
-              "Método prático e direto ao ponto – sem enrolação!"
-            ].map((item, index) => (
-              <div 
-                key={index} 
-                className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-3xl p-6 hover:bg-card/70 hover:border-accent/40 transition-all duration-300"
-              >
+            {["Método validado para explodir sua nota e ganhar classificação todos os dias", "Estratégias avançadas que fazem você dominar física, matemática e redação", "Técnicas para criar planos de estudo que realmente funcionam sem precisar depender de cursinho", "Sistema completo para revisão e memorização de longo prazo", "Método prático e direto ao ponto – sem enrolação!"].map((item, index) => <div key={index} className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-3xl p-6 hover:bg-card/70 hover:border-accent/40 transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center">
@@ -252,8 +230,7 @@ const Index = () => {
                   </div>
                   <p className="text-base md:text-lg text-muted-foreground">{item}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <p className="text-xl md:text-2xl text-center mt-16 max-w-4xl mx-auto leading-relaxed">
@@ -343,19 +320,10 @@ const Index = () => {
               <p className="text-sm text-muted-foreground mb-6">Acesso ao Treinamento Essencial</p>
               
               <ul className="space-y-3 mb-8">
-                {[
-                  "Planejamento semanal personalizado",
-                  "Grupo de estudos exclusivo",
-                  "PDFs e materiais básicos",
-                  "Simulados mensais",
-                  "Aulas gravadas",
-                  "Suporte via grupo"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                {["Planejamento semanal personalizado", "Grupo de estudos exclusivo", "PDFs e materiais básicos", "Simulados mensais", "Aulas gravadas", "Suporte via grupo"].map((item, index) => <li key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground line-through decoration-1">{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
               <div className="mb-6">
@@ -364,10 +332,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground">ou 12x de R$ 29,90</p>
               </div>
               
-              <Button 
-                variant="outline" 
-                className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent"
-              >
+              <Button variant="outline" className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent">
                 CONSULTAR PLANO →
               </Button>
             </div>
@@ -396,23 +361,10 @@ const Index = () => {
               <p className="text-sm text-background/80 mb-6">Acesso ao Treinamento Completo</p>
               
               <ul className="space-y-3 mb-8">
-                {[
-                  "Mentoria 1:1 personalizada",
-                  "Acompanhamento diário exclusivo",
-                  "PDFs completos + bônus premium",
-                  "Simulados semanais + correção detalhada",
-                  "Aulas ao vivo e gravadas",
-                  "Estratégia AFA, EN, EFOMM, EEAR",
-                  "Revisões com professores especializados",
-                  "Suporte direto com mentores",
-                  "Acesso vitalício a materiais",
-                  "Comunidade de aprovados"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados semanais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-background font-medium">{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
               <div className="mb-6">
@@ -421,10 +373,7 @@ const Index = () => {
                 <p className="text-sm text-background/80">ou 12x de R$ 97,00</p>
               </div>
               
-              <Button 
-                variant="default" 
-                className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90"
-              >
+              <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90">
                 GARANTIR MINHA VAGA →
               </Button>
             </div>

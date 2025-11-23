@@ -542,7 +542,7 @@ const Index = () => {
               {
                 icon: <TrendingUp className="w-6 h-6 text-primary-foreground" />,
                 title: "Evolução Constante",
-                description: "Acompanhe seu progresso com métricas e ajustes personalizados"
+                description: "Tenha encontros ao vivo comigo para saber exatamente o que fazer"
               },
               {
                 icon: <Users className="w-6 h-6 text-primary-foreground" />,

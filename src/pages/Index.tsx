@@ -56,8 +56,8 @@ const Index = () => {
         
         {/* Floating decorative elements */}
         <div className="absolute inset-0 z-5 pointer-events-none">
-          {/* Mobile minimal floating icons */}
-          <div className="absolute top-20 right-6 animate-float opacity-60 md:hidden" style={{
+          {/* Mobile minimal floating icons - Reduced for performance */}
+          <div className="absolute top-20 right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
           animationDelay: "0.5s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
@@ -65,7 +65,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="absolute bottom-32 left-6 animate-float opacity-60 md:hidden" style={{
+          <div className="absolute bottom-32 left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
           animationDelay: "1s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
@@ -74,7 +74,7 @@ const Index = () => {
           </div>
           
           {/* Desktop floating icons */}
-          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block" style={{
+          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block will-change-transform" style={{
           animationDelay: "0.5s"
         }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">

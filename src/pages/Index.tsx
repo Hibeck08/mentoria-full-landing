@@ -122,7 +122,7 @@ const Index = () => {
               animationDelay: "0.3s"
             }}>
                 <h1 className="text-[1.5rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.15] text-center md:text-left">
-                  <span className="text-foreground">
+                  <span className="text-foreground text-justify">
                     ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER{" "}
                   </span>
                   <span className="bg-gradient-hero-text bg-clip-text text-transparent">

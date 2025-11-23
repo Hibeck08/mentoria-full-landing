@@ -130,31 +130,50 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-background" />
+      {/* About Section - Two Column Layout */}
+      <section className="py-32 relative overflow-hidden bg-background">
+        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-20" />
         <div className="container relative z-10 mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                O que é a <span className="bg-gradient-primary bg-clip-text text-transparent">Mentoria FULL?  </span>
-              </h2>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  A Mentoria FULL é um acompanhamento individual e em grupo, projetado para transformar sua preparação para concursos militares em resultados concretos.
-                </p>
-                <ul className="space-y-3">
-                  {["Acompanhamento 1:1 e em grupo exclusivo", "Método FULL focado em explosão de resultados", "Aulas direcionadas para AFA, EN, EFOMM e EEAR", "Checklists semanais e metas diárias", "Revisões de alto nível com professores especializados", "Acesso completo a PDFs, simulados, resumos e listas"].map((item, index) => <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                      <span>{item}</span>
-                    </li>)}
-                </ul>
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            {/* Left side - Copy */}
+            <div className="space-y-6">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2">
+                <span className="text-sm font-semibold text-foreground">Mentoria FULL</span>
+                <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                  <Trophy className="w-5 h-5 text-background" />
+                </div>
               </div>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Se você já tentou estudar para concursos militares e não teve resultado, não foi culpa sua.
+              </p>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                A verdade é que não basta só estudar, você precisa de um <strong className="text-foreground">método validado</strong> que realmente funcione.
+              </p>
+              
+              <p className="text-base md:text-lg text-foreground leading-relaxed font-semibold">
+                A Mentoria FULL é um método validado, usado por centenas de aprovados para conquistar suas vagas nas academias militares, com um passo a passo simples e direto ao ponto.
+              </p>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Mesmo que você não tenha experiência com métodos de estudo estruturados, vai conseguir criar resultados extraordinários que realmente levam à aprovação.
+              </p>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Com planejamento pronto, checklists e um passo a passo validado, você nunca mais vai estudar no escuro!
+              </p>
             </div>
-            <div className="animate-fade-in-up" style={{
-            animationDelay: "0.2s"
-          }}>
-              <img src={studyDesk} alt="Modern study setup" className="rounded-2xl shadow-premium" />
+            
+            {/* Right side - Photo with glow */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent rounded-3xl blur-2xl" />
+              <img 
+                src={studyDesk} 
+                alt="Setup de estudos premium" 
+                className="relative rounded-3xl shadow-premium border border-accent/20"
+              />
             </div>
           </div>
         </div>
@@ -196,48 +215,53 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 w-[500px] h-[500px] bg-primary rounded-full blur-[150px] opacity-10 -translate-x-1/2" />
+      {/* Features Section - What You Will Learn */}
+      <section className="py-32 relative overflow-hidden bg-background">
         <div className="container relative z-10 mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            O Que Você Vai <span className="bg-gradient-primary bg-clip-text text-transparent">O que Você Vai</span>
-          </h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-            Todo o arsenal necessário para sua aprovação está aqui.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[{
-            icon: Calendar,
-            title: "Planejamento Personalizado",
-            description: "Cronograma semanal adaptado ao seu ritmo e necessidades"
-          }, {
-            icon: Users,
-            title: "Grupos Exclusivos",
-            description: "Acompanhamento em grupo e individual com mentores especializados"
-          }, {
-            icon: FileText,
-            title: "PDFs Profissionais",
-            description: "Materiais de estudo completos e organizados por disciplina"
-          }, {
-            icon: Award,
-            title: "Simulados Semanais",
-            description: "Testes reais que simulam as provas das academias militares"
-          }, {
-            icon: Video,
-            title: "Aulas Exclusivas",
-            description: "Conteúdo gravado e ao vivo focado nas suas dificuldades"
-          }, {
-            icon: Zap,
-            title: "Estratégias Avançadas",
-            description: "Métodos comprovados para física, redação e disciplinas base"
-          }].map((item, index) => <div key={index} className="animate-fade-in-up" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                <FeatureCard {...item} />
-              </div>)}
+          {/* Badge centered */}
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2">
+              <span className="text-sm font-semibold text-foreground">Mentoria FULL</span>
+              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                <Target className="w-5 h-5 text-background" />
+              </div>
+            </div>
           </div>
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16">
+            O que <span className="text-accent">você vai Aprender?</span>
+          </h2>
+          
+          <div className="max-w-5xl mx-auto space-y-4">
+            {[
+              "Método validado para explodir sua nota e ganhar classificação todos os dias",
+              "Estratégias avançadas que fazem você dominar física, matemática e redação",
+              "Técnicas para criar planos de estudo que realmente funcionam sem precisar depender de cursinho",
+              "Sistema completo para revisão e memorização de longo prazo",
+              "Método prático e direto ao ponto – sem enrolação!"
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-3xl p-6 hover:bg-card/70 hover:border-accent/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center">
+                      <CheckCircle2 className="w-6 h-6 text-accent" />
+                    </div>
+                  </div>
+                  <p className="text-base md:text-lg text-muted-foreground">{item}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <p className="text-xl md:text-2xl text-center mt-16 max-w-4xl mx-auto leading-relaxed">
+            <span className="font-bold text-foreground">E o melhor?</span>{" "}
+            <span className="text-muted-foreground">
+              Nada de ficar perdido! Você recebe planejamento pronto, checklists e um passo a passo validado para seguir e aplicar.
+            </span>
+          </p>
         </div>
       </section>
 
@@ -289,43 +313,126 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-24 bg-secondary/20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+      {/* Pricing Section - Two Cards */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary rounded-full blur-[150px]" />
           <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-accent rounded-full blur-[150px]" />
         </div>
+        
         <div className="container relative z-10 mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            Planos de <span className="bg-gradient-primary bg-clip-text text-transparent">Investimento</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16">
+            Planos de <span className="text-accent">Investimento</span>
           </h2>
-          <p className="text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-            Invista na sua aprovação com segurança total.
-          </p>
           
-          <div className="max-w-4xl mx-auto">
-            <PricingCard featured title="MENTORIA FULL" price="Consulte" features={[{
-            text: "Mentoria completa com acompanhamento diário"
-          }, {
-            text: "Acesso ao grupo exclusivo de alunos"
-          }, {
-            text: "PDFs completos de todas as disciplinas"
-          }, {
-            text: "Simulados semanais com correção detalhada"
-          }, {
-            text: "Aulas gravadas e ao vivo exclusivas"
-          }, {
-            text: "Estratégia personalizada para AFA, EN, EFOMM e EEAR"
-          }, {
-            text: "Revisões de alto nível com professores"
-          }, {
-            text: "Suporte direto com mentores especializados"
-          }, {
-            text: "Acesso vitalício a materiais atualizados"
-          }, {
-            text: "Comunidade de aprovados para networking"
-          }]} />
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Plano Básico - Dark Card */}
+            <div className="bg-card border border-border rounded-3xl p-8 hover:shadow-premium transition-all duration-300">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
+                <span className="text-xs font-semibold text-muted-foreground">Plano Básico</span>
+                <div className="w-6 h-6 bg-accent rounded-lg flex items-center justify-center">
+                  <BookOpen className="w-4 h-4 text-background" />
+                </div>
+              </div>
+              
+              <h3 className="text-3xl font-bold mb-2">
+                Mentoria <span className="text-accent">Essencial</span>
+              </h3>
+              
+              <p className="text-sm text-muted-foreground mb-6">Acesso ao Treinamento Essencial</p>
+              
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Planejamento semanal personalizado",
+                  "Grupo de estudos exclusivo",
+                  "PDFs e materiais básicos",
+                  "Simulados mensais",
+                  "Aulas gravadas",
+                  "Suporte via grupo"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-muted-foreground line-through decoration-1">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mb-6">
+                <p className="text-sm text-muted-foreground mb-2">de R$ 497,00 por</p>
+                <p className="text-5xl md:text-6xl font-bold text-accent mb-1">R$297</p>
+                <p className="text-sm text-muted-foreground">ou 12x de R$ 29,90</p>
+              </div>
+              
+              <Button 
+                variant="outline" 
+                className="w-full py-6 text-base font-bold border-accent/30 hover:bg-accent/10 hover:border-accent"
+              >
+                CONSULTAR PLANO →
+              </Button>
+            </div>
+            
+            {/* Plano Completo - Highlighted Card */}
+            <div className="bg-accent/95 border-2 border-accent rounded-3xl p-8 hover:shadow-glow-gold transition-all duration-300 relative">
+              {/* Popular Badge */}
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <div className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  MAIS POPULAR
+                </div>
+              </div>
+              
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-background/90 border border-background rounded-full px-4 py-1.5 mb-6">
+                <span className="text-xs font-semibold text-foreground">Plano Completo</span>
+                <div className="w-6 h-6 bg-background rounded-lg flex items-center justify-center">
+                  <Trophy className="w-4 h-4 text-accent" />
+                </div>
+              </div>
+              
+              <h3 className="text-3xl font-bold mb-2 text-background">
+                Mentoria <span className="text-background">FULL</span>
+              </h3>
+              
+              <p className="text-sm text-background/80 mb-6">Acesso ao Treinamento Completo</p>
+              
+              <ul className="space-y-3 mb-8">
+                {[
+                  "Mentoria 1:1 personalizada",
+                  "Acompanhamento diário exclusivo",
+                  "PDFs completos + bônus premium",
+                  "Simulados semanais + correção detalhada",
+                  "Aulas ao vivo e gravadas",
+                  "Estratégia AFA, EN, EFOMM, EEAR",
+                  "Revisões com professores especializados",
+                  "Suporte direto com mentores",
+                  "Acesso vitalício a materiais",
+                  "Comunidade de aprovados"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-background font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <div className="mb-6">
+                <p className="text-sm text-background/80 mb-2">de R$ 1.997,00 por</p>
+                <p className="text-5xl md:text-6xl font-bold text-background mb-1">R$997</p>
+                <p className="text-sm text-background/80">ou 12x de R$ 97,00</p>
+              </div>
+              
+              <Button 
+                variant="default" 
+                className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90"
+              >
+                GARANTIR MINHA VAGA →
+              </Button>
+            </div>
           </div>
+          
+          <p className="text-center text-muted-foreground mt-8 text-sm">
+            🔒 Garantia de 7 dias • Pagamento 100% seguro
+          </p>
         </div>
       </section>
 

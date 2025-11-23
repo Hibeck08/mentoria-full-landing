@@ -34,9 +34,9 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
           <img 
-            src="/lovable-uploads/hero-mobile-new.png" 
+            src="/lovable-uploads/hero-mobile.png" 
             alt="Background" 
-            className="block md:hidden w-full h-full object-cover object-[center_top] brightness-90 contrast-110 saturate-110"
+            className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110"
             loading="eager"
             fetchPriority="high"
           />
@@ -139,7 +139,7 @@ const Index = () => {
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
-            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-20 md:pt-0 md:pb-0">
+            <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-32 md:pt-0 md:pb-0">
               <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
@@ -172,7 +172,7 @@ const Index = () => {
         </div>
         
         {/* Static Horizontal banner strip */}
-        <div className="absolute bottom-8 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
+        <div className="absolute bottom-4 md:bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
           <div className="bg-gradient-primary py-2 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center">
               <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">
@@ -1033,7 +1033,7 @@ const Index = () => {
       </section>
 
       {/* Floating Contact Button */}
-      <div className="fixed bottom-20 right-4 md:bottom-8 md:right-8 z-50 animate-float">
+      <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 animate-float">
         <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
           💬 Fale Comigo
         </Button>

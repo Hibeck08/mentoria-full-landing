@@ -121,7 +121,7 @@ const Index = () => {
               <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
               animationDelay: "0.3s"
             }}>
-                <h1 className="text-[2rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.1] text-center md:text-left">
+                <h1 className="text-[1.5rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.15] text-center md:text-left">
                   <span className="text-foreground">
                     ENTENDA A FORMA DE ESTUDOS QUE ME PERMITIU SER{" "}
                   </span>
@@ -130,14 +130,14 @@ const Index = () => {
                   </span>
                 </h1>
                 
-                <p className="text-[0.95rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
+                <p className="text-[0.875rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-center md:text-left mx-auto md:mx-0">
                   Se você se vê perdido, sem direção ou pensando em desistir dos concursos militares constantemente, relaxa que isso é normal, basta que tenha um bom método para ter resultados.
                 </p>
                 
                 <div className="flex flex-col items-center md:items-start gap-4 md:gap-4 pt-4 md:pt-4 animate-fade-in-up" style={{
                 animationDelay: "0.5s"
               }}>
-                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-10 py-7 md:px-12 md:py-8 w-full sm:w-auto">
+                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-[0.9rem] leading-tight md:text-base lg:text-lg shadow-glow-beige text-center rounded-full transition-all font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
                     QUERO ME INSCREVER AGORA MESMO! →
                   </Button>
                   <p className="text-sm md:text-sm text-muted-foreground/80 text-center md:text-left">
@@ -150,10 +150,10 @@ const Index = () => {
         </div>
         
         {/* Static Horizontal banner strip */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
-          <div className="bg-gradient-primary py-3 md:py-6 border-y-2 border-accent-dark/30">
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none z-20">
+          <div className="bg-gradient-primary py-2 md:py-6 border-y-2 border-accent-dark/30">
             <div className="flex justify-center">
-              <span className="text-accent-foreground font-bold text-sm md:text-base lg:text-lg tracking-wider px-4">
+              <span className="text-accent-foreground font-bold text-xs md:text-base lg:text-lg tracking-wider px-4">
                 ⭐ MENTORIA FULL AFA EFOMM EN EEAR ⭐
               </span>
             </div>
@@ -948,7 +948,7 @@ const Index = () => {
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-6 py-4 md:px-8 md:py-6 text-base md:text-base font-bold" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
+        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-sm md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
           💬 Fale Comigo
         </Button>
       </div>

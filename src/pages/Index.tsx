@@ -112,7 +112,7 @@ const Index = () => {
             <div className="bg-gradient-primary/30 backdrop-blur-sm py-6 border-y-2 border-accent-dark/20">
               <div className="flex whitespace-nowrap animate-scroll-left">
                 <span className="inline-block text-accent-foreground/50 font-bold text-lg px-4 tracking-wider">
-                  ⭐ GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS •
+                  ⭐ MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR •
                 </span>
               </div>
             </div>
@@ -123,7 +123,7 @@ const Index = () => {
             <div className="bg-gradient-primary py-6 border-y-2 border-accent-dark/30">
               <div className="flex whitespace-nowrap animate-scroll-right">
                 <span className="inline-block text-accent-foreground font-bold text-lg px-4 tracking-wider">
-                  ⭐ GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS • GESTÃO DE CONTRATOS •
+                  ⭐ MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR • MENTORIA FULL • AFA • EFOMM • EN • EEAR •
                 </span>
               </div>
             </div>

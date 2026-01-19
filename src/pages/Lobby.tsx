@@ -12,30 +12,23 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ title, subtitle, description, to, comingSoon, featured }: ProductCardProps) => {
+  const baseStyles = "group relative w-full p-6 md:p-8 rounded-2xl border-2 transition-all duration-300 block";
+  
+  const getStyles = () => {
+    if (comingSoon) {
+      return `${baseStyles} bg-card/30 border-border/30 cursor-not-allowed`;
+    }
+    if (featured) {
+      return `${baseStyles} bg-card border-accent/60 shadow-[0_0_30px_rgba(228,195,132,0.15)] hover:shadow-[0_0_40px_rgba(228,195,132,0.25)] hover:border-accent`;
+    }
+    return `${baseStyles} bg-card border-border hover:border-accent/50 hover:shadow-lg`;
+  };
+
   const CardWrapper = ({ children }: { children: React.ReactNode }) => {
     if (comingSoon || !to) {
-      return (
-        <div className={`group relative w-full p-6 md:p-8 rounded-2xl border transition-all duration-300 ${
-          comingSoon 
-            ? "bg-card/50 border-border/50 opacity-70 cursor-not-allowed" 
-            : "bg-card border-border hover:border-accent/50"
-        }`}>
-          {children}
-        </div>
-      );
+      return <div className={getStyles()}>{children}</div>;
     }
-    return (
-      <Link 
-        to={to} 
-        className={`group relative w-full p-6 md:p-8 rounded-2xl border transition-all duration-300 ${
-          featured 
-            ? "bg-gradient-to-br from-card via-card to-accent/10 border-accent shadow-glow-beige hover:shadow-glow-beige-lg" 
-            : "bg-card border-border hover:border-accent/50 hover:shadow-lg"
-        }`}
-      >
-        {children}
-      </Link>
-    );
+    return <Link to={to} className={getStyles()}>{children}</Link>;
   };
 
   return (

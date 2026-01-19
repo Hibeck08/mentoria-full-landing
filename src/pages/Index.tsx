@@ -33,21 +33,9 @@ const Index = () => {
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
-          <img 
-            src="/lovable-uploads/hero-mobile.png" 
-            alt="Background" 
-            className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110"
-            loading="eager"
-            fetchPriority="high"
-          />
+          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Desktop image - Priority loading */}
-          <img 
-            src={heroMain} 
-            alt="Background" 
-            className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110"
-            loading="eager"
-            fetchPriority="high"
-          />
+          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Gradient overlay for better text readability and depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           {/* Subtle vignette effect */}
@@ -117,24 +105,14 @@ const Index = () => {
           <div className="max-w-7xl mx-auto h-full">
             {/* Logo - Fixed top left */}
             <div className="absolute top-4 md:top-8 left-4 md:left-8 animate-fade-in-up z-20">
-              <img 
-                src={mentoriaLogo} 
-                alt="Mentoria FULL Logo" 
-                className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl"
-                loading="eager"
-              />
+              <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl" loading="eager" />
             </div>
             
             {/* Badge - Desktop only */}
             <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
             animationDelay: "0.2s"
           }}>
-              <img 
-                src={heroPhoto} 
-                alt="Mentor" 
-                className="w-10 h-10 rounded-full object-cover ring-2 ring-accent"
-                loading="eager"
-              />
+              <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" loading="eager" />
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
             
@@ -217,13 +195,7 @@ const Index = () => {
                   {/* Foto */}
                   <div className="relative mx-auto md:mx-0 max-w-[280px] md:max-w-none">
                     <div className="absolute inset-0 bg-gradient-primary rounded-2xl md:rounded-3xl blur-2xl opacity-30" />
-                    <img 
-                      src={bryanPhoto} 
-                      alt="Bryan Hibeck" 
-                      className="relative rounded-2xl md:rounded-3xl w-full h-auto object-cover shadow-premium border-2 border-accent/20"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <img src={bryanPhoto} alt="Bryan Hibeck" className="relative rounded-2xl md:rounded-3xl w-full h-auto object-cover shadow-premium border-2 border-accent/20" loading="lazy" decoding="async" />
                   </div>
                   
                   {/* Descrição */}
@@ -284,13 +256,7 @@ const Index = () => {
       <section className="py-12 md:py-32 relative overflow-hidden">
         {/* Background Military Wallpaper */}
         <div className="absolute inset-0">
-          <img 
-            src={militaryWallpaper} 
-            alt="Military Background" 
-            className="w-full h-full object-cover"
-            loading="lazy"
-            decoding="async"
-          />
+          <img src={militaryWallpaper} alt="Military Background" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/95"></div>
         </div>
         
@@ -335,13 +301,7 @@ const Index = () => {
             <ScrollReveal variant="right">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-                <img 
-                  alt="Setup de estudos premium" 
-                  className="relative rounded-3xl shadow-premium border border-accent/20" 
-                  src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.png"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.png" loading="lazy" decoding="async" />
               </div>
             </ScrollReveal>
           </div>
@@ -412,12 +372,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button
-                  variant="gold"
-                  size="lg"
-                  onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
-                >
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
                   GARANTIR MINHA VAGA AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -562,23 +517,11 @@ const Index = () => {
         }}>
             {/* First set of images - HUGE and side by side */}
             {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
-                <img 
-                  src={image} 
-                  alt={`Depoimento ${index + 1}`} 
-                  className="h-full w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
               </div>)}
             {/* Duplicate for seamless infinite loop */}
             {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
-                <img 
-                  src={image} 
-                  alt={`Depoimento ${index + 1}`} 
-                  className="h-full w-auto object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
               </div>)}
           </div>
         </div>
@@ -587,12 +530,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button
-                  variant="gold"
-                  size="lg"
-                  onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
-                >
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -672,12 +610,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button
-                  variant="gold"
-                  size="lg"
-                  onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
-                >
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
                   QUERO FAZER PARTE AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -706,13 +639,7 @@ const Index = () => {
       {/* Pricing Section */}
       <section id="planos-mentoria" className="py-12 md:py-32 bg-background relative overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/lovable-uploads/military-background.png" 
-            alt="Military background" 
-            className="w-full h-full object-cover opacity-20"
-            loading="lazy"
-            decoding="async"
-          />
+          <img src="/lovable-uploads/military-background.png" alt="Military background" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
         </div>
         
@@ -748,16 +675,12 @@ const Index = () => {
                 
                 <div className="mb-3 md:mb-6 mt-auto">
                   <p className="text-xs md:text-sm text-muted-foreground mb-1 md:mb-2">de R$ 129,90 por</p>
-                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-accent mb-1">R$109,90</p>
+                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-accent mb-1">R$129,90</p>
                   <p className="text-xs md:text-sm text-muted-foreground">/mês</p>
                 </div>
                 
                 <div className="space-y-2">
-                  <Button
-                    variant="gold"
-                    className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto"
-                    onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}
-                  >
+                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
                     ASSINAR PLANO MENSAL →
                   </Button>
                   
@@ -836,8 +759,7 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-center">
-                  Livro  <span className="text-accent">Método Hibeck </span>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-center">Método Hibeck<span className="text-accent">Método Hibeck </span>
                 </h3>
                 
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-6 text-center">Pagamento Único</p>
@@ -865,7 +787,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
                     <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-foreground font-medium">Livro com a minha metodologia</span>
+                    <span className="text-sm md:text-base text-foreground font-medium">Aulas ensinando a Estudar</span>
                   </li>
                   <li className="flex items-start gap-2 md:gap-3">
                     <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -896,11 +818,7 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <Button
-                    variant="gold"
-                    className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto"
-                    onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}
-                  >
+                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
                     ADQUIRIR LIVRO DIGITAL →
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
@@ -975,12 +893,7 @@ const Index = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button
-                  variant="gold"
-                  size="lg"
-                  onClick={scrollToPlans}
-                  className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto"
-                >
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
                   QUERO TODOS OS BÔNUS AGORA →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -1044,12 +957,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
-              <img 
-                src={mentoriaLogo} 
-                alt="Mentoria FULL" 
-                className="w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4"
-                loading="lazy"
-              />
+              <img src={mentoriaLogo} alt="Mentoria FULL" className="w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4" loading="lazy" />
               <p className="text-base md:text-base text-muted-foreground italic font-semibold">
                 "Transformando disciplina em aprovação."
               </p>

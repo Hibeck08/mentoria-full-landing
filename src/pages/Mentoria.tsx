@@ -16,6 +16,7 @@ import certificates from "@/assets/certificates.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryHeritage from "@/assets/military-heritage.png";
 import militaryWallpaper from "@/assets/military-wallpaper.png";
+import metodoShowcaseBanner from "@/assets/metodo-showcase-banner.png";
 import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
   const scrollToPlans = () => {
@@ -315,6 +316,36 @@ const Index = () => {
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
                   💳 Parcelamento em até 12x • Satisfação garantida
                 </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Método Showcase Section */}
+      <section className="py-12 md:py-24 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="container relative z-10 mx-auto px-4 md:px-6">
+          <ScrollReveal>
+            <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-10 leading-tight">
+              O método que me levou a ser o{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">08 da EFOMM</span>
+              {" "}e o{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">01 DA AFA</span>
+            </h2>
+          </ScrollReveal>
+          
+          <ScrollReveal variant="scale">
+            <div className="relative max-w-6xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-accent/10 rounded-2xl md:rounded-3xl blur-xl" />
+              <div className="relative bg-card/60 backdrop-blur-sm border border-accent/30 rounded-2xl md:rounded-3xl p-3 md:p-6 overflow-hidden">
+                <img 
+                  src={metodoShowcaseBanner} 
+                  alt="Conteúdo do Método FULL" 
+                  className="w-full h-auto rounded-xl md:rounded-2xl shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           </ScrollReveal>

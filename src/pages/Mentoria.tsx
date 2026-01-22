@@ -329,28 +329,33 @@ const Index = () => {
           <img 
             src={metodoShowcaseBanner} 
             alt="Método FULL Background" 
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover object-center opacity-60"
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
         </div>
         
         <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-15" />
         
         <div className="container relative z-10 mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 leading-tight">
+            <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-3 md:mb-4 leading-tight">
               O método que me levou a ser o{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">08 da EFOMM</span>
               {" "}e o{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">01 da AFA</span>
             </h2>
+            
+            {/* Mini arrow */}
+            <div className="flex justify-center mb-6 md:mb-8">
+              <ArrowDown className="w-6 h-6 text-accent animate-bounce" />
+            </div>
           </ScrollReveal>
           
           <ScrollReveal delay={100}>
             <div className="max-w-4xl mx-auto">
-              <div className="bg-card/70 backdrop-blur-md border border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-10">
+              <div className="bg-card/80 backdrop-blur-md border border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-10">
                 <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground leading-relaxed mb-6">
                   Domine as técnicas que transformaram minha preparação:
                 </p>
@@ -378,6 +383,13 @@ const Index = () => {
                 <p className="text-sm md:text-base text-center text-accent font-medium mt-6 md:mt-8">
                   + Estratégias específicas para cada concurso militar
                 </p>
+                
+                {/* CTA Button */}
+                <div className="flex justify-center mt-8">
+                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-base lg:text-lg font-bold px-8 py-5 md:px-12 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all">
+                    QUERO FAZER PARTE DO FULL AGORA →
+                  </Button>
+                </div>
               </div>
             </div>
           </ScrollReveal>
@@ -713,192 +725,129 @@ const Index = () => {
             </h2>
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-sm md:max-w-6xl mx-auto items-stretch">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-sm md:max-w-6xl mx-auto items-stretch">
+            {/* Plano Mensal */}
             <ScrollReveal variant="left" className="h-full">
-              <div className="bg-card border border-border rounded-xl md:rounded-3xl p-4 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col h-full">
-                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-3 py-1.5 mb-4 md:mb-6 w-fit text-xs md:text-sm">
+              <div className="bg-card border border-border rounded-xl md:rounded-3xl p-4 md:p-6 hover:shadow-premium transition-all duration-300 flex flex-col h-full">
+                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-3 py-1.5 mb-4 w-fit text-xs md:text-sm">
                   <span className="font-semibold text-muted-foreground">Plano Mensal</span>
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-accent rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-3 h-3 md:w-4 md:h-4 text-background" />
+                  <div className="w-5 h-5 bg-accent rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-3 h-3 text-background" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
                   Mentoria <span className="text-accent">FULL</span>
                 </h3>
                 
-                <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-6">Pagamento Mensal</p>
+                <p className="text-xs text-muted-foreground mb-4">Renovação mensal</p>
                 
-                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso aos materiais durante a assinatura", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2 md:gap-3">
-                      <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-sm md:text-base text-foreground">{item}</span>
+                <ul className="space-y-2 mb-6 flex-grow">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário", "PDFs + bônus premium", "Simulados + correção", "Aulas ao vivo e gravadas", "Suporte direto"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm text-foreground">{item}</span>
                     </li>)}
                 </ul>
                 
-                <div className="mb-3 md:mb-6 mt-auto">
-                  <p className="text-xs md:text-sm text-muted-foreground mb-1 md:mb-2">de R$ 129,90 por</p>
-                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-accent mb-1">R$129,90</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">/mês</p>
+                <div className="mb-4 mt-auto">
+                  <p className="text-xs text-muted-foreground mb-1">por apenas</p>
+                  <p className="text-2xl md:text-3xl font-bold text-accent">R$129,90</p>
+                  <p className="text-xs text-muted-foreground">/mês</p>
                 </div>
                 
-                <div className="space-y-2">
-                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
-                    ASSINAR PLANO MENSAL →
-                  </Button>
-                  
-                </div>
+                <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
+                  ASSINAR MENSAL →
+                </Button>
               </div>
             </ScrollReveal>
             
-            <ScrollReveal variant="right" className="h-full">
-              <div className="bg-gradient-beige-premium border-2 border-accent rounded-xl md:rounded-3xl p-4 md:p-8 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full">
-                <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-primary text-primary-foreground px-3 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm font-bold shadow-lg">
-                    MAIS POPULAR   
+            {/* Plano Anual - MAIS POPULAR */}
+            <ScrollReveal variant="scale" className="h-full">
+              <div className="bg-gradient-beige-premium border-2 border-accent rounded-xl md:rounded-3xl p-4 md:p-6 hover:shadow-glow-gold transition-all duration-300 relative flex flex-col h-full md:scale-105">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <div className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-bold shadow-lg whitespace-nowrap">
+                    ⭐ MAIS POPULAR
                   </div>
                 </div>
                 
-                <div className="inline-flex items-center gap-2 bg-background/90 border border-background rounded-full px-3 py-1.5 mb-4 md:mb-6 w-fit text-xs md:text-sm">
-                  <span className="font-semibold text-foreground">Plano Semestral</span>
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-background rounded-lg flex items-center justify-center">
-                    <Trophy className="w-3 h-3 md:w-4 md:h-4 text-accent" />
+                <div className="inline-flex items-center gap-2 bg-background/90 border border-background rounded-full px-3 py-1.5 mb-4 w-fit text-xs md:text-sm mt-2">
+                  <span className="font-semibold text-foreground">Plano Anual</span>
+                  <div className="w-5 h-5 bg-background rounded-lg flex items-center justify-center">
+                    <Trophy className="w-3 h-3 text-accent" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-background">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-background">
                   Mentoria <span className="text-background">FULL</span>
                 </h3>
                 
-                <p className="text-xs md:text-sm text-background/80 mb-3 md:mb-6">Pagamento Semestral</p>
+                <p className="text-xs text-background/80 mb-4">Melhor custo-benefício</p>
                 
-                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados mensais + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com professores especializados", "Suporte direto com mentores", "Acesso vitalício a materiais", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2 md:gap-3">
-                      <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-background flex-shrink-0 mt-0.5" />
-                      <span className="text-sm md:text-base text-background font-medium">{item}</span>
+                <ul className="space-y-2 mb-6 flex-grow">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões especializadas", "Suporte direto com mentores", "Comunidade de aprovados", "Acesso por 12 meses"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-background flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm text-background font-medium">{item}</span>
                     </li>)}
                 </ul>
                 
-                <div className="mb-3 md:mb-6 mt-auto">
-                  <p className="text-xs md:text-sm text-background/80 mb-1 md:mb-2">de R$ 109,90 por apenas</p>
-                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-background mb-1">R$98,87</p>
-                  <p className="text-xs md:text-sm text-background/80">   /mês ou R$ 527,00 à vista                           </p>
+                <div className="mb-4 mt-auto">
+                  <p className="text-xs text-background/80 mb-1">de R$ 129,90 por apenas</p>
+                  <p className="text-2xl md:text-3xl font-bold text-background">R$89,90</p>
+                  <p className="text-xs text-background/80">/mês ou R$ 1.078,80 à vista</p>
                 </div>
                 
-                <div className="space-y-2 md:space-y-3">
-                  <Button variant="default" className="w-full py-4 md:py-6 text-sm md:text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
-                    GARANTIR PLANO SEMESTRAL →
-                  </Button>
-                  <p className="text-xs text-center text-background/90 font-medium">
-                    Economize 10%                       <span className="font-bold">12x de R$97,00</span> ou R$997 à vista
-                  </p>
-                  <div className="flex items-center justify-center gap-2 md:gap-3 pt-1 md:pt-2 flex-wrap">
-                    <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">MASTERCARD</span>
-                    </div>
-                    <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">VISA</span>
-                    </div>
-                    <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">PIX</span>
-                    </div>
-                    <div className="bg-background/90 rounded px-2 py-1">
-                      <span className="text-[0.65rem] md:text-xs font-bold text-accent">BOLETO</span>
-                    </div>
-                  </div>
-                </div>
+                <Button variant="default" className="w-full py-4 text-sm font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
+                  GARANTIR PLANO ANUAL →
+                </Button>
+                
+                <p className="text-xs text-center text-background/90 font-medium mt-2">
+                  Economize 30% • 12x de R$89,90
+                </p>
               </div>
             </ScrollReveal>
-          </div>
-          
-          {/* Third Card - Book Only */}
-          <div className="mt-6 md:mt-12 max-w-sm md:max-w-md mx-auto">
-            <ScrollReveal>
-              <div className="bg-card border-[3px] border-accent/40 rounded-xl md:rounded-3xl p-4 md:p-8 hover:shadow-premium transition-all duration-300 flex flex-col shadow-lg">
-                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-3 py-1.5 mb-4 md:mb-6 w-fit mx-auto text-xs md:text-sm">
-                  <span className="font-semibold text-muted-foreground">Livro Digital</span>
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-accent rounded-lg flex items-center justify-center">
-                    <BookOpen className="w-3 h-3 md:w-4 md:h-4 text-background" />
+            
+            {/* Plano Semestral */}
+            <ScrollReveal variant="right" className="h-full">
+              <div className="bg-card border border-border rounded-xl md:rounded-3xl p-4 md:p-6 hover:shadow-premium transition-all duration-300 flex flex-col h-full">
+                <div className="inline-flex items-center gap-2 bg-background/50 border border-accent/20 rounded-full px-3 py-1.5 mb-4 w-fit text-xs md:text-sm">
+                  <span className="font-semibold text-muted-foreground">Plano Semestral</span>
+                  <div className="w-5 h-5 bg-accent rounded-lg flex items-center justify-center">
+                    <Zap className="w-3 h-3 text-background" />
                   </div>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold mb-2 text-center">Método Hibeck<span className="text-accent">Método Hibeck </span>
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  Mentoria <span className="text-accent">FULL</span>
                 </h3>
                 
-                <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-6 text-center">Pagamento Único</p>
+                <p className="text-xs text-muted-foreground mb-4">6 meses de acesso</p>
                 
-                <ul className="space-y-2 md:space-y-3 mb-4 md:mb-8">
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Mentoria 1:1 personalizada</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Acompanhamento diário exclusivo</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">PDFs completos + bônus premium</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Simulados mensais + correção detalhada</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Aulas ao vivo e gravadas</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-foreground font-medium">Aulas ensinando a Estudar</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-foreground font-medium">Estratégias para AFA, EN, EFOMM, EEAR</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Revisões com professores especializados</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Suporte direto com mentores</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-foreground font-medium">Acesso vitalício</span>
-                  </li>
-                  <li className="flex items-start gap-2 md:gap-3 opacity-40">
-                    <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm md:text-base text-muted-foreground line-through">Comunidade de aprovados</span>
-                  </li>
+                <ul className="space-y-2 mb-6 flex-grow">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário", "PDFs + bônus premium", "Simulados + correção", "Aulas ao vivo e gravadas", "Suporte direto", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm text-foreground">{item}</span>
+                    </li>)}
                 </ul>
                 
-                <div className="mb-4 md:mb-6">
-                  <p className="text-xs md:text-sm text-muted-foreground mb-2 text-center">por apenas 12x de   </p>
-                  <p className="text-4xl md:text-6xl font-bold text-accent mb-1 text-center">R$8,26</p>
-                  <p className="text-xs md:text-sm text-muted-foreground text-center">ou 79,90 à vista   </p>
+                <div className="mb-4 mt-auto">
+                  <p className="text-xs text-muted-foreground mb-1">de R$ 129,90 por apenas</p>
+                  <p className="text-2xl md:text-3xl font-bold text-accent">R$98,87</p>
+                  <p className="text-xs text-muted-foreground">/mês ou R$ 593,22 à vista</p>
                 </div>
                 
-                <div className="space-y-2">
-                  <Button variant="gold" className="w-full py-4 md:py-6 text-sm md:text-base font-bold max-w-xs md:max-w-none mx-auto" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
-                    ADQUIRIR LIVRO DIGITAL →
-                  </Button>
-                  <p className="text-xs text-center text-muted-foreground">
-                    Pagamento único • Acesso imediato após compra
-                  </p>
-                </div>
+                <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
+                  ASSINAR SEMESTRAL →
+                </Button>
                 
-                <div className="mt-3 md:mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-accent">
-                  <Shield className="w-4 h-4" />
-                  <span className="font-semibold">Garantia de 7 dias</span>
-                </div>
+                <p className="text-xs text-center text-muted-foreground mt-2">
+                  Economize 20%
+                </p>
               </div>
             </ScrollReveal>
           </div>
           
           <ScrollReveal>
-            <p className="text-center text-muted-foreground mt-6 md:mt-8 text-sm md:text-sm">
+            <p className="text-center text-muted-foreground mt-6 md:mt-8 text-sm">
               🔒 Garantia de 7 dias • Pagamento 100% seguro
             </p>
           </ScrollReveal>

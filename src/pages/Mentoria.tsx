@@ -323,29 +323,61 @@ const Index = () => {
       </section>
 
       {/* Método Showcase Section */}
-      <section className="py-12 md:py-24 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-10" />
+      <section className="py-16 md:py-32 relative overflow-hidden">
+        {/* Background Wallpaper */}
+        <div className="absolute inset-0">
+          <img 
+            src={metodoShowcaseBanner} 
+            alt="Método FULL Background" 
+            className="w-full h-full object-cover opacity-40"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+        </div>
+        
+        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-15" />
+        
         <div className="container relative z-10 mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-10 leading-tight">
+            <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 leading-tight">
               O método que me levou a ser o{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">08 da EFOMM</span>
               {" "}e o{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">01 DA AFA</span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">01 da AFA</span>
             </h2>
           </ScrollReveal>
           
-          <ScrollReveal variant="scale">
-            <div className="relative max-w-6xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-accent/10 rounded-2xl md:rounded-3xl blur-xl" />
-              <div className="relative bg-card/60 backdrop-blur-sm border border-accent/30 rounded-2xl md:rounded-3xl p-3 md:p-6 overflow-hidden">
-                <img 
-                  src={metodoShowcaseBanner} 
-                  alt="Conteúdo do Método FULL" 
-                  className="w-full h-auto rounded-xl md:rounded-2xl shadow-lg"
-                  loading="lazy"
-                  decoding="async"
-                />
+          <ScrollReveal delay={100}>
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-card/70 backdrop-blur-md border border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-10">
+                <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground leading-relaxed mb-6">
+                  Domine as técnicas que transformaram minha preparação:
+                </p>
+                
+                <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+                  {[
+                    { icon: BookOpen, text: "Separação estratégica de matérias por peso e dificuldade" },
+                    { icon: Clock, text: "Organização inteligente das horas de estudo" },
+                    { icon: TrendingUp, text: "Otimização máxima do seu rendimento" },
+                    { icon: Target, text: "Filtragem cirúrgica de questões por relevância" },
+                    { icon: Brain, text: "Método infalível de revisões efetivas" },
+                    { icon: Trophy, text: "Timing perfeito para simulados e provas anteriores" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3 group">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <item.icon className="w-5 h-5 text-accent" />
+                      </div>
+                      <p className="text-sm md:text-base text-foreground/90 leading-relaxed pt-2">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                
+                <p className="text-sm md:text-base text-center text-accent font-medium mt-6 md:mt-8">
+                  + Estratégias específicas para cada concurso militar
+                </p>
               </div>
             </div>
           </ScrollReveal>

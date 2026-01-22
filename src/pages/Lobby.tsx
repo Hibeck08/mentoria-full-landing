@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Sparkles, CheckCircle, Users, Star, Infinity, Zap } from "lucide-react";
+import { ArrowRight, Clock, Sparkles, CheckCircle, Users, Star, Infinity, Zap, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import lobbyWallpaper from "@/assets/lobby-wallpaper.png";
@@ -42,16 +42,19 @@ const ProductCard = ({ title, subtitle, description, features, to, comingSoon, f
       {/* Background Image */}
       {backgroundImage && (
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+          className="absolute inset-0 bg-cover bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundPosition: featured ? 'right 10% center' : 'center'
+          }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70 md:from-background/95 md:via-background/80 md:to-background/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/60 md:from-background/90 md:via-background/70 md:to-background/40" />
         </div>
       )}
       
       {/* Top Badge - Positioned inside with padding */}
       {featured && (
-        <div className="absolute top-4 left-4 md:top-5 md:left-6 z-20">
+        <div className="absolute top-4 left-4 md:top-6 md:left-8 z-20">
           <span className="bg-gradient-to-r from-accent to-accent/80 text-accent-foreground px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold flex items-center gap-1.5 shadow-lg border border-accent/20">
             <Star className="w-3 h-3 fill-current" />
             MAIS POPULAR
@@ -60,7 +63,7 @@ const ProductCard = ({ title, subtitle, description, features, to, comingSoon, f
       )}
       
       {comingSoon && (
-        <div className="absolute top-4 left-4 md:top-5 md:left-6 z-20">
+        <div className="absolute top-4 left-4 md:top-6 md:left-8 z-20">
           <span className="bg-muted/90 text-muted-foreground px-4 py-1.5 rounded-full text-[10px] md:text-xs font-medium flex items-center gap-1.5 border border-border/50 backdrop-blur-sm">
             <Clock className="w-3 h-3" />
             EM BREVE
@@ -68,7 +71,7 @@ const ProductCard = ({ title, subtitle, description, features, to, comingSoon, f
         </div>
       )}
       
-      <div className={`relative z-10 ${featured ? 'pt-14 pb-6 px-4 md:pt-16 md:pb-8 md:px-8' : 'pt-12 pb-5 px-4 md:pt-14 md:pb-6 md:px-6'}`}>
+      <div className={`relative z-10 ${featured ? 'pt-14 pb-6 px-4 md:pt-20 md:pb-10 md:px-10' : 'pt-12 pb-5 px-4 md:pt-16 md:pb-8 md:px-8'}`}>
         <div className="flex flex-col gap-4 md:gap-0 md:flex-row md:items-start md:justify-between">
           <div className="flex-1 md:pr-8">
             <h3 className={`text-xl md:text-2xl lg:text-3xl font-bold mb-1.5 md:mb-2 ${comingSoon ? "text-muted-foreground" : "text-foreground"}`}>
@@ -170,17 +173,28 @@ const Lobby = () => {
                 SAIBA TUDO QUE TIVE QUE APRENDER PARA SER O 08 DA EFOMM E 01 DA AFA!
               </p>
               
-              <p className="text-sm md:text-lg text-muted-foreground max-w-md md:max-w-none">
+              <p className="text-sm md:text-lg text-muted-foreground max-w-md md:max-w-none mb-6 md:mb-8">
                 Escolha o programa ideal para conquistar sua vaga nas Forças Armadas
               </p>
+              
+              {/* WhatsApp Button */}
+              <a
+                href="https://wa.me/5521999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#25D366]/30 hover:scale-105"
+              >
+                <MessageCircle className="w-5 h-5 fill-white" />
+                <span>Entre em Contato</span>
+              </a>
             </div>
           </div>
         </section>
 
         {/* Products Section */}
-        <section className="py-6 md:py-12">
+        <section className="py-8 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-5 md:space-y-6">
+            <div className="max-w-5xl mx-auto space-y-5 md:space-y-8">
               {/* MENTORIA FULL */}
               <ProductCard
                 title="MENTORIA FULL"

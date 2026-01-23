@@ -854,14 +854,14 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground mb-4">Renovação mensal</p>
                 
                 <ul className="space-y-2 mb-6 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki", "Aulas ao vivo e gravadas", "Suporte direto"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                  {["Mentoria 1:1 personalizada", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki completos", "Simulados + correção detalhada", "Aulas ao vivo semanais", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com método infalível", "Suporte direto com mentores", "Comunidade de aprovados", "Acesso por 1 mês"].map((item, index) => <li key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-xs md:text-sm text-foreground">{item}</span>
                     </li>)}
                 </ul>
                 
                 <div className="mb-4 mt-auto">
-                  <p className="text-xs text-muted-foreground mb-1">por apenas</p>
+                  <p className="text-xs text-muted-foreground mb-1">de <span className="line-through">R$ 139,90</span> por apenas</p>
                   <p className="text-2xl md:text-3xl font-bold text-accent">R$129,90</p>
                   <p className="text-xs text-muted-foreground">/mês</p>
                 </div>
@@ -902,9 +902,9 @@ const Index = () => {
                 </ul>
                 
                 <div className="mb-4 mt-auto">
-                  <p className="text-xs text-background/80 mb-1">de R$ 129,90 por apenas</p>
-                  <p className="text-2xl md:text-3xl font-bold text-background">R$89,90</p>
-                  <p className="text-xs text-background/80">/mês ou R$ 1.078,80 à vista</p>
+                  <p className="text-xs text-background/80 mb-1">de <span className="line-through">R$ 129,90</span> por apenas</p>
+                  <p className="text-2xl md:text-3xl font-bold text-background">R$122,76</p>
+                  <p className="text-xs text-background/80">/mês ou R$ 1.187,00 à vista</p>
                 </div>
                 
                 <Button variant="default" className="w-full py-4 text-sm font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
@@ -912,7 +912,7 @@ const Index = () => {
                 </Button>
                 
                 <p className="text-xs text-center text-background/90 font-medium mt-2">
-                  Economize 30% • 12x de R$89,90
+                  Economize 5% • 12x de R$122,76
                 </p>
               </div>
             </ScrollReveal>
@@ -934,16 +934,16 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground mb-4">6 meses de acesso</p>
                 
                 <ul className="space-y-2 mb-6 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki", "Simulados + correção", "Aulas ao vivo semanais", "Suporte direto", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                  {["Mentoria 1:1 personalizada", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki completos", "Simulados + correção detalhada", "Aulas ao vivo semanais", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com método infalível", "Suporte direto com mentores", "Comunidade de aprovados", "Acesso por 6 meses"].map((item, index) => <li key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-xs md:text-sm text-foreground">{item}</span>
                     </li>)}
                 </ul>
                 
                 <div className="mb-4 mt-auto">
-                  <p className="text-xs text-muted-foreground mb-1">de R$ 129,90 por apenas</p>
-                  <p className="text-2xl md:text-3xl font-bold text-accent">R$98,87</p>
-                  <p className="text-xs text-muted-foreground">/mês ou R$ 593,22 à vista</p>
+                  <p className="text-xs text-muted-foreground mb-1">de <span className="line-through">R$ 129,90</span> por apenas</p>
+                  <p className="text-2xl md:text-3xl font-bold text-accent">R$125,13</p>
+                  <p className="text-xs text-muted-foreground">/mês ou R$ 667,00 à vista</p>
                 </div>
                 
                 <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
@@ -951,7 +951,7 @@ const Index = () => {
                 </Button>
                 
                 <p className="text-xs text-center text-muted-foreground mt-2">
-                  Economize 20%
+                  Economize 4%
                 </p>
               </div>
             </ScrollReveal>

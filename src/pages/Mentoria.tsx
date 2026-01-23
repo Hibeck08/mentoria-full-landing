@@ -8,7 +8,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { NumberStat } from "@/components/NumberStat";
 import { ComparisonCard } from "@/components/ComparisonCard";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown } from "lucide-react";
+import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
@@ -17,6 +17,8 @@ import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryHeritage from "@/assets/military-heritage.png";
 import militaryWallpaper from "@/assets/military-wallpaper.png";
 import metodoShowcaseBanner from "@/assets/metodo-showcase-banner.png";
+import ankiWallpaper from "@/assets/anki-wallpaper.png";
+import ankiCardExample from "@/assets/anki-card-example.png";
 import Autoplay from "embla-carousel-autoplay";
 const Index = () => {
   const scrollToPlans = () => {
@@ -488,6 +490,111 @@ const Index = () => {
               <ComparisonCard title="✅ Com a Mentoria FULL" type="after" items={["Plano de estudos estruturado e personalizado", "Foco total nas matérias que realmente importam", "Método comprovado de aprovação", "Acompanhamento direto de quem já passou", "Resultados rápidos e consistentes"]} />
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Anki Flashcards Section */}
+      <section className="py-16 md:py-32 relative overflow-hidden">
+        {/* Background Wallpaper */}
+        <div className="absolute inset-0">
+          <img 
+            src={ankiWallpaper} 
+            alt="Anki Flashcards Background" 
+            className="w-full h-full object-cover object-center opacity-50"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        </div>
+        
+        <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-15" />
+        
+        <div className="container relative z-10 mx-auto px-4 md:px-6">
+          <ScrollReveal>
+            <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2 mx-auto mb-6 flex justify-center">
+              <Layers className="w-5 h-5 text-accent" />
+              <span className="text-base font-semibold text-foreground">Flashcards Anki</span>
+            </div>
+            
+            <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-3 md:mb-4 leading-tight">
+              Mais de{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">2.000 flashcards</span>
+              {" "}de todas as matérias
+            </h2>
+            
+            <p className="text-base md:text-lg text-center text-muted-foreground max-w-3xl mx-auto mb-4">
+              Teoria, exemplos, questões comentadas e imagens ilustrativas para revisão e aprendizado a curto prazo
+            </p>
+            
+            {/* Mini arrow */}
+            <div className="flex justify-center mb-8 md:mb-12">
+              <ArrowDown className="w-6 h-6 text-accent animate-bounce" />
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={100}>
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Content */}
+                <div className="space-y-6">
+                  <div className="bg-card/80 backdrop-blur-md border border-accent/30 rounded-2xl p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+                      O que você vai encontrar:
+                    </h3>
+                    
+                    <ul className="space-y-4">
+                      {[
+                        "Teoria organizada de forma objetiva",
+                        "Exemplos práticos de cada assunto",
+                        "Questões comentadas para fixação",
+                        "Imagens ilustrativas que facilitam a compreensão",
+                        "Cards de revisão para todas as matérias",
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-sm md:text-base text-foreground/90">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  {/* CTA Button */}
+                  <div className="flex justify-center md:justify-start">
+                    <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-base lg:text-lg font-bold px-8 py-5 md:px-10 md:py-6 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all">
+                      QUERO REVISAR COM QUALIDADE! →
+                    </Button>
+                  </div>
+                </div>
+                
+                {/* Card Example with Arrow */}
+                <div className="relative">
+                  <div className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 hidden md:flex items-center">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-accent font-medium">Exemplo real</span>
+                      <ArrowDown className="w-6 h-6 text-accent rotate-[-90deg]" />
+                    </div>
+                  </div>
+                  
+                  {/* Mobile Arrow */}
+                  <div className="flex md:hidden items-center justify-center gap-2 mb-4">
+                    <span className="text-sm text-accent font-medium">Exemplo real</span>
+                    <ArrowDown className="w-5 h-5 text-accent" />
+                  </div>
+                  
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-40 transition-opacity" />
+                    <img 
+                      src={ankiCardExample} 
+                      alt="Exemplo de Flashcard Anki" 
+                      className="relative rounded-2xl shadow-premium border-2 border-accent/30 w-full max-w-md mx-auto"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

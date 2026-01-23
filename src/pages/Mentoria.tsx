@@ -8,7 +8,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { NumberStat } from "@/components/NumberStat";
 import { ComparisonCard } from "@/components/ComparisonCard";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers } from "lucide-react";
+import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers, Play, MoveRight } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
@@ -483,11 +483,11 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
             <ScrollReveal variant="left">
-              <ComparisonCard title="❌ Sem a Mentoria" type="before" items={["Estudando sem direção clara", "Perdendo tempo com o que não cai na prova", "Sem método validado de aprovação", "Fazendo apenas o que 'acha' que está certo", "Resultados lentos ou inexistentes"]} />
+              <ComparisonCard title="❌ Sem a Mentoria" type="before" items={["Estudando sem direção clara", "Perdendo tempo com o que não cai", "Sem saber como revisar de verdade", "Fazendo só o que 'acha' certo", "Resultados lentos ou inexistentes"]} />
             </ScrollReveal>
             
             <ScrollReveal variant="right">
-              <ComparisonCard title="✅ Com a Mentoria FULL" type="after" items={["Plano de estudos estruturado e personalizado", "Foco total nas matérias que realmente importam", "Método comprovado de aprovação", "Acompanhamento direto de quem já passou", "Resultados rápidos e consistentes"]} />
+              <ComparisonCard title="✅ Com a Mentoria FULL" type="after" items={["Vídeos ensinando como estudar cada matéria", "+ 2.000 flashcards para revisões efetivas", "Encontros ao vivo de matemática e física", "Acompanhamento 1:1 personalizado", "Método validado pelo 01º da AFA"]} />
             </ScrollReveal>
           </div>
         </div>
@@ -495,25 +495,27 @@ const Index = () => {
 
       {/* Anki Flashcards Section */}
       <section className="py-16 md:py-32 relative overflow-hidden">
-        {/* Background Wallpaper */}
+        {/* Background Wallpaper - Higher opacity */}
         <div className="absolute inset-0">
           <img 
             src={ankiWallpaper} 
             alt="Anki Flashcards Background" 
-            className="w-full h-full object-cover object-center opacity-50"
+            className="w-full h-full object-cover object-center opacity-80"
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/60 to-background/90" />
         </div>
         
         <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-15" />
         
         <div className="container relative z-10 mx-auto px-4 md:px-6">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2 mx-auto mb-6 flex justify-center">
-              <Layers className="w-5 h-5 text-accent" />
-              <span className="text-base font-semibold text-foreground">Flashcards Anki</span>
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2 bg-card/90 backdrop-blur-sm border border-accent/30 rounded-full px-6 py-2">
+                <Layers className="w-5 h-5 text-accent" />
+                <span className="text-base font-semibold text-foreground">Flashcards Anki</span>
+              </div>
             </div>
             
             <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold text-center mb-3 md:mb-4 leading-tight">
@@ -523,7 +525,7 @@ const Index = () => {
             </h2>
             
             <p className="text-base md:text-lg text-center text-muted-foreground max-w-3xl mx-auto mb-4">
-              Teoria, exemplos, questões comentadas e imagens ilustrativas para revisão e aprendizado a curto prazo
+              Teoria objetiva, exemplos práticos, questões comentadas e imagens ilustrativas para revisões efetivas e aprendizado acelerado
             </p>
             
             {/* Mini arrow */}
@@ -537,7 +539,7 @@ const Index = () => {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Content */}
                 <div className="space-y-6">
-                  <div className="bg-card/80 backdrop-blur-md border border-accent/30 rounded-2xl p-6 md:p-8">
+                  <div className="bg-card/90 backdrop-blur-md border border-accent/30 rounded-2xl p-6 md:p-8">
                     <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
                       O que você vai encontrar:
                     </h3>
@@ -566,23 +568,25 @@ const Index = () => {
                   </div>
                 </div>
                 
-                {/* Card Example with Arrow */}
+                {/* Card Example with Elegant Arrow */}
                 <div className="relative">
-                  <div className="absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 hidden md:flex items-center">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-accent font-medium">Exemplo real</span>
-                      <ArrowDown className="w-6 h-6 text-accent rotate-[-90deg]" />
+                  {/* Desktop Elegant Arrow */}
+                  <div className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 hidden md:flex items-center z-10">
+                    <div className="flex items-center gap-1 animate-pulse">
+                      <div className="w-12 h-[2px] bg-gradient-to-r from-transparent to-accent rounded-full" />
+                      <MoveRight className="w-6 h-6 text-accent" />
                     </div>
                   </div>
                   
-                  {/* Mobile Arrow */}
+                  {/* Mobile Elegant Arrow */}
                   <div className="flex md:hidden items-center justify-center gap-2 mb-4">
-                    <span className="text-sm text-accent font-medium">Exemplo real</span>
-                    <ArrowDown className="w-5 h-5 text-accent" />
+                    <div className="flex items-center gap-1 animate-pulse">
+                      <ArrowDown className="w-5 h-5 text-accent" />
+                    </div>
                   </div>
                   
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
                     <img 
                       src={ankiCardExample} 
                       alt="Exemplo de Flashcard Anki" 
@@ -626,7 +630,7 @@ const Index = () => {
           </ScrollReveal>
           
           <div className="max-w-5xl mx-auto space-y-3 md:space-y-4">
-            {["Método usado por mim para aprovação na AFA, EFOMM, EEAr e EPCAr", "Encontros ao vivo com foco em matemática e física do zero", "Técnicas para criar planos de estudo que realmente funcionam", "Aulas gravadas e acesso a listas de questões inéditas", "Método prático e direto ao ponto – sem enrolação!"].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
+            {["Método completo que me aprovou na AFA (01º), EFOMM (08º), EEAr e EPCAr", "Vídeo-aulas ensinando como estudar cada matéria do zero ao avançado", "+ de 2.000 flashcards Anki com teoria, exemplos e questões para revisão", "Encontros ao vivo semanais focados em matemática e física", "Técnicas de organização, filtragem de questões e revisões efetivas", "Aulas gravadas + listas exclusivas de questões – método direto ao ponto!"].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl md:rounded-3xl p-4 md:p-6 hover:bg-card/70 hover:border-accent/40 transition-all duration-300">
                   <div className="flex items-center gap-3 md:gap-4">
                     <div className="flex-shrink-0">
@@ -644,7 +648,7 @@ const Index = () => {
             <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-center mt-8 md:mt-16 max-w-4xl mx-auto leading-relaxed px-2">
               <span className="font-bold text-foreground">E o melhor?</span>{" "}
               <span className="text-muted-foreground">
-                Nada de ficar perdido! Você recebe planejamento pronto, checklists e um passo a passo validado para seguir e aplicar.
+                Nada de ficar perdido! Você recebe planejamento pronto, checklists, vídeos explicativos e um passo a passo validado para seguir e aplicar.
               </span>
             </p>
           </ScrollReveal>
@@ -752,29 +756,29 @@ const Index = () => {
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {[{
-            icon: <Rocket className="w-6 h-6 text-primary-foreground" />,
-            title: "Resultado Rápido",
-            description: "Método acelerado para você ver progresso em semanas, não anos"
+            icon: <Play className="w-6 h-6 text-primary-foreground" />,
+            title: "Vídeo-Aulas Exclusivas",
+            description: "Aprenda como estudar cada matéria com vídeos passo a passo"
           }, {
-            icon: <Brain className="w-6 h-6 text-primary-foreground" />,
-            title: "Aprenda de Verdade",
-            description: "Técnicas de memorização de longo prazo que realmente funcionam"
+            icon: <Layers className="w-6 h-6 text-primary-foreground" />,
+            title: "2.000+ Flashcards Anki",
+            description: "Teoria, exemplos e questões comentadas para revisão efetiva"
           }, {
             icon: <Clock className="w-6 h-6 text-primary-foreground" />,
-            title: "Flexível para Você",
-            description: "Estude no seu ritmo, com acesso longo aos materiais"
+            title: "Encontros ao Vivo",
+            description: "Aulas semanais de matemática e física com suporte direto"
           }, {
             icon: <TrendingUp className="w-6 h-6 text-primary-foreground" />,
-            title: "Evolução Constante",
-            description: "Tenha encontros ao vivo comigo para saber exatamente o que fazer"
+            title: "Método Validado",
+            description: "Estratégias que me levaram ao 01º da AFA e 08º da EFOMM"
           }, {
             icon: <Users className="w-6 h-6 text-primary-foreground" />,
-            title: "Comunidade Ativa",
-            description: "Faça parte de um grupo de estudantes focados na aprovação"
+            title: "Comunidade de Aprovados",
+            description: "Grupo exclusivo de estudantes focados na aprovação"
           }, {
             icon: <Award className="w-6 h-6 text-primary-foreground" />,
-            title: "Mentores Aprovados",
-            description: "Aprenda com quem já passou e sabe o caminho das pedras"
+            title: "Acompanhamento 1:1",
+            description: "Mentoria personalizada para ajustar seu plano de estudos"
           }].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="group relative bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-premium">
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
@@ -850,7 +854,7 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground mb-4">Renovação mensal</p>
                 
                 <ul className="space-y-2 mb-6 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário", "PDFs + bônus premium", "Simulados + correção", "Aulas ao vivo e gravadas", "Suporte direto"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                  {["Mentoria 1:1 personalizada", "Acompanhamento diário", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki", "Aulas ao vivo e gravadas", "Suporte direto"].map((item, index) => <li key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-xs md:text-sm text-foreground">{item}</span>
                     </li>)}
@@ -891,7 +895,7 @@ const Index = () => {
                 <p className="text-xs text-background/80 mb-4">Melhor custo-benefício</p>
                 
                 <ul className="space-y-2 mb-6 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário exclusivo", "PDFs completos + bônus premium", "Simulados + correção detalhada", "Aulas ao vivo e gravadas", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões especializadas", "Suporte direto com mentores", "Comunidade de aprovados", "Acesso por 12 meses"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                  {["Mentoria 1:1 personalizada", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki completos", "Simulados + correção detalhada", "Aulas ao vivo semanais", "Estratégia AFA, EN, EFOMM, EEAR", "Revisões com método infalível", "Suporte direto com mentores", "Comunidade de aprovados", "Acesso por 12 meses"].map((item, index) => <li key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-background flex-shrink-0 mt-0.5" />
                       <span className="text-xs md:text-sm text-background font-medium">{item}</span>
                     </li>)}
@@ -930,7 +934,7 @@ const Index = () => {
                 <p className="text-xs text-muted-foreground mb-4">6 meses de acesso</p>
                 
                 <ul className="space-y-2 mb-6 flex-grow">
-                  {["Mentoria 1:1 personalizada", "Acompanhamento diário", "PDFs + bônus premium", "Simulados + correção", "Aulas ao vivo e gravadas", "Suporte direto", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2">
+                  {["Mentoria 1:1 personalizada", "Vídeos ensinando como estudar", "+ 2.000 flashcards Anki", "Simulados + correção", "Aulas ao vivo semanais", "Suporte direto", "Comunidade de aprovados"].map((item, index) => <li key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-xs md:text-sm text-foreground">{item}</span>
                     </li>)}

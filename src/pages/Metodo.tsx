@@ -351,41 +351,56 @@ const Metodo = () => {
         </div>
       </div>
 
-      {/* What You Will Learn Section */}
-      <section className="py-12 md:py-32 relative overflow-hidden bg-secondary/20">
+      {/* What You Will Learn Section - Timeline Style */}
+      <section className="py-16 md:py-32 relative overflow-hidden bg-gradient-to-br from-background via-secondary/10 to-background">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[150px] opacity-40" />
+          <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-accent/20 rounded-full blur-[120px] opacity-30" />
+        </div>
+        
         <div className="container relative z-10 mx-auto px-6 md:px-4">
           <ScrollReveal>
-            <div className="flex justify-center mb-6 md:mb-12">
-              <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 md:px-6 py-2">
-                <span className="text-sm md:text-sm font-semibold text-foreground">Método FULL</span>
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-accent rounded-lg flex items-center justify-center">
-                  <Target className="w-4 h-4 md:w-5 md:h-5 text-background" />
-                </div>
-              </div>
-            </div>
-            
-            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-8 md:mb-16">
-              O que você vai <span className="text-accent">aprender?</span>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4">
+              O que você vai <span className="text-accent italic">dominar?</span>
             </h2>
+            <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-20 max-w-xl mx-auto">
+              Um caminho claro do zero à aprovação
+            </p>
           </ScrollReveal>
           
-          <div className="max-w-5xl mx-auto space-y-3 md:space-y-4">
+          {/* Timeline Container */}
+          <div className="max-w-4xl mx-auto relative">
+            {/* Vertical Line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent/50 to-transparent md:-translate-x-1/2" />
+            
             {[
-              "Como se organizar e montar um plano de estudos realista",
-              "Como estudar com eficiência, mesmo tendo pouco tempo",
-              "Como revisar do jeito certo (sem precisar recomeçar tudo)",
-              "Como filtrar questões que realmente valem a pena",
-              "Como usar simulados para identificar erros e evoluir rápido"
+              { step: "01", title: "Planejamento", desc: "Monte um plano de estudos realista e executável", icon: Target },
+              { step: "02", title: "Eficiência", desc: "Aprenda a estudar de verdade, mesmo com pouco tempo", icon: Zap },
+              { step: "03", title: "Revisão", desc: "Revise do jeito certo — sem recomeçar do zero", icon: Repeat },
+              { step: "04", title: "Questões", desc: "Filtre e resolva apenas o que realmente importa", icon: FileText },
+              { step: "05", title: "Evolução", desc: "Use simulados para medir progresso e ajustar rota", icon: TrendingUp }
             ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
-                <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl md:rounded-3xl p-4 md:p-6 hover:bg-card/70 hover:border-accent/40 transition-all duration-300">
-                  <div className="flex items-center gap-3 md:gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-8 h-8 md:w-10 md:h-10 bg-accent/20 rounded-lg md:rounded-xl flex items-center justify-center">
-                        <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+              <ScrollReveal key={index} delay={index * 150}>
+                <div className={`relative flex items-center gap-6 md:gap-8 mb-8 md:mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                  {/* Timeline Dot */}
+                  <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background shadow-glow-beige md:-translate-x-1/2 z-10" />
+                  
+                  {/* Content Card */}
+                  <div className={`ml-12 md:ml-0 md:w-[calc(50%-40px)] ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+                    <div className="group bg-card/60 backdrop-blur-sm border border-accent/20 rounded-2xl p-5 md:p-6 hover:border-accent/50 hover:bg-card/80 transition-all duration-300 hover:shadow-premium">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <item.icon className="w-6 h-6 text-accent-foreground" />
+                          </div>
+                        </div>
+                        <div>
+                          <span className="text-xs font-bold text-accent/70 uppercase tracking-wider">Passo {item.step}</span>
+                          <h3 className="text-lg md:text-xl font-bold text-foreground mt-1">{item.title}</h3>
+                          <p className="text-sm md:text-base text-muted-foreground mt-1">{item.desc}</p>
+                        </div>
                       </div>
                     </div>
-                    <p className="text-base md:text-base lg:text-lg text-muted-foreground">{item}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -393,67 +408,83 @@ const Metodo = () => {
           </div>
           
           <ScrollReveal>
-            <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-center mt-8 md:mt-16 max-w-4xl mx-auto leading-relaxed px-2">
-              <span className="font-bold text-foreground">Tudo isso seguindo um método testado, replicável e aplicável a qualquer prova.</span>
-            </p>
+            <div className="text-center mt-8 md:mt-16 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-foreground font-bold">
+                Um método <span className="text-accent">testado</span>, replicável e aplicável a <span className="underline decoration-accent decoration-2 underline-offset-4">qualquer prova</span>.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/20 to-background">
-        <div className="flex items-center gap-3">
-          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-accent"></div>
-          <div className="flex flex-col items-center">
-            <ArrowDown className="w-6 h-6 text-accent animate-bounce" />
+      {/* Section Transition - Subtle */}
+      <div className="py-6 bg-background">
+        <div className="flex justify-center">
+          <div className="flex items-center gap-2 opacity-40">
+            <div className="w-2 h-2 bg-accent rounded-full" />
+            <div className="w-3 h-3 bg-accent rounded-full" />
+            <div className="w-2 h-2 bg-accent rounded-full" />
           </div>
-          <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-accent"></div>
         </div>
       </div>
 
-      {/* Flashcards/Anki Section */}
-      <section className="py-12 md:py-32 bg-background relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
+      {/* Flashcards/Anki Section - Distinct Visual */}
+      <section className="py-16 md:py-32 relative overflow-hidden">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-accent/5" />
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background to-transparent" />
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
+        </div>
+        
         <div className="container relative z-10 mx-auto px-6 md:px-4">
           <ScrollReveal>
-            <div className="flex justify-center mb-6 md:mb-12">
-              <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 md:px-6 py-2">
-                <span className="text-sm md:text-sm font-semibold text-foreground">Bônus Exclusivo</span>
-                <div className="w-6 h-6 md:w-8 md:h-8 bg-accent rounded-lg flex items-center justify-center">
-                  <Repeat className="w-4 h-4 md:w-5 md:h-5 text-background" />
-                </div>
+            <div className="flex justify-center mb-4">
+              <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-5 py-2.5">
+                <span className="text-sm font-bold text-accent uppercase tracking-wider">🎁 Bônus Incluso</span>
               </div>
             </div>
             
-            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-4">
-              <span className="text-accent">+2000 Flashcards</span> prontos para acelerar sua aprovação
+            <h2 className="text-[2rem] md:text-5xl lg:text-6xl font-black text-center mb-4">
+              <span className="bg-gradient-hero-text bg-clip-text text-transparent">+2000</span> Flashcards
             </h2>
-            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-3xl mx-auto">
-              Além do método, você recebe mais de 2000 flashcards, organizados e prontos para uso, cobrindo todas as matérias.
+            <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
+              Teoria, exemplos e questões comentadas — tudo pronto para você revisar em minutos por dia.
             </p>
           </ScrollReveal>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: Brain, title: "Memorização Ativa", description: "Técnica comprovada de retenção" },
-              { icon: Zap, title: "Revisões Rápidas", description: "Otimize seu tempo de estudo" },
-              { icon: Clock, title: "Estudo em Pouco Tempo", description: "Perfeito para rotinas apertadas" },
-              { icon: Target, title: "Fixação de Conteúdos", description: "Domine os temas mais difíceis" }
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
-                <FeatureCard {...item} />
-              </ScrollReveal>
-            ))}
+          {/* Horizontal Cards with Icons */}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              {[
+                { icon: Brain, label: "Memorização", value: "Ativa" },
+                { icon: Clock, label: "Revisões", value: "Rápidas" },
+                { icon: Zap, label: "Tempo", value: "Otimizado" },
+                { icon: Target, label: "Fixação", value: "Permanente" }
+              ].map((item, index) => (
+                <ScrollReveal key={index} delay={index * 80}>
+                  <div className="group bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-xl p-4 md:p-5 text-center hover:border-accent hover:scale-105 transition-all duration-300">
+                    <div className="w-10 h-10 md:w-12 md:h-12 mx-auto bg-gradient-primary rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <item.icon className="w-5 h-5 md:w-6 md:h-6 text-accent-foreground" />
+                    </div>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">{item.label}</p>
+                    <p className="text-sm md:text-base font-bold text-foreground">{item.value}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
           
           <ScrollReveal>
-            <div className="text-center mt-8 md:mt-12">
-              <p className="text-lg md:text-xl text-foreground font-semibold mb-2">
-                Você não precisa criar nada do zero.
-              </p>
-              <p className="text-base md:text-lg text-accent font-bold">
-                É só usar e avançar.
-              </p>
+            <div className="text-center mt-10 md:mt-14">
+              <div className="inline-block bg-card/90 backdrop-blur-sm border border-accent/30 rounded-2xl px-8 py-5">
+                <p className="text-lg md:text-xl text-foreground font-bold">
+                  Você <span className="text-accent">não precisa criar nada</span> do zero.
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground mt-1">
+                  É só baixar, abrir e começar a revisar. 📚
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -797,29 +828,6 @@ const Metodo = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-12 md:py-24 bg-background">
-        <div className="container mx-auto px-6 md:px-4">
-          <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-6">
-                O Método FULL te mostra o <span className="text-accent">caminho</span>
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground mb-8">
-                Clique no botão abaixo e comece hoje.
-              </p>
-              <Button 
-                variant="gold" 
-                size="lg" 
-                onClick={scrollToPlans} 
-                className="text-lg md:text-xl font-bold px-10 py-7 md:px-14 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all"
-              >
-                QUERO O MÉTODO FULL →
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 animate-float">

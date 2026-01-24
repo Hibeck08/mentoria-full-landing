@@ -10,7 +10,6 @@ import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryWallpaper from "@/assets/military-wallpaper.png";
-
 const Metodo = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-metodo');
@@ -21,29 +20,15 @@ const Metodo = () => {
       });
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
-          <img 
-            src="/lovable-uploads/hero-mobile.png" 
-            alt="Background" 
-            className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" 
-            loading="eager" 
-            fetchPriority="high" 
-          />
+          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Desktop image - Priority loading */}
-          <img 
-            src={heroMain} 
-            alt="Background" 
-            className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" 
-            loading="eager" 
-            fetchPriority="high" 
-          />
+          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Gradient overlay for better text readability and depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           {/* Subtle vignette effect */}
@@ -53,72 +38,82 @@ const Metodo = () => {
         {/* Floating decorative elements */}
         <div className="absolute inset-0 z-5 pointer-events-none">
           {/* Mobile minimal floating icons */}
-          <div className="absolute top-[30%] right-6 animate-float opacity-60 md:hidden will-change-transform" style={{ animationDelay: "0.5s" }}>
+          <div className="absolute top-[30%] right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          animationDelay: "0.5s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
               <Brain className="w-6 h-6 text-accent-foreground" />
             </div>
           </div>
           
-          <div className="absolute top-[45%] left-6 animate-float opacity-60 md:hidden will-change-transform" style={{ animationDelay: "1s" }}>
+          <div className="absolute top-[45%] left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          animationDelay: "1s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
               <Lightbulb className="w-6 h-6 text-accent-foreground" />
             </div>
           </div>
           
           {/* Desktop floating icons */}
-          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block will-change-transform" style={{ animationDelay: "0.5s" }}>
+          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block will-change-transform" style={{
+          animationDelay: "0.5s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
               <Brain className="w-10 h-10 text-accent-foreground" />
             </div>
           </div>
           
-          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden md:block lg:block" style={{ animationDelay: "1s" }}>
+          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden md:block lg:block" style={{
+          animationDelay: "1s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
               <Lightbulb className="w-10 h-10 text-accent-foreground" />
             </div>
           </div>
           
-          <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{ animationDelay: "1.5s" }}>
+          <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{
+          animationDelay: "1.5s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
               <BarChart3 className="w-10 h-10 text-accent-foreground" />
             </div>
           </div>
           
           {/* Decorative circles */}
-          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full border-2 border-accent/20 animate-float hidden lg:block" style={{ animationDelay: "0.8s" }} />
-          <div className="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-accent/20 animate-float hidden lg:block" style={{ animationDelay: "1.2s" }} />
+          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full border-2 border-accent/20 animate-float hidden lg:block" style={{
+          animationDelay: "0.8s"
+        }} />
+          <div className="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-accent/20 animate-float hidden lg:block" style={{
+          animationDelay: "1.2s"
+        }} />
           
           {/* Subtle glow effects */}
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
-          <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+          <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{
+          animationDelay: "1.5s"
+        }} />
         </div>
         
         <div className="container relative z-10 mx-auto px-6 pt-24 pb-8 md:py-20 h-full">
           <div className="max-w-7xl mx-auto h-full">
             {/* Logo - Fixed top left */}
             <div className="absolute top-4 md:top-8 left-4 md:left-8 animate-fade-in-up z-20">
-              <img 
-                src={mentoriaLogo} 
-                alt="Método FULL Logo" 
-                className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl" 
-                loading="eager" 
-              />
+              <img src={mentoriaLogo} alt="Método FULL Logo" className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl" loading="eager" />
             </div>
             
             {/* Badge - Desktop only */}
-            <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{ animationDelay: "0.2s" }}>
-              <img 
-                src={heroPhoto} 
-                alt="Mentor" 
-                className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" 
-                loading="eager" 
-              />
+            <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
+            animationDelay: "0.2s"
+          }}>
+              <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" loading="eager" />
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
             <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-32 md:pt-0 md:pb-0">
-              <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{ animationDelay: "0.3s" }}>
+              <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
+              animationDelay: "0.3s"
+            }}>
                 <h1 className="text-[1.35rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.2] text-left md:text-left">
                   <span className="text-foreground">
                     ENTENDA OS FUNDAMENTOS QUE REALMENTE FAZEM ALGUÉM SER{" "}
@@ -132,13 +127,10 @@ const Metodo = () => {
                   Da mesma forma que eu fui o 08º da EFOMM, 01º da AFA e ainda classificado na AFA e na EPCAr, você também pode!
                 </p>
                 
-                <div className="flex flex-col items-start md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-                  <Button 
-                    variant="gold" 
-                    size="lg" 
-                    onClick={scrollToPlans} 
-                    className="text-[0.85rem] leading-tight md:text-base lg:text-lg shadow-glow-beige rounded-full transition-all font-bold px-6 py-4 md:px-12 md:py-8 w-full sm:w-auto"
-                  >
+                <div className="flex flex-col items-start md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{
+                animationDelay: "0.5s"
+              }}>
+                  <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-[0.85rem] leading-tight md:text-base lg:text-lg shadow-glow-beige rounded-full transition-all font-bold px-6 py-4 md:px-12 md:py-8 w-full sm:w-auto">
                     VENHA PARA O MÉTODO FULL →
                   </Button>
                   <p className="text-xs md:text-sm text-muted-foreground/80 text-left md:text-left">
@@ -196,13 +188,7 @@ const Metodo = () => {
                   {/* Foto */}
                   <div className="relative mx-auto md:mx-0 max-w-[280px] md:max-w-none">
                     <div className="absolute inset-0 bg-gradient-primary rounded-2xl md:rounded-3xl blur-2xl opacity-30" />
-                    <img 
-                      src={bryanPhoto} 
-                      alt="Bryan Hibeck" 
-                      className="relative rounded-2xl md:rounded-3xl w-full h-auto object-cover shadow-premium border-2 border-accent/20" 
-                      loading="lazy" 
-                      decoding="async" 
-                    />
+                    <img src={bryanPhoto} alt="Bryan Hibeck" className="relative rounded-2xl md:rounded-3xl w-full h-auto object-cover shadow-premium border-2 border-accent/20" loading="lazy" decoding="async" />
                   </div>
                   
                   {/* Descrição */}
@@ -263,13 +249,7 @@ const Metodo = () => {
       <section className="py-12 md:py-32 relative overflow-hidden">
         {/* Background Military Wallpaper */}
         <div className="absolute inset-0">
-          <img 
-            src={militaryWallpaper} 
-            alt="Military Background" 
-            className="w-full h-full object-cover" 
-            loading="lazy" 
-            decoding="async" 
-          />
+          <img src={militaryWallpaper} alt="Military Background" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/95"></div>
         </div>
         
@@ -293,8 +273,7 @@ const Metodo = () => {
                   O Método FULL é um sistema completo de estudos que te ensina <strong className="text-foreground">como estudar</strong>, independentemente da matéria, do concurso ou do nível.
                 </p>
                 
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Aqui você aprende a estudar com <strong className="text-accent">lógica, constância e resultado</strong> — sem improviso, sem excesso de conteúdo e sem perda de tempo.
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">Aqui você aprende a estudar com lógica, constância e resultado, sem improviso, sem excesso de conteúdo e sem perda de tempo.<strong className="text-accent">lógica, constância e resultado</strong> — sem improviso, sem excesso de conteúdo e sem perda de tempo.
                 </p>
                 
                 <p className="text-base md:text-lg text-foreground leading-relaxed font-semibold">
@@ -306,13 +285,7 @@ const Metodo = () => {
             <ScrollReveal variant="right">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-                <img 
-                  alt="Setup de estudos premium" 
-                  className="relative rounded-3xl shadow-premium border border-accent/20" 
-                  src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.png" 
-                  loading="lazy" 
-                  decoding="async" 
-                />
+                <img alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.png" loading="lazy" decoding="async" />
               </div>
             </ScrollReveal>
           </div>
@@ -320,12 +293,7 @@ const Metodo = () => {
           <ScrollReveal>
             <div className="text-center mt-8 md:mt-12">
               <div className="flex flex-col items-center gap-2 md:gap-3">
-                <Button 
-                  variant="gold" 
-                  size="lg" 
-                  onClick={scrollToPlans} 
-                  className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto"
-                >
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-lg md:text-lg font-bold px-8 py-6 md:px-12 md:py-8 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full sm:w-auto">
                   QUERO O MÉTODO FULL →
                 </Button>
                 <p className="text-sm md:text-sm text-muted-foreground text-center">
@@ -361,7 +329,7 @@ const Metodo = () => {
         <div className="container relative z-10 mx-auto px-6 md:px-4">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4">
-              O que você vai <span className="text-accent italic">dominar?</span>
+              O que você vai <span className="text-accent italic font-extrabold font-sans text-4xl">DOMINAR?</span>
             </h2>
             <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-20 max-w-xl mx-auto">
               Um caminho claro do zero à aprovação
@@ -373,14 +341,32 @@ const Metodo = () => {
             {/* Vertical Line */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent/50 to-transparent md:-translate-x-1/2" />
             
-            {[
-              { step: "01", title: "Planejamento", desc: "Monte um plano de estudos realista e executável", icon: Target },
-              { step: "02", title: "Eficiência", desc: "Aprenda a estudar de verdade, mesmo com pouco tempo", icon: Zap },
-              { step: "03", title: "Revisão", desc: "Revise do jeito certo — sem recomeçar do zero", icon: Repeat },
-              { step: "04", title: "Questões", desc: "Filtre e resolva apenas o que realmente importa", icon: FileText },
-              { step: "05", title: "Evolução", desc: "Use simulados para medir progresso e ajustar rota", icon: TrendingUp }
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 150}>
+            {[{
+            step: "01",
+            title: "Planejamento",
+            desc: "Monte um plano de estudos realista e executável",
+            icon: Target
+          }, {
+            step: "02",
+            title: "Eficiência",
+            desc: "Aprenda a estudar de verdade, mesmo com pouco tempo",
+            icon: Zap
+          }, {
+            step: "03",
+            title: "Revisão",
+            desc: "Revise do jeito certo — sem recomeçar do zero",
+            icon: Repeat
+          }, {
+            step: "04",
+            title: "Questões",
+            desc: "Filtre e resolva apenas o que realmente importa",
+            icon: FileText
+          }, {
+            step: "05",
+            title: "Evolução",
+            desc: "Use simulados para medir progresso e ajustar rota",
+            icon: TrendingUp
+          }].map((item, index) => <ScrollReveal key={index} delay={index * 150}>
                 <div className={`relative flex items-center gap-6 md:gap-8 mb-8 md:mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Timeline Dot */}
                   <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background shadow-glow-beige md:-translate-x-1/2 z-10" />
@@ -403,8 +389,7 @@ const Metodo = () => {
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+              </ScrollReveal>)}
           </div>
           
           <ScrollReveal>
@@ -456,13 +441,23 @@ const Metodo = () => {
           {/* Horizontal Cards with Icons */}
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {[
-                { icon: Brain, label: "Memorização", value: "Ativa" },
-                { icon: Clock, label: "Revisões", value: "Rápidas" },
-                { icon: Zap, label: "Tempo", value: "Otimizado" },
-                { icon: Target, label: "Fixação", value: "Permanente" }
-              ].map((item, index) => (
-                <ScrollReveal key={index} delay={index * 80}>
+              {[{
+              icon: Brain,
+              label: "Memorização",
+              value: "Ativa"
+            }, {
+              icon: Clock,
+              label: "Revisões",
+              value: "Rápidas"
+            }, {
+              icon: Zap,
+              label: "Tempo",
+              value: "Otimizado"
+            }, {
+              icon: Target,
+              label: "Fixação",
+              value: "Permanente"
+            }].map((item, index) => <ScrollReveal key={index} delay={index * 80}>
                   <div className="group bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-xl p-4 md:p-5 text-center hover:border-accent hover:scale-105 transition-all duration-300">
                     <div className="w-10 h-10 md:w-12 md:h-12 mx-auto bg-gradient-primary rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                       <item.icon className="w-5 h-5 md:w-6 md:h-6 text-accent-foreground" />
@@ -470,8 +465,7 @@ const Metodo = () => {
                     <p className="text-xs text-muted-foreground uppercase tracking-wide">{item.label}</p>
                     <p className="text-sm md:text-base font-bold text-foreground">{item.value}</p>
                   </div>
-                </ScrollReveal>
-              ))}
+                </ScrollReveal>)}
             </div>
           </div>
           
@@ -517,16 +511,25 @@ const Metodo = () => {
           </ScrollReveal>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {[
-              { icon: Target, title: "Estuda Sozinho", description: "Para quem precisa de direção clara e estruturada" },
-              { icon: Zap, title: "Já Tentou Vários Métodos", description: "Para quem não teve resultado com outras abordagens" },
-              { icon: Trophy, title: "Quer Estratégia", description: "Para quem quer estudar com método, não no improviso" },
-              { icon: BookOpen, title: "Busca Evolução Real", description: "Para quem quer constância, clareza e progresso" }
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
+            {[{
+            icon: Target,
+            title: "Estuda Sozinho",
+            description: "Para quem precisa de direção clara e estruturada"
+          }, {
+            icon: Zap,
+            title: "Já Tentou Vários Métodos",
+            description: "Para quem não teve resultado com outras abordagens"
+          }, {
+            icon: Trophy,
+            title: "Quer Estratégia",
+            description: "Para quem quer estudar com método, não no improviso"
+          }, {
+            icon: BookOpen,
+            title: "Busca Evolução Real",
+            description: "Para quem quer constância, clareza e progresso"
+          }].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <FeatureCard {...item} />
-              </ScrollReveal>
-            ))}
+              </ScrollReveal>)}
           </div>
           
           <ScrollReveal>
@@ -573,13 +576,23 @@ const Metodo = () => {
           </ScrollReveal>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
-            {[
-              { icon: <Target className="w-6 h-6 text-primary-foreground" />, title: "O que estudar", description: "Foco no que realmente importa" },
-              { icon: <Clock className="w-6 h-6 text-primary-foreground" />, title: "Quando estudar", description: "Organize seu tempo com eficiência" },
-              { icon: <Repeat className="w-6 h-6 text-primary-foreground" />, title: "Como revisar", description: "Técnicas de revisão que funcionam" },
-              { icon: <BarChart3 className="w-6 h-6 text-primary-foreground" />, title: "Como medir evolução", description: "Acompanhe seu progresso real" }
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
+            {[{
+            icon: <Target className="w-6 h-6 text-primary-foreground" />,
+            title: "O que estudar",
+            description: "Foco no que realmente importa"
+          }, {
+            icon: <Clock className="w-6 h-6 text-primary-foreground" />,
+            title: "Quando estudar",
+            description: "Organize seu tempo com eficiência"
+          }, {
+            icon: <Repeat className="w-6 h-6 text-primary-foreground" />,
+            title: "Como revisar",
+            description: "Técnicas de revisão que funcionam"
+          }, {
+            icon: <BarChart3 className="w-6 h-6 text-primary-foreground" />,
+            title: "Como medir evolução",
+            description: "Acompanhe seu progresso real"
+          }].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="group relative bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-premium">
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-xl transition-opacity duration-300" />
                   <div className="relative z-10 text-center">
@@ -590,8 +603,7 @@ const Metodo = () => {
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+              </ScrollReveal>)}
           </div>
           
           <ScrollReveal>
@@ -631,13 +643,19 @@ const Metodo = () => {
           </ScrollReveal>
           
           <div className="max-w-3xl mx-auto space-y-4">
-            {[
-              { icon: BookOpen, text: "Acesso completo ao Método FULL" },
-              { icon: Brain, text: "+2000 flashcards de todas as matérias" },
-              { icon: Zap, text: "Acesso vitalício ao conteúdo" },
-              { icon: Shield, text: "Garantia incondicional de 7 dias" }
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
+            {[{
+            icon: BookOpen,
+            text: "Acesso completo ao Método FULL"
+          }, {
+            icon: Brain,
+            text: "+2000 flashcards de todas as matérias"
+          }, {
+            icon: Zap,
+            text: "Acesso vitalício ao conteúdo"
+          }, {
+            icon: Shield,
+            text: "Garantia incondicional de 7 dias"
+          }].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className="bg-card/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-5 hover:bg-card/70 hover:border-accent/40 transition-all duration-300">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -646,8 +664,7 @@ const Metodo = () => {
                     <p className="text-lg md:text-xl text-foreground font-medium">{item.text}</p>
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+              </ScrollReveal>)}
           </div>
           
           <ScrollReveal>
@@ -702,21 +719,10 @@ const Metodo = () => {
                 <p className="text-sm text-background/80 mb-6 text-center">Pagamento Único</p>
                 
                 <ul className="space-y-3 mb-8 flex-grow">
-                  {[
-                    "Acesso completo ao Método FULL",
-                    "+2000 flashcards de todas as matérias",
-                    "Como montar plano de estudos realista",
-                    "Como estudar com eficiência",
-                    "Como revisar do jeito certo",
-                    "Como filtrar questões importantes",
-                    "Como usar simulados estrategicamente",
-                    "Acesso vitalício ao conteúdo"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {["Acesso completo ao Método FULL", "+2000 flashcards de todas as matérias", "Como montar plano de estudos realista", "Como estudar com eficiência", "Como revisar do jeito certo", "Como filtrar questões importantes", "Como usar simulados estrategicamente", "Acesso vitalício ao conteúdo"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
                       <span className="text-base text-background font-medium">{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <div className="mb-6 text-center">
@@ -726,11 +732,7 @@ const Metodo = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button 
-                    variant="default" 
-                    className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" 
-                    onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}
-                  >
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
                     QUERO O MÉTODO FULL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">
@@ -797,31 +799,11 @@ const Metodo = () => {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
-                <FAQItem 
-                  value="item-1" 
-                  question="O que é o Método FULL?" 
-                  answer="O Método FULL é um sistema completo de estudos que te ensina como estudar, independentemente da matéria, do concurso ou do nível. Você aprende a estudar com lógica, constância e resultado — sem improviso, sem excesso de conteúdo e sem perda de tempo." 
-                />
-                <FAQItem 
-                  value="item-2" 
-                  question="Por quanto tempo terei acesso?" 
-                  answer="Você terá acesso VITALÍCIO a todo o conteúdo do Método FULL. Uma vez adquirido, o acesso é seu para sempre, incluindo todas as atualizações futuras." 
-                />
-                <FAQItem 
-                  value="item-3" 
-                  question="Os flashcards estão inclusos?" 
-                  answer="Sim! Você recebe mais de 2000 flashcards organizados e prontos para uso, cobrindo todas as matérias. É só baixar e começar a usar." 
-                />
-                <FAQItem 
-                  value="item-4" 
-                  question="Tem garantia?" 
-                  answer="Sim! Oferecemos garantia incondicional de 7 dias. Se você não estiver satisfeito por qualquer motivo, devolvemos 100% do valor investido sem complicações." 
-                />
-                <FAQItem 
-                  value="item-5" 
-                  question="Serve para qualquer concurso?" 
-                  answer="Sim! O Método FULL foi desenvolvido para ser aplicável a qualquer prova. As técnicas de organização, revisão e memorização funcionam independentemente do concurso que você está se preparando." 
-                />
+                <FAQItem value="item-1" question="O que é o Método FULL?" answer="O Método FULL é um sistema completo de estudos que te ensina como estudar, independentemente da matéria, do concurso ou do nível. Você aprende a estudar com lógica, constância e resultado — sem improviso, sem excesso de conteúdo e sem perda de tempo." />
+                <FAQItem value="item-2" question="Por quanto tempo terei acesso?" answer="Você terá acesso VITALÍCIO a todo o conteúdo do Método FULL. Uma vez adquirido, o acesso é seu para sempre, incluindo todas as atualizações futuras." />
+                <FAQItem value="item-3" question="Os flashcards estão inclusos?" answer="Sim! Você recebe mais de 2000 flashcards organizados e prontos para uso, cobrindo todas as matérias. É só baixar e começar a usar." />
+                <FAQItem value="item-4" question="Tem garantia?" answer="Sim! Oferecemos garantia incondicional de 7 dias. Se você não estiver satisfeito por qualquer motivo, devolvemos 100% do valor investido sem complicações." />
+                <FAQItem value="item-5" question="Serve para qualquer concurso?" answer="Sim! O Método FULL foi desenvolvido para ser aplicável a qualquer prova. As técnicas de organização, revisão e memorização funcionam independentemente do concurso que você está se preparando." />
               </Accordion>
             </div>
           </ScrollReveal>
@@ -831,12 +813,7 @@ const Metodo = () => {
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button 
-          variant="gold" 
-          size="lg" 
-          className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" 
-          onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}
-        >
+        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
           💬 Fale Comigo
         </Button>
       </div>
@@ -846,12 +823,7 @@ const Metodo = () => {
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
-              <img 
-                src={mentoriaLogo} 
-                alt="Método FULL" 
-                className="w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4" 
-                loading="lazy" 
-              />
+              <img src={mentoriaLogo} alt="Método FULL" className="w-12 h-12 md:w-16 md:h-16 mb-3 md:mb-4" loading="lazy" />
               <p className="text-base md:text-base text-muted-foreground italic font-semibold">
                 "Estudar com estratégia, não no improviso."
               </p>
@@ -875,8 +847,6 @@ const Metodo = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Metodo;

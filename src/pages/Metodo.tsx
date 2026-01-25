@@ -7,9 +7,11 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Lightbulb, BarChart3, Repeat } from "lucide-react";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
-import heroMain from "@/assets/hero-main.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryWallpaper from "@/assets/military-wallpaper.png";
+import metodoHeroWallpaper from "@/assets/metodo-hero-wallpaper.jpg";
+import flashcardsWallpaper from "@/assets/flashcards-wallpaper.png";
+import benefitsWallpaper from "@/assets/benefits-wallpaper.png";
 const Metodo = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-metodo');
@@ -26,9 +28,9 @@ const Metodo = () => {
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
-          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={metodoHeroWallpaper} alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Desktop image - Priority loading */}
-          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={metodoHeroWallpaper} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Gradient overlay for better text readability and depth */}
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           {/* Subtle vignette effect */}
@@ -415,8 +417,11 @@ const Metodo = () => {
 
       {/* Flashcards/Anki Section - Distinct Visual */}
       <section className="py-16 md:py-32 relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-accent/5" />
+        {/* Background Wallpaper */}
+        <div className="absolute inset-0">
+          <img src={flashcardsWallpaper} alt="Flashcards Background" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-background/90" />
+        </div>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background to-transparent" />
           <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent" />
@@ -631,8 +636,14 @@ const Metodo = () => {
       </div>
 
       {/* What You Receive Section */}
-      <section className="py-12 md:py-32 bg-gradient-to-br from-background via-primary/5 to-background">
-        <div className="container mx-auto px-6 md:px-4">
+      <section className="py-12 md:py-32 relative overflow-hidden">
+        {/* Background Wallpaper */}
+        <div className="absolute inset-0">
+          <img src={benefitsWallpaper} alt="Benefits Background" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/95" />
+        </div>
+        
+        <div className="container relative z-10 mx-auto px-6 md:px-4">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-4">
               O que você recebe <span className="text-accent">ao entrar</span>

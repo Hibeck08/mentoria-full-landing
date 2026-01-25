@@ -25,67 +25,67 @@ All colors MUST be HSL.
   }
   
   :root {
-    /* Base colors - Dark Purple/Black */
-    --background: 266 30% 6%;
+    /* Base colors - Pure Black */
+    --background: 0 0% 4%;
     --foreground: 0 0% 98%;
 
-    /* Primary - Deep Purple */
-    --primary: 266 80% 35%;
+    /* Primary - Vermilion (bright red-orange) */
+    --primary: 8 85% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Very Dark Purple */
-    --secondary: 266 40% 12%;
+    /* Secondary - Very Dark Gray/Black */
+    --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Accent - Premium Beige */
-    --accent: 42 71% 68%;
-    --accent-foreground: 0 0% 10%;
-    --accent-dark: 33 34% 39%;
+    /* Accent - Vermilion */
+    --accent: 8 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-dark: 8 70% 40%;
 
     /* Muted */
-    --muted: 266 20% 20%;
+    --muted: 0 0% 15%;
     --muted-foreground: 0 0% 70%;
 
     /* Card */
-    --card: 266 35% 8%;
+    --card: 0 0% 6%;
     --card-foreground: 0 0% 98%;
 
     /* Popover */
-    --popover: 266 35% 8%;
+    --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
 
     /* Border */
-    --border: 266 30% 20%;
-    --input: 266 30% 20%;
-    --ring: 266 80% 35%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 8 85% 50%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     /* Sidebar colors */
-    --sidebar-background: 266 35% 8%;
+    --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 266 80% 35%;
+    --sidebar-primary: 8 85% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 266 20% 20%;
+    --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 266 30% 20%;
-    --sidebar-ring: 266 80% 35%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 8 85% 50%;
 
     --radius: 0.75rem;
 
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(42 71% 68%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-beige-premium: linear-gradient(135deg, hsl(42 71% 68%) 0%, hsl(45 86% 88%) 50%, hsl(0 0% 98%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(266 30% 6%) 0%, hsl(266 40% 10%) 50%, hsl(266 30% 6%) 100%);
-    --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(42 71% 68%) 100%);
+    /* Premium Gradients - Vermilion theme */
+    --gradient-primary: linear-gradient(135deg, hsl(8 85% 55%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-beige-premium: linear-gradient(135deg, hsl(8 85% 55%) 0%, hsl(15 90% 70%) 50%, hsl(0 0% 98%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 4%) 100%);
+    --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(8 85% 55%) 100%);
 
-    /* Premium Shadows with Glow */
-    --shadow-premium: 0 20px 60px -10px hsl(266 80% 35% / 0.4), 0 10px 30px -10px hsl(42 71% 68% / 0.3), 0 0 80px hsl(266 80% 35% / 0.2);
-    --glow-purple: 0 0 40px hsl(266 80% 35% / 0.6), 0 0 80px hsl(266 80% 35% / 0.4), 0 0 120px hsl(266 80% 35% / 0.2);
-    --glow-beige: 0 0 60px hsl(42 71% 68% / 0.8), 0 0 100px hsl(42 71% 68% / 0.6), 0 0 140px hsl(42 71% 68% / 0.4), 0 0 200px hsl(42 71% 68% / 0.2);
-    --shadow-glow-beige: 0 10px 40px hsl(42 71% 68% / 0.7), 0 0 80px hsl(42 71% 68% / 0.5), 0 0 120px hsl(42 71% 68% / 0.3);
+    /* Premium Shadows with Glow - Vermilion */
+    --shadow-premium: 0 20px 60px -10px hsl(8 85% 50% / 0.4), 0 10px 30px -10px hsl(8 85% 55% / 0.3), 0 0 80px hsl(8 85% 50% / 0.2);
+    --glow-purple: 0 0 40px hsl(8 85% 50% / 0.6), 0 0 80px hsl(8 85% 50% / 0.4), 0 0 120px hsl(8 85% 50% / 0.2);
+    --glow-beige: 0 0 60px hsl(8 85% 55% / 0.8), 0 0 100px hsl(8 85% 55% / 0.6), 0 0 140px hsl(8 85% 55% / 0.4), 0 0 200px hsl(8 85% 55% / 0.2);
+    --shadow-glow-beige: 0 10px 40px hsl(8 85% 55% / 0.7), 0 0 80px hsl(8 85% 55% / 0.5), 0 0 120px hsl(8 85% 55% / 0.3);
   }
 
   .dark {

@@ -635,6 +635,81 @@ const Metodo = () => {
         </div>
       </div>
 
+      {/* Section Transition */}
+      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-sm text-accent font-semibold tracking-wider">VEJA OS RESULTADOS</p>
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{
+            animationDelay: "0.2s"
+          }}></div>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{
+            animationDelay: "0.4s"
+          }}></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Results with Testimonials - True Infinite Scroll */}
+      <section className="py-12 md:py-24 bg-secondary/20 overflow-hidden">
+        <div className="container mx-auto px-6 md:px-4 mb-6 md:mb-12">
+          <ScrollReveal>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-4">
+              Resultados que <span className="bg-gradient-primary bg-clip-text text-transparent">comprovam</span>
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
+              A prova de que o método realmente funciona
+            </p>
+          </ScrollReveal>
+        </div>
+        
+        {/* True infinite horizontal scroll with huge images side by side */}
+        <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
+          <div className="absolute inset-0 flex animate-scroll-left" style={{
+          width: 'max-content'
+        }}>
+            {/* First set of images - HUGE and side by side */}
+            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png", "/lovable-uploads/feedback-6.png", "/lovable-uploads/feedback-7.png", "/lovable-uploads/feedback-8.png", "/lovable-uploads/feedback-9.png"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+                <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
+              </div>)}
+            {/* Duplicate for seamless infinite loop */}
+            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png", "/lovable-uploads/feedback-6.png", "/lovable-uploads/feedback-7.png", "/lovable-uploads/feedback-8.png", "/lovable-uploads/feedback-9.png"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+                <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
+              </div>)}
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center mt-8 md:mt-12">
+              <div className="flex flex-col items-center gap-2 md:gap-3">
+                <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
+                  QUERO O MÉTODO FULL AGORA →
+                </Button>
+                <p className="text-sm md:text-sm text-muted-foreground text-center">
+                  🎯 Junte-se aos aprovados • Resultados comprovados
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Section Divider */}
+      <div className="relative py-8 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-secondary/20 px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Rocket className="w-6 h-6 text-accent" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* What You Receive Section */}
       <section className="py-12 md:py-32 relative overflow-hidden">
         {/* Background Wallpaper */}

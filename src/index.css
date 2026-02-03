@@ -29,18 +29,18 @@ All colors MUST be HSL.
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
 
-    /* Primary - Vermilion (bright red-orange) */
-    --primary: 8 85% 50%;
+    /* Primary - Crimson Red (elegant, strong, brilliant) */
+    --primary: 0 90% 45%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - Very Dark Gray/Black */
     --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Accent - Vermilion */
-    --accent: 8 85% 55%;
+    /* Accent - Crimson Red (more vibrant and aggressive) */
+    --accent: 0 95% 50%;
     --accent-foreground: 0 0% 100%;
-    --accent-dark: 8 70% 40%;
+    --accent-dark: 0 85% 35%;
 
     /* Muted */
     --muted: 0 0% 15%;
@@ -57,7 +57,7 @@ All colors MUST be HSL.
     /* Border */
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 8 85% 50%;
+    --ring: 0 90% 45%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
@@ -66,26 +66,26 @@ All colors MUST be HSL.
     /* Sidebar colors */
     --sidebar-background: 0 0% 6%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 8 85% 50%;
+    --sidebar-primary: 0 90% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 8 85% 50%;
+    --sidebar-ring: 0 90% 45%;
 
     --radius: 0.75rem;
 
-    /* Premium Gradients - Vermilion theme (vermilion to dark vermilion) */
-    --gradient-primary: linear-gradient(135deg, hsl(8 85% 55%) 0%, hsl(8 70% 35%) 100%);
-    --gradient-beige-premium: linear-gradient(135deg, hsl(8 85% 55%) 0%, hsl(8 80% 45%) 50%, hsl(8 70% 35%) 100%);
+    /* Premium Gradients - Crimson theme (vibrant red to deep dark red) */
+    --gradient-primary: linear-gradient(135deg, hsl(0 95% 50%) 0%, hsl(0 80% 30%) 100%);
+    --gradient-beige-premium: linear-gradient(135deg, hsl(0 95% 55%) 0%, hsl(0 90% 45%) 50%, hsl(0 80% 30%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 50%, hsl(0 0% 4%) 100%);
-    --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(8 85% 55%) 100%);
+    --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 95% 55%) 100%);
 
-    /* Premium Shadows with Glow - Vermilion */
-    --shadow-premium: 0 20px 60px -10px hsl(8 85% 50% / 0.4), 0 10px 30px -10px hsl(8 85% 55% / 0.3), 0 0 80px hsl(8 85% 50% / 0.2);
-    --glow-purple: 0 0 40px hsl(8 85% 50% / 0.6), 0 0 80px hsl(8 85% 50% / 0.4), 0 0 120px hsl(8 85% 50% / 0.2);
-    --glow-beige: 0 0 60px hsl(8 85% 55% / 0.8), 0 0 100px hsl(8 85% 55% / 0.6), 0 0 140px hsl(8 85% 55% / 0.4), 0 0 200px hsl(8 85% 55% / 0.2);
-    --shadow-glow-beige: 0 10px 40px hsl(8 85% 55% / 0.7), 0 0 80px hsl(8 85% 55% / 0.5), 0 0 120px hsl(8 85% 55% / 0.3);
+    /* Premium Shadows with Glow - Crimson */
+    --shadow-premium: 0 20px 60px -10px hsl(0 90% 50% / 0.5), 0 10px 30px -10px hsl(0 95% 55% / 0.4), 0 0 80px hsl(0 90% 50% / 0.25);
+    --glow-purple: 0 0 40px hsl(0 90% 50% / 0.7), 0 0 80px hsl(0 90% 50% / 0.5), 0 0 120px hsl(0 90% 50% / 0.25);
+    --glow-beige: 0 0 60px hsl(0 95% 55% / 0.85), 0 0 100px hsl(0 95% 55% / 0.65), 0 0 140px hsl(0 95% 55% / 0.45), 0 0 200px hsl(0 95% 55% / 0.25);
+    --shadow-glow-beige: 0 10px 40px hsl(0 95% 55% / 0.75), 0 0 80px hsl(0 95% 55% / 0.55), 0 0 120px hsl(0 95% 55% / 0.35);
   }
 
   .dark {

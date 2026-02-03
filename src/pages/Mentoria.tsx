@@ -702,11 +702,11 @@ const Index = () => {
           width: 'max-content'
         }}>
             {/* First set of images - HUGE and side by side */}
-            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png", "/lovable-uploads/feedback-6.png", "/lovable-uploads/feedback-7.png", "/lovable-uploads/feedback-8.png", "/lovable-uploads/feedback-9.png"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
                 <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
               </div>)}
             {/* Duplicate for seamless infinite loop */}
-            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png", "/lovable-uploads/feedback-6.png", "/lovable-uploads/feedback-7.png", "/lovable-uploads/feedback-8.png", "/lovable-uploads/feedback-9.png"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
                 <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
               </div>)}
           </div>

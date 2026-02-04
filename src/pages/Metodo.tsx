@@ -670,11 +670,11 @@ const Metodo = () => {
           width: 'max-content'
         }}>
             {/* First set of images - HUGE and side by side */}
-            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png", "/lovable-uploads/feedback-6.png", "/lovable-uploads/feedback-7.png", "/lovable-uploads/feedback-8.png", "/lovable-uploads/feedback-9.png"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+            {["/lovable-uploads/feedback-1.jpg", "/lovable-uploads/feedback-2.jpg", "/lovable-uploads/feedback-3.jpg", "/lovable-uploads/feedback-4.jpg", "/lovable-uploads/feedback-5.jpg", "/lovable-uploads/feedback-6.jpg", "/lovable-uploads/feedback-7.jpg", "/lovable-uploads/feedback-8.jpg", "/lovable-uploads/feedback-9.jpg"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
                 <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
               </div>)}
             {/* Duplicate for seamless infinite loop */}
-            {["/lovable-uploads/feedback-1.png", "/lovable-uploads/feedback-2.png", "/lovable-uploads/feedback-3.png", "/lovable-uploads/feedback-4.png", "/lovable-uploads/feedback-5.png", "/lovable-uploads/feedback-6.png", "/lovable-uploads/feedback-7.png", "/lovable-uploads/feedback-8.png", "/lovable-uploads/feedback-9.png"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+            {["/lovable-uploads/feedback-1.jpg", "/lovable-uploads/feedback-2.jpg", "/lovable-uploads/feedback-3.jpg", "/lovable-uploads/feedback-4.jpg", "/lovable-uploads/feedback-5.jpg", "/lovable-uploads/feedback-6.jpg", "/lovable-uploads/feedback-7.jpg", "/lovable-uploads/feedback-8.jpg", "/lovable-uploads/feedback-9.jpg"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
                 <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
               </div>)}
           </div>
@@ -818,7 +818,7 @@ const Metodo = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/6Rd3HhN', '_blank')}>
+                <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/0MZI5tk', '_blank')}>
                     QUERO O MÉTODO FULL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">

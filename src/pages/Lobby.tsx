@@ -256,7 +256,7 @@ const Lobby = () => {
                   { text: "Simulados cronometrados" },
                   { text: "Suporte direto para dúvidas" },
                 ]}
-                comingSoon
+                to="/questoes"
               />
               
               {/* FULL ZENITH */}

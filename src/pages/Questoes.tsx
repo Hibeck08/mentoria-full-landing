@@ -8,7 +8,6 @@ import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryWallpaper from "@/assets/military-wallpaper.png";
-
 const Questoes = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-questoes');
@@ -19,9 +18,7 @@ const Questoes = () => {
       });
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         {/* Background with gradient */}
@@ -29,46 +26,62 @@ const Questoes = () => {
           <div className="absolute inset-0 bg-gradient-hero" />
           {/* Subtle glow effects */}
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
-          <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+          <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{
+          animationDelay: "1.5s"
+        }} />
         </div>
         
         {/* Floating decorative elements */}
         <div className="absolute inset-0 z-5 pointer-events-none">
           {/* Mobile minimal floating icons */}
-          <div className="absolute top-[30%] right-6 animate-float opacity-60 md:hidden will-change-transform" style={{ animationDelay: "0.5s" }}>
+          <div className="absolute top-[30%] right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          animationDelay: "0.5s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
               <Database className="w-6 h-6 text-accent-foreground" />
             </div>
           </div>
           
-          <div className="absolute top-[45%] left-6 animate-float opacity-60 md:hidden will-change-transform" style={{ animationDelay: "1s" }}>
+          <div className="absolute top-[45%] left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
+          animationDelay: "1s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
               <Search className="w-6 h-6 text-accent-foreground" />
             </div>
           </div>
           
           {/* Desktop floating icons */}
-          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block will-change-transform" style={{ animationDelay: "0.5s" }}>
+          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block will-change-transform" style={{
+          animationDelay: "0.5s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
               <Database className="w-10 h-10 text-accent-foreground" />
             </div>
           </div>
           
-          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden md:block lg:block" style={{ animationDelay: "1s" }}>
+          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden md:block lg:block" style={{
+          animationDelay: "1s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
               <Search className="w-10 h-10 text-accent-foreground" />
             </div>
           </div>
           
-          <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{ animationDelay: "1.5s" }}>
+          <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{
+          animationDelay: "1.5s"
+        }}>
             <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
               <Timer className="w-10 h-10 text-accent-foreground" />
             </div>
           </div>
           
           {/* Decorative circles */}
-          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full border-2 border-accent/20 animate-float hidden lg:block" style={{ animationDelay: "0.8s" }} />
-          <div className="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-accent/20 animate-float hidden lg:block" style={{ animationDelay: "1.2s" }} />
+          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full border-2 border-accent/20 animate-float hidden lg:block" style={{
+          animationDelay: "0.8s"
+        }} />
+          <div className="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-accent/20 animate-float hidden lg:block" style={{
+          animationDelay: "1.2s"
+        }} />
         </div>
         
         <div className="container relative z-10 mx-auto px-6 pt-24 pb-8 md:py-20 h-full">
@@ -79,14 +92,18 @@ const Questoes = () => {
             </div>
             
             {/* Badge - Desktop only */}
-            <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{ animationDelay: "0.2s" }}>
+            <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
+            animationDelay: "0.2s"
+          }}>
               <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" loading="eager" />
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
             
             {/* Mobile Layout: Centered image with text below */}
             <div className="flex flex-col items-start justify-end md:justify-center md:items-start gap-5 md:gap-12 min-h-[90vh] md:min-h-[80vh] pb-32 md:pt-0 md:pb-0">
-              <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{ animationDelay: "0.3s" }}>
+              <div className="space-y-6 md:space-y-6 lg:space-y-8 animate-fade-in-up max-w-2xl z-10 w-full" style={{
+              animationDelay: "0.3s"
+            }}>
                 <h1 className="text-[1.35rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.2] text-left md:text-left">
                   <span className="text-foreground">
                     MILHARES DE QUESTÕES COM{" "}
@@ -97,10 +114,12 @@ const Questoes = () => {
                 </h1>
                 
                 <p className="text-[0.85rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-left md:text-left">
-                  O maior banco de questões para concursos militares. Resolução em texto detalhado (em breve em vídeo), simulados com cronômetro, ranking de desempenho e muito mais!
+                  O melhor banco de questões para concursos militares. Resolução em texto detalhado (em breve em vídeo), simulados com cronômetro, ranking de desempenho e muito mais!
                 </p>
                 
-                <div className="flex flex-col items-start md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+                <div className="flex flex-col items-start md:items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{
+                animationDelay: "0.5s"
+              }}>
                   <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-[0.85rem] leading-tight md:text-base lg:text-lg shadow-glow-beige rounded-full transition-all font-bold px-6 py-4 md:px-12 md:py-8 w-full sm:w-auto">
                     ACESSAR O FULL QUESTÕES →
                   </Button>
@@ -160,7 +179,7 @@ const Questoes = () => {
                 </div>
                 
                 <h2 className="text-[1.5rem] md:text-3xl lg:text-4xl font-bold mb-4 md:mb-4 leading-tight">
-                  O MAIOR BANCO DE QUESTÕES PARA CONCURSOS MILITARES
+                  O MELHOR BANCO DE QUESTÕES PARA CONCURSOS MILITARES
                 </h2>
                 
                 <p className="text-[0.95rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed">
@@ -191,8 +210,8 @@ const Questoes = () => {
                       <p className="text-sm text-muted-foreground">Resolvidas</p>
                     </div>
                     <div className="bg-accent/10 rounded-2xl p-6 text-center">
-                      <p className="text-4xl font-bold text-accent">∞</p>
-                      <p className="text-sm text-muted-foreground">Simulados</p>
+                      <p className="text-4xl font-bold text-accent">Filtros</p>
+                      <p className="text-sm text-muted-foreground">e Simulados</p>
                     </div>
                     <div className="bg-accent/10 rounded-2xl p-6 text-center">
                       <p className="text-4xl font-bold text-accent">📊</p>
@@ -251,16 +270,35 @@ const Questoes = () => {
             {/* Vertical Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-accent via-accent/50 to-accent rounded-full hidden md:block" />
             
-            {[
-              { icon: Database, title: "Banco de +20.000 Questões", description: "Questões de todas as bancas militares, organizadas e com resolução detalhada em texto." },
-              { icon: Search, title: "Filtros Avançados", description: "Filtre por matéria, assunto, banca, ano e nível de dificuldade para estudar o que realmente importa." },
-              { icon: FileText, title: "Listas Personalizadas", description: "Monte suas próprias listas de questões organizadas por matéria e assunto." },
-              { icon: Timer, title: "Simulados com Cronômetro", description: "Faça simulados cronometrados que simulam a prova real, com ranking de acertos." },
-              { icon: MessageCircle, title: "Suporte Direto com Professores", description: "Tire suas dúvidas diretamente com nossos professores especialistas." },
-              { icon: LineChart, title: "Painel de Desempenho", description: "Acompanhe seu progresso com gráficos de erros e acertos por matéria." },
-              { icon: User, title: "Perfil Personalizável", description: "Personalize seu perfil e interaja com outros alunos nas questões." }
-            ].map((item, index) => (
-              <ScrollReveal key={index} delay={index * 100}>
+            {[{
+            icon: Database,
+            title: "Banco de +20.000 Questões",
+            description: "Questões de todas as bancas militares, organizadas e com resolução detalhada em texto."
+          }, {
+            icon: Search,
+            title: "Filtros Avançados",
+            description: "Filtre por matéria, assunto, banca, ano e nível de dificuldade para estudar o que realmente importa."
+          }, {
+            icon: FileText,
+            title: "Listas Personalizadas",
+            description: "Monte suas próprias listas de questões organizadas por matéria e assunto."
+          }, {
+            icon: Timer,
+            title: "Simulados com Cronômetro",
+            description: "Faça simulados cronometrados que simulam a prova real, com ranking de acertos."
+          }, {
+            icon: MessageCircle,
+            title: "Suporte Direto com Professores",
+            description: "Tire suas dúvidas diretamente com nossos professores especialistas."
+          }, {
+            icon: LineChart,
+            title: "Painel de Desempenho",
+            description: "Acompanhe seu progresso com gráficos de erros e acertos por matéria."
+          }, {
+            icon: User,
+            title: "Perfil Personalizável",
+            description: "Personalize seu perfil e interaja com outros alunos nas questões."
+          }].map((item, index) => <ScrollReveal key={index} delay={index * 100}>
                 <div className={`flex items-center gap-6 md:gap-12 mb-8 md:mb-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className={`bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-6 hover:shadow-premium transition-all duration-300 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
@@ -276,8 +314,7 @@ const Questoes = () => {
                   
                   <div className="flex-1 hidden md:block" />
                 </div>
-              </ScrollReveal>
-            ))}
+              </ScrollReveal>)}
           </div>
         </div>
       </section>
@@ -288,8 +325,12 @@ const Questoes = () => {
           <p className="text-sm text-accent font-semibold tracking-wider">VEJA OS RESULTADOS</p>
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: "0.2s" }}></div>
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{
+            animationDelay: "0.2s"
+          }}></div>
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" style={{
+            animationDelay: "0.4s"
+          }}></div>
           </div>
         </div>
       </div>
@@ -309,19 +350,17 @@ const Questoes = () => {
         
         {/* True infinite horizontal scroll with huge images side by side */}
         <div className="relative w-full h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
-          <div className="absolute inset-0 flex animate-scroll-left" style={{ width: 'max-content' }}>
+          <div className="absolute inset-0 flex animate-scroll-left" style={{
+          width: 'max-content'
+        }}>
             {/* First set of images - HUGE and side by side */}
-            {["/lovable-uploads/feedback-1.jpg", "/lovable-uploads/feedback-2.jpg", "/lovable-uploads/feedback-3.jpg", "/lovable-uploads/feedback-4.jpg", "/lovable-uploads/feedback-5.jpg", "/lovable-uploads/feedback-6.jpg", "/lovable-uploads/feedback-7.jpg", "/lovable-uploads/feedback-8.jpg", "/lovable-uploads/feedback-9.jpg"].map((image, index) => (
-              <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+            {["/lovable-uploads/feedback-1.jpg", "/lovable-uploads/feedback-2.jpg", "/lovable-uploads/feedback-3.jpg", "/lovable-uploads/feedback-4.jpg", "/lovable-uploads/feedback-5.jpg", "/lovable-uploads/feedback-6.jpg", "/lovable-uploads/feedback-7.jpg", "/lovable-uploads/feedback-8.jpg", "/lovable-uploads/feedback-9.jpg"].map((image, index) => <div key={index} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
                 <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
-              </div>
-            ))}
+              </div>)}
             {/* Duplicate for seamless infinite loop */}
-            {["/lovable-uploads/feedback-1.jpg", "/lovable-uploads/feedback-2.jpg", "/lovable-uploads/feedback-3.jpg", "/lovable-uploads/feedback-4.jpg", "/lovable-uploads/feedback-5.jpg", "/lovable-uploads/feedback-6.jpg", "/lovable-uploads/feedback-7.jpg", "/lovable-uploads/feedback-8.jpg", "/lovable-uploads/feedback-9.jpg"].map((image, index) => (
-              <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
+            {["/lovable-uploads/feedback-1.jpg", "/lovable-uploads/feedback-2.jpg", "/lovable-uploads/feedback-3.jpg", "/lovable-uploads/feedback-4.jpg", "/lovable-uploads/feedback-5.jpg", "/lovable-uploads/feedback-6.jpg", "/lovable-uploads/feedback-7.jpg", "/lovable-uploads/feedback-8.jpg", "/lovable-uploads/feedback-9.jpg"].map((image, index) => <div key={`dup-${index}`} className="h-[50vh] md:h-[70vh] lg:h-[80vh] w-auto flex-shrink-0">
                 <img src={image} alt={`Depoimento ${index + 1}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
         
@@ -398,22 +437,10 @@ const Questoes = () => {
                 <p className="text-sm text-muted-foreground mb-6">Renovação mensal</p>
                 
                 <ul className="space-y-3 mb-8 flex-grow">
-                  {[
-                    "Acesso a +20.000 questões",
-                    "Resolução detalhada em texto",
-                    "Filtros por matéria e banca",
-                    "Listas personalizadas",
-                    "Simulados com cronômetro",
-                    "Ranking de desempenho",
-                    "Suporte com professores",
-                    "Perfil personalizável",
-                    "Acesso por 1 mês"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {["Acesso a +20.000 questões", "Resolução detalhada em texto", "Filtros por matéria e banca", "Listas personalizadas", "Simulados com cronômetro", "Ranking de desempenho", "Suporte com professores", "Perfil personalizável", "Acesso por 1 mês"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                       <span className="text-base text-foreground">{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <div className="mb-6">
@@ -450,22 +477,10 @@ const Questoes = () => {
                 <p className="text-sm text-background/80 mb-6">Melhor custo-benefício</p>
                 
                 <ul className="space-y-3 mb-8 flex-grow">
-                  {[
-                    "Acesso a +20.000 questões",
-                    "Resolução detalhada em texto",
-                    "Filtros por matéria e banca",
-                    "Listas personalizadas",
-                    "Simulados com cronômetro",
-                    "Ranking de desempenho",
-                    "Suporte com professores",
-                    "Perfil personalizável",
-                    "Acesso por 6 meses"
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {["Acesso a +20.000 questões", "Resolução detalhada em texto", "Filtros por matéria e banca", "Listas personalizadas", "Simulados com cronômetro", "Ranking de desempenho", "Suporte com professores", "Perfil personalizável", "Acesso por 6 meses"].map((item, index) => <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-background flex-shrink-0 mt-0.5" />
                       <span className="text-base text-background font-medium">{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <div className="mb-6 text-center">
@@ -575,8 +590,6 @@ const Questoes = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Questoes;

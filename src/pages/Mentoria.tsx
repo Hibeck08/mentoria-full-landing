@@ -866,7 +866,7 @@ const Index = () => {
                   <p className="text-xs text-muted-foreground">/mês</p>
                 </div>
                 
-                <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/1frrfTZ', '_blank')}>
+                <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/SxulQ3q', '_blank')}>
                   ASSINAR MENSAL →
                 </Button>
               </div>
@@ -907,7 +907,7 @@ const Index = () => {
                   <p className="text-xs text-background/80">/mês ou R$ 1.187,00 à vista</p>
                 </div>
                 
-                <Button variant="default" className="w-full py-4 text-sm font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
+                <Button variant="default" className="w-full py-4 text-sm font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/Vv3N6zi', '_blank')}>
                   GARANTIR PLANO ANUAL →
                 </Button>
                 
@@ -946,7 +946,7 @@ const Index = () => {
                   <p className="text-xs text-muted-foreground">/mês ou R$ 667,00 à vista</p>
                 </div>
                 
-                <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/RevIIZs', '_blank')}>
+                <Button variant="gold" className="w-full py-4 text-sm font-bold" onClick={() => window.open('https://pay.kiwify.com.br/TifHiat', '_blank')}>
                   ASSINAR SEMESTRAL →
                 </Button>
                 

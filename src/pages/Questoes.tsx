@@ -21,9 +21,11 @@ const Questoes = () => {
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
-        {/* Background with gradient */}
+        {/* Background with hero wallpaper */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-hero" />
+          <img src="/lovable-uploads/questoes-hero-wallpaper.jpg" alt="Background" className="w-full h-full object-cover object-center brightness-75 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background/80 md:bg-gradient-to-br md:from-background/70 md:via-background/50 md:to-background/80" />
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40" />
           {/* Subtle glow effects */}
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
           <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{
@@ -319,8 +321,91 @@ const Questoes = () => {
         </div>
       </section>
 
+      {/* Platform Showcase Section */}
+      <section className="py-12 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="container relative z-10 mx-auto px-6 md:px-4">
+          <ScrollReveal>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4">
+              Conheça a <span className="bg-gradient-primary bg-clip-text text-transparent">plataforma</span>
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-2xl mx-auto">
+              Uma experiência completa para sua preparação
+            </p>
+          </ScrollReveal>
+          
+          {/* Platform Screenshots Grid */}
+          <div className="max-w-6xl mx-auto space-y-8">
+            {/* Main question view - full width */}
+            <ScrollReveal variant="scale">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-3 h-3 rounded-full bg-accent/60"></div>
+                    <span className="text-xs text-muted-foreground font-medium">Questão com resolução</span>
+                  </div>
+                  <img src="/lovable-uploads/questoes-question.png" alt="Questão com alternativas e resolução" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </ScrollReveal>
+            
+            {/* Two column layout */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <ScrollReveal variant="left">
+                <div className="relative group h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4 h-full">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-3 h-3 rounded-full bg-accent/60"></div>
+                      <span className="text-xs text-muted-foreground font-medium">Área de comentários</span>
+                    </div>
+                    <img src="/lovable-uploads/questoes-comments.png" alt="Comentários e interação entre alunos" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </ScrollReveal>
+              
+              <ScrollReveal variant="right">
+                <div className="relative group h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4 h-full">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-3 h-3 rounded-full bg-accent/60"></div>
+                      <span className="text-xs text-muted-foreground font-medium">Filtros avançados</span>
+                    </div>
+                    <img src="/lovable-uploads/questoes-filters.png" alt="Filtros por concurso, ano e resolução" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+            
+            {/* Menu bar */}
+            <ScrollReveal>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-3 h-3 rounded-full bg-accent/60"></div>
+                    <span className="text-xs text-muted-foreground font-medium">Navegação completa</span>
+                  </div>
+                  <img src="/lovable-uploads/questoes-menu.png" alt="Menu com perfil, desempenho, listas e mais" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+          
+          <ScrollReveal>
+            <div className="text-center mt-8 md:mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
+                QUERO ACESSAR AGORA →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Section Transition */}
-      <div className="flex justify-center py-8 bg-gradient-to-b from-background to-secondary/20">
+      <div className="flex justify-center py-8 bg-gradient-to-b from-secondary/10 to-secondary/20">
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm text-accent font-semibold tracking-wider">VEJA OS RESULTADOS</p>
           <div className="flex items-center gap-1">
@@ -448,7 +533,7 @@ const Questoes = () => {
                   <p className="text-sm text-muted-foreground">/mês</p>
                 </div>
                 
-                <Button variant="gold" className="w-full py-6 text-base font-bold">
+                <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/lH2Na3Q', '_blank')}>
                   ASSINAR MENSAL →
                 </Button>
               </div>
@@ -490,7 +575,7 @@ const Questoes = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90">
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/Ra2vsjP', '_blank')}>
                     ASSINAR SEMESTRAL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">

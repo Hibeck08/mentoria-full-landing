@@ -15,10 +15,11 @@ interface ProductCardProps {
   comingSoon?: boolean;
   featured?: boolean;
   backgroundImage?: string;
+  backgroundPosition?: string;
   instructor?: string;
 }
 
-const ProductCard = ({ title, subtitle, description, features, to, comingSoon, featured, backgroundImage, instructor }: ProductCardProps) => {
+const ProductCard = ({ title, subtitle, description, features, to, comingSoon, featured, backgroundImage, backgroundPosition, instructor }: ProductCardProps) => {
   const baseStyles = "group relative w-full rounded-2xl transition-all duration-500 block overflow-hidden";
   
   const getStyles = () => {
@@ -46,7 +47,7 @@ const ProductCard = ({ title, subtitle, description, features, to, comingSoon, f
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{ 
             backgroundImage: `url(${backgroundImage})`,
-            backgroundPosition: featured ? 'right 25% center' : 'center'
+            backgroundPosition: backgroundPosition || (featured ? 'right 25% center' : 'center')
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/60 md:from-background/90 md:via-background/70 md:to-background/40" />
@@ -259,6 +260,7 @@ const Lobby = () => {
                 ]}
                 to="/questoes"
                 backgroundImage={questoesBanner}
+                backgroundPosition="right 30% top 20%"
               />
               
               {/* FULL ZENITH */}

@@ -24,11 +24,11 @@ const Metodo = () => {
   };
   return <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
+      <section className="relative min-h-[115vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
-          <img src={metodoHeroWallpaper} alt="Background" className="block md:hidden w-full h-full object-cover object-[center_20%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={metodoHeroWallpaper} alt="Background" className="block md:hidden w-full h-full object-cover object-[center_top] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Desktop image - Priority loading */}
           <img src={metodoHeroWallpaper} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Gradient overlay for better text readability and depth */}

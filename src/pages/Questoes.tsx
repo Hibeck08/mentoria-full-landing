@@ -23,7 +23,8 @@ const Questoes = () => {
       <section className="relative min-h-[100vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         {/* Background with hero wallpaper */}
         <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/questoes-hero-wallpaper.jpg" alt="Background" className="w-full h-full object-cover object-center brightness-75 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src="/lovable-uploads/questoes-hero-wallpaper.jpg" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_20%] brightness-75 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src="/lovable-uploads/questoes-hero-wallpaper.jpg" alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-75 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background/80 md:bg-gradient-to-br md:from-background/70 md:via-background/50 md:to-background/80" />
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40" />
           {/* Subtle glow effects */}

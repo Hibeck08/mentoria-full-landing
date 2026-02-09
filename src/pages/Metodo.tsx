@@ -28,7 +28,7 @@ const Metodo = () => {
         {/* Background Image with enhanced treatment */}
         <div className="absolute inset-0 z-0">
           {/* Mobile image - Priority loading */}
-          <img src={metodoHeroWallpaper} alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={metodoHeroWallpaper} alt="Background" className="block md:hidden w-full h-full object-cover object-[center_20%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Desktop image - Priority loading */}
           <img src={metodoHeroWallpaper} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           {/* Gradient overlay for better text readability and depth */}

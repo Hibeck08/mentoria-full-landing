@@ -681,7 +681,7 @@ const Questoes = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/Ra2vsjP', '_blank')}>
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/v3O04nK', '_blank')}>
                     ASSINAR SEMESTRAL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">

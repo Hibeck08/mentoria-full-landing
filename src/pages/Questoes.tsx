@@ -639,7 +639,7 @@ const Questoes = () => {
                   <p className="text-sm text-muted-foreground">/mês</p>
                 </div>
                 
-                <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/lH2Na3Q', '_blank')}>
+                <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/cS3oAhK', '_blank')}>
                   ASSINAR MENSAL →
                 </Button>
               </div>

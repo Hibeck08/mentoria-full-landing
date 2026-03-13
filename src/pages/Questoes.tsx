@@ -383,7 +383,7 @@ const Questoes = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/banco-filtros.png" alt="Banco de questões com filtros" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                    <img src="/platform/banco-filtros.png" alt="Banco de questões com filtros" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="space-y-4">

@@ -467,7 +467,7 @@ const Questoes = () => {
                 <div className="relative group order-1 md:order-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/questoes-lista.png" alt="Questões dentro de uma lista" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                    <img src="/platform/questoes-lista.png" alt="Questões dentro de uma lista" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>

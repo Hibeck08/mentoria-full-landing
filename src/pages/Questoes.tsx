@@ -341,70 +341,160 @@ const Questoes = () => {
             </p>
           </ScrollReveal>
           
-          {/* Platform Screenshots Grid */}
-          <div className="max-w-6xl mx-auto space-y-8">
-            {/* Main question view - full width */}
-            <ScrollReveal variant="scale">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-3 h-3 rounded-full bg-accent/60"></div>
-                    <span className="text-xs text-muted-foreground font-medium">Questão com resolução</span>
+          {/* Platform Screenshots - Alternating layout with copy */}
+          <div className="max-w-6xl mx-auto space-y-16 md:space-y-24">
+            
+            {/* 1. Home / Dashboard */}
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Rocket className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Tela Inicial</span>
                   </div>
-                  <img src="/lovable-uploads/questoes-question.png" alt="Questão com alternativas e resolução" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Tudo ao seu alcance em <span className="text-accent">um clique</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Assim que você entra, já sabe exatamente onde ir. Banco de questões, simulados, listas — sem enrolação, sem perda de tempo. Seu estudo começa agora.
+                  </p>
+                </div>
+                <div className="relative group order-1 md:order-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/home-desktop.png" alt="Tela inicial da plataforma" className="w-full rounded-xl hidden md:block" loading="lazy" decoding="async" />
+                    <img src="/platform/home-mobile.png" alt="Tela inicial mobile" className="w-full rounded-xl block md:hidden max-h-[500px] object-contain mx-auto" loading="lazy" decoding="async" />
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
-            
-            {/* Two column layout */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <ScrollReveal variant="left">
-                <div className="relative group h-full">
+
+            {/* 2. Banco de Questões + Filtros */}
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4 h-full">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-3 h-3 rounded-full bg-accent/60"></div>
-                      <span className="text-xs text-muted-foreground font-medium">Área de comentários</span>
-                    </div>
-                    <img src="/lovable-uploads/questoes-comments.png" alt="Comentários e interação entre alunos" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/banco-filtros.png" alt="Banco de questões com filtros" className="w-full rounded-xl" loading="lazy" decoding="async" />
                   </div>
                 </div>
-              </ScrollReveal>
-              
-              <ScrollReveal variant="right">
-                <div className="relative group h-full">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Search className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Filtros Inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Encontre a questão <span className="text-accent">perfeita</span> em segundos
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Matéria, assunto, banca, prova, ano e resolução — filtre do jeito que quiser. Chega de perder horas procurando questão. Aqui, o estudo inteligente é o padrão.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 3. Questão com Resolução */}
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Brain className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Resolução Completa</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Errou? Sem problema. <span className="text-accent">Aprenda com cada questão</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Cada questão tem resolução detalhada passo a passo. Não é só gabarito — é uma aula dentro de cada alternativa. Aqui você entende o porquê, não apenas o quê.
+                  </p>
+                </div>
+                <div className="relative group order-1 md:order-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4 h-full">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-3 h-3 rounded-full bg-accent/60"></div>
-                      <span className="text-xs text-muted-foreground font-medium">Filtros avançados</span>
-                    </div>
-                    <img src="/lovable-uploads/questoes-filters.png" alt="Filtros por concurso, ano e resolução" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/resolucao.png" alt="Resolução detalhada de questão" className="w-full rounded-xl" loading="lazy" decoding="async" />
                   </div>
                 </div>
-              </ScrollReveal>
-            </div>
-            
-            {/* Menu bar */}
-            <ScrollReveal>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-3 md:p-4">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-3 h-3 rounded-full bg-accent/60"></div>
-                    <span className="text-xs text-muted-foreground font-medium">Navegação completa</span>
+              </div>
+            </ScrollReveal>
+
+            {/* 4. Listas Personalizadas */}
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/listas-desktop.png" alt="Listas personalizadas" className="w-full rounded-xl" loading="lazy" decoding="async" />
                   </div>
-                  <img src="/lovable-uploads/questoes-menu.png" alt="Menu com perfil, desempenho, listas e mais" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <FileText className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Suas Listas</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Monte seu <span className="text-accent">plano de ataque</span> personalizado
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Crie listas com as questões que você quer revisar. Organize por matéria, por fraqueza, ou do jeito que funcionar melhor pra você. Seu estudo, suas regras.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 5. Questões dentro da Lista */}
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Target className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Prática Direcionada</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Foco total nas questões que <span className="text-accent">realmente importam</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Dentro de cada lista, resolva questão por questão no seu ritmo. Acompanhe seu progresso e veja exatamente quanto falta para dominar aquele assunto.
+                  </p>
+                </div>
+                <div className="relative group order-1 md:order-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/questoes-lista.png" alt="Questões dentro de uma lista" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 6. Desempenho */}
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl hidden md:block" loading="lazy" decoding="async" />
+                    <img src="/platform/desempenho-mobile.png" alt="Painel de desempenho mobile" className="w-full rounded-xl block md:hidden max-h-[500px] object-contain mx-auto" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <BarChart3 className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Seu Desempenho</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Saiba exatamente <span className="text-accent">onde você precisa melhorar</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Acertos, erros, taxa de aproveitamento — tudo por matéria. Nada de chutar no escuro. Com dados reais do seu desempenho, você sabe onde atacar e quando está pronto.
+                  </p>
                 </div>
               </div>
             </ScrollReveal>
           </div>
           
           <ScrollReveal>
-            <div className="text-center mt-8 md:mt-12">
+            <div className="text-center mt-12 md:mt-16">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
-                QUERO ACESSAR AGORA →
+                QUERO IMPULSIONAR MEUS ESTUDOS →
               </Button>
             </div>
           </ScrollReveal>

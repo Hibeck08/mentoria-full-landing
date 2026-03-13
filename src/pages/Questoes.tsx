@@ -577,8 +577,8 @@ const Questoes = () => {
                 
                 <div className="mb-6 text-center">
                   <p className="text-sm text-background/80 mb-2">6x de</p>
-                  <p className="text-5xl md:text-6xl font-bold text-background mb-1">R$55,72</p>
-                  <p className="text-sm text-background/80">ou R$297,00 à vista</p>
+                  <p className="text-5xl md:text-6xl font-bold text-background mb-1">R$38,84</p>
+                  <p className="text-sm text-background/80">ou R$207,00 à vista</p>
                 </div>
                 
                 <div className="space-y-3">
@@ -586,7 +586,7 @@ const Questoes = () => {
                     ASSINAR SEMESTRAL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">
-                    Economia de R$62,40 • Acesso imediato
+                    Economia de R$32,40 • Acesso imediato
                   </p>
                 </div>
                 

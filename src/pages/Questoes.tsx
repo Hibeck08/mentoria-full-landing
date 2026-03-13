@@ -536,7 +536,7 @@ const Questoes = () => {
                 </ul>
                 
                 <div className="mb-6">
-                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1">R$59,90</p>
+                  <p className="text-5xl md:text-6xl font-bold text-accent mb-1">R$39,90</p>
                   <p className="text-sm text-muted-foreground">/mês</p>
                 </div>
                 

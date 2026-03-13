@@ -109,7 +109,13 @@ const Questoes = () => {
             }}>
                 <h1 className="text-[1.35rem] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.2] text-left md:text-left">
                   <span className="text-foreground">
-                    MILHARES DE QUESTÕES COM{" "}
+                    POR MENOS DE{" "}
+                  </span>
+                  <span className="bg-gradient-hero-text bg-clip-text text-transparent">
+                    R$1,35 POR DIA
+                  </span>
+                  <span className="text-foreground">
+                    , TENHA ACESSO A MILHARES DE QUESTÕES COM{" "}
                   </span>
                   <span className="bg-gradient-hero-text bg-clip-text text-transparent">
                     RESOLUÇÃO DETALHADA
@@ -124,7 +130,7 @@ const Questoes = () => {
                 animationDelay: "0.5s"
               }}>
                   <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-[0.85rem] leading-tight md:text-base lg:text-lg shadow-glow-beige rounded-full transition-all font-bold px-6 py-4 md:px-12 md:py-8 w-full sm:w-auto">
-                    ACESSAR O FULL QUESTÕES →
+                    QUERO IMPULSIONAR MEUS ESTUDOS →
                   </Button>
                   <p className="text-xs md:text-sm text-muted-foreground/80 text-left md:text-left">
                     ⚡ +20.000 questões • Simulados ilimitados

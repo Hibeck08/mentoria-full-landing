@@ -479,8 +479,7 @@ const Questoes = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl hidden md:block" loading="lazy" decoding="async" />
-                    <img src="/platform/desempenho-mobile.png" alt="Painel de desempenho mobile" className="w-full rounded-xl block md:hidden max-h-[500px] object-contain mx-auto" loading="lazy" decoding="async" />
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="space-y-4">

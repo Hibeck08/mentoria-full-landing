@@ -3,7 +3,8 @@ import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Lightbulb, BarChart3, Repeat, Database, Timer, MessageCircle, User, LineChart, Search } from "lucide-react";
+import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Lightbulb, BarChart3, Repeat, Database, Timer, MessageCircle, User, LineChart, Search, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
@@ -94,8 +95,16 @@ const Questoes = () => {
               <img src={mentoriaLogo} alt="FULL QUESTÕES Logo" className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl" loading="eager" />
             </div>
             
+            {/* Menu Button */}
+            <Link to="/" className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20 hover:bg-card/90 hover:border-accent/50 transition-all" style={{
+            animationDelay: "0.2s"
+          }}>
+              <Home className="w-4 h-4 text-accent" />
+              <span className="text-sm font-semibold text-foreground hidden md:inline">Menu</span>
+            </Link>
+            
             {/* Badge - Desktop only */}
-            <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
+            <div className="absolute top-4 md:top-8 right-28 md:right-36 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
             animationDelay: "0.2s"
           }}>
               <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" loading="eager" />
@@ -362,8 +371,7 @@ const Questoes = () => {
                 <div className="relative group order-1 md:order-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/home-desktop.png" alt="Tela inicial da plataforma" className="w-full rounded-xl hidden md:block" loading="lazy" decoding="async" />
-                    <img src="/platform/home-mobile.png" alt="Tela inicial mobile" className="w-full rounded-xl block md:hidden max-h-[500px] object-contain mx-auto" loading="lazy" decoding="async" />
+                    <img src="/platform/home-mobile.png" alt="Tela inicial da plataforma" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -375,7 +383,7 @@ const Questoes = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/banco-filtros.png" alt="Banco de questões com filtros" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                    <img src="/platform/banco-filtros.png" alt="Banco de questões com filtros" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -411,7 +419,7 @@ const Questoes = () => {
                 <div className="relative group order-1 md:order-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/resolucao.png" alt="Resolução detalhada de questão" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                    <img src="/platform/resolucao.png" alt="Resolução detalhada de questão" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -423,7 +431,7 @@ const Questoes = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/listas-desktop.png" alt="Listas personalizadas" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                    <img src="/platform/listas-desktop.png" alt="Listas personalizadas" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -459,7 +467,7 @@ const Questoes = () => {
                 <div className="relative group order-1 md:order-2">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/questoes-lista.png" alt="Questões dentro de uma lista" className="w-full rounded-xl" loading="lazy" decoding="async" />
+                    <img src="/platform/questoes-lista.png" alt="Questões dentro de uma lista" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -471,8 +479,7 @@ const Questoes = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
                   <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
-                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl hidden md:block" loading="lazy" decoding="async" />
-                    <img src="/platform/desempenho-mobile.png" alt="Painel de desempenho mobile" className="w-full rounded-xl block md:hidden max-h-[500px] object-contain mx-auto" loading="lazy" decoding="async" />
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="space-y-4">
@@ -630,7 +637,7 @@ const Questoes = () => {
                   <p className="text-sm text-muted-foreground">/mês</p>
                 </div>
                 
-                <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/lH2Na3Q', '_blank')}>
+                <Button variant="gold" className="w-full py-6 text-base font-bold" onClick={() => window.open('https://pay.kiwify.com.br/cS3oAhK', '_blank')}>
                   ASSINAR MENSAL →
                 </Button>
               </div>
@@ -672,7 +679,7 @@ const Questoes = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/Ra2vsjP', '_blank')}>
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/v3O04nK', '_blank')}>
                     ASSINAR SEMESTRAL →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">

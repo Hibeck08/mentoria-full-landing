@@ -8,7 +8,8 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { NumberStat } from "@/components/NumberStat";
 import { ComparisonCard } from "@/components/ComparisonCard";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers, Play, MoveRight } from "lucide-react";
+import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers, Play, MoveRight, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
@@ -111,8 +112,16 @@ const Index = () => {
               <img src={mentoriaLogo} alt="Mentoria FULL Logo" className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-2xl" loading="eager" />
             </div>
             
+            {/* Menu Button */}
+            <Link to="/" className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20 hover:bg-card/90 hover:border-accent/50 transition-all" style={{
+            animationDelay: "0.2s"
+          }}>
+              <Home className="w-4 h-4 text-accent" />
+              <span className="text-sm font-semibold text-foreground hidden md:inline">Menu</span>
+            </Link>
+            
             {/* Badge - Desktop only */}
-            <div className="absolute top-4 md:top-8 right-4 md:right-8 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
+            <div className="absolute top-4 md:top-8 right-28 md:right-36 animate-fade-in-up hidden md:flex items-center gap-3 bg-card/80 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 z-20" style={{
             animationDelay: "0.2s"
           }}>
               <img src={heroPhoto} alt="Mentor" className="w-10 h-10 rounded-full object-cover ring-2 ring-accent" loading="eager" />

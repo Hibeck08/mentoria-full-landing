@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import lobbyWallpaper from "@/assets/lobby-wallpaper.png";
 import mentoriaBanner from "@/assets/mentoria-banner.png";
-import metodoBanner from "@/assets/metodo-banner.png";
+
 import questoesBanner from "@/assets/questoes-banner.png";
 
 interface ProductCardProps {

@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lobby from "./pages/Lobby";
 import Mentoria from "./pages/Mentoria";
-import Metodo from "./pages/Metodo";
+
 import Questoes from "./pages/Questoes";
 import NotFound from "./pages/NotFound";
 

@@ -57,7 +57,7 @@ All colors MUST be HSL.
     /* Border */
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 0 90% 45%;
+    --ring: 270 60% 35%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;

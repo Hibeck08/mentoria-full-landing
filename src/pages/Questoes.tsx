@@ -163,7 +163,7 @@ const Questoes = () => {
                 </h2>
                 
                 <p className="text-[0.95rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                  Mais de <strong className="text-accent">20.000 questões</strong> resolvidas e comentadas, organizadas por matéria, banca e nível de dificuldade — combinadas com o <strong className="text-accent">Método FULL</strong>, o sistema de estudos que te ensina como estudar de verdade.
+                  Mais de <strong className="text-accent">20.000 questões</strong> resolvidas e comentadas, organizadas por matéria, banca e nível de dificuldade — combinadas com o <strong className="text-accent">Método FULL</strong>: videoaulas de como estudar, filtrar questões e revisar, plano de metas, livro completo com minha metodologia, grupo de suporte e +2.000 flashcards.
                 </p>
                 
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">

@@ -96,7 +96,7 @@ const Questoes = () => {
                 </h1>
                 
                 <p className="text-[0.85rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-left">
-                  O melhor banco de questões para concursos militares <strong className="text-accent">+ o método completo de estudos</strong> que me fez ser o 08º da EFOMM e 01º da AFA. Tudo em um lugar só.
+                  <strong className="text-accent">+20.000 questões resolvidas</strong> para concursos militares + o <strong className="text-accent">Método FULL</strong>: videoaulas ensinando como estudar, filtrar questões e revisar, plano de metas personalizado, meu livro com toda a metodologia que usei, grupo de suporte exclusivo e <strong className="text-accent">+2.000 flashcards</strong> de todos os assuntos do edital. Serve para ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ e qualquer concurso em geral.
                 </p>
                 
                 <div className="flex flex-col items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
@@ -163,7 +163,7 @@ const Questoes = () => {
                 </h2>
                 
                 <p className="text-[0.95rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed">
-                  Mais de <strong className="text-accent">20.000 questões</strong> resolvidas e comentadas, organizadas por matéria, banca e nível de dificuldade — combinadas com o <strong className="text-accent">Método FULL</strong>, o sistema de estudos que te ensina como estudar de verdade.
+                  Mais de <strong className="text-accent">20.000 questões</strong> resolvidas e comentadas, organizadas por matéria, banca e nível de dificuldade — combinadas com o <strong className="text-accent">Método FULL</strong>: videoaulas de como estudar, filtrar questões e revisar, plano de metas, livro completo com minha metodologia, grupo de suporte e +2.000 flashcards.
                 </p>
                 
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -880,7 +880,7 @@ const Questoes = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/cS3oAhK', '_blank')}>
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/f03lua2', '_blank')}>
                     QUERO IMPULSIONAR MEUS ESTUDOS →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">
@@ -948,7 +948,7 @@ const Questoes = () => {
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 <FAQItem value="item-1" question="O que está incluso na assinatura?" answer="Você recebe acesso completo ao banco com +20.000 questões resolvidas, ao Método FULL de estudos, +2000 flashcards, simulados cronometrados, painel de desempenho, filtros avançados, listas personalizadas e suporte direto com professores." />
-                <FAQItem value="item-2" question="O que é o Método FULL?" answer="O Método FULL é um sistema completo de estudos que te ensina como estudar de verdade — planejamento, revisão estratégica, filtragem de questões e uso inteligente de simulados. Tudo com lógica, constância e resultado." />
+                <FAQItem value="item-2" question="O que é o Método FULL?" answer="O Método FULL é um sistema completo com videoaulas ensinando como estudar, filtrar questões, revisar e se organizar. Inclui plano de metas personalizado, meu livro com história, trajetória e metodologia, grupo de suporte exclusivo e +2.000 flashcards de todos os assuntos do edital. Funciona para ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ e qualquer concurso." />
                 <FAQItem value="item-3" question="Por quanto tempo terei acesso?" answer="O acesso é por assinatura mensal. Enquanto sua assinatura estiver ativa, você tem acesso completo a tudo — questões, método, flashcards e todas as funcionalidades. Você pode cancelar quando quiser." />
                 <FAQItem value="item-4" question="Quantas questões tem no banco?" answer="Nosso banco possui mais de 20.000 questões de concursos militares, todas com resolução detalhada em texto. Em breve, todas terão resolução em vídeo também!" />
                 <FAQItem value="item-5" question="Como funcionam os simulados?" answer="Você pode montar simulados personalizados com cronômetro, simulando a prova real. Ao final, você vê seu desempenho e pode comparar com outros alunos no ranking." />

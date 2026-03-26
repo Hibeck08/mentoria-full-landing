@@ -880,7 +880,7 @@ const Questoes = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/cS3oAhK', '_blank')}>
+                  <Button variant="default" className="w-full py-6 text-base font-bold bg-background text-accent hover:bg-background/90" onClick={() => window.open('https://pay.kiwify.com.br/f03lua2', '_blank')}>
                     QUERO IMPULSIONAR MEUS ESTUDOS →
                   </Button>
                   <p className="text-xs text-center text-background/90 font-medium">

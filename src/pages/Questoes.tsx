@@ -96,7 +96,7 @@ const Questoes = () => {
                 </h1>
                 
                 <p className="text-[0.85rem] md:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl text-left">
-                  O melhor banco de questões para concursos militares <strong className="text-accent">+ o método completo de estudos</strong> que me fez ser o 08º da EFOMM e 01º da AFA. Tudo em um lugar só.
+                  <strong className="text-accent">+20.000 questões resolvidas</strong> para concursos militares + o <strong className="text-accent">Método FULL</strong>: videoaulas ensinando como estudar, filtrar questões e revisar, plano de metas personalizado, meu livro com toda a metodologia que usei, grupo de suporte exclusivo e <strong className="text-accent">+2.000 flashcards</strong> de todos os assuntos do edital. Serve para ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ e qualquer concurso em geral.
                 </p>
                 
                 <div className="flex flex-col items-start gap-3 md:gap-4 pt-2 md:pt-4 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>

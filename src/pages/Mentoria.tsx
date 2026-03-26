@@ -997,6 +997,7 @@ const Index = () => {
         </div>
       </section>
 
+      <div className="relative py-8 bg-gradient-to-b from-background to-background">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t-2 border-accent/20"></div>
         </div>

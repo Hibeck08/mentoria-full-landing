@@ -1077,12 +1077,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Floating Contact Button */}
-      <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
-          💬 Fale Comigo
-        </Button>
-      </div>
+      {/* Floating Contact Button - appears on scroll */}
+      <FloatingWhatsApp />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-8 md:py-12">

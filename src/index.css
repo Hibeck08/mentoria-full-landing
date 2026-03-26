@@ -29,18 +29,18 @@ All colors MUST be HSL.
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
 
-    /* Primary - Crimson Red (elegant, strong, brilliant) */
-    --primary: 0 90% 45%;
+    /* Primary - Deep Elegant Purple */
+    --primary: 270 60% 35%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - Very Dark Gray/Black */
-    --secondary: 0 0% 8%;
+    --secondary: 270 10% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Accent - Crimson Red (more vibrant and aggressive) */
-    --accent: 0 95% 50%;
+    /* Accent - Vibrant Purple (elegant, brilliant) */
+    --accent: 270 80% 60%;
     --accent-foreground: 0 0% 100%;
-    --accent-dark: 0 85% 35%;
+    --accent-dark: 270 60% 30%;
 
     /* Muted */
     --muted: 0 0% 15%;

@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -12,6 +13,26 @@ import bryanPhoto from "@/assets/bryan-photo.jpg";
 import militaryWallpaper from "@/assets/military-wallpaper.png";
 import flashcardsWallpaper from "@/assets/flashcards-wallpaper.png";
 import benefitsWallpaper from "@/assets/benefits-wallpaper.png";
+
+const FloatingWhatsApp = () => {
+  const [visible, setVisible] = React.useState(false);
+  
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  return (
+    <div className={`fixed bottom-6 right-4 md:bottom-8 md:right-8 z-50 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+      <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
+        💬 Fale Comigo
+      </Button>
+    </div>
+  );
+};
 
 const Questoes = () => {
   const scrollToPlans = () => {
@@ -960,12 +981,8 @@ const Questoes = () => {
         </div>
       </section>
 
-      {/* Floating Contact Button */}
-      <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
-          💬 Fale Comigo
-        </Button>
-      </div>
+      {/* Floating Contact Button - appears on scroll */}
+      <FloatingWhatsApp />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-8 md:py-12">

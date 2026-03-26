@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -8,7 +9,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { NumberStat } from "@/components/NumberStat";
 import { ComparisonCard } from "@/components/ComparisonCard";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers, Play, MoveRight, Home } from "lucide-react";
+import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Layers, Play, MoveRight, Home, Database, Search, Timer, BarChart3, MessageCircle, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
@@ -21,6 +22,26 @@ import metodoShowcaseBanner from "@/assets/metodo-showcase-banner.png";
 import ankiWallpaper from "@/assets/anki-wallpaper.png";
 import ankiCardExample from "@/assets/anki-card-example.png";
 import Autoplay from "embla-carousel-autoplay";
+const FloatingWhatsApp = () => {
+  const [visible, setVisible] = React.useState(false);
+  
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  return (
+    <div className={`fixed bottom-6 right-4 md:bottom-8 md:right-8 z-50 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+      <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
+        💬 Fale Comigo
+      </Button>
+    </div>
+  );
+};
+
 const Index = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-mentoria');
@@ -817,7 +838,165 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section Divider */}
+      {/* Section Divider - Platform */}
+      <div className="relative py-8 bg-gradient-to-b from-background to-primary/5">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t-2 border-accent/20"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-background px-6">
+            <div className="w-12 h-12 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">
+              <Database className="w-6 h-6 text-accent" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Platform Showcase Section - "Conheça o nosso banco" */}
+      <section className="py-12 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="container relative z-10 mx-auto px-6 md:px-4">
+          <ScrollReveal>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-4">
+              Conheça o nosso <span className="bg-gradient-primary bg-clip-text text-transparent">banco de questões</span>
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-center text-muted-foreground mb-8 md:mb-16 max-w-2xl mx-auto">
+              +20.000 questões resolvidas incluídas na sua mentoria
+            </p>
+          </ScrollReveal>
+          
+          <div className="max-w-6xl mx-auto space-y-16 md:space-y-24">
+            {/* 1. Home */}
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Rocket className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Tela Inicial</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Tudo ao seu alcance em <span className="text-accent">um clique</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Banco de questões, simulados, listas — sem enrolação, sem perda de tempo.
+                  </p>
+                </div>
+                <div className="relative group order-1 md:order-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/home-mobile.png" alt="Tela inicial da plataforma" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 2. Filtros */}
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/banco-filtros.png" alt="Banco de questões com filtros" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Search className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Filtros Inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Encontre a questão <span className="text-accent">perfeita</span> em segundos
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Matéria, assunto, banca, prova, ano — filtre do jeito que quiser.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 3. Resolução */}
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Brain className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Resolução Completa</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Errou? <span className="text-accent">Aprenda com cada questão</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Cada questão tem resolução detalhada passo a passo — uma aula dentro de cada alternativa.
+                  </p>
+                </div>
+                <div className="relative group order-1 md:order-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/resolucao.png" alt="Resolução detalhada" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 4. Listas */}
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/listas-desktop.png" alt="Listas personalizadas" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <FileText className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Suas Listas</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Monte seu <span className="text-accent">plano de ataque</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Crie listas com as questões que você quer revisar, organizadas do jeito que funcionar melhor.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* 5. Desempenho */}
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <BarChart3 className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Seu Desempenho</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Saiba exatamente <span className="text-accent">onde melhorar</span>
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Acertos, erros, taxa de aproveitamento — tudo por matéria. Com dados reais, você sabe onde atacar.
+                  </p>
+                </div>
+                <div className="relative group order-1 md:order-2">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 overflow-hidden">
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+          
+          <ScrollReveal>
+            <div className="text-center mt-12 md:mt-16">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm sm:text-base md:text-lg font-bold px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all w-full max-w-xs sm:max-w-sm md:w-auto">
+                QUERO FAZER PARTE AGORA →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <div className="relative py-8 bg-gradient-to-b from-background to-background">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t-2 border-accent/20"></div>
@@ -1077,12 +1256,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Floating Contact Button */}
-      <div className="fixed bottom-24 right-4 md:bottom-8 md:right-8 z-50 animate-float">
-        <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
-          💬 Fale Comigo
-        </Button>
-      </div>
+      {/* Floating Contact Button - appears on scroll */}
+      <FloatingWhatsApp />
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-8 md:py-12">

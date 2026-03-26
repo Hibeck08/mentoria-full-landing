@@ -22,6 +22,26 @@ import metodoShowcaseBanner from "@/assets/metodo-showcase-banner.png";
 import ankiWallpaper from "@/assets/anki-wallpaper.png";
 import ankiCardExample from "@/assets/anki-card-example.png";
 import Autoplay from "embla-carousel-autoplay";
+const FloatingWhatsApp = () => {
+  const [visible, setVisible] = React.useState(false);
+  
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  return (
+    <div className={`fixed bottom-6 right-4 md:bottom-8 md:right-8 z-50 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+      <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige hover:shadow-glow-beige/70 transition-all px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open('https://api.whatsapp.com/send?phone=5521992104885', '_blank')}>
+        💬 Fale Comigo
+      </Button>
+    </div>
+  );
+};
+
 const Index = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-mentoria');

@@ -103,7 +103,7 @@ const Questoes = () => {
                  QUERO UM BANCO DE QUESTÕES →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground/90">
-                ⚡ A partir de <strong className="text-accent">R$ 53,47/mês</strong> • Garantia de 7 dias
+                Garantia de 7 dias
               </p>
             </div>
           </div>

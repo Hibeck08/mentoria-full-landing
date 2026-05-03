@@ -78,13 +78,13 @@ const Questoes = () => {
             <span className="text-sm font-semibold text-foreground">@hibeck_</span>
           </div>
 
-          <div className="flex flex-col items-start justify-end md:justify-center gap-5 md:gap-8 min-h-[85vh] md:min-h-[80vh] pb-20 md:pb-0">
+          <div className="flex flex-col items-center text-center justify-end md:justify-center gap-5 md:gap-8 min-h-[85vh] md:min-h-[80vh] pb-20 md:pb-0">
             <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm animate-fade-in-up">
               <Award className="w-4 h-4 text-accent" />
                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Bancas civis e militares</span>
             </div>
 
-            <h1 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-left max-w-4xl animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+            <h1 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-center max-w-4xl animate-fade-in-up mx-auto" style={{ animationDelay: "0.15s" }}>
               <span className="text-foreground">O banco de questões mais </span>
               <span className="bg-gradient-hero-text bg-clip-text text-transparent">completo do Brasil</span>
               <span className="text-foreground">, com </span>
@@ -94,11 +94,11 @@ const Questoes = () => {
               <span className="text-foreground">.</span>
             </h1>
 
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Pare de estudar no escuro. <strong className="text-accent">Você recebe um plano semanal pronto</strong>, treina nas listas certas (níveis 1, 2 e 3), revisa com flashcards e sobe de nível — passo a passo, sem perder tempo.
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl text-center mx-auto animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              Chega de estudar perdido e sem material. O <strong className="text-accent">Banco FULL</strong> te entrega um plano de metas pronto, flashcards de todos os assuntos e questões comentadas em vários níveis.
             </p>
 
-            <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full" style={{ animationDelay: "0.45s" }}>
+            <div className="flex flex-col items-center gap-3 pt-2 animate-fade-in-up w-full" style={{ animationDelay: "0.45s" }}>
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
                  QUERO UM BANCO DE QUESTÕES →
               </Button>

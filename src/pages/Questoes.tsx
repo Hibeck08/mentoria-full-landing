@@ -42,15 +42,15 @@ const Questoes = () => {
   const planos = [
     {
       nome: "Mensal", destaque: false, preco: "R$ 59,90", periodo: "/mês", parcela: null,
-      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/f03lua2", cta: "ASSINAR MENSAL",
+      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/fuiSXQ5", cta: "ASSINAR MENSAL",
     },
     {
       nome: "Semestral", destaque: true, preco: "R$ 55,72", periodo: "/mês", parcela: "ou R$ 297,00 à vista",
-      total: "Economize R$ 25/mês", link: "https://pay.kiwify.com.br/f03lua2", cta: "QUERO O SEMESTRAL",
+      total: "Economize R$ 25/mês", link: "https://pay.kiwify.com.br/98uFoBC", cta: "QUERO O SEMESTRAL",
     },
     {
       nome: "Anual", destaque: false, preco: "R$ 53,47", periodo: "/mês", parcela: "ou R$ 517,00 à vista",
-      total: "Maior economia", link: "https://pay.kiwify.com.br/f03lua2", cta: "QUERO O ANUAL",
+      total: "Maior economia", link: "https://pay.kiwify.com.br/dHylj2t", cta: "QUERO O ANUAL",
     },
   ];
 

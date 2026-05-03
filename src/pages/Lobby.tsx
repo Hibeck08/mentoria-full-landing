@@ -183,7 +183,7 @@ const Lobby = () => {
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 {/* WhatsApp Button - Vermilion */}
                 <a
-                  href="https://wa.me/5521999999999"
+                  href="https://api.whatsapp.com/send?phone=5521992104885"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 bg-gradient-primary hover:opacity-90 text-accent-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-glow-beige hover:shadow-glow-beige hover:scale-105"

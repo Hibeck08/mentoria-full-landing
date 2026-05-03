@@ -34,7 +34,7 @@ const Questoes = () => {
   };
 
   const pillars = [
-    { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Plano de metas semanal com 3 listas (níveis 1, 2 e 3) + flashcard do assunto. Você evolui na ordem certa, sem adivinhação." },
+     { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
     { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo. Filtre por matéria, assunto, banca, ano e dificuldade." },
   ];
@@ -81,14 +81,14 @@ const Questoes = () => {
           <div className="flex flex-col items-start justify-end md:justify-center gap-5 md:gap-8 min-h-[85vh] md:min-h-[80vh] pb-20 md:pb-0">
             <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm animate-fade-in-up">
               <Award className="w-4 h-4 text-accent" />
-              <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Para qualquer concurso — civil ou militar</span>
+               <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Bancas civis e militares</span>
             </div>
 
             <h1 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] text-left max-w-4xl animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
               <span className="text-foreground">O banco de questões mais </span>
               <span className="bg-gradient-hero-text bg-clip-text text-transparent">completo do Brasil</span>
               <span className="text-foreground">, com </span>
-              <span className="bg-gradient-hero-text bg-clip-text text-transparent">método</span>
+               <span className="bg-gradient-hero-text bg-clip-text text-transparent">método FULL</span>
               <span className="text-foreground"> e </span>
               <span className="bg-gradient-hero-text bg-clip-text text-transparent">nivelamento automático</span>
               <span className="text-foreground">.</span>
@@ -100,7 +100,7 @@ const Questoes = () => {
 
             <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full" style={{ animationDelay: "0.45s" }}>
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                QUERO IMPULSIONAR MEUS ESTUDOS →
+                 QUERO UM BANCO DE QUESTÕES →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground/90">
                 ⚡ A partir de <strong className="text-accent">R$ 53,47/mês</strong> • Garantia de 7 dias
@@ -189,7 +189,7 @@ const Questoes = () => {
                   <span className="text-sm font-semibold text-accent">Filtros Inteligentes</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Encontre a questão <span className="text-accent">perfeita</span> em segundos</h3>
-                <p className="text-muted-foreground leading-relaxed">Matéria, assunto, banca, ano, dificuldade — você escolhe. Pare de perder tempo procurando o que estudar.</p>
+                 <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano, dificuldade. </p>
               </div>
             </div>
           </ScrollReveal>
@@ -203,7 +203,7 @@ const Questoes = () => {
                   <span className="text-sm font-semibold text-accent">Resolução Detalhada</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Errou? <span className="text-accent">Aprenda na hora.</span></h3>
-                <p className="text-muted-foreground leading-relaxed">Cada questão tem resolução passo a passo. Não é só gabarito — é uma microaula dentro de cada item.</p>
+                 <p className="text-muted-foreground leading-relaxed">Cada questão tem o comentário com a devida profundidade.</p>
               </div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
@@ -229,7 +229,7 @@ const Questoes = () => {
                   <span className="text-sm font-semibold text-accent">Listas Personalizadas</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Seu <span className="text-accent">plano de ataque</span>, do seu jeito</h3>
-                <p className="text-muted-foreground leading-relaxed">Crie listas com as questões que você quer revisar. Por matéria, por fraqueza, por banca — você decide.</p>
+                 <p className="text-muted-foreground leading-relaxed">Crie listas com as questões que você quer revisar/ aprender.</p>
               </div>
             </div>
           </ScrollReveal>
@@ -258,7 +258,7 @@ const Questoes = () => {
         <ScrollReveal>
           <div className="text-center mt-14">
             <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-              QUERO IMPULSIONAR MEUS ESTUDOS →
+               QUERO UM BANCO DE QUESTÕES →
             </Button>
           </div>
         </ScrollReveal>
@@ -288,8 +288,8 @@ const Questoes = () => {
           <ScrollReveal variant="left">
             <div className="space-y-5">
               {[
-                { n: "1", t: "Plano semanal pronto", d: "Cada semana traz os assuntos que você precisa estudar — sem improviso." },
-                { n: "2", t: "3 listas progressivas", d: "Nível 1 (base), Nível 2 (intermediário), Nível 3 (banca real). Você sobe de nível conforme acerta." },
+                 { n: "1", t: "Plano semanal pronto", d: "Quando vê, você dominou o edital inteiro, ideal para quem está perdido nos estudos." },
+                 { n: "2", t: "3 listas progressivas", d: "Nível 1 (base), Nível 2 (intermediário), Nível 3 (Avançado). Você sobe de nível conforme acerta." },
                 { n: "3", t: "Flashcard do assunto", d: "Fechou as 3 listas? Revisa o flashcard e fixa o conteúdo de vez." },
                 { n: "4", t: "Evolução perfeita", d: "Quando vê, você dominou o edital inteiro — sem furos, sem ansiedade." },
               ].map((item, i) => (
@@ -317,7 +317,7 @@ const Questoes = () => {
                 {[
                   { lvl: "Nível 1 — Base", color: "bg-emerald-500/20 text-emerald-400", done: true },
                   { lvl: "Nível 2 — Intermediário", color: "bg-amber-500/20 text-amber-400", done: true },
-                  { lvl: "Nível 3 — Banca real", color: "bg-accent/20 text-accent", done: false },
+                   { lvl: "Nível 3 — Avançado", color: "bg-accent/20 text-accent", done: false },
                   { lvl: "🎴 Flashcard do assunto", color: "bg-primary/30 text-foreground", done: false },
                 ].map((s, i) => (
                   <div key={i} className={`flex items-center justify-between p-3 rounded-xl ${s.color} border border-current/20`}>
@@ -464,7 +464,7 @@ const Questoes = () => {
                     "+20.000 questões resolvidas",
                     "+2.000 flashcards",
                     "Listas, simulados e desempenho",
-                    "Suporte direto com professores",
+                     "Suporte direto comigo",
                   ].map((f, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plano.destaque ? "text-background" : "text-accent"}`} />

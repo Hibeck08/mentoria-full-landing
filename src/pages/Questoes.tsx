@@ -41,16 +41,16 @@ const Questoes = () => {
 
   const planos = [
     {
-      nome: "Mensal", destaque: false, preco: "R$ 59,90", periodo: "/mês", parcela: null,
-      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/fuiSXQ5", cta: "ASSINAR MENSAL",
+      nome: "Mensal", destaque: false, preco: "R$ 44,90", precoAntigo: "R$ 59,90", periodo: "/mês", parcela: null,
+      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/Kn3mHd3", cta: "ASSINAR MENSAL",
     },
     {
-      nome: "Semestral", destaque: true, preco: "R$ 55,72", periodo: "/mês", parcela: "ou R$ 297,00 à vista",
-      total: "Economize R$ 25/mês", link: "https://pay.kiwify.com.br/98uFoBC", cta: "QUERO O SEMESTRAL",
+      nome: "Semestral", destaque: true, preco: "R$ 37,33", precoAntigo: "R$ 55,72", periodo: "/mês", parcela: "ou 1x de R$ 199,90 /semestre",
+      total: "Economize R$ 112/mês", link: "https://pay.kiwify.com.br/XY03b6t", cta: "QUERO O SEMESTRAL",
     },
     {
-      nome: "Anual", destaque: false, preco: "R$ 53,47", periodo: "/mês", parcela: "ou R$ 517,00 à vista",
-      total: "Maior economia", link: "https://pay.kiwify.com.br/dHylj2t", cta: "QUERO O ANUAL",
+      nome: "Anual", destaque: false, preco: "R$ 36,92", precoAntigo: "R$ 53,47", periodo: "/mês", parcela: "ou 1x de R$ 357,00 /ano",
+      total: "Maior economia", link: "https://pay.kiwify.com.br/TtaJ1TO", cta: "QUERO O ANUAL",
     },
   ];
 

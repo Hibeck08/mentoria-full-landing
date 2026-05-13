@@ -444,6 +444,11 @@ const Questoes = () => {
                   {plano.nome}
                 </h3>
                 <div className="text-center mb-5">
+                  {plano.precoAntigo && (
+                    <p className={`text-sm line-through mb-1 ${plano.destaque ? "text-background/60" : "text-muted-foreground/70"}`}>
+                      De {plano.precoAntigo}{plano.periodo}
+                    </p>
+                  )}
                   <p className={`text-4xl md:text-5xl font-black ${plano.destaque ? "text-background" : "text-accent"}`}>
                     {plano.preco}
                     <span className={`text-sm font-medium ${plano.destaque ? "text-background/80" : "text-muted-foreground"}`}>{plano.periodo}</span>
@@ -453,9 +458,10 @@ const Questoes = () => {
                       {plano.parcela}
                     </p>
                   )}
-                  <p className={`text-xs mt-2 font-bold uppercase tracking-wider ${plano.destaque ? "text-background/80" : "text-accent"}`}>
+                  <div className={`inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full text-xs font-bold ${plano.destaque ? "bg-background/20 text-background" : "bg-accent/15 text-accent"}`}>
+                    <Zap className="w-3 h-3" />
                     {plano.total}
-                  </p>
+                  </div>
                 </div>
                 <ul className={`space-y-2.5 mb-6 flex-grow text-sm ${plano.destaque ? "text-background" : "text-foreground"}`}>
                   {[

@@ -41,16 +41,16 @@ const Questoes = () => {
 
   const planos = [
     {
-      nome: "Mensal", destaque: false, preco: "R$ 59,90", periodo: "/mês", parcela: null,
-      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/fuiSXQ5", cta: "ASSINAR MENSAL",
+      nome: "Mensal", destaque: false, preco: "R$ 44,90", precoAntigo: "R$ 59,90", periodo: "/mês", parcela: null,
+      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/Kn3mHd3", cta: "ASSINAR MENSAL",
     },
     {
-      nome: "Semestral", destaque: true, preco: "R$ 55,72", periodo: "/mês", parcela: "ou R$ 297,00 à vista",
-      total: "Economize R$ 25/mês", link: "https://pay.kiwify.com.br/98uFoBC", cta: "QUERO O SEMESTRAL",
+      nome: "Semestral", destaque: true, preco: "R$ 37,33", precoAntigo: "R$ 55,72", periodo: "/mês", parcela: "ou 1x de R$ 199,90 /semestre",
+      total: "Economize R$ 112/mês", link: "https://pay.kiwify.com.br/XY03b6t", cta: "QUERO O SEMESTRAL",
     },
     {
-      nome: "Anual", destaque: false, preco: "R$ 53,47", periodo: "/mês", parcela: "ou R$ 517,00 à vista",
-      total: "Maior economia", link: "https://pay.kiwify.com.br/dHylj2t", cta: "QUERO O ANUAL",
+      nome: "Anual", destaque: false, preco: "R$ 36,92", precoAntigo: "R$ 53,47", periodo: "/mês", parcela: "ou 1x de R$ 357,00 /ano",
+      total: "Maior economia", link: "https://pay.kiwify.com.br/TtaJ1TO", cta: "QUERO O ANUAL",
     },
   ];
 
@@ -444,6 +444,11 @@ const Questoes = () => {
                   {plano.nome}
                 </h3>
                 <div className="text-center mb-5">
+                  {plano.precoAntigo && (
+                    <p className={`text-sm line-through mb-1 ${plano.destaque ? "text-background/60" : "text-muted-foreground/70"}`}>
+                      De {plano.precoAntigo}{plano.periodo}
+                    </p>
+                  )}
                   <p className={`text-4xl md:text-5xl font-black ${plano.destaque ? "text-background" : "text-accent"}`}>
                     {plano.preco}
                     <span className={`text-sm font-medium ${plano.destaque ? "text-background/80" : "text-muted-foreground"}`}>{plano.periodo}</span>
@@ -453,9 +458,10 @@ const Questoes = () => {
                       {plano.parcela}
                     </p>
                   )}
-                  <p className={`text-xs mt-2 font-bold uppercase tracking-wider ${plano.destaque ? "text-background/80" : "text-accent"}`}>
+                  <div className={`inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full text-xs font-bold ${plano.destaque ? "bg-background/20 text-background" : "bg-accent/15 text-accent"}`}>
+                    <Zap className="w-3 h-3" />
                     {plano.total}
-                  </p>
+                  </div>
                 </div>
                 <ul className={`space-y-2.5 mb-6 flex-grow text-sm ${plano.destaque ? "text-background" : "text-foreground"}`}>
                   {[
@@ -515,7 +521,7 @@ const Questoes = () => {
               <FAQItem value="item-1" question="O que é o sistema de nivelamento automático?" answer="É um plano de metas semanal pronto. Cada semana traz os assuntos que você deve estudar, com 3 listas (níveis 1, 2 e 3) que evoluem em dificuldade, mais o flashcard daquele assunto. Você só precisa seguir — a plataforma cuida do que estudar e quando." />
               <FAQItem value="item-2" question="Serve para qualquer concurso ou só militares?" answer="Serve para QUALQUER concurso. Temos questões de bancas civis e militares (ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ, vestibulares e bancas civis em geral). O método e o nivelamento funcionam para qualquer prova." />
               <FAQItem value="item-3" question="O que está incluso na assinatura?" answer="Banco com +20.000 questões resolvidas, Método FULL completo (videoaulas, livro, plano de metas, grupo de suporte), +2.000 flashcards, sistema de nivelamento automático semanal, filtros avançados, listas personalizadas, simulados cronometrados, painel de desempenho e suporte direto com professores." />
-              <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está no preço por mês: o anual sai R$ 53,47/mês (maior economia), o semestral R$ 55,72/mês e o mensal R$ 59,90/mês. Quanto maior o compromisso, menor o valor." />
+              <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está no preço: o anual sai R$ 36,92/mês (ou 1x de R$ 357,00/ano — maior economia), o semestral R$ 37,33/mês (ou 1x de R$ 199,90/semestre) e o mensal R$ 44,90/mês. Quanto maior o compromisso, menor o valor." />
               <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias de garantia incondicional. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
               <FAQItem value="item-6" question="Como funciona o acesso?" answer="Após o pagamento, você recebe acesso imediato à plataforma. Pode estudar pelo celular, tablet ou computador, no horário que quiser." />
             </Accordion>

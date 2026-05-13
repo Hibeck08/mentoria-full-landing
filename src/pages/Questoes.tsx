@@ -45,12 +45,12 @@ const Questoes = () => {
       total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/Kn3mHd3", cta: "ASSINAR MENSAL",
     },
     {
-      nome: "Semestral", destaque: false, preco: "R$ 37,33", precoAntigo: "R$ 55,72", periodo: "/mês", parcela: "ou 1x de R$ 199,90 /semestre",
-      total: "Economize R$ 112/mês", link: "https://pay.kiwify.com.br/XY03b6t", cta: "QUERO O SEMESTRAL",
-    },
-    {
       nome: "Anual", destaque: true, preco: "R$ 36,92", precoAntigo: "R$ 53,47", periodo: "/mês", parcela: "ou 1x de R$ 357,00 /ano",
       total: "Maior economia", link: "https://pay.kiwify.com.br/TtaJ1TO", cta: "QUERO O ANUAL",
+    },
+    {
+      nome: "Semestral", destaque: false, preco: "R$ 37,33", precoAntigo: "R$ 55,72", periodo: "/mês", parcela: "ou 1x de R$ 199,90 /semestre",
+      total: "Economize R$ 112/mês", link: "https://pay.kiwify.com.br/XY03b6t", cta: "QUERO O SEMESTRAL",
     },
   ];
 

@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Sparkles, CheckCircle, Users, Star, Infinity, Zap, MessageCircle, Instagram } from "lucide-react";
+import { ArrowRight, Clock, Sparkles, CheckCircle, Users, Star, Infinity, Zap, MessageCircle, Instagram, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import lobbyWallpaper from "@/assets/lobby-wallpaper.png";
@@ -257,6 +257,21 @@ const Lobby = () => {
                   </span>
                 </div>
               </div>
+
+              {/* FULL ADELPHI */}
+              <ProductCard
+                title="FULL ADELPHI"
+                subtitle="Português e Inglês — Curso Completo pra Concursos Públicos"
+                features={[
+                  { text: "Aulas gravadas de Português e Inglês", highlight: true },
+                  { text: "Aulas ao vivo semanais com professores", highlight: true },
+                  { text: "Acesso ao banco FULL Questões" },
+                  { text: "Flashcards de todos os assuntos" },
+                  { text: "Metas semanais pra seguir" },
+                  { text: "Time de professores especializados" },
+                ]}
+                to="/adelphi"
+              />
               
               {/* FULL ZENITH */}
               <ProductCard

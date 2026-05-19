@@ -257,6 +257,21 @@ const Lobby = () => {
                   </span>
                 </div>
               </div>
+
+              {/* FULL ADELPHI */}
+              <ProductCard
+                title="FULL ADELPHI"
+                subtitle="Português e Inglês — Curso Completo pra Concursos Públicos"
+                features={[
+                  { text: "Aulas gravadas de Português e Inglês", highlight: true },
+                  { text: "Aulas ao vivo semanais com professores", highlight: true },
+                  { text: "Acesso ao banco FULL Questões" },
+                  { text: "Flashcards de todos os assuntos" },
+                  { text: "Metas semanais pra seguir" },
+                  { text: "Time de professores especializados" },
+                ]}
+                to="/adelphi"
+              />
               
               {/* FULL ZENITH */}
               <ProductCard

@@ -6,7 +6,8 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import {
   Target, BookOpen, Trophy, CheckCircle2, Zap, Instagram, Brain, Rocket,
-  Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp
+  Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp,
+  Database, Search, FileText
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
@@ -278,10 +279,16 @@ const Mentoria = () => {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Bryan Hibeck</h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    <strong className="text-accent">+20.000 questões</strong> resolvidas em 8 meses de preparação. Aprovado em <strong className="text-foreground">10º na AFA</strong>, <strong className="text-foreground">8º na EFOMM</strong> e <strong className="text-foreground">15º na EEAr (BCT)</strong>.
+                    Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+20.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Fui aprovado na <strong className="text-foreground">AFA como 10º colocado geral</strong> (01 de Infantaria, 04 de Intendência e 05 de Aviação), na <strong className="text-foreground">EFOMM como 08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT) como 15º colocado</strong>.
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Estudo concurso militar desde 2021 e consegui minha primeira classificação na <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses, ainda no mesmo ano. Vivi cada bastidor, errei muito, ajustei o método — e hoje meu trabalho é te entregar o atalho que eu não tive.
                   </p>
                   <p className="text-sm md:text-base text-foreground font-semibold">
-                    Minha missão agora é te entregar o passo a passo que me levou ao topo. 🎯
+                    Minha missão agora é simples: te entregar o passo a passo que me levou ao topo. 🎯
                   </p>
                 </div>
               </div>

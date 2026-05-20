@@ -6,7 +6,8 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import {
   Target, BookOpen, Trophy, CheckCircle2, Zap, Instagram, Brain, Rocket,
-  Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp
+  Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp,
+  Database, Search, FileText
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
@@ -260,6 +261,95 @@ const Mentoria = () => {
         </div>
       </section>
 
+      {/* BANCO FULL QUESTÕES SHOWCASE */}
+      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Database className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Plataforma Inclusa</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> de quebra
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                +20.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-5xl mx-auto space-y-12 md:space-y-16">
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Search className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
+                  <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com <strong className="text-accent">resolução comentada passo a passo</strong> — você não fica mais travado quando erra.</p>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
+                    <img src="/platform/resolucao.png" alt="Resolução comentada" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group order-2 md:order-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
+                    <img src="/platform/listas-desktop.png" alt="Listas de estudo" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="space-y-4 order-1 md:order-2">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <FileText className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Listas inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Seu plano de ataque <span className="text-accent">já montado</span></h3>
+                  <p className="text-muted-foreground leading-relaxed">3 listas progressivas por assunto (base, intermediário, avançado) + flashcard de fechamento. Você só abre, executa e sobe de nível.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <TrendingUp className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Desempenho em tempo real</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Saiba <span className="text-accent">exatamente</span> onde você está</h3>
+                  <p className="text-muted-foreground leading-relaxed">Gráficos de acerto por matéria, evolução semanal e ranking. Pare de estudar no escuro — <strong className="text-accent">você vê a nota subir antes da prova</strong>.</p>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO ESSA PLATAFORMA →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* QUEM SOU EU – compacto */}
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
@@ -278,10 +368,16 @@ const Mentoria = () => {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Bryan Hibeck</h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    <strong className="text-accent">+20.000 questões</strong> resolvidas em 8 meses de preparação. Aprovado em <strong className="text-foreground">10º na AFA</strong>, <strong className="text-foreground">8º na EFOMM</strong> e <strong className="text-foreground">15º na EEAr (BCT)</strong>.
+                    Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+20.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Fui aprovado na <strong className="text-foreground">AFA como 10º colocado geral</strong> (01 de Infantaria, 04 de Intendência e 05 de Aviação), na <strong className="text-foreground">EFOMM como 08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT) como 15º colocado</strong>.
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Estudo concurso militar desde 2021 e consegui minha primeira classificação na <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses, ainda no mesmo ano. Vivi cada bastidor, errei muito, ajustei o método — e hoje meu trabalho é te entregar o atalho que eu não tive.
                   </p>
                   <p className="text-sm md:text-base text-foreground font-semibold">
-                    Minha missão agora é te entregar o passo a passo que me levou ao topo. 🎯
+                    Minha missão agora é simples: te entregar o passo a passo que me levou ao topo. 🎯
                   </p>
                 </div>
               </div>

@@ -145,29 +145,24 @@ const FullAdelphi = () => {
             <div className="flex flex-col items-start gap-5 md:gap-7 min-h-[88vh] md:min-h-[80vh] justify-end md:justify-center pb-24 md:pb-0 max-w-2xl">
               <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm animate-fade-in-up">
                 <GraduationCap className="w-4 h-4 text-accent" />
-                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Português · Inglês · Concursos & Militares</span>
+                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Português · Inglês · Preparatório Premium</span>
               </div>
 
               <h1 className="text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
                 <span className="bg-gradient-hero-text bg-clip-text text-transparent">FULL ADELPHI</span>
                 <br />
-                <span className="text-foreground">Português e Inglês com o método de quem </span>
-                <span className="bg-gradient-hero-text bg-clip-text text-transparent">já passou.</span>
+                <span className="text-foreground">o melhor preparatório de </span>
+                <span className="bg-gradient-hero-text bg-clip-text text-transparent">português e inglês</span>
+                <span className="text-foreground"> para concursos públicos.</span>
               </h1>
 
-              <p className="text-sm md:text-lg text-muted-foreground leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                As duas matérias que mais derrubam candidato em <strong className="text-foreground">EFOMM, ESA, ESPCEX, EPCAr</strong> e concursos públicos — agora destrinchadas por professores aprovados, com aulas ao vivo, banco de questões, flashcards e metas semanais prontas pra você executar.
+              <p className="text-xs md:text-base text-muted-foreground/90 leading-relaxed animate-fade-in-up max-w-xl" style={{ animationDelay: "0.3s" }}>
+                Aulas ao vivo, banco de questões e plano de metas com professores que já cruzaram esse portão.
               </p>
 
-              <div className="flex flex-wrap gap-2 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                {["EFOMM", "ESA", "ESPCEX", "EPCAr", "Concursos Públicos"].map((c) => (
-                  <span key={c} className="text-[10px] md:text-xs font-bold uppercase tracking-wider bg-card/60 backdrop-blur-sm border border-accent/30 text-foreground px-3 py-1.5 rounded-full">{c}</span>
-                ))}
-              </div>
-
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
-                <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  QUERO ENTRAR NO FULL ADELPHI →
+                <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto animate-gold-shimmer">
+                  QUERO CLASSIFICAR →
                 </Button>
                 <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Acesso imediato · Garantia de 7 dias</p>
               </div>

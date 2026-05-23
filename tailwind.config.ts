@@ -131,6 +131,14 @@ export default {
             transform: "translateX(0)",
           },
         },
+        "gold-shimmer": {
+          "0%, 100%": { "box-shadow": "0 0 0 0 hsl(45 90% 60% / 0.0), 0 0 20px hsl(45 90% 60% / 0.25)" },
+          "50%": { "box-shadow": "0 0 0 6px hsl(45 90% 60% / 0.15), 0 0 40px hsl(45 90% 60% / 0.55)" },
+        },
+        "tilt-in": {
+          "0%": { opacity: "0", transform: "translateY(40px) rotate(-2deg)" },
+          "100%": { opacity: "1", transform: "translateY(0) rotate(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -140,6 +148,8 @@ export default {
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 20s linear infinite",
+        "gold-shimmer": "gold-shimmer 2.4s ease-in-out infinite",
+        "tilt-in": "tilt-in 0.7s ease-out both",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",

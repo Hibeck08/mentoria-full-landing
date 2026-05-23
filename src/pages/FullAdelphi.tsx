@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import {
   Home, Instagram, BookOpen, Video, Database, Layers, Calendar,
   Trophy, CheckCircle2, GraduationCap, MessageCircle, Award, Shield,
-  Zap, Target, Sparkles, Languages, Globe, Star, Flame
+  Zap, Target, Sparkles, Languages, Globe, Star, Flame, TrendingUp, Search, FileText, Crown, Headphones, PenLine
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";

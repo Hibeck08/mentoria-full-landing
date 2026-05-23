@@ -173,36 +173,51 @@ const Mentoria = () => {
 
       {/* O QUE VOCÊ RECEBE */}
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10 animate-glow-pulse" />
+        <div className="absolute bottom-0 left-1/4 w-[420px] h-[420px] bg-primary/30 rounded-full blur-[140px] opacity-30 animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
         <div className="container relative z-10 mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
-                <Rocket className="w-4 h-4 text-accent" />
-                <span className="text-xs font-bold text-accent uppercase tracking-wider">Pacote Completo</span>
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige animate-gold-shimmer">
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Pacote completo · top tier</span>
               </div>
               <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                O que está <span className="bg-gradient-primary bg-clip-text text-transparent">incluso</span>
+                Tudo que está <span className="bg-gradient-primary bg-clip-text text-transparent">incluso</span> ✨
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Sem firula, só o que realmente faz diferença na sua aprovação.
+                Cada peça pensada pra te empurrar pra aprovação. Passe o mouse e veja cada uma ganhar vida.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-4 md:gap-5">
+          <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {[
-              { icon: Play, title: "Vídeo-aulas do método", desc: "Como estudar cada matéria, do zero ao avançado." },
-              { icon: Users, title: "Encontros ao vivo", desc: "Aulas semanais de matemática e física comigo." },
-              { icon: Layers, title: "+2.000 flashcards Anki", desc: "Teoria, exemplos e revisões de tudo que cai." },
-              { icon: Calendar, title: "Plano de metas pronto", desc: "Você só executa — eu monto o que estudar e quando." },
-              { icon: BookOpen, title: "Livro do Método Hibeck", desc: "Tudo que aprendi nos 8 meses que me aprovaram." },
-              { icon: Trophy, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas e nivelamento automático." },
+              { icon: Play, title: "Aulas gravadas — 4 matérias", desc: "Português, Inglês, Matemática e Física do zero ao avançado.", gold: true },
+              { icon: Users, title: "Aulas ao vivo semanais", desc: "Encontros semanais de Português, Inglês, Matemática e Física com os professores.", gold: true },
+              { icon: PenLine, title: "Correção de redação ao vivo", desc: "Sua redação corrigida em tempo real, com feedback direto pra subir nota rápido.", gold: true },
+              { icon: Trophy, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas, listas por nível e nivelamento automático." },
+              { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias — fixa de verdade." },
+              { icon: Calendar, title: "Plano de metas semanal", desc: "Toda segunda você já sabe o que estudar. Zero tempo perdido decidindo." },
+              { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral — com tendência." },
+              { icon: BookOpen, title: "Livro do Método Hibeck", desc: "Tudo que aprendi nos 8 meses que me aprovaram, num só material." },
+              { icon: MessageCircle, title: "Suporte direto comigo", desc: "Dúvida no grupo? Resposta rápida. Você não estuda sozinho." },
             ].map((b, i) => (
-              <ScrollReveal key={i} delay={i * 80}>
-                <div className="h-full bg-card/70 backdrop-blur-sm border border-accent/20 rounded-2xl p-5 md:p-6 hover:border-accent/50 transition-all">
+              <ScrollReveal key={i} delay={i * 70} variant="scale">
+                <div className={`group relative h-full backdrop-blur-sm rounded-2xl p-5 md:p-6 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] ${
+                  b.gold
+                    ? "bg-gradient-to-br from-card/90 to-card/70 border-2 border-accent shadow-glow-beige hover:shadow-[0_0_60px_hsl(45_90%_60%/0.45)] animate-gold-shimmer"
+                    : "bg-card/70 border-2 border-accent/25 hover:border-accent"
+                }`}>
+                  {b.gold && (
+                    <div className="absolute -top-2 -right-2 bg-gradient-primary text-accent-foreground text-[9px] font-black px-2 py-0.5 rounded-full shadow-glow-beige tracking-wider uppercase">
+                      Destaque
+                    </div>
+                  )}
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-11 h-11 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:rotate-6 group-hover:scale-110 ${
+                      b.gold ? "bg-gradient-beige-premium" : "bg-gradient-primary"
+                    }`}>
                       <b.icon className="w-5 h-5 text-accent-foreground" />
                     </div>
                     <div>
@@ -217,8 +232,8 @@ const Mentoria = () => {
 
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO TUDO ISSO →
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto animate-gold-shimmer">
+                QUERO CLASSIFICAR →
               </Button>
             </div>
           </ScrollReveal>

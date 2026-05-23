@@ -491,7 +491,7 @@ const FullAdelphi = () => {
                 }`}>
                   {plano.destaque && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <div className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-xs font-black shadow-lg whitespace-nowrap">
+                      <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-xs font-black shadow-glow-beige whitespace-nowrap animate-gold-shimmer">
                         ⭐ MAIS ESCOLHIDO
                       </div>
                     </div>

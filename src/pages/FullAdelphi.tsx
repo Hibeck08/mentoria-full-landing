@@ -190,13 +190,13 @@ const FullAdelphi = () => {
                 <span className="text-xs font-bold text-accent uppercase tracking-wider">A real do concurso</span>
               </div>
               <h2 className="text-[1.6rem] md:text-4xl font-bold leading-tight">
-                Quem decide vaga é <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>. E quase ninguém estuda direito.
+                Vaga se ganha — ou se perde — em <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                A matemática você até dá um jeito. Mas <strong className="text-foreground">interpretar texto sob pressão</strong>, lembrar daquela regra de regência ou destravar uma reading em inglês na hora da prova — é aí que a aprovação escapa.
+                São as matérias com <strong className="text-foreground">maior peso de desempate</strong> nas principais bancas — e justamente as que mais candidato deixa pra depois. Interpretação sob pressão, regência, vocabulário, reading: é aí que a classificação escapa.
               </p>
               <p className="text-base md:text-lg text-foreground font-semibold">
-                O FULL Adelphi resolve isso de uma vez. Sem enrolação, sem aula genérica, com método de quem acabou de passar nos mesmos concursos que você quer.
+                No FULL Adelphi você estuda Português e Inglês com método, ao vivo, com quem acabou de passar nos concursos que você quer.
               </p>
             </div>
           </ScrollReveal>
@@ -238,8 +238,8 @@ const FullAdelphi = () => {
 
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO MEU LUGAR →
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto animate-gold-shimmer">
+                QUERO CLASSIFICAR →
               </Button>
             </div>
           </ScrollReveal>

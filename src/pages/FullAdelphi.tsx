@@ -323,36 +323,141 @@ const FullAdelphi = () => {
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14">
               <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Zap className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Como funciona na prática</span>
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
               </div>
               <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Sua semana no <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Adelphi</span>
+                Benefícios que <span className="bg-gradient-primary bg-clip-text text-transparent">se conectam</span> entre si
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Nada de "estudar pelo edital sozinho". A gente entrega a semana mastigada — você só executa.
+                Cada peça do FULL Adelphi puxa a outra. Você aprende, treina, fixa e mede — sem furo no ciclo.
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {[
-              { n: "1", t: "Segunda chegou", d: "Você abre a plataforma e já encontra as metas da semana: aulas, questões e flashcards organizadas por dia." },
-              { n: "2", t: "Aula ao vivo", d: "Encontros semanais com Fontes (Português) e Teixeira (Inglês) destrinchando o que mais cai e tirando dúvida ao vivo." },
-              { n: "3", t: "Questão na veia", d: "Você cai no Banco FULL Questões com listas por nível. Erra? A resolução te explica como acertar." },
-              { n: "4", t: "Flashcard fixa", d: "Termina o assunto revisando flashcards. Quando vê, o conteúdo virou seu — sem precisar reler tudo." },
+              { icon: Video, t: "Aula ao vivo", d: "Fontes e Teixeira destrinchando o conteúdo da semana — você ouve, anota e tira dúvida em tempo real.", next: "alimenta as listas" },
+              { icon: Database, t: "Banco FULL Questões", d: "Listas com as questões EXATAS do que foi visto na aula. Erra? A resolução te mostra o caminho.", next: "vira flashcard" },
+              { icon: Layers, t: "Flashcards de revisão", d: "Os pontos que mais caem viram cards. Revisão espaçada que fixa de verdade sem reler tudo.", next: "entra na meta" },
+              { icon: Calendar, t: "Meta semanal pronta", d: "Toda segunda o ciclo recomeça com plano novo: aula → questão → flashcard → simulado.", next: "fecha o ciclo" },
             ].map((s, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className="relative h-full bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-5 md:p-6 hover:border-accent transition-all">
-                  <div className="absolute -top-3 -left-2 w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center font-black text-accent-foreground text-base shadow-glow-beige">
-                    {s.n}
+              <ScrollReveal key={i} delay={i * 120} variant="scale">
+                <div className="relative h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-5 md:p-6 hover:border-accent hover:-translate-y-1 hover:shadow-glow-beige transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow-beige mb-4 group-hover:rotate-6 transition-transform">
+                    <s.icon className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <h4 className="text-base md:text-lg font-bold text-foreground mb-2 mt-3">{s.t}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+                  <h4 className="text-base md:text-lg font-bold text-foreground mb-2">{s.t}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{s.d}</p>
+                  <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 rounded-full px-2.5 py-1">
+                    → {s.next}
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* BANCO FULL QUESTÕES SHOWCASE */}
+      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Database className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Plataforma inclusa</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> liberado
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                +20.000 questões de Português e Inglês com filtros por banca, ano e nível. <strong className="text-accent">Tudo incluído no FULL Adelphi.</strong>
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-5xl mx-auto space-y-10 md:space-y-14">
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Search className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
+                  <p className="text-muted-foreground leading-relaxed">Cada questão vem com <strong className="text-accent">resolução comentada passo a passo</strong> — você não fica mais travado quando erra.</p>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 hover:scale-[1.02] transition-transform duration-300">
+                    <img src="/platform/resolucao.png" alt="Resolução comentada" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group order-2 md:order-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3 hover:scale-[1.02] transition-transform duration-300">
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="space-y-3 order-1 md:order-2">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <TrendingUp className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Desempenho em tempo real</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Veja sua nota <span className="text-accent">subir antes da prova</span></h3>
+                  <p className="text-muted-foreground leading-relaxed">Gráficos por matéria, evolução semanal e ranking. Estudo no escuro acabou.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* DEPOIMENTOS / FEEDBACK */}
+      <section className="py-12 md:py-20 bg-secondary/20 overflow-hidden">
+        <div className="container mx-auto px-6 mb-6 md:mb-10">
+          <ScrollReveal>
+            <div className="text-center max-w-2xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
+                <Star className="w-4 h-4 text-accent fill-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">Resultados reais</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Quem entrou, <span className="bg-gradient-primary bg-clip-text text-transparent">classificou.</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">A prova de que o método entrega.</p>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        <div className="relative w-full h-[45vh] md:h-[65vh] overflow-hidden">
+          <div className="absolute inset-0 flex animate-scroll-left" style={{ width: "max-content" }}>
+            {[...Array(2)].flatMap((_, dup) =>
+              ["1","2","3","4","5","6","7","8","9"].map((n, i) => (
+                <div key={`${dup}-${i}`} className="h-[45vh] md:h-[65vh] w-auto flex-shrink-0">
+                  <img src={`/lovable-uploads/feedback-${n}.jpg`} alt={`Depoimento ${n}`} className="h-full w-auto object-contain" loading="lazy" decoding="async" />
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+
+        <div className="container mx-auto px-4 mt-8">
+          <ScrollReveal>
+            <div className="text-center">
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto animate-gold-shimmer">
+                QUERO MEU NOME NESSA LISTA →
+              </Button>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

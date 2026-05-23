@@ -296,6 +296,25 @@ const Mentoria = () => {
             </div>
           </ScrollReveal>
 
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
+            {[
+              { icon: Database, t: "+20.000 questões", d: "Resolvidas e comentadas em detalhes." },
+              { icon: Filter, t: "Filtros avançados", d: "Matéria, banca, ano, dificuldade e nível." },
+              { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado por assunto." },
+              { icon: TrendingUp, t: "Painel com tendência", d: "Acerto por matéria, dia, mês, ranking e simulado semanal." },
+            ].map((b, i) => (
+              <ScrollReveal key={i} delay={i * 80} variant="scale">
+                <div className="group h-full bg-card/70 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 md:p-5 hover:border-accent hover:-translate-y-1 transition-all">
+                  <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform">
+                    <b.icon className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <h4 className="text-sm md:text-base font-bold text-foreground mb-1">{b.t}</h4>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{b.d}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
           <div className="max-w-5xl mx-auto space-y-12 md:space-y-16">
             <ScrollReveal variant="right">
               <div className="grid md:grid-cols-2 gap-8 items-center">

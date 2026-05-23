@@ -5,6 +5,7 @@ import lobbyWallpaper from "@/assets/lobby-wallpaper.png";
 import mentoriaBanner from "@/assets/mentoria-banner.png";
 
 import questoesBanner from "@/assets/questoes-banner.png";
+import adelphiBanner from "@/assets/adelphi-banner.png";
 
 interface ProductCardProps {
   title: string;
@@ -271,6 +272,8 @@ const Lobby = () => {
                   { text: "Time de professores especializados" },
                 ]}
                 to="/adelphi"
+                backgroundImage={adelphiBanner}
+                backgroundPosition="right center"
               />
               
               {/* FULL ZENITH */}

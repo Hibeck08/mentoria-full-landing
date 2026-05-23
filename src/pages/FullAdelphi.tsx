@@ -47,9 +47,8 @@ const equipe = [
     funcao: "Coordenador · Criador do Método FULL",
     foto: bryanPhoto,
     paragrafos: [
-      "Nasci em 17/03/2004 e ganhei destaque no mundo dos concursos por ter resolvido +20.000 questões em apenas 8 meses de preparação, em 2024.",
-      "Fui aprovado na AFA como 10º colocado geral (01 de Infantaria, 04 de Intendência e 05 de Aviação), na EFOMM como 08º e na EEAr (BCT) como 15º.",
-      "Estudo concurso militar desde 2021 e já no mesmo ano consegui minha primeira classificação na EPCAr. Aqui no FULL Adelphi minha missão é garantir que cada aluno tenha um plano de estudo que realmente leva à aprovação.",
+      "Resolvi +20.000 questões em 8 meses e fui aprovado em AFA (10º), EFOMM (08º) e EEAr (15º).",
+      "Criei o Método FULL pra encurtar o caminho de quem quer passar — e agora coordeno o FULL Adelphi pra garantir que cada aluno tenha um plano que leva à aprovação.",
     ],
   },
   {
@@ -57,9 +56,8 @@ const equipe = [
     funcao: "Professor de Português",
     foto: fontesPhoto,
     paragrafos: [
-      "Tenho 20 anos e em 2024 fui aprovado em 3 concursos: EFOMM, ESA e ESPCEX.",
-      "Consegui essa conquista mesmo conciliando os estudos com uma rotina exaustiva — só em transporte público eu perdia 6 horas do meu dia indo pra escola e pro trabalho.",
-      "Aprendi a não baixar a cabeça e a estudar do jeito que dava. A aprovação veio. Hoje meu trabalho é encurtar o caminho de quem está nessa mesma posição.",
+      "Aprovado em 2024 em EFOMM, ESA e ESPCEX — mesmo perdendo 6h por dia no transporte entre escola e trabalho.",
+      "Hoje ensina o Português que cai de verdade nas provas: gramática objetiva, interpretação cirúrgica e redação que pontua alto.",
     ],
   },
   {
@@ -67,9 +65,8 @@ const equipe = [
     funcao: "Professor de Inglês · Dono do projeto",
     foto: teixeiraPhoto,
     paragrafos: [
-      "Minha jornada começou em 2020 e, com muita dedicação, conquistei minha vaga na EPCAr — entrei em 2022 como 31º colocado geral da turma e fui monitor de inglês durante toda a formação na Força Aérea.",
-      "Em 2024, depois de me formar, encarei o desafio dos concursos de oficiais e fui aprovado na EFOMM como 37º colocado — fruto de estratégia e foco cirúrgico em apenas 4 meses de preparação intensiva.",
-      "Vivi a rotina das escolas militares na pele e conheço exatamente o caminho, as dificuldades e as estratégias necessárias pra vencer as provas mais concorridas do Brasil. Minha missão agora é compartilhar esse método e te levar à aprovação. ✈️",
+      "Aprovado na EPCAr (31º) em 2022 e na EFOMM (37º) em 2024 — esta última em só 4 meses de preparação intensiva.",
+      "Foi monitor de Inglês na Força Aérea e hoje destrincha reading, vocabulário e falsos cognatos do jeito que cai nas bancas militares. ✈️",
     ],
   },
 ];

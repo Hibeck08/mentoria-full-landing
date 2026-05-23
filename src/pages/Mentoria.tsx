@@ -386,7 +386,6 @@ const Mentoria = () => {
 
       {/* QUEM SOU EU – compacto */}
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-        {/* This wrapper is preserved. Section above this one is the weekly plan. */}
         <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
         <div className="container relative z-10 mx-auto px-6 max-w-5xl">
           <ScrollReveal>

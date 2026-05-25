@@ -161,7 +161,7 @@ const FullAdelphi = () => {
               </p>
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
-                <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto animate-gold-shimmer">
+                <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
                   QUERO CLASSIFICAR →
                 </Button>
                 <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Acesso imediato · Garantia de 7 dias</p>
@@ -238,7 +238,7 @@ const FullAdelphi = () => {
 
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto animate-gold-shimmer">
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
                 QUERO CLASSIFICAR →
               </Button>
             </div>
@@ -453,7 +453,7 @@ const FullAdelphi = () => {
         <div className="container mx-auto px-4 mt-8">
           <ScrollReveal>
             <div className="text-center">
-              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto animate-gold-shimmer">
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
                 QUERO MEU NOME NESSA LISTA →
               </Button>
             </div>
@@ -491,7 +491,7 @@ const FullAdelphi = () => {
                 }`}>
                   {plano.destaque && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-xs font-black shadow-glow-beige whitespace-nowrap animate-gold-shimmer">
+                      <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-xs font-black shadow-glow-beige whitespace-nowrap">
                         ⭐ MAIS ESCOLHIDO
                       </div>
                     </div>

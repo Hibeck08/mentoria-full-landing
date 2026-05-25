@@ -110,13 +110,13 @@ const Mentoria = () => {
               </div>
 
               <h1 className="text-[1.5rem] sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] max-w-3xl animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-                <span className="text-foreground">O método que me levou a ser </span>
-                <span className="bg-gradient-hero-text bg-clip-text text-transparent">01 da AFA e 08 da EFOMM</span>
-                <span className="text-foreground">, agora na sua mão.</span>
+                <span className="text-foreground">A mentoria que vai te levar </span>
+                <span className="bg-gradient-hero-text bg-clip-text text-transparent">do zero à aprovação</span>
+                <span className="text-foreground"> nas escolas militares.</span>
               </h1>
 
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                Mentoria 1:1, plano de metas pronto, aulas ao vivo e a plataforma completa. Tudo num lugar só, sem você precisar adivinhar o que estudar.
+                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> — e é exatamente isso que você terá dentro da Mentoria FULL.
               </p>
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
@@ -144,10 +144,10 @@ const Mentoria = () => {
         <div className="container relative z-10 mx-auto px-6">
           <ScrollReveal>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
-              Tudo que você precisa pra <span className="bg-gradient-primary bg-clip-text text-transparent">passar</span>
+              Por que tanta gente <span className="bg-gradient-primary bg-clip-text text-transparent">estuda errado?</span>
             </h2>
             <p className="text-base md:text-lg text-center text-muted-foreground mb-10 md:mb-14 max-w-2xl mx-auto">
-              Três pilares conectados que transformam estudo em aprovação.
+              Falta método, falta plano, falta direção. A Mentoria FULL resolve isso com 3 pilares simples:
             </p>
           </ScrollReveal>
 

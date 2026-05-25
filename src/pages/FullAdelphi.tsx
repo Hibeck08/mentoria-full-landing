@@ -157,7 +157,7 @@ const FullAdelphi = () => {
               </h1>
 
               <p className="text-xs md:text-base text-muted-foreground/90 leading-relaxed animate-fade-in-up max-w-xl" style={{ animationDelay: "0.3s" }}>
-                Aulas ao vivo, banco de questões e plano de metas com professores que já cruzaram esse portão.
+                Você não precisa de dom, precisa de <strong className="text-foreground">método</strong>. Aulas ao vivo, banco de questões e plano de metas com quem acabou de passar.
               </p>
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>

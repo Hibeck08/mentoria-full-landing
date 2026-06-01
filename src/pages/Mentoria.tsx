@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import {
   Target, BookOpen, Trophy, CheckCircle2, Zap, Instagram, Brain, Rocket,
@@ -168,6 +169,38 @@ const Mentoria = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* CICLO - Connected Benefits */}
+      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que não deixa nada solto
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Você não precisa decidir o que estudar. A mentoria conecta cada peça pra que uma alimente a outra.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ConnectedBenefits
+            items={[
+              { icon: Calendar, title: "Semana pronta na segunda", desc: "Plano de metas já montado: o que assistir, quantas questões resolver, quais flashcards revisar. Você só executa.", next: "puxa a teoria" },
+              { icon: Play, title: "Teoria com método", desc: "Aulas gravadas e ao vivo de Português, Inglês, Matemática e Física. Aprendeu o conteúdo? Já cai pra prática.", next: "vira questão" },
+              { icon: Database, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas e listas com nivelamento automático. Errou? A resolução te ensina ali mesmo.", next: "vira flashcard" },
+              { icon: Layers, title: "Flashcards de revisão", desc: "+2.000 cards Anki dos pontos que mais caem. Revisão espaçada que fixa de verdade sem reler tudo.", next: "fecha com dados" },
+              { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, tendência semanal e simulado. A próxima meta nasce do que os números mostram.", next: "recomeça o ciclo" },
+            ]}
+          />
         </div>
       </section>
 

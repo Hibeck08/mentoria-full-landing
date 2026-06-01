@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award } from "lucide-react";
+import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
@@ -151,6 +152,38 @@ const Questoes = () => {
             );
           })}
         </div>
+      </div>
+    </section>
+
+    {/* CICLO - Connected Benefits (moved to top of landing) */}
+    <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+      <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+        <ScrollReveal>
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+              <Crown className="w-4 h-4" />
+              <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+            </div>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+              Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo</span> que te leva à aprovação em modo automático
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground">
+              Você não precisa pensar no que estudar. A plataforma encaixa cada etapa pra você só executar e ver a nota subir.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ConnectedBenefits
+          items={[
+            { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda você abre a plataforma e já sabe o que estudar. Zero tempo perdido decidindo.", next: "vira lista" },
+            { icon: Database, title: "Listas com nivelamento automático", desc: "Questões organizadas por dificuldade. Você sobe de nível conforme acerta, sem furar etapa.", next: "explica o erro" },
+            { icon: Brain, title: "Resolução comentada passo a passo", desc: "Errou? A resolução te mostra o caminho ali mesmo. Você não fica travado e nunca erra a mesma coisa duas vezes.", next: "vira flashcard" },
+            { icon: Layers, title: "Flashcards do que mais cai", desc: "+2.000 cards Anki com revisão espaçada que fixa de verdade sem reler tudo de novo.", next: "mede com dados" },
+            { icon: TrendingUp, title: "Painel de desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. A próxima meta nasce do que os números mostram.", next: "fecha o ciclo" },
+          ]}
+        />
       </div>
     </section>
 

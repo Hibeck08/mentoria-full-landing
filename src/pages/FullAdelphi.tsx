@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import {
   Home, Instagram, BookOpen, Video, Database, Layers, Calendar,
   Trophy, CheckCircle2, GraduationCap, MessageCircle, Award, Shield,
@@ -203,6 +204,36 @@ const FullAdelphi = () => {
         </div>
       </section>
 
+      {/* COMO FUNCIONA - Cycle (moved above benefits) */}
+      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que se alimenta sozinho
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Cada peça do FULL Adelphi puxa a outra. Você aprende, treina, fixa e mede sem furo no ciclo.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ConnectedBenefits
+            items={[
+              { icon: Video, title: "Aula ao vivo", desc: "Fontes e Teixeira destrinchando o conteúdo da semana, você ouve, anota e tira dúvida em tempo real.", next: "alimenta as listas" },
+              { icon: Database, title: "Banco FULL Questões", desc: "Listas com as questões EXATAS do que foi visto na aula. Errou? A resolução te mostra o caminho.", next: "vira flashcard" },
+              { icon: Layers, title: "Flashcards de revisão", desc: "Os pontos que mais caem viram cards. Revisão espaçada que fixa de verdade sem reler tudo.", next: "entra na meta" },
+              { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda o ciclo recomeça com plano novo: aula → questão → flashcard → simulado.", next: "fecha o ciclo" },
+            ]}
+          />
+        </div>
+      </section>
+
       {/* BENEFÍCIOS */}
       <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
         <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
@@ -317,48 +348,6 @@ const FullAdelphi = () => {
       </section>
 
       {/* COMO FUNCIONA */}
-      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
-        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Crown className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
-              </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Benefícios que <span className="bg-gradient-primary bg-clip-text text-transparent">se conectam</span> entre si
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Cada peça do FULL Adelphi puxa a outra. Você aprende, treina, fixa e mede — sem furo no ciclo.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {[
-              { icon: Video, t: "Aula ao vivo", d: "Fontes e Teixeira destrinchando o conteúdo da semana — você ouve, anota e tira dúvida em tempo real.", next: "alimenta as listas" },
-              { icon: Database, t: "Banco FULL Questões", d: "Listas com as questões EXATAS do que foi visto na aula. Erra? A resolução te mostra o caminho.", next: "vira flashcard" },
-              { icon: Layers, t: "Flashcards de revisão", d: "Os pontos que mais caem viram cards. Revisão espaçada que fixa de verdade sem reler tudo.", next: "entra na meta" },
-              { icon: Calendar, t: "Meta semanal pronta", d: "Toda segunda o ciclo recomeça com plano novo: aula → questão → flashcard → simulado.", next: "fecha o ciclo" },
-            ].map((s, i) => (
-              <ScrollReveal key={i} delay={i * 120} variant="scale">
-                <div className="relative h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-5 md:p-6 hover:border-accent hover:-translate-y-1 hover:shadow-glow-beige transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow-beige mb-4 group-hover:rotate-6 transition-transform">
-                    <s.icon className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <h4 className="text-base md:text-lg font-bold text-foreground mb-2">{s.t}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{s.d}</p>
-                  <div className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 rounded-full px-2.5 py-1">
-                    → {s.next}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* BANCO FULL QUESTÕES SHOWCASE */}
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />

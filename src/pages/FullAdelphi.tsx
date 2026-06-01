@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import {
   Home, Instagram, BookOpen, Video, Database, Layers, Calendar,
   Trophy, CheckCircle2, GraduationCap, MessageCircle, Award, Shield,

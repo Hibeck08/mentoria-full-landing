@@ -139,6 +139,14 @@ export default {
           "0%": { opacity: "0", transform: "translateY(40px) rotate(-2deg)" },
           "100%": { opacity: "1", transform: "translateY(0) rotate(0)" },
         },
+        "line-flow": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "0.8", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.15)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -150,6 +158,8 @@ export default {
         "scroll-right": "scroll-right 20s linear infinite",
         "gold-shimmer": "gold-shimmer 2.4s ease-in-out infinite",
         "tilt-in": "tilt-in 0.7s ease-out both",
+        "line-flow": "line-flow 3.5s linear infinite",
+        "pulse-soft": "pulse-soft 2.4s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",

@@ -297,7 +297,7 @@ const Mentoria = () => {
                   Revise igual quem <span className="text-accent">passa de verdade</span>
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  São <strong className="text-accent">+2.000 flashcards</strong> prontos, com teoria objetiva, exemplos e questões. Você só abre e revisa — sem perder uma hora montando material.
+                  São <strong className="text-accent">+2.000 flashcards</strong> prontos, com teoria objetiva, exemplos e questões. Você só abre e revisa sem perder uma hora montando material.
                 </p>
                 <ul className="space-y-2">
                   {["Todas as matérias do edital", "Imagens ilustrativas pra fixar", "Revisão espaçada que funciona"].map((t, i) => (
@@ -404,7 +404,7 @@ const Mentoria = () => {
                     <span className="text-sm font-semibold text-accent">Desempenho em tempo real</span>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Saiba <span className="text-accent">exatamente</span> onde você está</h3>
-                  <p className="text-muted-foreground leading-relaxed">Gráficos de acerto por matéria, evolução semanal e ranking. Pare de estudar no escuro — <strong className="text-accent">você vê a nota subir antes da prova</strong>.</p>
+                  <p className="text-muted-foreground leading-relaxed">Gráficos de acerto por matéria, evolução semanal e ranking. Pare de estudar no escuro <strong className="text-accent">você vê a nota subir antes da prova</strong>.</p>
                 </div>
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
@@ -448,12 +448,12 @@ const Mentoria = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {[
-              { icon: BookOpen, t: "Matérias da semana", d: "A gente diz exatamente quais assuntos atacar — Português, Inglês, Matemática ou Física — sem você decidir nada." },
+              { icon: BookOpen, t: "Matérias da semana", d: "A gente diz exatamente quais assuntos atacar Português, Inglês, Matemática ou Física sem você decidir nada." },
               { icon: Layers, t: "Flashcards por assunto", d: "Os flashcards do conteúdo da semana já liberados. Revisão espaçada que fixa de verdade." },
               { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado pra cada assunto. Você sobe de nível conforme acerta." },
               { icon: Trophy, t: "Simulado semanal", d: "Toda semana fecha com simulado pra avançar no conteúdo e medir sua evolução real." },
               { icon: BarChart3, t: "Gráficos com tendência", d: "Questões feitas no dia, no mês, no geral. Acerto por matéria e linha de evolução semanal." },
-              { icon: Target, t: "Feedback do que estudar", d: "A plataforma aponta a matéria que mais precisa de atenção — você ataca o gargalo certo." },
+              { icon: Target, t: "Feedback do que estudar", d: "A plataforma aponta a matéria que mais precisa de atenção você ataca o gargalo certo." },
             ].map((m, i) => (
               <ScrollReveal key={i} delay={i * 80} variant="scale">
                 <div className="group h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-5 md:p-6 hover:border-accent hover:-translate-y-1 hover:shadow-glow-beige transition-all">
@@ -501,7 +501,7 @@ const Mentoria = () => {
                     Fui aprovado na <strong className="text-foreground">AFA como 10º colocado geral</strong> (01 de Infantaria, 04 de Intendência e 05 de Aviação), na <strong className="text-foreground">EFOMM como 08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT) como 15º colocado</strong>.
                   </p>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Estudo concurso militar desde 2021 e consegui minha primeira classificação na <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses, ainda no mesmo ano. Vivi cada bastidor, errei muito, ajustei o método — e hoje meu trabalho é te entregar o atalho que eu não tive.
+                    Estudo concurso militar desde 2021 e consegui minha primeira classificação na <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses, ainda no mesmo ano. Vivi cada bastidor, errei muito, ajustei o método e hoje meu trabalho é te entregar o atalho que eu não tive.
                   </p>
                   <p className="text-sm md:text-base text-foreground font-semibold">
                     Minha missão agora é simples: te entregar o passo a passo que me levou ao topo. 
@@ -663,7 +663,7 @@ const Mentoria = () => {
                 <FAQItem value="item-3" question="Serve pra qualquer concurso militar?" answer="Sim. O método é o mesmo que me aprovou na AFA (01º), EFOMM (08º), EEAr (15º) e EPCAr. Funciona pra AFA, EN, EFOMM, EEAR, EPCAR, ESPCEX, ESA, EAM, IME, ITA e CN." />
                 <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo. A diferença é o preço: o anual sai R$ 122,76/mês (1x de R$ 1.187,00), o semestral R$ 125,13/mês (1x de R$ 667,00) e o trimestral R$ 134,54/mês (1x de R$ 377,00)." />
                 <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias incondicionais. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
-                <FAQItem value="item-6" question="Sirvo se sou iniciante?" answer="Sim. A mentoria começa do zero — vídeos ensinando como estudar cada matéria, sem assumir que você já sabe alguma coisa." />
+                <FAQItem value="item-6" question="Sirvo se sou iniciante?" answer="Sim. A mentoria começa do zero vídeos ensinando como estudar cada matéria, sem assumir que você já sabe alguma coisa." />
               </Accordion>
             </div>
           </ScrollReveal>

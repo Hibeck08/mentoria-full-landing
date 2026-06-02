@@ -57,7 +57,7 @@ const equipe = [
     funcao: "Professor de Português",
     foto: fontesPhoto,
     paragrafos: [
-      "Aprovado em 2024 em EFOMM, ESA e ESPCEX — mesmo perdendo 6h por dia no transporte entre escola e trabalho.",
+      "Aprovado em 2024 em EFOMM, ESA e ESPCEX mesmo perdendo 6h por dia no transporte entre escola e trabalho.",
       "Hoje ensina o Português que cai de verdade nas provas: gramática objetiva, interpretação cirúrgica e redação que pontua alto.",
     ],
   },
@@ -66,7 +66,7 @@ const equipe = [
     funcao: "Professor de Inglês · Dono do projeto",
     foto: teixeiraPhoto,
     paragrafos: [
-      "Aprovado na EPCAr (31º) em 2022 e na EFOMM (37º) em 2024 — esta última em só 4 meses de preparação intensiva.",
+      "Aprovado na EPCAr (31º) em 2022 e na EFOMM (37º) em 2024 esta última em só 4 meses de preparação intensiva.",
       "Foi monitor de Inglês na Força Aérea e hoje destrincha reading, vocabulário e falsos cognatos do jeito que cai nas bancas militares.",
     ],
   },
@@ -386,7 +386,7 @@ const FullAdelphi = () => {
                     <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
-                  <p className="text-muted-foreground leading-relaxed">Cada questão vem com <strong className="text-accent">resolução comentada passo a passo</strong> — você não fica mais travado quando erra.</p>
+                  <p className="text-muted-foreground leading-relaxed">Cada questão vem com <strong className="text-accent">resolução comentada passo a passo</strong> você não fica mais travado quando erra.</p>
                 </div>
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
@@ -599,13 +599,13 @@ const FullAdelphi = () => {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
-                <FAQItem value="item-1" question="O FULL Adelphi serve pra qual concurso?" answer="Pra qualquer concurso que cobre Português e Inglês — com foco especial em EFOMM, ESA, ESPCEX, EPCAr e concursos públicos federais e estaduais. O conteúdo é alinhado com as principais bancas do país." />
+                <FAQItem value="item-1" question="O FULL Adelphi serve pra qual concurso?" answer="Pra qualquer concurso que cobre Português e Inglês com foco especial em EFOMM, ESA, ESPCEX, EPCAr e concursos públicos federais e estaduais. O conteúdo é alinhado com as principais bancas do país." />
                 <FAQItem value="item-2" question="As aulas são ao vivo ou gravadas?" answer="Os dois. Você tem o curso completo gravado pra estudar no seu ritmo, e encontros ao vivo toda semana com Fontes (Português) e Teixeira (Inglês) pra tirar dúvidas e aprofundar conteúdo." />
-                <FAQItem value="item-3" question="Eu também tenho acesso ao Banco FULL Questões?" answer="Sim. Todo aluno do FULL Adelphi tem acesso liberado ao Banco FULL Questões, com +20.000 questões resolvidas — incluindo Português e Inglês de várias bancas, com filtros e resolução comentada." />
-                <FAQItem value="item-4" question="Como funcionam as metas semanais?" answer="Toda segunda você abre a plataforma e já encontra um plano com o que estudar (aulas, questões, flashcards). Você só executa — sem precisar perder tempo decidindo por onde começar." />
+                <FAQItem value="item-3" question="Eu também tenho acesso ao Banco FULL Questões?" answer="Sim. Todo aluno do FULL Adelphi tem acesso liberado ao Banco FULL Questões, com +20.000 questões resolvidas incluindo Português e Inglês de várias bancas, com filtros e resolução comentada." />
+                <FAQItem value="item-4" question="Como funcionam as metas semanais?" answer="Toda segunda você abre a plataforma e já encontra um plano com o que estudar (aulas, questões, flashcards). Você só executa sem precisar perder tempo decidindo por onde começar." />
                 <FAQItem value="item-5" question="Qual a diferença entre o Anual e o Intensivo Trimestral?" answer="O acesso é o mesmo. O Anual sai R$ 56,57/mês (1x de R$ 547,00) e é o melhor custo-benefício. O Intensivo Trimestral sai R$ 81,01/mês (1x de R$ 227,00) e serve pra quem está a poucos meses da prova e quer turbinar o resultado." />
                 <FAQItem value="item-6" question="Tem garantia?" answer="Sim. 7 dias incondicionais. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
-                <FAQItem value="item-7" question="Sou iniciante. Sirvo?" answer="Sirve. As aulas começam do zero, com explicação passo a passo. Não importa se você está há anos longe do português ou nunca estudou inglês a sério — a gente te leva do básico ao nível de aprovação." />
+                <FAQItem value="item-7" question="Sou iniciante. Sirvo?" answer="Sirve. As aulas começam do zero, com explicação passo a passo. Não importa se você está há anos longe do português ou nunca estudou inglês a sério a gente te leva do básico ao nível de aprovação." />
               </Accordion>
             </div>
           </ScrollReveal>

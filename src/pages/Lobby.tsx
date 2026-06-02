@@ -215,7 +215,7 @@ const Lobby = () => {
               {/* MENTORIA FULL */}
               <ProductCard
                 title="MENTORIA FULL"
-                subtitle="O Pacote Completo — Tudo em Um Lugar Só"
+                subtitle="O Pacote Completo Tudo em Um Lugar Só"
                 features={[
                   { text: "Método FULL + FULL QUESTÕES inclusos", highlight: true },
                   { text: "FULL ZENITH + FULL AZIMUTH inclusos", highlight: true },
@@ -262,7 +262,7 @@ const Lobby = () => {
               {/* FULL ADELPHI */}
               <ProductCard
                 title="FULL ADELPHI"
-                subtitle="Português e Inglês — Curso Completo pra Concursos Públicos"
+                subtitle="Português e Inglês Curso Completo pra Concursos Públicos"
                 features={[
                   { text: "Aulas gravadas de Português e Inglês", highlight: true },
                   { text: "Aulas ao vivo semanais com professores", highlight: true },
@@ -313,7 +313,7 @@ const Lobby = () => {
         <footer className="py-6 md:py-8 border-t border-border/30">
           <div className="container mx-auto px-4 text-center">
             <p className="text-xs md:text-sm text-muted-foreground/70">
-              © {new Date().getFullYear()} FULL — Todos os direitos reservados
+              © {new Date().getFullYear()} FULL Todos os direitos reservados
             </p>
           </div>
         </footer>

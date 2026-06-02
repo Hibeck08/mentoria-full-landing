@@ -122,7 +122,7 @@ const Mentoria = () => {
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
                 <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  QUERO ENTRAR PRA MENTORIA →
+                  QUERO ESSES BENEFÍCIOS →
                 </Button>
                 <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Garantia de 7 dias · Acesso imediato</p>
               </div>
@@ -205,7 +205,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-12">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                ENTRAR PRA MENTORIA →
+                QUERO MELHORAR EM LINGUAGENS →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Garantia de 7 dias · Acesso imediato</p>
             </div>
@@ -275,7 +275,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-12">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ENTRAR PRA MENTORIA →
+                QUERO ESSES BENEFÍCIOS →
               </Button>
             </div>
           </ScrollReveal>
@@ -540,7 +540,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO MEU NOME NESSA LISTA →
+                QUERO SER APROVADO →
               </Button>
             </div>
           </ScrollReveal>

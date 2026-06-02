@@ -222,7 +222,7 @@ const Questoes = () => {
                   <span className="text-sm font-semibold text-accent">Filtros Inteligentes</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Encontre a questão <span className="text-accent">perfeita</span> em segundos</h3>
-                 <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano, dificuldade. </p>
+                 <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com resolução comentada passo a passo você não fica mais travado quando erra.</p>
               </div>
             </div>
           </ScrollReveal>
@@ -236,7 +236,7 @@ const Questoes = () => {
                   <span className="text-sm font-semibold text-accent">Resolução Detalhada</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Errou? <span className="text-accent">Aprenda na hora.</span></h3>
-                 <p className="text-muted-foreground leading-relaxed">Cada questão tem o comentário com a devida profundidade.</p>
+                 <p className="text-muted-foreground leading-relaxed">Cada questão vem com resolução comentada passo a passo\nvocê não fica mais travado quando erra.</p>
               </div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
@@ -253,7 +253,7 @@ const Questoes = () => {
               <div className="relative group order-2 md:order-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
                 <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                  <img src="/platform/listas-desktop.png" alt="Listas" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  <p className="text-muted-foreground leading-relaxed">A plataforma aponta a matéria que mais precisa de atenção.</p>
                 </div>
               </div>
               <div className="space-y-4 order-1 md:order-2">
@@ -324,7 +324,7 @@ const Questoes = () => {
                  { n: "1", t: "Plano semanal pronto", d: "Quando vê, você dominou o edital inteiro, ideal para quem está perdido nos estudos." },
                  { n: "2", t: "3 listas progressivas", d: "Nível 1 (base), Nível 2 (intermediário), Nível 3 (Avançado). Você sobe de nível conforme acerta." },
                 { n: "3", t: "Flashcard do assunto", d: "Fechou as 3 listas? Revisa o flashcard e fixa o conteúdo de vez." },
-                { n: "4", t: "Evolução perfeita", d: "Quando vê, você dominou o edital inteiro — sem furos, sem ansiedade." },
+                { n: "4", t: "Evolução perfeita", d: "Você não precisa mais decidir o que estudar hoje. A plataforma decide por você e na ordem certa." },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 items-start">
                   <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-xl flex items-center justify-center font-black text-accent-foreground text-lg shadow-glow-beige">

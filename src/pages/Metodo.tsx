@@ -38,59 +38,8 @@ const Metodo = () => {
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40" />
         </div>
         
-        {/* Floating decorative elements */}
+        {/* Subtle ambient glow only — clean professional aesthetic */}
         <div className="absolute inset-0 z-5 pointer-events-none">
-          {/* Mobile minimal floating icons */}
-          <div className="absolute top-[30%] right-6 animate-float opacity-60 md:hidden will-change-transform" style={{
-          animationDelay: "0.5s"
-        }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
-              <Brain className="w-6 h-6 text-accent-foreground" />
-            </div>
-          </div>
-          
-          <div className="absolute top-[45%] left-6 animate-float opacity-60 md:hidden will-change-transform" style={{
-          animationDelay: "1s"
-        }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20">
-              <Lightbulb className="w-6 h-6 text-accent-foreground" />
-            </div>
-          </div>
-          
-          {/* Desktop floating icons */}
-          <div className="absolute top-32 right-20 animate-float opacity-80 hidden md:block lg:block will-change-transform" style={{
-          animationDelay: "0.5s"
-        }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
-              <Brain className="w-10 h-10 text-accent-foreground" />
-            </div>
-          </div>
-          
-          <div className="absolute bottom-40 left-20 animate-float opacity-80 hidden md:block lg:block" style={{
-          animationDelay: "1s"
-        }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
-              <Lightbulb className="w-10 h-10 text-accent-foreground" />
-            </div>
-          </div>
-          
-          <div className="absolute top-1/2 right-32 animate-float opacity-80 hidden xl:block" style={{
-          animationDelay: "1.5s"
-        }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20">
-              <BarChart3 className="w-10 h-10 text-accent-foreground" />
-            </div>
-          </div>
-          
-          {/* Decorative circles */}
-          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full border-2 border-accent/20 animate-float hidden lg:block" style={{
-          animationDelay: "0.8s"
-        }} />
-          <div className="absolute bottom-1/3 left-1/4 w-20 h-20 rounded-full bg-accent/5 backdrop-blur-sm border border-accent/20 animate-float hidden lg:block" style={{
-          animationDelay: "1.2s"
-        }} />
-          
-          {/* Subtle glow effects */}
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30 animate-glow-pulse" />
           <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25 animate-glow-pulse" style={{
           animationDelay: "1.5s"

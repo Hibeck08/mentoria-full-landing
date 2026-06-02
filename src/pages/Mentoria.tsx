@@ -357,7 +357,7 @@ const Mentoria = () => {
                     <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
-                  <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com <strong className="text-accent">resolução comentada passo a passo</strong> — você não fica mais travado quando erra.</p>
+                  <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com resolução comentada passo a passo você não fica mais travado quando erra.</p>
                 </div>
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />

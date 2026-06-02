@@ -495,7 +495,7 @@ const Mentoria = () => {
                     Estudo concurso militar desde 2021 e consegui minha primeira classificação na <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses, ainda no mesmo ano. Vivi cada bastidor, errei muito, ajustei o método — e hoje meu trabalho é te entregar o atalho que eu não tive.
                   </p>
                   <p className="text-sm md:text-base text-foreground font-semibold">
-                    Minha missão agora é simples: te entregar o passo a passo que me levou ao topo. 🎯
+                    Minha missão agora é simples: te entregar o passo a passo que me levou ao topo. 
                   </p>
                 </div>
               </div>

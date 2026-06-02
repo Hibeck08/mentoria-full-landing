@@ -276,7 +276,7 @@ const Questoes = () => {
                   <span className="text-sm font-semibold text-accent">Prática Direcionada</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Foco no que <span className="text-accent">realmente importa</span></h3>
-                <p className="text-muted-foreground leading-relaxed">Resolva questão por questão dentro de cada lista. Acompanhe seu progresso e veja exatamente quanto falta para dominar o assunto.</p>
+                <p className="text-muted-foreground leading-relaxed">A plataforma aponta a matéria que mais precisa de atenção.</p>
               </div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />

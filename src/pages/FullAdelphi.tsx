@@ -34,12 +34,12 @@ const FloatingWhatsApp = () => {
 };
 
 const beneficios = [
-  { icon: Video, title: "Aulas gravadas, do zero ao topo", desc: "Cursos completos de Português e Inglês — gramática, interpretação, redação e vocabulário. Assista no seu ritmo, revise quantas vezes precisar e nunca mais fique travado num assunto." },
-  { icon: Calendar, title: "Encontros ao vivo toda semana", desc: "Aulas ao vivo com os professores tirando dúvidas em tempo real, corrigindo questões da semana e aprofundando o que mais cai. É como ter uma aula particular — só que em turma." },
-  { icon: Database, title: "Banco FULL Questões liberado", desc: "+20.000 questões resolvidas com filtro por banca, assunto e dificuldade. Português e Inglês inclusos, com resolução comentada passo a passo. Você nunca mais erra a mesma coisa duas vezes." },
-  { icon: Layers, title: "Flashcards de tudo que cai", desc: "Gramática, vocabulário, falsos cognatos, reading — revisão espaçada que fixa de verdade. Os mesmos flashcards que aprovaram alunos em EFOMM, ESA, ESPCEX e EPCAr." },
-  { icon: Trophy, title: "Metas semanais prontas", desc: "Toda segunda você abre a plataforma e já sabe o que estudar: aulas, questões, flashcards. Zero tempo perdido decidindo — você só executa e vê a nota subir." },
-  { icon: Shield, title: "Suporte direto com os professores", desc: "Travou numa questão às 22h? Manda no grupo. A gente está ali pra destravar e te empurrar pra frente — nada de ficar esperando dias por uma resposta." },
+  { icon: Video, title: "Aulas gravadas, do zero ao topo", desc: "Cursos completos de Português e Inglês. Gramática, interpretação, redação e vocabulário. Assista no seu ritmo, revise quantas vezes precisar e nunca mais fique travado num assunto." },
+  { icon: Calendar, title: "Encontros ao vivo toda semana", desc: "Aulas ao vivo com os professores tirando dúvidas em tempo real, corrigindo questões da semana e aprofundando o que mais cai." },
+  { icon: Database, title: "Banco FULL Questões liberado", desc: "+20.000 questões resolvidas com filtro por banca, assunto e dificuldade. Português e Inglês inclusos, com resolução comentada passo a passo você não fica mais travado quando erra." },
+  { icon: Layers, title: "Flashcards de tudo que cai", desc: "Gramática, vocabulário, falsos cognatos, reading, revisão espaçada que fixa de verdade. Os mesmos flashcards que aprovaram alunos em EFOMM, ESA, ESPCEX e EPCAr." },
+  { icon: Trophy, title: "Metas semanais prontas", desc: "Toda segunda você abre a plataforma e já sabe o que estudar: aulas, questões, flashcards. Zero tempo perdido decidindo, você só executa e vê a nota subir." },
+  { icon: Shield, title: "Suporte direto com os professores", desc: "Travou numa questão às 22h? Manda no grupo. A gente está ali pra destravar e te empurrar pra frente, nada de ficar esperando dias por uma resposta." },
 ];
 
 const equipe = [
@@ -49,7 +49,7 @@ const equipe = [
     foto: bryanPhoto,
     paragrafos: [
       "Resolvi +20.000 questões em 8 meses e fui aprovado em AFA (10º), EFOMM (08º) e EEAr (15º).",
-      "Criei o Método FULL pra encurtar o caminho de quem quer passar — e agora coordeno o FULL Adelphi pra garantir que cada aluno tenha um plano que leva à aprovação.",
+      "Criei o Método FULL pra encurtar o caminho de quem quer passar e agora coordeno o FULL Adelphi pra garantir que cada aluno tenha um plano que leva à aprovação.",
     ],
   },
   {
@@ -67,7 +67,7 @@ const equipe = [
     foto: teixeiraPhoto,
     paragrafos: [
       "Aprovado na EPCAr (31º) em 2022 e na EFOMM (37º) em 2024 — esta última em só 4 meses de preparação intensiva.",
-      "Foi monitor de Inglês na Força Aérea e hoje destrincha reading, vocabulário e falsos cognatos do jeito que cai nas bancas militares. ✈️",
+      "Foi monitor de Inglês na Força Aérea e hoje destrincha reading, vocabulário e falsos cognatos do jeito que cai nas bancas militares.",
     ],
   },
 ];
@@ -163,7 +163,7 @@ const FullAdelphi = () => {
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
                 <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  QUERO CLASSIFICAR →
+                  QUERO ME ORGANIZAR →
                 </Button>
                 <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Acesso imediato · Garantia de 7 dias</p>
               </div>
@@ -191,10 +191,10 @@ const FullAdelphi = () => {
                 <span className="text-xs font-bold text-accent uppercase tracking-wider">A real do concurso</span>
               </div>
               <h2 className="text-[1.6rem] md:text-4xl font-bold leading-tight">
-                Vaga se ganha — ou se perde — em <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>.
+                Vaga se ganha, ou se perde, em <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                São as matérias com <strong className="text-foreground">maior peso de desempate</strong> nas principais bancas — e justamente as que mais candidato deixa pra depois. Interpretação sob pressão, regência, vocabulário, reading: é aí que a classificação escapa.
+                São as matérias com <strong className="text-foreground">maior peso de desempate</strong> nas principais bancas e justamente as que mais candidato deixa pra depois. Interpretação sob pressão, regência, vocabulário...
               </p>
               <p className="text-base md:text-lg text-foreground font-semibold">
                 No FULL Adelphi você estuda Português e Inglês com método, ao vivo, com quem acabou de passar nos concursos que você quer.
@@ -270,7 +270,7 @@ const FullAdelphi = () => {
           <ScrollReveal>
             <div className="text-center mt-12">
               <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO CLASSIFICAR →
+                QUERO ME ORGANIZAR →
               </Button>
             </div>
           </ScrollReveal>

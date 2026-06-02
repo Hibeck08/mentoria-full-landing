@@ -198,7 +198,7 @@ const Mentoria = () => {
               { icon: Play, title: "Teoria com método", desc: "Aulas gravadas e ao vivo de Português, Inglês, Matemática e Física. Aprendeu o conteúdo? Já cai pra prática.", next: "vira questão" },
               { icon: Database, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas e listas com nivelamento automático. Errou? tem resolução!", next: "vira flashcard" },
               { icon: Layers, title: "Flashcards de revisão", desc: "+2.000 cards Anki dos pontos que mais caem. Revisão espaçada que fixa de verdade.", next: "fecha com dados" },
-              { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, tendência semanal e simulado. A próxima meta nasce do que os números mostram.", next: "recomeça o ciclo" },
+              { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. Pare de estudar no escuro você vê a nota subir antes da prova.", next: "recomeça o ciclo" },
             ]}
           />
         </div>

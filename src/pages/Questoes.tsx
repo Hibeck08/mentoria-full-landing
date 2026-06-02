@@ -37,7 +37,7 @@ const Questoes = () => {
   const pillars = [
      { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
-    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo. Filtre por matéria, assunto, banca, ano e dificuldade." },
+    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo\nvocê não fica mais travado quando erra." },
   ];
 
   const planos = [
@@ -179,7 +179,7 @@ const Questoes = () => {
           items={[
             { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda você abre a plataforma e já sabe o que estudar. Zero tempo perdido decidindo.", next: "vira lista" },
             { icon: Database, title: "Listas com nivelamento automático", desc: "Questões organizadas por dificuldade. Você sobe de nível conforme acerta, sem furar etapa.", next: "explica o erro" },
-            { icon: Brain, title: "Resolução comentada passo a passo", desc: "Errou? A resolução te mostra o caminho ali mesmo. Você não fica travado e nunca erra a mesma coisa duas vezes.", next: "vira flashcard" },
+            { icon: Brain, title: "Resolução comentada passo a passo", desc: "Errou? tem resolução!", next: "vira flashcard" },
             { icon: Layers, title: "Flashcards do que mais cai", desc: "+2.000 cards Anki com revisão espaçada que fixa de verdade sem reler tudo de novo.", next: "mede com dados" },
             { icon: TrendingUp, title: "Painel de desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. A próxima meta nasce do que os números mostram.", next: "fecha o ciclo" },
           ]}

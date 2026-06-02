@@ -117,7 +117,7 @@ const Mentoria = () => {
               </h1>
 
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> — e é exatamente isso que você terá dentro da Mentoria FULL.
+                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> e é exatamente isso que você terá dentro da Mentoria FULL.
               </p>
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
@@ -187,7 +187,7 @@ const Mentoria = () => {
                 Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que não deixa nada solto
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Você não precisa decidir o que estudar. A mentoria conecta cada peça pra que uma alimente a outra.
+                Você não precisa decidir o que estudar. A mentoria conecta cada peça pra que uma alimente a outra. 
               </p>
             </div>
           </ScrollReveal>
@@ -216,10 +216,10 @@ const Mentoria = () => {
                 <span className="text-xs font-bold uppercase tracking-wider">Pacote completo · top tier</span>
               </div>
               <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Tudo que está <span className="bg-gradient-primary bg-clip-text text-transparent">incluso</span> ✨
+                Tudo que está <span className="bg-gradient-primary bg-clip-text text-transparent">incluso</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Cada peça pensada pra te empurrar pra aprovação. Passe o mouse e veja cada uma ganhar vida.
+                Cada peça pensada pra te empurrar pra aprovação.
               </p>
             </div>
           </ScrollReveal>
@@ -230,9 +230,9 @@ const Mentoria = () => {
               { icon: Users, title: "Aulas ao vivo semanais", desc: "Encontros semanais de Português, Inglês, Matemática e Física com os professores.", gold: true },
               { icon: PenLine, title: "Correção de redação ao vivo", desc: "Sua redação corrigida em tempo real, com feedback direto pra subir nota rápido.", gold: true },
               { icon: Trophy, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas, listas por nível e nivelamento automático." },
-              { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias — fixa de verdade." },
-              { icon: Calendar, title: "Plano de metas semanal", desc: "Toda segunda você já sabe o que estudar. Zero tempo perdido decidindo." },
-              { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral — com tendência." },
+              { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias." },
+              { icon: Calendar, title: "Plano de metas semanal", desc: "Toda dia você já sabe o que estudar. Zero tempo perdido decidindo." },
+              { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral, com tendência." },
               { icon: BookOpen, title: "Livro do Método Hibeck", desc: "Tudo que aprendi nos 8 meses que me aprovaram, num só material." },
               { icon: MessageCircle, title: "Suporte direto comigo", desc: "Dúvida no grupo? Resposta rápida. Você não estuda sozinho." },
             ].map((b, i) => (

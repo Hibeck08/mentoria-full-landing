@@ -312,7 +312,7 @@ const Questoes = () => {
               Sistema de <span className="bg-gradient-primary bg-clip-text text-transparent">Nivelamento Automático</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
-              Você não precisa mais decidir o que estudar hoje. <strong className="text-accent">A plataforma decide por você</strong> — e na ordem certa.
+              Você não precisa mais decidir o que estudar hoje. <strong className="text-accent">A plataforma decide por você</strong> e na ordem certa.
             </p>
           </div>
         </ScrollReveal>
@@ -348,9 +348,9 @@ const Questoes = () => {
                   <span className="text-xs text-muted-foreground">Funções • Cinemática</span>
                 </div>
                 {[
-                  { lvl: "Nível 1 — Base", color: "bg-emerald-500/20 text-emerald-400", done: true },
-                  { lvl: "Nível 2 — Intermediário", color: "bg-amber-500/20 text-amber-400", done: true },
-                   { lvl: "Nível 3 — Avançado", color: "bg-accent/20 text-accent", done: false },
+                  { lvl: "Nível 1 Base", color: "bg-emerald-500/20 text-emerald-400", done: true },
+                  { lvl: "Nível 2 Intermediário", color: "bg-amber-500/20 text-amber-400", done: true },
+                   { lvl: "Nível 3 Avançado", color: "bg-accent/20 text-accent", done: false },
                   { lvl: "🎴 Flashcard do assunto", color: "bg-primary/30 text-foreground", done: false },
                 ].map((s, i) => (
                   <div key={i} className={`flex items-center justify-between p-3 rounded-xl ${s.color} border border-current/20`}>
@@ -551,10 +551,10 @@ const Questoes = () => {
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              <FAQItem value="item-1" question="O que é o sistema de nivelamento automático?" answer="É um plano de metas semanal pronto. Cada semana traz os assuntos que você deve estudar, com 3 listas (níveis 1, 2 e 3) que evoluem em dificuldade, mais o flashcard daquele assunto. Você só precisa seguir — a plataforma cuida do que estudar e quando." />
+              <FAQItem value="item-1" question="O que é o sistema de nivelamento automático?" answer="É um plano de metas semanal pronto. Cada semana traz os assuntos que você deve estudar, com 3 listas (níveis 1, 2 e 3) que evoluem em dificuldade, mais o flashcard daquele assunto. Você só precisa seguir a plataforma cuida do que estudar e quando." />
               <FAQItem value="item-2" question="Serve para qualquer concurso ou só militares?" answer="Serve para QUALQUER concurso. Temos questões de bancas civis e militares (ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ, vestibulares e bancas civis em geral). O método e o nivelamento funcionam para qualquer prova." />
               <FAQItem value="item-3" question="O que está incluso na assinatura?" answer="Banco com +20.000 questões resolvidas, Método FULL completo (videoaulas, livro, plano de metas, grupo de suporte), +2.000 flashcards, sistema de nivelamento automático semanal, filtros avançados, listas personalizadas, simulados cronometrados, painel de desempenho e suporte direto com professores." />
-              <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está no preço: o anual sai R$ 36,92/mês (ou 1x de R$ 357,00/ano — maior economia), o semestral R$ 37,33/mês (ou 1x de R$ 199,90/semestre) e o mensal R$ 44,90/mês. Quanto maior o compromisso, menor o valor." />
+              <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está no preço: o anual sai R$ 36,92/mês (ou 1x de R$ 357,00/ano maior economia), o semestral R$ 37,33/mês (ou 1x de R$ 199,90/semestre) e o mensal R$ 44,90/mês. Quanto maior o compromisso, menor o valor." />
               <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias de garantia incondicional. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
               <FAQItem value="item-6" question="Como funciona o acesso?" answer="Após o pagamento, você recebe acesso imediato à plataforma. Pode estudar pelo celular, tablet ou computador, no horário que quiser." />
             </Accordion>

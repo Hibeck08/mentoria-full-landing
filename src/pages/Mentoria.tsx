@@ -201,6 +201,15 @@ const Mentoria = () => {
               { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. Pare de estudar no escuro você vê a nota subir antes da prova.", next: "recomeça o ciclo" },
             ]}
           />
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                ENTRAR PRA MENTORIA →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Garantia de 7 dias · Acesso imediato</p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -226,12 +235,12 @@ const Mentoria = () => {
 
           <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {[
-              { icon: Play, title: "Aulas gravadas — 4 matérias", desc: "Português, Inglês, Matemática e Física do zero ao avançado.", gold: true },
+              { icon: Play, title: "Aulas gravadas, 4 matérias", desc: "Português, Inglês, Matemática e Física do zero ao avançado.", gold: true },
               { icon: Users, title: "Aulas ao vivo semanais", desc: "Encontros semanais de Português, Inglês, Matemática e Física com os professores.", gold: true },
               { icon: PenLine, title: "Correção de redação ao vivo", desc: "Sua redação corrigida em tempo real, com feedback direto pra subir nota rápido.", gold: true },
               { icon: Trophy, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas, listas por nível e nivelamento automático." },
               { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias." },
-              { icon: Calendar, title: "Plano de metas semanal", desc: "Toda dia você já sabe o que estudar. Zero tempo perdido decidindo." },
+              { icon: Calendar, title: "Plano de metas semanal", desc: "Todo dia você já sabe o que estudar. Zero tempo perdido decidindo." },
               { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral, com tendência." },
               { icon: BookOpen, title: "Livro do Método Hibeck", desc: "Tudo que aprendi nos 8 meses que me aprovaram, num só material." },
               { icon: MessageCircle, title: "Suporte direto comigo", desc: "Dúvida no grupo? Resposta rápida. Você não estuda sozinho." },
@@ -266,7 +275,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-12">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO CLASSIFICAR →
+                QUERO ENTRAR PRA MENTORIA →
               </Button>
             </div>
           </ScrollReveal>

@@ -231,6 +231,15 @@ const FullAdelphi = () => {
               { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda o ciclo recomeça com plano novo: aula → questão → flashcard → simulado.", next: "fecha o ciclo" },
             ]}
           />
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                ENTRAR NO CICLO AGORA →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Acesso imediato · Garantia de 7 dias</p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

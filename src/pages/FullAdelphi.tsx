@@ -114,25 +114,6 @@ const FullAdelphi = () => {
           <div className="absolute bottom-1/4 right-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />
         </div>
 
-        {/* Floating decorative elements */}
-        <div className="absolute inset-0 z-5 pointer-events-none">
-          <div className="absolute top-[28%] right-6 animate-float opacity-70 md:hidden will-change-transform" style={{ animationDelay: "0.5s" }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20"><Languages className="w-6 h-6 text-accent-foreground" /></div>
-          </div>
-          <div className="absolute top-[44%] left-6 animate-float opacity-70 md:hidden will-change-transform" style={{ animationDelay: "1s" }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-xl p-3 shadow-glow-beige border border-accent/20"><BookOpen className="w-6 h-6 text-accent-foreground" /></div>
-          </div>
-          <div className="absolute top-28 right-20 animate-float opacity-90 hidden md:block will-change-transform" style={{ animationDelay: "0.5s" }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20"><Languages className="w-10 h-10 text-accent-foreground" /></div>
-          </div>
-          <div className="absolute top-1/2 right-32 animate-float opacity-90 hidden md:block will-change-transform" style={{ animationDelay: "1.5s" }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20"><Globe className="w-10 h-10 text-accent-foreground" /></div>
-          </div>
-          <div className="absolute bottom-36 right-1/4 animate-float opacity-90 hidden md:block will-change-transform" style={{ animationDelay: "1s" }}>
-            <div className="bg-gradient-primary backdrop-blur-md rounded-2xl p-5 shadow-glow-beige border border-accent/20"><BookOpen className="w-10 h-10 text-accent-foreground" /></div>
-          </div>
-        </div>
-
         <div className="container relative z-10 mx-auto px-6 pt-24 pb-12 md:py-20">
           <div className="max-w-7xl mx-auto">
             <div className="absolute top-4 md:top-8 left-4 md:left-8 z-20">

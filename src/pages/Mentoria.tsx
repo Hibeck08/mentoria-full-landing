@@ -39,6 +39,8 @@ const Mentoria = () => {
     document.getElementById("planos-mentoria")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const [vslPlaying, setVslPlaying] = React.useState(false);
+
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },
     { icon: Users, badge: "1:1", title: "Mentoria Personalizada", desc: "Acompanhamento direto comigo. Aulas ao vivo de Português, Inglês, Matemática e Física toda semana." },
@@ -64,12 +66,12 @@ const Mentoria = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="theme-mentoria min-h-screen bg-background text-foreground">
       {/* HERO */}
       <section className="relative min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
-          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[50%_18%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-[center_35%] lg:object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/85 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
           <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />

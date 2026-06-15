@@ -88,7 +88,7 @@ const Questoes = () => {
     },
   ];
 
-  return <div className="min-h-screen bg-background text-foreground">
+  return <div className="theme-questoes min-h-screen bg-background text-foreground">
     {/* HERO */}
     <section className="relative min-h-[105vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">

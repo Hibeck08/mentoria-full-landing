@@ -269,3 +269,112 @@ All colors MUST be HSL.
     transparent 80%);
   filter: blur(40px);
 }
+
+/* =====================================================
+   Mentoria FULL — paleta scoped (bordô + cobre)
+   "theme-purple" dentro do escopo restaura o dark purple
+   apenas nas seções de plataforma / Banco FULL Questões.
+   ===================================================== */
+.theme-mentoria {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  --card: 0 12% 7%;
+  --card-foreground: 0 0% 98%;
+  --secondary: 350 18% 8%;
+  --muted: 350 10% 14%;
+  --muted-foreground: 20 8% 72%;
+  --border: 350 18% 18%;
+  --primary: 350 70% 32%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 14 88% 58%;
+  --accent-foreground: 0 0% 100%;
+  --accent-dark: 14 70% 38%;
+  --ring: 350 70% 32%;
+
+  --gradient-primary: linear-gradient(135deg, hsl(14 88% 60%) 0%, hsl(350 75% 32%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(20 92% 65%) 0%, hsl(14 88% 55%) 50%, hsl(350 75% 30%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(350 18% 8%) 50%, hsl(0 0% 4%) 100%);
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(14 88% 65%) 100%);
+
+  --shadow-premium: 0 20px 60px -10px hsl(14 80% 45% / 0.4), 0 10px 30px -10px hsl(350 70% 40% / 0.35), 0 0 80px hsl(14 80% 50% / 0.18);
+  --glow-beige: 0 0 60px hsl(14 88% 58% / 0.55), 0 0 100px hsl(14 88% 58% / 0.32), 0 0 140px hsl(350 75% 45% / 0.22);
+  --shadow-glow-beige: 0 10px 40px hsl(14 88% 58% / 0.5), 0 0 80px hsl(14 88% 55% / 0.3), 0 0 120px hsl(350 70% 40% / 0.2);
+}
+
+.theme-mentoria .theme-purple {
+  /* Mesmo dark purple usado na Questões */
+  --background: 260 28% 5%;
+  --foreground: 0 0% 98%;
+  --card: 260 24% 8%;
+  --card-foreground: 0 0% 98%;
+  --secondary: 260 22% 7%;
+  --muted: 260 16% 12%;
+  --muted-foreground: 260 8% 70%;
+  --border: 260 20% 16%;
+  --primary: 268 65% 42%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 268 82% 66%;
+  --accent-foreground: 0 0% 100%;
+  --accent-dark: 268 60% 32%;
+  --ring: 268 65% 42%;
+
+  --gradient-primary: linear-gradient(135deg, hsl(268 80% 62%) 0%, hsl(268 65% 38%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(268 80% 65%) 0%, hsl(268 70% 48%) 50%, hsl(268 60% 30%) 100%);
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(268 85% 75%) 100%);
+
+  --shadow-premium: 0 20px 60px -10px hsl(268 70% 45% / 0.45), 0 10px 30px -10px hsl(268 80% 55% / 0.35), 0 0 80px hsl(268 70% 40% / 0.2);
+  --glow-beige: 0 0 50px hsl(268 80% 58% / 0.45), 0 0 100px hsl(268 80% 58% / 0.25);
+  --shadow-glow-beige: 0 10px 40px hsl(268 80% 55% / 0.4), 0 0 80px hsl(268 75% 45% / 0.25);
+}
+
+/* Seams Mentoria: bordô → roxo e roxo → bordô */
+.theme-mentoria .seam-to-purple {
+  position: relative;
+  height: 200px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  background: linear-gradient(180deg,
+    hsl(0 0% 4%) 0%,
+    hsl(330 18% 5%) 35%,
+    hsl(290 22% 5%) 70%,
+    hsl(260 28% 5%) 100%);
+  overflow: hidden;
+  pointer-events: none;
+}
+.theme-mentoria .seam-to-purple::before {
+  content: "";
+  position: absolute;
+  inset: -20% 10% auto 10%;
+  height: 90%;
+  background: radial-gradient(ellipse at 50% 0%,
+    hsl(14 88% 58% / 0.22) 0%,
+    hsl(350 75% 40% / 0.15) 30%,
+    hsl(268 70% 45% / 0.10) 60%,
+    transparent 80%);
+  filter: blur(40px);
+}
+.theme-mentoria .seam-to-bordo {
+  position: relative;
+  height: 200px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  background: linear-gradient(180deg,
+    hsl(260 28% 5%) 0%,
+    hsl(290 22% 5%) 30%,
+    hsl(330 18% 5%) 65%,
+    hsl(0 0% 4%) 100%);
+  overflow: hidden;
+  pointer-events: none;
+}
+.theme-mentoria .seam-to-bordo::before {
+  content: "";
+  position: absolute;
+  inset: auto 10% -20% 10%;
+  height: 90%;
+  background: radial-gradient(ellipse at 50% 100%,
+    hsl(14 88% 58% / 0.22) 0%,
+    hsl(350 75% 40% / 0.15) 30%,
+    hsl(268 70% 45% / 0.10) 60%,
+    transparent 80%);
+  filter: blur(40px);
+}

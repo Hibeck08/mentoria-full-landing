@@ -8,7 +8,8 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import {
   Target, BookOpen, Trophy, CheckCircle2, Zap, Instagram, Brain, Rocket,
   Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp,
-  Database, Search, FileText, PenLine, Filter, BarChart3, Sparkles, Crown
+  Database, Search, FileText, PenLine, Filter, BarChart3, Sparkles, Crown,
+  AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
@@ -38,10 +39,12 @@ const Mentoria = () => {
     document.getElementById("planos-mentoria")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const [vslPlaying, setVslPlaying] = React.useState(false);
+
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },
     { icon: Users, badge: "1:1", title: "Mentoria Personalizada", desc: "Acompanhamento direto comigo. Aulas ao vivo de Português, Inglês, Matemática e Física toda semana." },
-    { icon: Layers, badge: "+20K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
+    { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
   const planos = [
@@ -63,12 +66,12 @@ const Mentoria = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="theme-mentoria min-h-screen bg-background text-foreground">
       {/* HERO */}
       <section className="relative min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[center_0%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
-          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[50%_18%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-[center_35%] lg:object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/85 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
           <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />
@@ -123,187 +126,143 @@ const Mentoria = () => {
         </div>
       </section>
 
-      {/* 3 PILARES */}
-      <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
-        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
-        <div className="container relative z-10 mx-auto px-6">
-          <ScrollReveal>
-            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
-              Por que tanta gente <span className="bg-gradient-primary bg-clip-text text-transparent">estuda errado?</span>
-            </h2>
-            <p className="text-base md:text-lg text-center text-muted-foreground mb-10 md:mb-14 max-w-2xl mx-auto">
-              Falta método, falta plano, falta direção. A Mentoria FULL resolve isso com 3 pilares simples:
-            </p>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
-            {pillars.map((p, i) => {
-              const Icon = p.icon;
-              return (
-                <ScrollReveal key={i} delay={i * 120}>
-                  <div className="relative h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-7 hover:border-accent hover:shadow-premium transition-all duration-300">
-                    <div className="absolute -top-3 right-4 bg-gradient-primary text-accent-foreground text-[10px] font-black px-3 py-1 rounded-full shadow-glow-beige tracking-wider">{p.badge}</div>
-                    <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                      <Icon className="w-7 h-7 text-accent-foreground" />
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{p.title}</h3>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.desc}</p>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CICLO - Connected Benefits */}
-      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
-        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+      {/* PAS - POR QUE TANTA GENTE TRAVA */}
+      <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[160px]" />
+        <div className="container relative z-10 mx-auto px-6 max-w-6xl">
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Crown className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+                <AlertTriangle className="w-4 h-4 text-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">Por que tanta gente trava</span>
               </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que não deixa nada solto
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Você não precisa decidir o que estudar. A mentoria conecta cada peça pra que uma alimente a outra. 
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ConnectedBenefits
-            items={[
-              { icon: Calendar, title: "Semana pronta na segunda", desc: "Plano de metas já montado: o que assistir, quantas questões resolver, quais flashcards revisar.", next: "puxa a teoria" },
-              { icon: Play, title: "Teoria com método", desc: "Aulas gravadas e ao vivo de Português, Inglês, Matemática e Física. Aprendeu o conteúdo? Já cai pra prática.", next: "vira questão" },
-              { icon: Database, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas e listas com nivelamento automático. Errou? tem resolução!", next: "vira flashcard" },
-              { icon: Layers, title: "Flashcards de revisão", desc: "+2.000 cards Anki dos pontos que mais caem. Revisão espaçada que fixa de verdade.", next: "fecha com dados" },
-              { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. Pare de estudar no escuro você vê a nota subir antes da prova.", next: "recomeça o ciclo" },
-            ]}
-          />
-
-          <ScrollReveal>
-            <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO SER CLASSIFICADO →
-              </Button>
-              <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Garantia de 7 dias · Acesso imediato</p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* O QUE VOCÊ RECEBE */}
-      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
-        <div className="absolute bottom-0 left-1/4 w-[420px] h-[420px] bg-primary/30 rounded-full blur-[140px] opacity-30" style={{ animationDelay: "1.5s" }} />
-        <div className="container relative z-10 mx-auto px-6">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Crown className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Pacote completo · top tier</span>
-              </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Tudo que está <span className="bg-gradient-primary bg-clip-text text-transparent">incluso</span>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
+                Não é talento. <br className="hidden md:block" />
+                <span className="bg-gradient-primary bg-clip-text text-transparent">É método e direção.</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Cada peça pensada pra te empurrar pra aprovação.
+                Quem passa não estuda mais. <strong className="text-foreground">Estuda diferente</strong>. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
             {[
-              { icon: Play, title: "Aulas gravadas, 4 matérias", desc: "Português, Inglês, Matemática e Física do zero ao avançado.", gold: true },
-              { icon: Users, title: "Aulas ao vivo semanais", desc: "Encontros semanais de Português, Inglês, Matemática e Física com os professores.", gold: true },
-              { icon: PenLine, title: "Correção de redação ao vivo", desc: "Sua redação corrigida em tempo real, com feedback direto pra subir nota rápido.", gold: true },
-              { icon: Trophy, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas, listas por nível e nivelamento automático." },
-              { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias." },
-              { icon: Calendar, title: "Plano de metas semanal", desc: "Todo dia você já sabe o que estudar. Zero tempo perdido decidindo." },
-              { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral, com tendência." },
-              { icon: BookOpen, title: "Livro do Método Hibeck", desc: "Tudo que aprendi nos 8 meses que me aprovaram, num só material." },
-              { icon: MessageCircle, title: "Suporte direto comigo", desc: "Dúvida no grupo? Resposta rápida. Você não estuda sozinho." },
-            ].map((b, i) => (
-              <ScrollReveal key={i} delay={i * 70} variant="scale">
-                <div className={`group relative h-full backdrop-blur-sm rounded-2xl p-5 md:p-6 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] ${
-                  b.gold
-                    ? "bg-gradient-to-br from-card/90 to-card/70 border-2 border-accent shadow-glow-beige hover:shadow-[0_0_60px_hsl(45_90%_60%/0.45)]"
-                    : "bg-card/70 border-2 border-accent/25 hover:border-accent"
-                }`}>
-                  {b.gold && (
-                    <div className="absolute -top-2 -right-2 bg-gradient-primary text-accent-foreground text-[9px] font-black px-2 py-0.5 rounded-full shadow-glow-beige tracking-wider uppercase">
-                      Destaque
+              { n: "01", title: "Estuda sem plano e sem ordem", desc: "Sem alguém te dizendo o que estudar hoje, você gasta mais tempo decidindo do que praticando. Esforço grande, nota parada, sensação de andar em círculos." },
+              { n: "02", title: "Some na primeira semana ruim", desc: "Dois dias firme, para três, volta com culpa e repete o ciclo. Sem mentoria e sem rotina viva, a constância desmorona, e constância é o que separa quem passa de quem fica." },
+              { n: "03", title: "Não tem quem corrija e oriente", desc: "Erra a mesma coisa por meses. Resolve questão sem entender o gabarito, escreve redação sem feedback e chega na prova sem saber se realmente evoluiu." },
+            ].map((e, i) => (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-accent/25 rounded-2xl p-6 md:p-7 hover:border-accent/60 transition-all duration-300">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-2xl font-black text-accent-foreground">{e.n}</span>
                     </div>
-                  )}
-                  <div className="flex items-start gap-3">
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:rotate-6 group-hover:scale-110 ${
-                      b.gold ? "bg-gradient-beige-premium" : "bg-gradient-primary"
-                    }`}>
-                      <b.icon className="w-5 h-5 text-accent-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{b.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-accent uppercase tracking-wider mt-3">
+                      <XCircle className="w-3 h-3" />
+                      Erro {e.n} de 03
                     </div>
                   </div>
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 leading-snug">{e.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{e.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
           <ScrollReveal>
-            <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO SER CLASSIFICADO →
-              </Button>
+            <div className="text-center mt-12 md:mt-16 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-foreground font-semibold">
+                E quando alguém te entrega <span className="text-accent">método</span>, <span className="text-accent">mentoria 1:1</span> e <span className="text-accent">plataforma completa</span>?
+              </p>
+              <p className="mt-4 text-lg md:text-2xl font-black leading-snug">
+                <span className="text-foreground">A aprovação vira consequência. </span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">E é pra isso que existe a Mentoria FULL.</span>
+              </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* FLASHCARDS – compacto */}
-      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-10" />
-        <div className="container relative z-10 mx-auto px-6">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            <ScrollReveal variant="left">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                  <Layers className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-semibold text-accent">Flashcards Anki</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold">
-                  Revise igual quem <span className="text-accent">passa de verdade</span>
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  São <strong className="text-accent">+2.000 flashcards</strong> prontos, com teoria objetiva, exemplos e questões. Você só abre e revisa sem perder uma hora montando material.
-                </p>
-                <ul className="space-y-2">
-                  {["Todas as matérias do edital", "Imagens ilustrativas pra fixar", "Revisão espaçada que funciona"].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-foreground/90">
-                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />{t}
-                    </li>
-                  ))}
-                </ul>
+      <div className="seam-to-purple" aria-hidden="true" />
+
+      {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
+      <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] bg-accent rounded-full blur-[180px] opacity-[0.08]" />
+        <div className="absolute bottom-0 right-1/4 w-[360px] h-[360px] bg-primary/20 rounded-full blur-[160px] opacity-[0.12]" />
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-5 shadow-glow-beige">
+                <Play className="w-4 h-4 fill-current" />
+                <span className="text-xs font-bold uppercase tracking-wider">Assista antes de decidir</span>
               </div>
-            </ScrollReveal>
-            <ScrollReveal variant="right">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30" />
-                <img src={ankiCardExample} alt="Exemplo de Flashcard" className="relative rounded-2xl shadow-premium border-2 border-accent/30 w-full max-w-md mx-auto" loading="lazy" />
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+                Conheça o <span className="bg-gradient-primary bg-clip-text text-transparent">Banco FULL Questões</span> por dentro
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                A plataforma vem inclusa na mentoria. Em poucos minutos eu te mostro <strong className="text-foreground">cada ferramenta</strong>, como o nivelamento funciona e por que ele encurta meses de estudo no escuro.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute -inset-2 md:-inset-3 bg-gradient-primary rounded-3xl blur-3xl opacity-[0.18]" />
+              <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/40 shadow-premium bg-black">
+                {vslPlaying ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/qoa3CiyRrNU?autoplay=1&rel=0&modestbranding=1"
+                    title="Conheça a plataforma FULL Questões"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setVslPlaying(true)}
+                    className="group absolute inset-0 w-full h-full cursor-pointer"
+                    aria-label="Assistir ao vídeo da plataforma"
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/qoa3CiyRrNU/maxresdefault.jpg"
+                      alt="Tour pela plataforma FULL Questões"
+                      className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity animate-pulse" />
+                        <div className="relative w-20 h-20 md:w-28 md:h-28 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow-beige group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-9 h-9 md:w-12 md:h-12 text-accent-foreground fill-current ml-1.5" />
+                        </div>
+                      </div>
+                      <div className="text-center px-4">
+                        <p className="text-white font-bold text-base md:text-2xl drop-shadow-lg">Clique para assistir o tour completo</p>
+                        <p className="text-white/80 text-xs md:text-sm mt-1 drop-shadow">⏱ Vídeo curto · sem enrolação</p>
+                      </div>
+                    </div>
+                  </button>
+                )}
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="text-center mt-10 md:mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO ENTRAR PRA MENTORIA →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* BANCO FULL QUESTÕES SHOWCASE */}
-      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
+      <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
         <div className="container relative z-10 mx-auto px-6">
@@ -317,14 +276,14 @@ const Mentoria = () => {
                 Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> de quebra
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                +20.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
+                +10.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
               </p>
             </div>
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
             {[
-              { icon: Database, t: "+20.000 questões", d: "Resolvidas e comentadas em detalhes." },
+              { icon: Database, t: "+10.000 questões", d: "Resolvidas e comentadas em detalhes." },
               { icon: Filter, t: "Filtros avançados", d: "Matéria, banca, ano, dificuldade e nível." },
               { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado por assunto." },
               { icon: TrendingUp, t: "Painel com tendência", d: "Acerto por matéria, dia, mês, ranking e simulado semanal." },
@@ -410,6 +369,187 @@ const Mentoria = () => {
         </div>
       </section>
 
+      <div className="seam-to-bordo" aria-hidden="true" />
+
+      {/* 3 PILARES */}
+      <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
+        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
+              Por que tanta gente <span className="bg-gradient-primary bg-clip-text text-transparent">estuda errado?</span>
+            </h2>
+            <p className="text-base md:text-lg text-center text-muted-foreground mb-10 md:mb-14 max-w-2xl mx-auto">
+              Falta método, falta plano, falta direção. A Mentoria FULL resolve isso com 3 pilares simples:
+            </p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
+            {pillars.map((p, i) => {
+              const Icon = p.icon;
+              return (
+                <ScrollReveal key={i} delay={i * 120}>
+                  <div className="relative h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-7 hover:border-accent hover:shadow-premium transition-all duration-300">
+                    <div className="absolute -top-3 right-4 bg-gradient-primary text-accent-foreground text-[10px] font-black px-3 py-1 rounded-full shadow-glow-beige tracking-wider">{p.badge}</div>
+                    <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                      <Icon className="w-7 h-7 text-accent-foreground" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{p.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.desc}</p>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CICLO - Connected Benefits */}
+      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que não deixa nada solto
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Você não precisa decidir o que estudar. A mentoria conecta cada peça pra que uma alimente a outra. 
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ConnectedBenefits
+            items={[
+              { icon: Calendar, title: "Semana pronta na segunda", desc: "Plano de metas já montado: o que assistir, quantas questões resolver, quais flashcards revisar.", next: "puxa a teoria" },
+              { icon: Play, title: "Teoria com método", desc: "Aulas gravadas e ao vivo de Português, Inglês, Matemática e Física. Aprendeu o conteúdo? Já cai pra prática.", next: "vira questão" },
+              { icon: Database, title: "Banco FULL Questões", desc: "+10.000 questões resolvidas e listas com nivelamento automático. Errou? tem resolução!", next: "vira flashcard" },
+              { icon: Layers, title: "Flashcards de revisão", desc: "+2.000 cards Anki dos pontos que mais caem. Revisão espaçada que fixa de verdade.", next: "fecha com dados" },
+              { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. Pare de estudar no escuro você vê a nota subir antes da prova.", next: "recomeça o ciclo" },
+            ]}
+          />
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO SER CLASSIFICADO →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Garantia de 7 dias · Acesso imediato</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* O QUE VOCÊ RECEBE */}
+      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="absolute bottom-0 left-1/4 w-[420px] h-[420px] bg-primary/30 rounded-full blur-[140px] opacity-30" style={{ animationDelay: "1.5s" }} />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Pacote completo · top tier</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Tudo que está <span className="bg-gradient-primary bg-clip-text text-transparent">incluso</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Cada peça pensada pra te empurrar pra aprovação.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+            {[
+              { icon: Play, title: "Aulas gravadas, 4 matérias", desc: "Português, Inglês, Matemática e Física do zero ao avançado.", gold: true },
+              { icon: Users, title: "Aulas ao vivo semanais", desc: "Encontros semanais de Português, Inglês, Matemática e Física com os professores.", gold: true },
+              { icon: PenLine, title: "Correção de redação ao vivo", desc: "Sua redação corrigida em tempo real, com feedback direto pra subir nota rápido.", gold: true },
+              { icon: Trophy, title: "Banco FULL Questões", desc: "+10.000 questões resolvidas, listas por nível e nivelamento automático." },
+              { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias." },
+              { icon: Calendar, title: "Plano de metas semanal", desc: "Todo dia você já sabe o que estudar. Zero tempo perdido decidindo." },
+              { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral, com tendência." },
+              { icon: BookOpen, title: "Livro do Método Hibeck", desc: "Tudo que aprendi nos 8 meses que me aprovaram, num só material." },
+              { icon: MessageCircle, title: "Suporte direto comigo", desc: "Dúvida no grupo? Resposta rápida. Você não estuda sozinho." },
+            ].map((b, i) => (
+              <ScrollReveal key={i} delay={i * 70} variant="scale">
+                <div className={`group relative h-full backdrop-blur-sm rounded-2xl p-5 md:p-6 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] ${
+                  b.gold
+                    ? "bg-gradient-to-br from-card/90 to-card/70 border-2 border-accent shadow-glow-beige hover:shadow-[0_0_60px_hsl(45_90%_60%/0.45)]"
+                    : "bg-card/70 border-2 border-accent/25 hover:border-accent"
+                }`}>
+                  {b.gold && (
+                    <div className="absolute -top-2 -right-2 bg-gradient-primary text-accent-foreground text-[9px] font-black px-2 py-0.5 rounded-full shadow-glow-beige tracking-wider uppercase">
+                      Destaque
+                    </div>
+                  )}
+                  <div className="flex items-start gap-3">
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:rotate-6 group-hover:scale-110 ${
+                      b.gold ? "bg-gradient-beige-premium" : "bg-gradient-primary"
+                    }`}>
+                      <b.icon className="w-5 h-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="text-base md:text-lg font-bold text-foreground mb-1">{b.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO SER CLASSIFICADO →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* FLASHCARDS – compacto */}
+      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="container relative z-10 mx-auto px-6">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+            <ScrollReveal variant="left">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                  <Layers className="w-4 h-4 text-accent" />
+                  <span className="text-sm font-semibold text-accent">Flashcards Anki</span>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold">
+                  Revise igual quem <span className="text-accent">passa de verdade</span>
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  São <strong className="text-accent">+2.000 flashcards</strong> prontos, com teoria objetiva, exemplos e questões. Você só abre e revisa sem perder uma hora montando material.
+                </p>
+                <ul className="space-y-2">
+                  {["Todas as matérias do edital", "Imagens ilustrativas pra fixar", "Revisão espaçada que funciona"].map((t, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground/90">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />{t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal variant="right">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30" />
+                <img src={ankiCardExample} alt="Exemplo de Flashcard" className="relative rounded-2xl shadow-premium border-2 border-accent/30 w-full max-w-md mx-auto" loading="lazy" />
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* PLANO DE METAS SEMANAL */}
       <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-[460px] h-[460px] bg-accent rounded-full blur-[160px] opacity-10" />
@@ -479,7 +619,7 @@ const Mentoria = () => {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Bryan Hibeck</h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+20.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
+                    Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+10.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
                   </p>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Fui aprovado na <strong className="text-foreground">AFA como 10º colocado geral</strong> (01 de Infantaria, 04 de Intendência e 05 de Aviação), na <strong className="text-foreground">EFOMM como 08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT) como 15º colocado</strong>.
@@ -493,6 +633,17 @@ const Mentoria = () => {
                 </div>
               </div>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* HOOK ANTES DOS DEPOIMENTOS */}
+      <section className="pt-8 pb-2 md:pt-12 md:pb-4 bg-secondary/20">
+        <div className="container mx-auto px-6">
+          <ScrollReveal>
+            <p className="text-center text-base md:text-2xl font-black text-accent tracking-wide">
+              ↓ Vira isto aqui ↓
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -643,7 +794,7 @@ const Mentoria = () => {
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 <FAQItem value="item-1" question="Por que o mínimo é trimestral e não mensal?" answer="Em 1 mês você ainda está se adaptando ao método. A evolução real (dominar matérias, ganhar ritmo de questões, ver a nota subir) aparece a partir do 2º/3º mês. O trimestral existe pra você conseguir ver resultado de verdade." />
-                <FAQItem value="item-2" question="O que está incluso na mentoria?" answer="Mentoria 1:1 personalizada, aulas ao vivo de matemática e física, vídeo-aulas do método, +2.000 flashcards Anki, acesso ao Banco FULL Questões com +20.000 questões resolvidas, plano de metas pronto, livro do Método Hibeck e suporte direto comigo." />
+                <FAQItem value="item-2" question="O que está incluso na mentoria?" answer="Mentoria 1:1 personalizada, aulas ao vivo de matemática e física, vídeo-aulas do método, +2.000 flashcards Anki, acesso ao Banco FULL Questões com +10.000 questões resolvidas, plano de metas pronto, livro do Método Hibeck e suporte direto comigo." />
                 <FAQItem value="item-3" question="Serve pra qualquer concurso militar?" answer="Sim. O método é o mesmo que me aprovou na AFA (01º), EFOMM (08º), EEAr (15º) e EPCAr. Funciona pra AFA, EN, EFOMM, EEAR, EPCAR, ESPCEX, ESA, EAM, IME, ITA e CN." />
                 <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo. A diferença é o preço: o anual sai R$ 122,76/mês (1x de R$ 1.187,00), o semestral R$ 125,13/mês (1x de R$ 667,00) e o trimestral R$ 134,54/mês (1x de R$ 377,00)." />
                 <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias incondicionais. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />

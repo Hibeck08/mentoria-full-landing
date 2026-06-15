@@ -193,18 +193,43 @@ All colors MUST be HSL.
 }
 
 .theme-questoes .theme-purple {
-  --primary: 270 60% 22%;
+  /* Dark purple referência: bg 260 22% 9% · card 260 20% 12% · primary 268 65% 42% */
+  --background: 260 22% 9%;
+  --foreground: 0 0% 98%;
+  --card: 260 20% 12%;
+  --card-foreground: 0 0% 98%;
+  --secondary: 260 18% 14%;
+  --muted: 260 14% 18%;
+  --muted-foreground: 260 10% 72%;
+  --border: 260 18% 22%;
+  --primary: 268 65% 42%;
   --primary-foreground: 0 0% 100%;
-  --accent: 270 75% 62%;
+  --accent: 268 80% 65%;
   --accent-foreground: 0 0% 100%;
-  --accent-dark: 270 55% 28%;
-  --ring: 270 60% 30%;
+  --accent-dark: 268 60% 32%;
+  --ring: 268 65% 42%;
 
-  --gradient-primary: linear-gradient(135deg, hsl(270 75% 55%) 0%, hsl(270 60% 22%) 100%);
-  --gradient-beige-premium: linear-gradient(135deg, hsl(270 75% 60%) 0%, hsl(270 65% 40%) 50%, hsl(270 55% 22%) 100%);
-  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(270 80% 72%) 100%);
+  --gradient-primary: linear-gradient(135deg, hsl(268 80% 62%) 0%, hsl(268 65% 38%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(268 80% 65%) 0%, hsl(268 70% 48%) 50%, hsl(268 60% 30%) 100%);
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(268 85% 75%) 100%);
 
-  --shadow-premium: 0 20px 60px -10px hsl(270 60% 30% / 0.35), 0 10px 30px -10px hsl(270 70% 45% / 0.3), 0 0 60px hsl(270 60% 30% / 0.15);
-  --glow-beige: 0 0 40px hsl(270 70% 50% / 0.35), 0 0 80px hsl(270 70% 50% / 0.2);
-  --shadow-glow-beige: 0 8px 30px hsl(270 70% 50% / 0.35), 0 0 60px hsl(270 70% 50% / 0.2);
+  --shadow-premium: 0 20px 60px -10px hsl(268 70% 45% / 0.45), 0 10px 30px -10px hsl(268 80% 55% / 0.35), 0 0 80px hsl(268 70% 40% / 0.2);
+  --glow-beige: 0 0 50px hsl(268 80% 58% / 0.45), 0 0 100px hsl(268 80% 58% / 0.25);
+  --shadow-glow-beige: 0 10px 40px hsl(268 80% 55% / 0.4), 0 0 80px hsl(268 75% 45% / 0.25);
+}
+
+/* Transições suaves entre seções âmbar/teal e roxo dentro do Questões */
+.theme-questoes .seam-to-purple {
+  background: linear-gradient(180deg,
+    hsl(200 18% 8%) 0%,
+    hsl(245 20% 9%) 50%,
+    hsl(260 22% 9%) 100%);
+  height: 96px;
+}
+.theme-questoes .seam-to-amber {
+  background: linear-gradient(180deg,
+    hsl(260 22% 9%) 0%,
+    hsl(230 18% 8%) 50%,
+    hsl(200 18% 8%) 100%);
+  height: 96px;
 }

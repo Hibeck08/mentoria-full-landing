@@ -224,10 +224,10 @@ const Questoes = () => {
       </div>
     </section>
 
-    {/* VSL - VÍDEO DE VENDAS */}
-    <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-15" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+    {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
+    <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] bg-accent rounded-full blur-[180px] opacity-[0.08]" />
+      <div className="absolute bottom-0 right-1/4 w-[360px] h-[360px] bg-primary/20 rounded-full blur-[160px] opacity-[0.12]" />
       <div className="container relative z-10 mx-auto px-6 max-w-5xl">
         <ScrollReveal>
           <div className="text-center mb-8 md:mb-12">
@@ -246,7 +246,7 @@ const Questoes = () => {
 
         <ScrollReveal>
           <div className="relative max-w-4xl mx-auto">
-            <div className="absolute -inset-3 md:-inset-4 bg-gradient-primary rounded-3xl blur-2xl opacity-50" />
+            <div className="absolute -inset-2 md:-inset-3 bg-gradient-primary rounded-3xl blur-3xl opacity-[0.18]" />
             <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/40 shadow-premium bg-black">
               {vslPlaying ? (
                 <iframe

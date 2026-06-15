@@ -225,6 +225,7 @@ const Questoes = () => {
     </section>
 
     {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
+    <div className="seam-to-purple" aria-hidden="true" />
     <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] bg-accent rounded-full blur-[180px] opacity-[0.08]" />
       <div className="absolute bottom-0 right-1/4 w-[360px] h-[360px] bg-primary/20 rounded-full blur-[160px] opacity-[0.12]" />

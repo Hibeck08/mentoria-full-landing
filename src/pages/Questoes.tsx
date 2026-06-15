@@ -43,7 +43,7 @@ const Questoes = () => {
   const pillars = [
      { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
-    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo. Você não fica mais travado quando erra." },
+     { iconKey: "Database" as const, badge: "+10.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo. Você não fica mais travado quando erra." },
   ];
 
   const planos = [
@@ -147,7 +147,7 @@ const Questoes = () => {
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-20">
         <div className="bg-gradient-primary py-2 md:py-4 border-y-2 border-accent-dark/30">
           <p className="text-center text-accent-foreground font-bold text-xs md:text-base tracking-wider px-4">
-            ⭐ NIVELAMENTO • MÉTODO • +20.000 QUESTÕES RESOLVIDAS ⭐
+            ⭐ NIVELAMENTO • MÉTODO • +10.000 QUESTÕES RESOLVIDAS ⭐
           </p>
         </div>
       </div>
@@ -169,8 +169,8 @@ const Questoes = () => {
               <span className="text-xs font-bold text-amber-300 uppercase tracking-wider">Por que tanta gente trava</span>
             </div>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
-              Não é talento. Não é tempo. <br className="hidden md:block" />
-              <span className="bg-gradient-primary bg-clip-text text-transparent">É estrutura.</span>
+              Não é talento. <br className="hidden md:block" />
+              <span className="bg-gradient-primary bg-clip-text text-transparent">É técnica e esforço.</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Quem classifica não estuda mais. <strong className="text-foreground">Estuda diferente</strong>. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço.
@@ -216,10 +216,9 @@ const Questoes = () => {
 
         <ScrollReveal>
           <div className="text-center mt-12 md:mt-16 max-w-2xl mx-auto">
-            <p className="text-base md:text-xl text-foreground font-semibold mb-2">
+            <p className="text-base md:text-xl text-foreground font-semibold">
               E quando alguém junta <span className="text-accent">direção</span>, <span className="text-accent">constância</span> e <span className="text-accent">treino no lugar certo</span>?
             </p>
-            <p className="text-sm md:text-base text-muted-foreground italic">↓ Vira isto aqui ↓</p>
           </div>
         </ScrollReveal>
       </div>

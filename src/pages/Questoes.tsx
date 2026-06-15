@@ -43,7 +43,7 @@ const Questoes = () => {
   const pillars = [
      { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
-    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo\nvocê não fica mais travado quando erra." },
+    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo. Você não fica mais travado quando erra." },
   ];
 
   const planos = [

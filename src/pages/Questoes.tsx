@@ -43,7 +43,7 @@ const Questoes = () => {
   const pillars = [
      { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
-    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo\nvocê não fica mais travado quando erra." },
+    { iconKey: "Database" as const, badge: "+20.000", title: "Questões Resolvidas", desc: "Bancas civis e militares com resolução detalhada passo a passo. Você não fica mais travado quando erra." },
   ];
 
   const planos = [
@@ -159,21 +159,21 @@ const Questoes = () => {
         <img src={militaryCollageBanner.url} alt="" className="w-full h-full object-cover object-center" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
       </div>
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-red-600/15 rounded-full blur-[160px]" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[160px]" />
 
       <div className="container relative z-10 mx-auto px-6 max-w-6xl">
         <ScrollReveal>
           <div className="text-center mb-10 md:mb-14">
-            <div className="inline-flex items-center gap-2 bg-red-600/15 border border-red-500/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
-              <AlertTriangle className="w-4 h-4 text-red-400" />
-              <span className="text-xs font-bold text-red-300 uppercase tracking-wider">Por que tanta gente trava</span>
+            <div className="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+              <AlertTriangle className="w-4 h-4 text-amber-400" />
+              <span className="text-xs font-bold text-amber-300 uppercase tracking-wider">Por que tanta gente trava</span>
             </div>
             <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
               Não é talento. Não é tempo. <br className="hidden md:block" />
               <span className="bg-gradient-primary bg-clip-text text-transparent">É estrutura.</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Quem classifica não estuda mais — <strong className="text-foreground">estuda diferente</strong>. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço.
+              Quem classifica não estuda mais. <strong className="text-foreground">Estuda diferente</strong>. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço.
             </p>
           </div>
         </ScrollReveal>
@@ -188,21 +188,21 @@ const Questoes = () => {
             {
               n: "02",
               title: "Some na primeira semana ruim",
-              desc: "Dois dias firme, para três, volta com culpa e repete o ciclo. Sem alguém puxando, a rotina sempre desmoronaconstância é o que separa quem passa de quem fica.",
+              desc: "Dois dias firme, para três, volta com culpa e repete o ciclo. Sem alguém puxando, a rotina desmorona. E constância é o que separa quem passa de quem fica.",
             },
             {
               n: "03",
               title: "Faz questão solta e não sabe o que errou",
-              desc: "Caça PDF perdido, resolve sem critério, vê o gabarito e segue achando que aprendeu. Chega na prova sem repertório e sem saber se evoluiu — porque nunca treinou no padrão real da banca.",
+              desc: "Caça PDF perdido, resolve sem critério, vê o gabarito e segue achando que aprendeu. Chega na prova sem repertório e sem saber se evoluiu, porque nunca treinou no padrão real da banca.",
             },
           ].map((e, i) => (
             <ScrollReveal key={i} delay={i * 120}>
-              <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-red-900/40 rounded-2xl p-6 md:p-7 hover:border-red-500/60 transition-all duration-300">
+              <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-amber-900/40 rounded-2xl p-6 md:p-7 hover:border-amber-500/60 transition-all duration-300">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-600 to-red-900 rounded-xl flex items-center justify-center shadow-lg">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-800 rounded-xl flex items-center justify-center shadow-lg">
                     <span className="text-2xl font-black text-white">{e.n}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-red-300 uppercase tracking-wider mt-3">
+                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-amber-300 uppercase tracking-wider mt-3">
                     <XCircle className="w-3 h-3" />
                     Erro {e.n} de 03
                   </div>
@@ -225,82 +225,6 @@ const Questoes = () => {
       </div>
     </section>
 
-    {/* 3 PILARES */}
-    <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
-      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
-      <div className="container relative z-10 mx-auto px-6">
-        <ScrollReveal>
-          <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
-            Tudo que você precisa para <span className="bg-gradient-primary bg-clip-text text-transparent">passar</span>
-          </h2>
-          <p className="text-base md:text-lg text-center text-muted-foreground mb-10 md:mb-14 max-w-2xl mx-auto">
-            Três pilares que se conectam para transformar estudo em aprovação.
-          </p>
-        </ScrollReveal>
-
-        <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
-          {pillars.map((p, i) => {
-            const Icon = PILLAR_ICON_MAP[p.iconKey];
-            return (
-              <ScrollReveal key={i} delay={i * 120}>
-                <div className="relative h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-7 hover:border-accent hover:shadow-premium transition-all duration-300">
-                  <div className="absolute -top-3 right-4 bg-gradient-primary text-accent-foreground text-[10px] font-black px-3 py-1 rounded-full shadow-glow-beige tracking-wider">
-                    {p.badge}
-                  </div>
-                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                    <Icon className="w-7 h-7 text-accent-foreground" />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{p.title}</h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.desc}</p>
-                </div>
-              </ScrollReveal>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-
-    {/* CICLO - Connected Benefits (moved to top of landing) */}
-    <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
-      <div className="container relative z-10 mx-auto px-6 max-w-5xl">
-        <ScrollReveal>
-          <div className="text-center mb-10 md:mb-14">
-            <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-              <Crown className="w-4 h-4" />
-              <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
-            </div>
-            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-              Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo</span> que te leva à aprovação em modo automático
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
-              Você não precisa pensar no que estudar. A plataforma encaixa cada etapa pra você só executar e ver a nota subir.
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <ConnectedBenefits
-          items={[
-            { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda você abre a plataforma e já sabe o que estudar. Zero tempo perdido decidindo.", next: "vira lista" },
-            { icon: Database, title: "Listas com nivelamento automático", desc: "Questões organizadas por dificuldade. Você sobe de nível conforme acerta, sem furar etapa.", next: "explica o erro" },
-            { icon: Brain, title: "Resolução comentada passo a passo", desc: "Errou? tem resolução!", next: "vira flashcard" },
-            { icon: Layers, title: "Flashcards do que mais cai", desc: "+2.000 cards Anki com revisão espaçada que fixa de verdade sem reler tudo de novo.", next: "mede com dados" },
-            { icon: TrendingUp, title: "Painel de desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. A próxima meta nasce do que os números mostram.", next: "fecha o ciclo" },
-          ]}
-        />
-
-        <ScrollReveal>
-          <div className="text-center mt-12 md:mt-16">
-            <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-              QUERO ENTRAR NESSE CICLO →
-            </Button>
-            <p className="text-xs md:text-sm text-muted-foreground mt-4">⚡ Acesso imediato · Garantia de 7 dias</p>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
-
     {/* VSL - VÍDEO DE VENDAS */}
     <section className="py-14 md:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-15" />
@@ -316,7 +240,7 @@ const Questoes = () => {
               Conheça a <span className="bg-gradient-primary bg-clip-text text-transparent">plataforma</span> por dentro
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Em poucos minutos eu te mostro <strong className="text-foreground">cada ferramenta</strong>, como o nivelamento funciona e por que ele encurta meses de estudo perdido.
+              Em poucos minutos eu te mostro <strong className="text-foreground">cada ferramenta</strong>, como o nivelamento funciona e por que ele encurta meses de estudo no escuro.
             </p>
           </div>
         </ScrollReveal>
@@ -438,7 +362,7 @@ const Questoes = () => {
                     {[
                       "Bancas civis e militares (ESA, EAM, EsPCEx, EFOMM, AFA, EEAR e mais)",
                       "Filtros por matéria, assunto, banca, ano e dificuldade",
-                      "Resolução passo a passo — você não trava mais",
+                      "Resolução passo a passo. Você não trava mais quando erra.",
                       "Listas personalizadas e simulados cronometrados",
                     ].map((f, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
@@ -478,6 +402,82 @@ const Questoes = () => {
       </div>
     </section>
 
+    {/* 3 PILARES */}
+    <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
+      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
+      <div className="container relative z-10 mx-auto px-6">
+        <ScrollReveal>
+          <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
+            Tudo que você precisa para <span className="bg-gradient-primary bg-clip-text text-transparent">passar</span>
+          </h2>
+          <p className="text-base md:text-lg text-center text-muted-foreground mb-10 md:mb-14 max-w-2xl mx-auto">
+            Três pilares que se conectam para transformar estudo em aprovação.
+          </p>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
+          {pillars.map((p, i) => {
+            const Icon = PILLAR_ICON_MAP[p.iconKey];
+            return (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="relative h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-7 hover:border-accent hover:shadow-premium transition-all duration-300">
+                  <div className="absolute -top-3 right-4 bg-gradient-primary text-accent-foreground text-[10px] font-black px-3 py-1 rounded-full shadow-glow-beige tracking-wider">
+                    {p.badge}
+                  </div>
+                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                    <Icon className="w-7 h-7 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{p.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.desc}</p>
+                </div>
+              </ScrollReveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    {/* CICLO - Connected Benefits (moved to top of landing) */}
+    <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+      <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+        <ScrollReveal>
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+              <Crown className="w-4 h-4" />
+              <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+            </div>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+              Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo</span> que te leva à aprovação em modo automático
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground">
+              Você não precisa pensar no que estudar hoje. A plataforma encaixa cada etapa. Você só executa e vê a nota subir toda semana.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ConnectedBenefits
+          items={[
+            { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda você abre a plataforma e já sabe o que estudar. Zero tempo perdido decidindo.", next: "vira lista" },
+            { icon: Database, title: "Listas com nivelamento automático", desc: "Questões organizadas por dificuldade. Você sobe de nível conforme acerta, sem furar etapa.", next: "explica o erro" },
+            { icon: Brain, title: "Resolução comentada passo a passo", desc: "Errou uma vez? A resolução te mostra exatamente onde travou, sem você precisar caçar PDF.", next: "vira flashcard" },
+            { icon: Layers, title: "Flashcards do que mais cai", desc: "+2.000 cards Anki com revisão espaçada que fixa de verdade sem reler tudo de novo.", next: "mede com dados" },
+            { icon: TrendingUp, title: "Painel de desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. A próxima meta nasce do que os números mostram.", next: "fecha o ciclo" },
+          ]}
+        />
+
+        <ScrollReveal>
+          <div className="text-center mt-12 md:mt-16">
+            <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+              QUERO ENTRAR NESSE CICLO →
+            </Button>
+            <p className="text-xs md:text-sm text-muted-foreground mt-4">⚡ Acesso imediato · Garantia de 7 dias</p>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+
     {/* SISTEMA DE NIVELAMENTO */}
     <section className="py-14 md:py-24 bg-gradient-to-br from-secondary/20 via-background to-primary/10 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
@@ -492,7 +492,7 @@ const Questoes = () => {
               Sistema de <span className="bg-gradient-primary bg-clip-text text-transparent">Nivelamento Automático</span>
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
-              Você não precisa mais decidir o que estudar hoje. <strong className="text-accent">A plataforma decide por você</strong> e na ordem certa.
+              Você não precisa mais decidir o que estudar hoje. <strong className="text-accent">A plataforma decide por você</strong>, na ordem certa e no nível certo.
             </p>
           </div>
         </ScrollReveal>
@@ -501,7 +501,7 @@ const Questoes = () => {
           <ScrollReveal variant="left">
             <div className="space-y-5">
               {[
-                 { n: "1", t: "Plano semanal pronto", d: "Quando vê, você dominou o edital inteiro, ideal para quem está perdido nos estudos." },
+                 { n: "1", t: "Plano semanal pronto", d: "Toda segunda você abre a plataforma e o seu plano de estudo da semana já está pronto." },
                  { n: "2", t: "3 listas progressivas", d: "Nível 1 (base), Nível 2 (intermediário), Nível 3 (Avançado). Você sobe de nível conforme acerta." },
                 { n: "3", t: "Flashcard do assunto", d: "Fechou as 3 listas? Revisa o flashcard e fixa o conteúdo de vez." },
                 { n: "4", t: "Evolução perfeita", d: "Você não precisa mais decidir o que estudar hoje. A plataforma decide por você e na ordem certa." },
@@ -568,7 +568,7 @@ const Questoes = () => {
             <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-10 items-center">
               <div className="relative mx-auto md:mx-0 max-w-[260px]">
                 <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-2xl opacity-30" />
-                <img src={bryanPhoto} alt="Bryan Hibeck" className="relative rounded-2xl w-full object-cover shadow-premium border-2 border-accent/20" loading="lazy" />
+                <img src={bryanUniform.url} alt="Bryan Hibeck" className="relative rounded-2xl w-full object-cover shadow-premium border-2 border-accent/20" loading="lazy" />
               </div>
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-primary rounded-full px-3 py-1.5">
@@ -734,7 +734,7 @@ const Questoes = () => {
               <FAQItem value="item-1" question="O que é o sistema de nivelamento automático?" answer="É um plano de metas semanal pronto. Cada semana traz os assuntos que você deve estudar, com 3 listas (níveis 1, 2 e 3) que evoluem em dificuldade, mais o flashcard daquele assunto. Você só precisa seguir a plataforma cuida do que estudar e quando." />
               <FAQItem value="item-2" question="Serve para qualquer concurso ou só militares?" answer="Serve para QUALQUER concurso. Temos questões de bancas civis e militares (ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ, vestibulares e bancas civis em geral). O método e o nivelamento funcionam para qualquer prova." />
               <FAQItem value="item-3" question="O que está incluso na assinatura?" answer="Banco com +20.000 questões resolvidas, Método FULL completo (videoaulas, livro, plano de metas, grupo de suporte), +2.000 flashcards, sistema de nivelamento automático semanal, filtros avançados, listas personalizadas, simulados cronometrados, painel de desempenho e suporte direto com professores." />
-              <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está no preço: o anual sai R$ 36,92/mês (ou 1x de R$ 357,00/ano maior economia), o semestral R$ 37,33/mês (ou 1x de R$ 199,90/semestre) e o mensal R$ 44,90/mês. Quanto maior o compromisso, menor o valor." />
+              <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está só no preço por mês. Anual sai R$ 38,99/mês (ou R$ 377 à vista) e é o plano com maior economia. Semestral fica em R$ 50,07/mês (ou R$ 266,90 à vista). Trimestral em R$ 56,04/mês (ou R$ 157 à vista). Quanto maior o compromisso, menor o valor." />
               <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias de garantia incondicional. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
               <FAQItem value="item-6" question="Como funciona o acesso?" answer="Após o pagamento, você recebe acesso imediato à plataforma. Pode estudar pelo celular, tablet ou computador, no horário que quiser." />
             </Accordion>

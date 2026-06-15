@@ -44,7 +44,7 @@ const Mentoria = () => {
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },
     { icon: Users, badge: "1:1", title: "Mentoria Personalizada", desc: "Acompanhamento direto comigo. Aulas ao vivo de Português, Inglês, Matemática e Física toda semana." },
-    { icon: Layers, badge: "+20K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
+    { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
   const planos = [
@@ -276,14 +276,14 @@ const Mentoria = () => {
                 Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> de quebra
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                +20.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
+                +10.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
               </p>
             </div>
           </ScrollReveal>
 
           <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
             {[
-              { icon: Database, t: "+20.000 questões", d: "Resolvidas e comentadas em detalhes." },
+              { icon: Database, t: "+10.000 questões", d: "Resolvidas e comentadas em detalhes." },
               { icon: Filter, t: "Filtros avançados", d: "Matéria, banca, ano, dificuldade e nível." },
               { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado por assunto." },
               { icon: TrendingUp, t: "Painel com tendência", d: "Acerto por matéria, dia, mês, ranking e simulado semanal." },
@@ -428,7 +428,7 @@ const Mentoria = () => {
             items={[
               { icon: Calendar, title: "Semana pronta na segunda", desc: "Plano de metas já montado: o que assistir, quantas questões resolver, quais flashcards revisar.", next: "puxa a teoria" },
               { icon: Play, title: "Teoria com método", desc: "Aulas gravadas e ao vivo de Português, Inglês, Matemática e Física. Aprendeu o conteúdo? Já cai pra prática.", next: "vira questão" },
-              { icon: Database, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas e listas com nivelamento automático. Errou? tem resolução!", next: "vira flashcard" },
+              { icon: Database, title: "Banco FULL Questões", desc: "+10.000 questões resolvidas e listas com nivelamento automático. Errou? tem resolução!", next: "vira flashcard" },
               { icon: Layers, title: "Flashcards de revisão", desc: "+2.000 cards Anki dos pontos que mais caem. Revisão espaçada que fixa de verdade.", next: "fecha com dados" },
               { icon: BarChart3, title: "Dados do seu desempenho", desc: "Gráficos por matéria, evolução semanal e ranking. Pare de estudar no escuro você vê a nota subir antes da prova.", next: "recomeça o ciclo" },
             ]}
@@ -470,7 +470,7 @@ const Mentoria = () => {
               { icon: Play, title: "Aulas gravadas, 4 matérias", desc: "Português, Inglês, Matemática e Física do zero ao avançado.", gold: true },
               { icon: Users, title: "Aulas ao vivo semanais", desc: "Encontros semanais de Português, Inglês, Matemática e Física com os professores.", gold: true },
               { icon: PenLine, title: "Correção de redação ao vivo", desc: "Sua redação corrigida em tempo real, com feedback direto pra subir nota rápido.", gold: true },
-              { icon: Trophy, title: "Banco FULL Questões", desc: "+20.000 questões resolvidas, listas por nível e nivelamento automático." },
+              { icon: Trophy, title: "Banco FULL Questões", desc: "+10.000 questões resolvidas, listas por nível e nivelamento automático." },
               { icon: Layers, title: "+2.000 flashcards Anki", desc: "Revisão espaçada de todas as matérias." },
               { icon: Calendar, title: "Plano de metas semanal", desc: "Todo dia você já sabe o que estudar. Zero tempo perdido decidindo." },
               { icon: BarChart3, title: "Gráficos de desempenho", desc: "Acompanhe sua evolução por matéria, dia, mês e geral, com tendência." },
@@ -619,7 +619,7 @@ const Mentoria = () => {
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold">Bryan Hibeck</h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+20.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
+                    Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+10.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
                   </p>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Fui aprovado na <strong className="text-foreground">AFA como 10º colocado geral</strong> (01 de Infantaria, 04 de Intendência e 05 de Aviação), na <strong className="text-foreground">EFOMM como 08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT) como 15º colocado</strong>.
@@ -794,7 +794,7 @@ const Mentoria = () => {
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
                 <FAQItem value="item-1" question="Por que o mínimo é trimestral e não mensal?" answer="Em 1 mês você ainda está se adaptando ao método. A evolução real (dominar matérias, ganhar ritmo de questões, ver a nota subir) aparece a partir do 2º/3º mês. O trimestral existe pra você conseguir ver resultado de verdade." />
-                <FAQItem value="item-2" question="O que está incluso na mentoria?" answer="Mentoria 1:1 personalizada, aulas ao vivo de matemática e física, vídeo-aulas do método, +2.000 flashcards Anki, acesso ao Banco FULL Questões com +20.000 questões resolvidas, plano de metas pronto, livro do Método Hibeck e suporte direto comigo." />
+                <FAQItem value="item-2" question="O que está incluso na mentoria?" answer="Mentoria 1:1 personalizada, aulas ao vivo de matemática e física, vídeo-aulas do método, +2.000 flashcards Anki, acesso ao Banco FULL Questões com +10.000 questões resolvidas, plano de metas pronto, livro do Método Hibeck e suporte direto comigo." />
                 <FAQItem value="item-3" question="Serve pra qualquer concurso militar?" answer="Sim. O método é o mesmo que me aprovou na AFA (01º), EFOMM (08º), EEAr (15º) e EPCAr. Funciona pra AFA, EN, EFOMM, EEAR, EPCAR, ESPCEX, ESA, EAM, IME, ITA e CN." />
                 <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo. A diferença é o preço: o anual sai R$ 122,76/mês (1x de R$ 1.187,00), o semestral R$ 125,13/mês (1x de R$ 667,00) e o trimestral R$ 134,54/mês (1x de R$ 377,00)." />
                 <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias incondicionais. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />

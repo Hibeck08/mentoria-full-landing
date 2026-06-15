@@ -5,11 +5,15 @@ import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play } from "lucide-react";
+import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play, AlertTriangle, Flame, Sparkles, Clock, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
+import bryanUniform from "@/assets/bryan-uniform.jpg.asset.json";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
+import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
+import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
 
 const FloatingWhatsApp = () => {
   const [visible, setVisible] = React.useState(false);

@@ -38,6 +38,8 @@ const Questoes = () => {
     document.getElementById('planos-questoes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const [vslPlaying, setVslPlaying] = React.useState(false);
+
   const pillars = [
      { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
@@ -46,16 +48,43 @@ const Questoes = () => {
 
   const planos = [
     {
-      nome: "Mensal", destaque: false, preco: "R$ 44,90", precoAntigo: "R$ 59,90", periodo: "/mês", parcela: null,
-      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/Kn3mHd3", cta: "ASSINAR MENSAL",
+      nome: "Trimestral",
+      destaque: false,
+      preco: "R$ 56,04",
+      precoAntigo: "R$ 59,90",
+      periodo: "/mês",
+      parcela: "ou R$ 157,00 à vista",
+      total: "Comece com baixo compromisso",
+      link: "https://pay.kiwify.com.br/HQCYyoR",
+      cta: "QUERO O TRIMESTRAL",
+      badge: null,
+      economia: null,
     },
     {
-      nome: "Anual", destaque: true, preco: "R$ 36,92", precoAntigo: "R$ 53,47", periodo: "/mês", parcela: "ou 1x de R$ 357,00 /ano",
-      total: "Maior economia", link: "https://pay.kiwify.com.br/TtaJ1TO", cta: "QUERO O ANUAL",
+      nome: "Semestral",
+      destaque: false,
+      preco: "R$ 50,07",
+      precoAntigo: "R$ 56,04",
+      periodo: "/mês",
+      parcela: "ou R$ 266,90 à vista",
+      total: "Economize R$ 35,82 vs Trimestral",
+      link: "https://pay.kiwify.com.br/5Y3FKc4",
+      cta: "QUERO O SEMESTRAL",
+      badge: "ECONOMIA",
+      economia: "R$ 35,82",
     },
     {
-      nome: "Semestral", destaque: false, preco: "R$ 37,33", precoAntigo: "R$ 55,72", periodo: "/mês", parcela: "ou 1x de R$ 199,90 /semestre",
-      total: "Economize R$ 112/mês", link: "https://pay.kiwify.com.br/XY03b6t", cta: "QUERO O SEMESTRAL",
+      nome: "Anual",
+      destaque: true,
+      preco: "R$ 38,99",
+      precoAntigo: "R$ 56,04",
+      periodo: "/mês",
+      parcela: "ou R$ 377,00 à vista",
+      total: "Economize R$ 204,60/ano vs Trimestral",
+      link: "https://pay.kiwify.com.br/QM4Ph8c",
+      cta: "QUERO O ANUAL",
+      badge: "MELHOR PLANO",
+      economia: "R$ 204,60",
     },
   ];
 

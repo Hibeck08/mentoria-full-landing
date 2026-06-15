@@ -299,9 +299,9 @@ const Questoes = () => {
       </div>
     </section>
 
-    {/* DENTRO DA PLATAFORMA - banners reais */}
-    <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/15 to-background relative overflow-hidden">
-      <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-accent rounded-full blur-[160px] opacity-10" />
+    {/* DENTRO DA PLATAFORMA - banners reais (escopo roxo) */}
+    <section className="theme-purple py-14 md:py-24 bg-gradient-to-b from-background via-secondary/15 to-background relative overflow-hidden">
+      <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-accent rounded-full blur-[160px] opacity-[0.08]" />
       <div className="container relative z-10 mx-auto px-6 max-w-6xl">
         <ScrollReveal>
           <div className="text-center mb-10 md:mb-14">
@@ -356,7 +356,7 @@ const Questoes = () => {
                     <Database className="w-3 h-3 text-accent" />
                     <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Banco completo</span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">+20.000 questões resolvidas, todas <span className="text-accent">comentadas</span></h3>
+                  <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">+10.000 questões resolvidas, todas <span className="text-accent">comentadas</span></h3>
                   <ul className="space-y-2 pt-2">
                     {[
                       "Bancas civis e militares (ESA, EAM, EsPCEx, EFOMM, AFA, EEAR e mais)",
@@ -373,7 +373,7 @@ const Questoes = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-2 pt-5 mt-5 border-t border-accent/20">
                   <div className="text-center">
-                    <p className="text-2xl md:text-3xl font-black text-accent">20k+</p>
+                    <p className="text-2xl md:text-3xl font-black text-accent">10k+</p>
                     <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Questões</p>
                   </div>
                   <div className="text-center">

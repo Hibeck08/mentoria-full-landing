@@ -92,7 +92,7 @@ const Questoes = () => {
     {/* HERO */}
     <section className="relative min-h-[105vh] md:min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img src="/lovable-uploads/questoes-hero-wallpaper.jpg" alt="Background" className="w-full h-full object-cover object-center brightness-75 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+        <img src="/lovable-uploads/questoes-hero-wallpaper.jpg" alt="Background" className="w-full h-full object-cover object-[50%_28%] md:object-center brightness-75 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/55 to-background/90" />
         <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
         <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />
@@ -218,6 +218,10 @@ const Questoes = () => {
           <div className="text-center mt-12 md:mt-16 max-w-2xl mx-auto">
             <p className="text-base md:text-xl text-foreground font-semibold">
               E quando alguém junta <span className="text-accent">direção</span>, <span className="text-accent">constância</span> e <span className="text-accent">treino no lugar certo</span>?
+            </p>
+            <p className="mt-4 text-lg md:text-2xl font-black leading-snug">
+              <span className="text-foreground">A aprovação vem. </span>
+              <span className="bg-gradient-primary bg-clip-text text-transparent">E é pra isso que existe o FULL Questões.</span>
             </p>
           </div>
         </ScrollReveal>

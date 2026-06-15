@@ -402,6 +402,7 @@ const Questoes = () => {
       </div>
     </section>
 
+    <div className="seam-to-amber" aria-hidden="true" />
     {/* 3 PILARES */}
     <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
       <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />

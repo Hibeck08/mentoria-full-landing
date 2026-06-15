@@ -126,6 +126,251 @@ const Mentoria = () => {
         </div>
       </section>
 
+      {/* PAS - POR QUE TANTA GENTE TRAVA */}
+      <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[160px]" />
+        <div className="container relative z-10 mx-auto px-6 max-w-6xl">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+                <AlertTriangle className="w-4 h-4 text-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">Por que tanta gente trava</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
+                Não é talento. <br className="hidden md:block" />
+                <span className="bg-gradient-primary bg-clip-text text-transparent">É método e direção.</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Quem passa não estuda mais. <strong className="text-foreground">Estuda diferente</strong>. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+            {[
+              { n: "01", title: "Estuda sem plano e sem ordem", desc: "Sem alguém te dizendo o que estudar hoje, você gasta mais tempo decidindo do que praticando. Esforço grande, nota parada, sensação de andar em círculos." },
+              { n: "02", title: "Some na primeira semana ruim", desc: "Dois dias firme, para três, volta com culpa e repete o ciclo. Sem mentoria e sem rotina viva, a constância desmorona, e constância é o que separa quem passa de quem fica." },
+              { n: "03", title: "Não tem quem corrija e oriente", desc: "Erra a mesma coisa por meses. Resolve questão sem entender o gabarito, escreve redação sem feedback e chega na prova sem saber se realmente evoluiu." },
+            ].map((e, i) => (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-accent/25 rounded-2xl p-6 md:p-7 hover:border-accent/60 transition-all duration-300">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-2xl font-black text-accent-foreground">{e.n}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-accent uppercase tracking-wider mt-3">
+                      <XCircle className="w-3 h-3" />
+                      Erro {e.n} de 03
+                    </div>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 leading-snug">{e.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{e.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12 md:mt-16 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-foreground font-semibold">
+                E quando alguém te entrega <span className="text-accent">método</span>, <span className="text-accent">mentoria 1:1</span> e <span className="text-accent">plataforma completa</span>?
+              </p>
+              <p className="mt-4 text-lg md:text-2xl font-black leading-snug">
+                <span className="text-foreground">A aprovação vira consequência. </span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">E é pra isso que existe a Mentoria FULL.</span>
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="seam-to-purple" aria-hidden="true" />
+
+      {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
+      <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] bg-accent rounded-full blur-[180px] opacity-[0.08]" />
+        <div className="absolute bottom-0 right-1/4 w-[360px] h-[360px] bg-primary/20 rounded-full blur-[160px] opacity-[0.12]" />
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-5 shadow-glow-beige">
+                <Play className="w-4 h-4 fill-current" />
+                <span className="text-xs font-bold uppercase tracking-wider">Assista antes de decidir</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+                Conheça o <span className="bg-gradient-primary bg-clip-text text-transparent">Banco FULL Questões</span> por dentro
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                A plataforma vem inclusa na mentoria. Em poucos minutos eu te mostro <strong className="text-foreground">cada ferramenta</strong>, como o nivelamento funciona e por que ele encurta meses de estudo no escuro.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute -inset-2 md:-inset-3 bg-gradient-primary rounded-3xl blur-3xl opacity-[0.18]" />
+              <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/40 shadow-premium bg-black">
+                {vslPlaying ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/qoa3CiyRrNU?autoplay=1&rel=0&modestbranding=1"
+                    title="Conheça a plataforma FULL Questões"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setVslPlaying(true)}
+                    className="group absolute inset-0 w-full h-full cursor-pointer"
+                    aria-label="Assistir ao vídeo da plataforma"
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/qoa3CiyRrNU/maxresdefault.jpg"
+                      alt="Tour pela plataforma FULL Questões"
+                      className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity animate-pulse" />
+                        <div className="relative w-20 h-20 md:w-28 md:h-28 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow-beige group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-9 h-9 md:w-12 md:h-12 text-accent-foreground fill-current ml-1.5" />
+                        </div>
+                      </div>
+                      <div className="text-center px-4">
+                        <p className="text-white font-bold text-base md:text-2xl drop-shadow-lg">Clique para assistir o tour completo</p>
+                        <p className="text-white/80 text-xs md:text-sm mt-1 drop-shadow">⏱ Vídeo curto · sem enrolação</p>
+                      </div>
+                    </div>
+                  </button>
+                )}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="text-center mt-10 md:mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO ENTRAR PRA MENTORIA →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* BANCO FULL QUESTÕES SHOWCASE */}
+      <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Database className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Plataforma Inclusa</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> de quebra
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                +20.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
+            {[
+              { icon: Database, t: "+20.000 questões", d: "Resolvidas e comentadas em detalhes." },
+              { icon: Filter, t: "Filtros avançados", d: "Matéria, banca, ano, dificuldade e nível." },
+              { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado por assunto." },
+              { icon: TrendingUp, t: "Painel com tendência", d: "Acerto por matéria, dia, mês, ranking e simulado semanal." },
+            ].map((b, i) => (
+              <ScrollReveal key={i} delay={i * 80} variant="scale">
+                <div className="group h-full bg-card/70 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 md:p-5 hover:border-accent hover:-translate-y-1 transition-all">
+                  <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform">
+                    <b.icon className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <h4 className="text-sm md:text-base font-bold text-foreground mb-1">{b.t}</h4>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{b.d}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto space-y-12 md:space-y-16">
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <Search className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
+                  <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com resolução comentada passo a passo você não fica mais travado quando erra.</p>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
+                    <img src="/platform/resolucao.png" alt="Resolução comentada" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="left">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative group order-2 md:order-1">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
+                    <img src="/platform/listas-desktop.png" alt="Listas de estudo" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div className="space-y-4 order-1 md:order-2">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <FileText className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Listas inteligentes</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Seu plano de ataque <span className="text-accent">já montado</span></h3>
+                  <p className="text-muted-foreground leading-relaxed">3 listas progressivas por assunto (base, intermediário, avançado) + flashcard de fechamento. Você só abre, executa e sobe de nível.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal variant="right">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
+                    <TrendingUp className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-semibold text-accent">Desempenho em tempo real</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">Saiba <span className="text-accent">exatamente</span> onde você está</h3>
+                  <p className="text-muted-foreground leading-relaxed">Gráficos de acerto por matéria, evolução semanal e ranking. Pare de estudar no escuro <strong className="text-accent">você vê a nota subir antes da prova</strong>.</p>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
+                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
+                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO ESSA PLATAFORMA →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="seam-to-bordo" aria-hidden="true" />
+
       {/* 3 PILARES */}
       <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
         <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
@@ -305,114 +550,6 @@ const Mentoria = () => {
         </div>
       </section>
 
-      {/* BANCO FULL QUESTÕES SHOWCASE */}
-      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
-        <div className="container relative z-10 mx-auto px-6">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Database className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Plataforma Inclusa</span>
-              </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> de quebra
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                +20.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
-            {[
-              { icon: Database, t: "+20.000 questões", d: "Resolvidas e comentadas em detalhes." },
-              { icon: Filter, t: "Filtros avançados", d: "Matéria, banca, ano, dificuldade e nível." },
-              { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado por assunto." },
-              { icon: TrendingUp, t: "Painel com tendência", d: "Acerto por matéria, dia, mês, ranking e simulado semanal." },
-            ].map((b, i) => (
-              <ScrollReveal key={i} delay={i * 80} variant="scale">
-                <div className="group h-full bg-card/70 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 md:p-5 hover:border-accent hover:-translate-y-1 transition-all">
-                  <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform">
-                    <b.icon className="w-5 h-5 text-accent-foreground" />
-                  </div>
-                  <h4 className="text-sm md:text-base font-bold text-foreground mb-1">{b.t}</h4>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{b.d}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <div className="max-w-5xl mx-auto space-y-12 md:space-y-16">
-            <ScrollReveal variant="right">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                    <Search className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
-                  <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com resolução comentada passo a passo você não fica mais travado quando erra.</p>
-                </div>
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                    <img src="/platform/resolucao.png" alt="Resolução comentada" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal variant="left">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="relative group order-2 md:order-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                    <img src="/platform/listas-desktop.png" alt="Listas de estudo" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-                <div className="space-y-4 order-1 md:order-2">
-                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                    <FileText className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">Listas inteligentes</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">Seu plano de ataque <span className="text-accent">já montado</span></h3>
-                  <p className="text-muted-foreground leading-relaxed">3 listas progressivas por assunto (base, intermediário, avançado) + flashcard de fechamento. Você só abre, executa e sobe de nível.</p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal variant="right">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                    <TrendingUp className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">Desempenho em tempo real</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">Saiba <span className="text-accent">exatamente</span> onde você está</h3>
-                  <p className="text-muted-foreground leading-relaxed">Gráficos de acerto por matéria, evolução semanal e ranking. Pare de estudar no escuro <strong className="text-accent">você vê a nota subir antes da prova</strong>.</p>
-                </div>
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal>
-            <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ESSA PLATAFORMA →
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* PLANO DE METAS SEMANAL */}
       <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-[460px] h-[460px] bg-accent rounded-full blur-[160px] opacity-10" />
@@ -496,6 +633,17 @@ const Mentoria = () => {
                 </div>
               </div>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* HOOK ANTES DOS DEPOIMENTOS */}
+      <section className="pt-8 pb-2 md:pt-12 md:pb-4 bg-secondary/20">
+        <div className="container mx-auto px-6">
+          <ScrollReveal>
+            <p className="text-center text-base md:text-2xl font-black text-accent tracking-wide">
+              ↓ Vira isto aqui ↓
+            </p>
           </ScrollReveal>
         </div>
       </section>

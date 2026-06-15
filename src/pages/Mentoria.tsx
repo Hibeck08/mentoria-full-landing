@@ -8,7 +8,8 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import {
   Target, BookOpen, Trophy, CheckCircle2, Zap, Instagram, Brain, Rocket,
   Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp,
-  Database, Search, FileText, PenLine, Filter, BarChart3, Sparkles, Crown
+  Database, Search, FileText, PenLine, Filter, BarChart3, Sparkles, Crown,
+  AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";

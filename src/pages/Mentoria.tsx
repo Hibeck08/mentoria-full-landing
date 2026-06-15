@@ -22,7 +22,7 @@ import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
 import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
 import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
 import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
-import { Sparkles as SparklesIcon, GraduationCap } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {
   const [visible, setVisible] = React.useState(false);

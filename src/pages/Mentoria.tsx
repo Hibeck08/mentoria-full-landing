@@ -17,6 +17,12 @@ import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import ankiCardExample from "@/assets/anki-card-example.png";
+import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop.png.asset.json";
+import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
+import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
+import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
+import { Sparkles as SparklesIcon, GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {
   const [visible, setVisible] = React.useState(false);

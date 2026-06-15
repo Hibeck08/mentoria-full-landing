@@ -477,88 +477,7 @@ const Questoes = () => {
       </div>
     </section>
 
-    {/* SISTEMA DE NIVELAMENTO */}
-    <section className="py-14 md:py-24 bg-gradient-to-br from-secondary/20 via-background to-primary/10 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
-      <div className="container relative z-10 mx-auto px-6">
-        <ScrollReveal>
-          <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-              <Calendar className="w-4 h-4" />
-              <span className="text-xs font-bold uppercase tracking-wider">Novidade exclusiva</span>
-            </div>
-            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-              Sistema de <span className="bg-gradient-primary bg-clip-text text-transparent">Nivelamento Automático</span>
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
-              Você não precisa mais decidir o que estudar hoje. <strong className="text-accent">A plataforma decide por você</strong>, na ordem certa e no nível certo.
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <ScrollReveal variant="left">
-            <div className="space-y-5">
-              {[
-                 { n: "1", t: "Plano semanal pronto", d: "Toda segunda você abre a plataforma e o seu plano de estudo da semana já está pronto." },
-                 { n: "2", t: "3 listas progressivas", d: "Nível 1 (base), Nível 2 (intermediário), Nível 3 (Avançado). Você sobe de nível conforme acerta." },
-                { n: "3", t: "Flashcard do assunto", d: "Fechou as 3 listas? Revisa o flashcard e fixa o conteúdo de vez." },
-                { n: "4", t: "Evolução perfeita", d: "Você não precisa mais decidir o que estudar hoje. A plataforma decide por você e na ordem certa." },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-xl flex items-center justify-center font-black text-accent-foreground text-lg shadow-glow-beige">
-                    {item.n}
-                  </div>
-                  <div>
-                    <h4 className="text-lg md:text-xl font-bold text-foreground mb-1">{item.t}</h4>
-                    <p className="text-sm md:text-base text-muted-foreground">{item.d}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal variant="right">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-primary rounded-3xl blur-2xl opacity-30" />
-              <div className="relative bg-card/80 backdrop-blur-sm border-2 border-accent/40 rounded-3xl p-6 md:p-8 space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-accent/20">
-                  <span className="text-xs font-bold text-accent uppercase tracking-wider">Semana 03</span>
-                  <span className="text-xs text-muted-foreground">Funções • Cinemática</span>
-                </div>
-                {[
-                  { lvl: "Nível 1 Base", color: "bg-emerald-500/20 text-emerald-400", done: true },
-                  { lvl: "Nível 2 Intermediário", color: "bg-amber-500/20 text-amber-400", done: true },
-                   { lvl: "Nível 3 Avançado", color: "bg-accent/20 text-accent", done: false },
-                  { lvl: "🎴 Flashcard do assunto", color: "bg-primary/30 text-foreground", done: false },
-                ].map((s, i) => (
-                  <div key={i} className={`flex items-center justify-between p-3 rounded-xl ${s.color} border border-current/20`}>
-                    <span className="text-sm md:text-base font-semibold">{s.lvl}</span>
-                    {s.done ? <CheckCircle2 className="w-5 h-5" /> : <span className="text-xs font-bold">EM ANDAMENTO</span>}
-                  </div>
-                ))}
-                <div className="pt-3 border-t border-accent/20">
-                  <p className="text-xs text-center text-muted-foreground">Progresso da semana</p>
-                  <div className="mt-2 h-2 bg-muted rounded-full overflow-hidden">
-                    <div className="h-full w-1/2 bg-gradient-primary" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-
-        <ScrollReveal>
-          <div className="text-center mt-12">
-            <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-              QUERO ESTUDAR COM ESTRATÉGIA →
-            </Button>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
-
-    {/* QUEM SOU EU - encurtado */}
+    {/* QUEM SOU EU */}
     <section className="py-14 md:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
       <div className="container relative z-10 mx-auto px-6 max-w-5xl">
@@ -567,7 +486,7 @@ const Questoes = () => {
             <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-10 items-center">
               <div className="relative mx-auto md:mx-0 max-w-[260px]">
                 <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-2xl opacity-30" />
-                <img src={bryanUniform.url} alt="Bryan Hibeck" className="relative rounded-2xl w-full object-cover shadow-premium border-2 border-accent/20" loading="lazy" />
+                <img src={bryanPhoto} alt="Bryan Hibeck" className="relative rounded-2xl w-full object-cover shadow-premium border-2 border-accent/20" loading="lazy" />
               </div>
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 bg-gradient-primary rounded-full px-3 py-1.5">
@@ -576,10 +495,16 @@ const Questoes = () => {
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold">Bryan Hibeck</h3>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Mais de <strong className="text-accent">20 mil questões resolvidas</strong> em 8 meses de preparação. Aprovado em <strong className="text-foreground">10º na AFA</strong>, <strong className="text-foreground">8º na EFOMM</strong> e <strong className="text-foreground">15º na EEAr (BCT)</strong>.
+                  Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-accent">+10.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Fui aprovado na <strong className="text-foreground">AFA como 10º colocado geral</strong> (01 de Infantaria, 04 de Intendência e 05 de Aviação), na <strong className="text-foreground">EFOMM como 08º colocado</strong> e na <strong className="text-foreground">EEAr (BCT) como 15º colocado</strong>.
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Estudo concurso militar desde 2021 e consegui minha primeira classificação na <strong className="text-foreground">EPCAr</strong> estudando apenas 3 meses, ainda no mesmo ano. Vivi cada bastidor, errei muito, ajustei o método e hoje meu trabalho é te entregar o atalho que eu não tive.
                 </p>
                 <p className="text-sm md:text-base text-foreground font-semibold">
-                  Agora minha missão é entregar pra você o método que me levou ao topo. 🎯
+                  Minha missão agora é simples: te entregar o passo a passo que me levou ao topo.
                 </p>
               </div>
             </div>
@@ -592,6 +517,7 @@ const Questoes = () => {
     <section className="py-12 md:py-20 bg-secondary/20 overflow-hidden">
       <div className="container mx-auto px-6 mb-6 md:mb-10">
         <ScrollReveal>
+          <p className="text-center text-sm md:text-base text-muted-foreground italic mb-3">↓ Vira isto aqui ↓</p>
           <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
             Resultados que <span className="bg-gradient-primary bg-clip-text text-transparent">comprovam</span>
           </h2>
@@ -679,7 +605,7 @@ const Questoes = () => {
                   {[
                     "Nivelamento automático semanal",
                     "Método FULL completo",
-                    "+20.000 questões resolvidas",
+                    "+10.000 questões resolvidas",
                     "+2.000 flashcards",
                     "Listas, simulados e desempenho",
                      "Suporte direto comigo",
@@ -732,7 +658,7 @@ const Questoes = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <FAQItem value="item-1" question="O que é o sistema de nivelamento automático?" answer="É um plano de metas semanal pronto. Cada semana traz os assuntos que você deve estudar, com 3 listas (níveis 1, 2 e 3) que evoluem em dificuldade, mais o flashcard daquele assunto. Você só precisa seguir a plataforma cuida do que estudar e quando." />
               <FAQItem value="item-2" question="Serve para qualquer concurso ou só militares?" answer="Serve para QUALQUER concurso. Temos questões de bancas civis e militares (ESA, EAM, ESPCEX, CFN, EEAR, EFOMM, AFA, EN, IME, ITA, CN, EPCAR, CMRJ, vestibulares e bancas civis em geral). O método e o nivelamento funcionam para qualquer prova." />
-              <FAQItem value="item-3" question="O que está incluso na assinatura?" answer="Banco com +20.000 questões resolvidas, Método FULL completo (videoaulas, livro, plano de metas, grupo de suporte), +2.000 flashcards, sistema de nivelamento automático semanal, filtros avançados, listas personalizadas, simulados cronometrados, painel de desempenho e suporte direto com professores." />
+              <FAQItem value="item-3" question="O que está incluso na assinatura?" answer="Banco com +10.000 questões resolvidas, Método FULL completo (videoaulas, livro, plano de metas, grupo de suporte), +2.000 flashcards, sistema de nivelamento automático semanal, filtros avançados, listas personalizadas, simulados cronometrados, painel de desempenho e suporte direto com professores." />
               <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo nos três planos. A diferença está só no preço por mês. Anual sai R$ 38,99/mês (ou R$ 377 à vista) e é o plano com maior economia. Semestral fica em R$ 50,07/mês (ou R$ 266,90 à vista). Trimestral em R$ 56,04/mês (ou R$ 157 à vista). Quanto maior o compromisso, menor o valor." />
               <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias de garantia incondicional. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
               <FAQItem value="item-6" question="Como funciona o acesso?" answer="Após o pagamento, você recebe acesso imediato à plataforma. Pode estudar pelo celular, tablet ou computador, no horário que quiser." />

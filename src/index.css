@@ -221,9 +221,9 @@ All colors MUST be HSL.
 /* Transições longas: o dourado invade o roxo e se dissipa */
 .theme-questoes .seam-to-purple {
   position: relative;
-  height: 200px;
-  margin-top: -1px;
-  margin-bottom: -1px;
+  height: 220px;
+  margin-top: -8px;
+  margin-bottom: -8px;
   background: linear-gradient(180deg,
     hsl(0 0% 4%) 0%,
     hsl(230 18% 5%) 40%,
@@ -246,9 +246,9 @@ All colors MUST be HSL.
 }
 .theme-questoes .seam-to-amber {
   position: relative;
-  height: 200px;
-  margin-top: -1px;
-  margin-bottom: -1px;
+  height: 220px;
+  margin-top: -8px;
+  margin-bottom: -8px;
   background: linear-gradient(180deg,
     hsl(260 28% 5%) 0%,
     hsl(255 24% 5%) 25%,
@@ -271,34 +271,34 @@ All colors MUST be HSL.
 }
 
 /* =====================================================
-   Mentoria FULL — paleta scoped (bordô + cobre)
-   "theme-purple" dentro do escopo restaura o dark purple
-   apenas nas seções de plataforma / Banco FULL Questões.
+   Mentoria FULL — paleta scoped (azul-marinho profundo + cyan-aqua)
+   Inspirado no fundo naval do hero. Sem dourado.
+   "theme-purple" restaura o dark purple nas seções de plataforma.
    ===================================================== */
 .theme-mentoria {
-  --background: 0 0% 4%;
+  --background: 215 55% 5%;
   --foreground: 0 0% 98%;
-  --card: 0 12% 7%;
+  --card: 215 45% 8%;
   --card-foreground: 0 0% 98%;
-  --secondary: 350 18% 8%;
-  --muted: 350 10% 14%;
-  --muted-foreground: 20 8% 72%;
-  --border: 350 18% 18%;
-  --primary: 350 70% 32%;
+  --secondary: 215 40% 9%;
+  --muted: 215 28% 14%;
+  --muted-foreground: 200 12% 74%;
+  --border: 210 35% 18%;
+  --primary: 210 80% 38%;
   --primary-foreground: 0 0% 100%;
-  --accent: 14 88% 58%;
-  --accent-foreground: 0 0% 100%;
-  --accent-dark: 14 70% 38%;
-  --ring: 350 70% 32%;
+  --accent: 190 92% 56%;
+  --accent-foreground: 215 60% 10%;
+  --accent-dark: 200 75% 35%;
+  --ring: 210 80% 38%;
 
-  --gradient-primary: linear-gradient(135deg, hsl(14 88% 60%) 0%, hsl(350 75% 32%) 100%);
-  --gradient-beige-premium: linear-gradient(135deg, hsl(20 92% 65%) 0%, hsl(14 88% 55%) 50%, hsl(350 75% 30%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(350 18% 8%) 50%, hsl(0 0% 4%) 100%);
-  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(14 88% 65%) 100%);
+  --gradient-primary: linear-gradient(135deg, hsl(190 95% 60%) 0%, hsl(210 85% 38%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(185 95% 65%) 0%, hsl(195 90% 52%) 50%, hsl(215 80% 32%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(215 55% 5%) 0%, hsl(215 40% 9%) 50%, hsl(215 55% 5%) 100%);
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(190 92% 70%) 100%);
 
-  --shadow-premium: 0 20px 60px -10px hsl(14 80% 45% / 0.4), 0 10px 30px -10px hsl(350 70% 40% / 0.35), 0 0 80px hsl(14 80% 50% / 0.18);
-  --glow-beige: 0 0 60px hsl(14 88% 58% / 0.55), 0 0 100px hsl(14 88% 58% / 0.32), 0 0 140px hsl(350 75% 45% / 0.22);
-  --shadow-glow-beige: 0 10px 40px hsl(14 88% 58% / 0.5), 0 0 80px hsl(14 88% 55% / 0.3), 0 0 120px hsl(350 70% 40% / 0.2);
+  --shadow-premium: 0 20px 60px -10px hsl(190 80% 45% / 0.35), 0 10px 30px -10px hsl(210 80% 40% / 0.3), 0 0 80px hsl(190 80% 50% / 0.18);
+  --glow-beige: 0 0 60px hsl(190 92% 56% / 0.5), 0 0 100px hsl(190 92% 56% / 0.3), 0 0 140px hsl(210 80% 45% / 0.2);
+  --shadow-glow-beige: 0 10px 40px hsl(190 92% 56% / 0.45), 0 0 80px hsl(190 88% 52% / 0.28), 0 0 120px hsl(210 75% 40% / 0.18);
 }
 
 .theme-mentoria .theme-purple {
@@ -327,16 +327,16 @@ All colors MUST be HSL.
   --shadow-glow-beige: 0 10px 40px hsl(268 80% 55% / 0.4), 0 0 80px hsl(268 75% 45% / 0.25);
 }
 
-/* Seams Mentoria: bordô → roxo e roxo → bordô */
+/* Seams Mentoria: navy → roxo e roxo → navy */
 .theme-mentoria .seam-to-purple {
   position: relative;
-  height: 200px;
-  margin-top: -1px;
-  margin-bottom: -1px;
+  height: 220px;
+  margin-top: -8px;
+  margin-bottom: -8px;
   background: linear-gradient(180deg,
-    hsl(0 0% 4%) 0%,
-    hsl(330 18% 5%) 35%,
-    hsl(290 22% 5%) 70%,
+    hsl(215 55% 5%) 0%,
+    hsl(230 45% 5%) 35%,
+    hsl(250 35% 5%) 70%,
     hsl(260 28% 5%) 100%);
   overflow: hidden;
   pointer-events: none;
@@ -347,33 +347,33 @@ All colors MUST be HSL.
   inset: -20% 10% auto 10%;
   height: 90%;
   background: radial-gradient(ellipse at 50% 0%,
-    hsl(14 88% 58% / 0.22) 0%,
-    hsl(350 75% 40% / 0.15) 30%,
+    hsl(190 92% 56% / 0.22) 0%,
+    hsl(210 80% 45% / 0.15) 30%,
     hsl(268 70% 45% / 0.10) 60%,
     transparent 80%);
   filter: blur(40px);
 }
-.theme-mentoria .seam-to-bordo {
+.theme-mentoria .seam-to-navy {
   position: relative;
-  height: 200px;
-  margin-top: -1px;
-  margin-bottom: -1px;
+  height: 220px;
+  margin-top: -8px;
+  margin-bottom: -8px;
   background: linear-gradient(180deg,
     hsl(260 28% 5%) 0%,
-    hsl(290 22% 5%) 30%,
-    hsl(330 18% 5%) 65%,
-    hsl(0 0% 4%) 100%);
+    hsl(250 35% 5%) 30%,
+    hsl(230 45% 5%) 65%,
+    hsl(215 55% 5%) 100%);
   overflow: hidden;
   pointer-events: none;
 }
-.theme-mentoria .seam-to-bordo::before {
+.theme-mentoria .seam-to-navy::before {
   content: "";
   position: absolute;
   inset: auto 10% -20% 10%;
   height: 90%;
   background: radial-gradient(ellipse at 50% 100%,
-    hsl(14 88% 58% / 0.22) 0%,
-    hsl(350 75% 40% / 0.15) 30%,
+    hsl(190 92% 56% / 0.22) 0%,
+    hsl(210 80% 45% / 0.15) 30%,
     hsl(268 70% 45% / 0.10) 60%,
     transparent 80%);
   filter: blur(40px);

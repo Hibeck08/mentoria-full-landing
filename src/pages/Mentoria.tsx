@@ -17,6 +17,12 @@ import heroPhoto from "@/assets/hero-photo.jpg";
 import heroMain from "@/assets/hero-main.png";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
 import ankiCardExample from "@/assets/anki-card-example.png";
+import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop.png.asset.json";
+import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
+import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
+import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
+import { GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {
   const [visible, setVisible] = React.useState(false);
@@ -70,8 +76,8 @@ const Mentoria = () => {
       {/* HERO */}
       <section className="relative min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/hero-mobile.png" alt="Background" className="block md:hidden w-full h-full object-cover object-[50%_18%] brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
-          <img src={heroMain} alt="Background" className="hidden md:block w-full h-full object-cover object-[center_35%] lg:object-center brightness-90 contrast-110 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={mentoriaHeroMobile.url} alt="Background" className="block md:hidden w-full h-full object-cover object-center brightness-95 contrast-105 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={mentoriaHeroDesktop.url} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-95 contrast-105 saturate-110" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/85 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
           <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />
@@ -261,115 +267,109 @@ const Mentoria = () => {
         </div>
       </section>
 
-      {/* BANCO FULL QUESTÕES SHOWCASE */}
-      <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
-        <div className="container relative z-10 mx-auto px-6">
+      {/* DENTRO DA PLATAFORMA - banners reais (escopo roxo) */}
+      <section className="theme-purple py-14 md:py-24 bg-gradient-to-b from-background via-secondary/15 to-background relative overflow-hidden">
+        <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-accent rounded-full blur-[160px] opacity-[0.08]" />
+        <div className="container relative z-10 mx-auto px-6 max-w-6xl">
           <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Database className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Plataforma Inclusa</span>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">O que você desbloqueia</span>
               </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Banco <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> de quebra
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+                Tudo o que você vê aqui é <span className="bg-gradient-primary bg-clip-text text-transparent">real</span>
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                +10.000 questões resolvidas, nivelamento automático e listas inteligentes. <strong className="text-accent">Acesso liberado pra todo aluno da mentoria.</strong>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Não é mockup. É a plataforma que centenas de alunos da Mentoria já estão usando hoje pra estudar com método.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-16">
-            {[
-              { icon: Database, t: "+10.000 questões", d: "Resolvidas e comentadas em detalhes." },
-              { icon: Filter, t: "Filtros avançados", d: "Matéria, banca, ano, dificuldade e nível." },
-              { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado por assunto." },
-              { icon: TrendingUp, t: "Painel com tendência", d: "Acerto por matéria, dia, mês, ranking e simulado semanal." },
-            ].map((b, i) => (
-              <ScrollReveal key={i} delay={i * 80} variant="scale">
-                <div className="group h-full bg-card/70 backdrop-blur-sm border border-accent/30 rounded-2xl p-4 md:p-5 hover:border-accent hover:-translate-y-1 transition-all">
-                  <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center shadow-lg mb-3 group-hover:rotate-6 transition-transform">
-                    <b.icon className="w-5 h-5 text-accent-foreground" />
+          <div className="space-y-8 md:space-y-10">
+            <ScrollReveal variant="left">
+              <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300">
+                <img src={metodoGridBanner.url} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                    <GraduationCap className="w-3 h-3 text-accent" />
+                    <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Método FULL incluso</span>
                   </div>
-                  <h4 className="text-sm md:text-base font-bold text-foreground mb-1">{b.t}</h4>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{b.d}</p>
+                  <h3 className="text-xl md:text-3xl font-black text-white mb-1">Aulas que ensinam <span className="text-accent">como estudar</span></h3>
+                  <p className="text-white/80 text-sm md:text-base">Introdução ao método, como filtrar questões, como usar flashcards, como revisar e simular. Tudo destrinchado.</p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              <ScrollReveal variant="left">
+                <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 min-h-[340px] md:min-h-[420px]">
+                  <img src={flashcardsCloseupBanner.url} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+                    <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                      <Layers className="w-3 h-3 text-accent" />
+                      <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">+2.000 cards</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-black text-white mb-1">Flashcards Anki <span className="text-accent">de tudo que cai</span></h3>
+                    <p className="text-white/80 text-sm">Revisão espaçada que fixa de verdade sem reler matéria de novo.</p>
+                  </div>
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
 
-          <div className="max-w-5xl mx-auto space-y-12 md:space-y-16">
-            <ScrollReveal variant="right">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                    <Search className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">Filtros inteligentes</span>
+              <ScrollReveal variant="right">
+                <div className="relative h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-8 min-h-[340px] md:min-h-[420px] flex flex-col justify-between hover:border-accent/60 transition-all duration-300">
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center gap-1.5 bg-accent/15 border border-accent/40 rounded-full px-3 py-1">
+                      <Database className="w-3 h-3 text-accent" />
+                      <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Banco completo</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">+10.000 questões resolvidas, todas <span className="text-accent">comentadas</span></h3>
+                    <ul className="space-y-2 pt-2">
+                      {[
+                        "Bancas civis e militares (ESA, EAM, EsPCEx, EFOMM, AFA, EEAR e mais)",
+                        "Filtros por matéria, assunto, banca, ano e dificuldade",
+                        "Resolução passo a passo. Você não trava mais quando erra.",
+                        "Listas personalizadas e simulados cronometrados",
+                      ].map((f, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
+                          <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">Achou. Resolveu. <span className="text-accent">Aprendeu.</span></h3>
-                  <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com resolução comentada passo a passo você não fica mais travado quando erra.</p>
-                </div>
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                    <img src="/platform/resolucao.png" alt="Resolução comentada" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal variant="left">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="relative group order-2 md:order-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                    <img src="/platform/listas-desktop.png" alt="Listas de estudo" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-                <div className="space-y-4 order-1 md:order-2">
-                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                    <FileText className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">Listas inteligentes</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">Seu plano de ataque <span className="text-accent">já montado</span></h3>
-                  <p className="text-muted-foreground leading-relaxed">3 listas progressivas por assunto (base, intermediário, avançado) + flashcard de fechamento. Você só abre, executa e sobe de nível.</p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal variant="right">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                    <TrendingUp className="w-4 h-4 text-accent" />
-                    <span className="text-sm font-semibold text-accent">Desempenho em tempo real</span>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold">Saiba <span className="text-accent">exatamente</span> onde você está</h3>
-                  <p className="text-muted-foreground leading-relaxed">Gráficos de acerto por matéria, evolução semanal e ranking. Pare de estudar no escuro <strong className="text-accent">você vê a nota subir antes da prova</strong>.</p>
-                </div>
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                  <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                    <img src="/platform/desempenho-desktop.png" alt="Painel de desempenho" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+                  <div className="grid grid-cols-3 gap-2 pt-5 mt-5 border-t border-accent/20">
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-black text-accent">10k+</p>
+                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Questões</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-black text-accent">2k+</p>
+                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Flashcards</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-black text-accent">50+</p>
+                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Bancas</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           </div>
 
           <ScrollReveal>
-            <div className="text-center mt-12">
+            <div className="text-center mt-12 md:mt-14">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ESSA PLATAFORMA →
+                QUERO ENTRAR PRA MENTORIA →
               </Button>
+              <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <div className="seam-to-bordo" aria-hidden="true" />
+      <div className="seam-to-navy" aria-hidden="true" />
 
       {/* 3 PILARES */}
       <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
@@ -511,42 +511,6 @@ const Mentoria = () => {
               </Button>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* FLASHCARDS – compacto */}
-      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-accent rounded-full blur-[150px] opacity-10" />
-        <div className="container relative z-10 mx-auto px-6">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            <ScrollReveal variant="left">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                  <Layers className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-semibold text-accent">Flashcards Anki</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold">
-                  Revise igual quem <span className="text-accent">passa de verdade</span>
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  São <strong className="text-accent">+2.000 flashcards</strong> prontos, com teoria objetiva, exemplos e questões. Você só abre e revisa sem perder uma hora montando material.
-                </p>
-                <ul className="space-y-2">
-                  {["Todas as matérias do edital", "Imagens ilustrativas pra fixar", "Revisão espaçada que funciona"].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-foreground/90">
-                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />{t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal variant="right">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-xl opacity-30" />
-                <img src={ankiCardExample} alt="Exemplo de Flashcard" className="relative rounded-2xl shadow-premium border-2 border-accent/30 w-full max-w-md mx-auto" loading="lazy" />
-              </div>
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 

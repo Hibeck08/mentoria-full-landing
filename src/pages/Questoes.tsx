@@ -5,11 +5,15 @@ import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play } from "lucide-react";
+import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play, AlertTriangle, Flame, Sparkles, Clock, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.png";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
+import bryanUniform from "@/assets/bryan-uniform.jpg.asset.json";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
+import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
+import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
 
 const FloatingWhatsApp = () => {
   const [visible, setVisible] = React.useState(false);
@@ -34,6 +38,8 @@ const Questoes = () => {
     document.getElementById('planos-questoes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const [vslPlaying, setVslPlaying] = React.useState(false);
+
   const pillars = [
      { iconKey: "Layers" as const, badge: "NOVO", title: "Nivelamento Automático", desc: "Bancas civis e militares comentadas. Filtre por matéria, assunto, banca, ano e dificuldade." },
     { iconKey: "GraduationCap" as const, badge: "EXCLUSIVO", title: "Método FULL Incluso", desc: "Videoaulas ensinando como estudar, filtrar, revisar e se organizar. Plano de metas, livro da metodologia e grupo de suporte." },
@@ -42,16 +48,43 @@ const Questoes = () => {
 
   const planos = [
     {
-      nome: "Mensal", destaque: false, preco: "R$ 44,90", precoAntigo: "R$ 59,90", periodo: "/mês", parcela: null,
-      total: "Cobrado mensalmente", link: "https://pay.kiwify.com.br/Kn3mHd3", cta: "ASSINAR MENSAL",
+      nome: "Trimestral",
+      destaque: false,
+      preco: "R$ 56,04",
+      precoAntigo: "R$ 59,90",
+      periodo: "/mês",
+      parcela: "ou R$ 157,00 à vista",
+      total: "Comece com baixo compromisso",
+      link: "https://pay.kiwify.com.br/HQCYyoR",
+      cta: "QUERO O TRIMESTRAL",
+      badge: null,
+      economia: null,
     },
     {
-      nome: "Anual", destaque: true, preco: "R$ 36,92", precoAntigo: "R$ 53,47", periodo: "/mês", parcela: "ou 1x de R$ 357,00 /ano",
-      total: "Maior economia", link: "https://pay.kiwify.com.br/TtaJ1TO", cta: "QUERO O ANUAL",
+      nome: "Semestral",
+      destaque: false,
+      preco: "R$ 50,07",
+      precoAntigo: "R$ 56,04",
+      periodo: "/mês",
+      parcela: "ou R$ 266,90 à vista",
+      total: "Economize R$ 35,82 vs Trimestral",
+      link: "https://pay.kiwify.com.br/5Y3FKc4",
+      cta: "QUERO O SEMESTRAL",
+      badge: "ECONOMIA",
+      economia: "R$ 35,82",
     },
     {
-      nome: "Semestral", destaque: false, preco: "R$ 37,33", precoAntigo: "R$ 55,72", periodo: "/mês", parcela: "ou 1x de R$ 199,90 /semestre",
-      total: "Economize R$ 112/mês", link: "https://pay.kiwify.com.br/XY03b6t", cta: "QUERO O SEMESTRAL",
+      nome: "Anual",
+      destaque: true,
+      preco: "R$ 38,99",
+      precoAntigo: "R$ 56,04",
+      periodo: "/mês",
+      parcela: "ou R$ 377,00 à vista",
+      total: "Economize R$ 204,60/ano vs Trimestral",
+      link: "https://pay.kiwify.com.br/QM4Ph8c",
+      cta: "QUERO O ANUAL",
+      badge: "MELHOR PLANO",
+      economia: "R$ 204,60",
     },
   ];
 
@@ -117,6 +150,78 @@ const Questoes = () => {
             ⭐ NIVELAMENTO • MÉTODO • +20.000 QUESTÕES RESOLVIDAS ⭐
           </p>
         </div>
+      </div>
+    </section>
+
+    {/* SEÇÃO PAS - 3 ERROS QUE TRAVAM SUA APROVAÇÃO */}
+    <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <img src={militaryCollageBanner.url} alt="" className="w-full h-full object-cover object-center" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
+      </div>
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-red-600/15 rounded-full blur-[160px]" />
+
+      <div className="container relative z-10 mx-auto px-6 max-w-6xl">
+        <ScrollReveal>
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 bg-red-600/15 border border-red-500/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+              <AlertTriangle className="w-4 h-4 text-red-400" />
+              <span className="text-xs font-bold text-red-300 uppercase tracking-wider">Por que tanta gente trava</span>
+            </div>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
+              Não é talento. Não é tempo. <br className="hidden md:block" />
+              <span className="bg-gradient-primary bg-clip-text text-transparent">É estrutura.</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Quem classifica não estuda mais — <strong className="text-foreground">estuda diferente</strong>. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          {[
+            {
+              n: "01",
+              title: "Passa mais tempo decidindo do que estudando",
+              desc: "Sem plano de metas e sem ordem certa, 60% do seu tempo vai embora só decidindo o que fazer. Esforço grande, nota parada, sensação de andar em círculos.",
+            },
+            {
+              n: "02",
+              title: "Some na primeira semana ruim",
+              desc: "Dois dias firme, para três, volta com culpa e repete o ciclo. Sem alguém puxando, a rotina sempre desmoronaconstância é o que separa quem passa de quem fica.",
+            },
+            {
+              n: "03",
+              title: "Faz questão solta e não sabe o que errou",
+              desc: "Caça PDF perdido, resolve sem critério, vê o gabarito e segue achando que aprendeu. Chega na prova sem repertório e sem saber se evoluiu — porque nunca treinou no padrão real da banca.",
+            },
+          ].map((e, i) => (
+            <ScrollReveal key={i} delay={i * 120}>
+              <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-red-900/40 rounded-2xl p-6 md:p-7 hover:border-red-500/60 transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-red-600 to-red-900 rounded-xl flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-black text-white">{e.n}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-red-300 uppercase tracking-wider mt-3">
+                    <XCircle className="w-3 h-3" />
+                    Erro {e.n} de 03
+                  </div>
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 leading-snug">{e.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{e.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+
+        <ScrollReveal>
+          <div className="text-center mt-12 md:mt-16 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-foreground font-semibold mb-2">
+              E quando alguém junta <span className="text-accent">direção</span>, <span className="text-accent">constância</span> e <span className="text-accent">treino no lugar certo</span>?
+            </p>
+            <p className="text-sm md:text-base text-muted-foreground italic">↓ Vira isto aqui ↓</p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
 
@@ -196,112 +301,178 @@ const Questoes = () => {
       </div>
     </section>
 
-    {/* CONHEÇA A PLATAFORMA - movida para cima, só 4 imagens */}
+    {/* VSL - VÍDEO DE VENDAS */}
     <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
-      <div className="container relative z-10 mx-auto px-6">
+      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-15" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+      <div className="container relative z-10 mx-auto px-6 max-w-5xl">
         <ScrollReveal>
-          <div className="text-center mb-10 md:mb-16">
-            <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
-              <Rocket className="w-4 h-4 text-accent" />
-              <span className="text-xs font-bold text-accent uppercase tracking-wider">Tour pela plataforma</span>
+          <div className="text-center mb-8 md:mb-12">
+            <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-5 shadow-glow-beige">
+              <Play className="w-4 h-4 fill-current" />
+              <span className="text-xs font-bold uppercase tracking-wider">Assista antes de decidir</span>
             </div>
-            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-              Conheça a <span className="bg-gradient-primary bg-clip-text text-transparent">plataforma</span>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+              Conheça a <span className="bg-gradient-primary bg-clip-text text-transparent">plataforma</span> por dentro
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Simples, rápida e feita pra estudar de verdade.
+              Em poucos minutos eu te mostro <strong className="text-foreground">cada ferramenta</strong>, como o nivelamento funciona e por que ele encurta meses de estudo perdido.
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="max-w-6xl mx-auto space-y-14 md:space-y-20">
-          {/* Filtros */}
+        <ScrollReveal>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute -inset-3 md:-inset-4 bg-gradient-primary rounded-3xl blur-2xl opacity-50" />
+            <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/40 shadow-premium bg-black">
+              {vslPlaying ? (
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/qoa3CiyRrNU?autoplay=1&rel=0&modestbranding=1"
+                  title="Conheça a plataforma FULL Questões"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setVslPlaying(true)}
+                  className="group absolute inset-0 w-full h-full cursor-pointer"
+                  aria-label="Assistir ao vídeo da plataforma"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/qoa3CiyRrNU/maxresdefault.jpg"
+                    alt="Tour pela plataforma FULL Questões"
+                    className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity animate-pulse" />
+                      <div className="relative w-20 h-20 md:w-28 md:h-28 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow-beige group-hover:scale-110 transition-transform duration-300">
+                        <Play className="w-9 h-9 md:w-12 md:h-12 text-accent-foreground fill-current ml-1.5" />
+                      </div>
+                    </div>
+                    <div className="text-center px-4">
+                      <p className="text-white font-bold text-base md:text-2xl drop-shadow-lg">Clique para assistir o tour completo</p>
+                      <p className="text-white/80 text-xs md:text-sm mt-1 drop-shadow">⏱ Vídeo curto · sem enrolação</p>
+                    </div>
+                  </div>
+                </button>
+              )}
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="text-center mt-10 md:mt-12">
+            <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+              QUERO ACESSAR A PLATAFORMA →
+            </Button>
+            <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+
+    {/* DENTRO DA PLATAFORMA - banners reais */}
+    <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/15 to-background relative overflow-hidden">
+      <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-accent rounded-full blur-[160px] opacity-10" />
+      <div className="container relative z-10 mx-auto px-6 max-w-6xl">
+        <ScrollReveal>
+          <div className="text-center mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span className="text-xs font-bold text-accent uppercase tracking-wider">O que você desbloqueia</span>
+            </div>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+              Tudo o que você vê aqui é <span className="bg-gradient-primary bg-clip-text text-transparent">real</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              Não é mockup. É a plataforma que centenas de alunos já estão usando hoje pra estudar com método.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="space-y-8 md:space-y-10">
           <ScrollReveal variant="left">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative group order-2 md:order-1">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                  <img src="/platform/banco-filtros.png" alt="Filtros" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+            <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300">
+              <img src={metodoGridBanner.url} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                  <GraduationCap className="w-3 h-3 text-accent" />
+                  <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Método FULL incluso</span>
                 </div>
-              </div>
-              <div className="space-y-4 order-1 md:order-2">
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                  <Search className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-semibold text-accent">Filtros Inteligentes</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold">Encontre a questão <span className="text-accent">perfeita</span> em segundos</h3>
-                 <p className="text-muted-foreground leading-relaxed">Filtre por matéria, assunto, banca, ano e dificuldade. Cada questão vem com resolução comentada passo a passo você não fica mais travado quando erra.</p>
+                <h3 className="text-xl md:text-3xl font-black text-white mb-1">Aulas que ensinam <span className="text-accent">como estudar</span></h3>
+                <p className="text-white/80 text-sm md:text-base">Introdução ao método, como filtrar questões, como usar flashcards, como revisar e simular. Tudo destrinchado.</p>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Resolução */}
-          <ScrollReveal variant="right">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                  <Brain className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-semibold text-accent">Resolução Detalhada</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold">Errou? <span className="text-accent">Aprenda na hora.</span></h3>
-                 <p className="text-muted-foreground leading-relaxed">Cada questão vem com resolução comentada passo a passo\nvocê não fica mais travado quando erra.</p>
-              </div>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                  <img src="/platform/resolucao.png" alt="Resolução" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            <ScrollReveal variant="left">
+              <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 min-h-[340px] md:min-h-[420px]">
+                <img src={flashcardsCloseupBanner.url} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                    <Layers className="w-3 h-3 text-accent" />
+                    <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">+2.000 cards</span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black text-white mb-1">Flashcards Anki <span className="text-accent">de tudo que cai</span></h3>
+                  <p className="text-white/80 text-sm">Revisão espaçada que fixa de verdade sem reler matéria de novo.</p>
                 </div>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
 
-          {/* Listas */}
-          <ScrollReveal variant="left">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative group order-2 md:order-1">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                  <p className="text-muted-foreground leading-relaxed">A plataforma aponta a matéria que mais precisa de atenção.</p>
+            <ScrollReveal variant="right">
+              <div className="relative h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-8 min-h-[340px] md:min-h-[420px] flex flex-col justify-between hover:border-accent/60 transition-all duration-300">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/15 border border-accent/40 rounded-full px-3 py-1">
+                    <Database className="w-3 h-3 text-accent" />
+                    <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Banco completo</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">+20.000 questões resolvidas, todas <span className="text-accent">comentadas</span></h3>
+                  <ul className="space-y-2 pt-2">
+                    {[
+                      "Bancas civis e militares (ESA, EAM, EsPCEx, EFOMM, AFA, EEAR e mais)",
+                      "Filtros por matéria, assunto, banca, ano e dificuldade",
+                      "Resolução passo a passo — você não trava mais",
+                      "Listas personalizadas e simulados cronometrados",
+                    ].map((f, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm md:text-base text-muted-foreground">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="grid grid-cols-3 gap-2 pt-5 mt-5 border-t border-accent/20">
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-black text-accent">20k+</p>
+                    <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Questões</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-black text-accent">2k+</p>
+                    <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Flashcards</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl md:text-3xl font-black text-accent">50+</p>
+                    <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Bancas</p>
+                  </div>
                 </div>
               </div>
-              <div className="space-y-4 order-1 md:order-2">
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                  <FileText className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-semibold text-accent">Listas Personalizadas</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold">Seu <span className="text-accent">plano de ataque</span>, do seu jeito</h3>
-                 <p className="text-muted-foreground leading-relaxed">Crie listas com as questões que você quer revisar/ aprender.</p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Questões */}
-          <ScrollReveal variant="right">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5">
-                  <Target className="w-4 h-4 text-accent" />
-                  <span className="text-sm font-semibold text-accent">Prática Direcionada</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold">Foco no que <span className="text-accent">realmente importa</span></h3>
-                <p className="text-muted-foreground leading-relaxed">A plataforma aponta a matéria que mais precisa de atenção.</p>
-              </div>
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/10 rounded-2xl blur-xl opacity-60" />
-                <div className="relative bg-card/80 backdrop-blur-sm border border-accent/30 rounded-2xl p-2 md:p-3">
-                  <img src="/platform/questoes-lista.png" alt="Questões" className="w-full rounded-xl object-contain" loading="lazy" decoding="async" />
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
         </div>
 
         <ScrollReveal>
-          <div className="text-center mt-14">
+          <div className="text-center mt-12 md:mt-14">
             <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-               QUERO UM BANCO DE QUESTÕES →
+              DESTRAVAR TUDO ISSO →
             </Button>
+            <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
           </div>
         </ScrollReveal>
       </div>

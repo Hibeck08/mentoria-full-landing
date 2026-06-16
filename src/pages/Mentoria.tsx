@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SeamMarquee } from "@/components/SeamMarquee";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import {
@@ -191,6 +192,7 @@ const Mentoria = () => {
       </section>
 
       <div className="seam-to-purple" aria-hidden="true" />
+      <SeamMarquee text="FULL HIBECK" />
 
       {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
       <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
@@ -369,6 +371,7 @@ const Mentoria = () => {
         </div>
       </section>
 
+      <SeamMarquee text="FULL HIBECK" />
       <div className="seam-to-navy" aria-hidden="true" />
 
       {/* 3 PILARES */}

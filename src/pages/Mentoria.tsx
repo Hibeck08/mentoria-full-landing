@@ -155,8 +155,8 @@ const Mentoria = () => {
           <div className="grid md:grid-cols-3 gap-5 md:gap-6">
             {[
               { n: "01", title: "Estuda sem plano e sem ordem", desc: "Sem alguém te dizendo o que estudar hoje, você gasta mais tempo decidindo do que praticando. Esforço grande, nota parada, sensação de andar em círculos." },
-              { n: "02", title: "Some na primeira semana ruim", desc: "Dois dias firme, para três, volta com culpa e repete o ciclo. Sem mentoria e sem rotina viva, a constância desmorona, e constância é o que separa quem passa de quem fica." },
-              { n: "03", title: "Não tem quem corrija e oriente", desc: "Erra a mesma coisa por meses. Resolve questão sem entender o gabarito, escreve redação sem feedback e chega na prova sem saber se realmente evoluiu." },
+              { n: "02", title: "Desiste na primeira semana ruim", desc: "\u00a0Sem alguém direcionando, você não consegue seguir uma rotina. E constância é o que separa quem passa de quem fica." },
+              { n: "03", title: "Faz questão sem filtro e não sabe o que errou", desc: "Caça PDF, resolve sem ver resolução, vê o gabarito e segue achando que aprendeu. Chega na prova sem saber nada e sem saber se evoluiu, porque nunca treinou direito." },
             ].map((e, i) => (
               <ScrollReveal key={i} delay={i * 120}>
                 <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-accent/25 rounded-2xl p-6 md:p-7 hover:border-accent/60 transition-all duration-300">

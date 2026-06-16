@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.webp";
 import adelphiHero from "@/assets/adelphi-hero.webp";
 import adelphiBanner2 from "@/assets/adelphi-banner-2.webp";
-import bryanPhoto from "@/assets/bryan-photo.jpg";
+import bryanPhoto from "@/assets/bryan-photo.webp";
 import fontesPhoto from "@/assets/fontes-photo.webp";
 import teixeiraPhoto from "@/assets/teixeira-photo.webp";
 

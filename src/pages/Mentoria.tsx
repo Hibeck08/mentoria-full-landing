@@ -14,10 +14,10 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.webp";
-import heroPhoto from "@/assets/hero-photo.jpg";
+import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
-import bryanPhoto from "@/assets/bryan-photo.jpg";
-import ankiCardExample from "@/assets/anki-card-example.png";
+import bryanPhoto from "@/assets/bryan-photo.webp";
+import ankiCardExample from "@/assets/anki-card-example.webp";
 import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop.png.asset.json";
 import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
 import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";

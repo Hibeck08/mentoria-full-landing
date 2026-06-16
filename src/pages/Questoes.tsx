@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { SeamMarquee } from "@/components/SeamMarquee";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play, AlertTriangle, Flame, Sparkles, Clock, XCircle } from "lucide-react";

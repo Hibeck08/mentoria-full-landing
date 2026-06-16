@@ -221,16 +221,18 @@ All colors MUST be HSL.
 /* Transições longas: o dourado invade o roxo e se dissipa */
 .theme-questoes .seam-to-purple {
   position: relative;
-  height: 220px;
-  margin-top: -8px;
-  margin-bottom: -8px;
+  height: 360px;
+  margin-top: -80px;
+  margin-bottom: -80px;
   background: linear-gradient(180deg,
     hsl(0 0% 4%) 0%,
-    hsl(230 18% 5%) 40%,
-    hsl(255 24% 5%) 75%,
+    hsl(0 0% 4%) 18%,
+    hsl(245 22% 5%) 55%,
+    hsl(260 28% 5%) 82%,
     hsl(260 28% 5%) 100%);
   overflow: hidden;
   pointer-events: none;
+  z-index: 5;
 }
 .theme-questoes .seam-to-purple::before {
   content: "";
@@ -246,16 +248,18 @@ All colors MUST be HSL.
 }
 .theme-questoes .seam-to-amber {
   position: relative;
-  height: 220px;
-  margin-top: -8px;
-  margin-bottom: -8px;
+  height: 360px;
+  margin-top: -80px;
+  margin-bottom: -80px;
   background: linear-gradient(180deg,
     hsl(260 28% 5%) 0%,
-    hsl(255 24% 5%) 25%,
-    hsl(230 18% 5%) 60%,
+    hsl(260 28% 5%) 18%,
+    hsl(245 22% 5%) 45%,
+    hsl(0 0% 4%) 82%,
     hsl(0 0% 4%) 100%);
   overflow: hidden;
   pointer-events: none;
+  z-index: 5;
 }
 .theme-questoes .seam-to-amber::before {
   content: "";
@@ -330,16 +334,18 @@ All colors MUST be HSL.
 /* Seams Mentoria: navy → roxo e roxo → navy */
 .theme-mentoria .seam-to-purple {
   position: relative;
-  height: 220px;
-  margin-top: -8px;
-  margin-bottom: -8px;
+  height: 360px;
+  margin-top: -80px;
+  margin-bottom: -80px;
   background: linear-gradient(180deg,
     hsl(215 55% 5%) 0%,
-    hsl(230 45% 5%) 35%,
-    hsl(250 35% 5%) 70%,
+    hsl(215 55% 5%) 18%,
+    hsl(240 40% 5%) 55%,
+    hsl(260 28% 5%) 82%,
     hsl(260 28% 5%) 100%);
   overflow: hidden;
   pointer-events: none;
+  z-index: 5;
 }
 .theme-mentoria .seam-to-purple::before {
   content: "";
@@ -355,16 +361,18 @@ All colors MUST be HSL.
 }
 .theme-mentoria .seam-to-navy {
   position: relative;
-  height: 220px;
-  margin-top: -8px;
-  margin-bottom: -8px;
+  height: 360px;
+  margin-top: -80px;
+  margin-bottom: -80px;
   background: linear-gradient(180deg,
     hsl(260 28% 5%) 0%,
-    hsl(250 35% 5%) 30%,
-    hsl(230 45% 5%) 65%,
+    hsl(260 28% 5%) 18%,
+    hsl(240 40% 5%) 45%,
+    hsl(215 55% 5%) 82%,
     hsl(215 55% 5%) 100%);
   overflow: hidden;
   pointer-events: none;
+  z-index: 5;
 }
 .theme-mentoria .seam-to-navy::before {
   content: "";

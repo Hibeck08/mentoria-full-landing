@@ -386,3 +386,56 @@ All colors MUST be HSL.
     transparent 80%);
   filter: blur(40px);
 }
+
+/* =====================================================
+   Seam Marquee Banner — faixa dourada com texto rolando
+   sobreposta ao seam para disfarçar a transição amarelo↔roxo
+   ===================================================== */
+.seam-marquee-wrap {
+  position: relative;
+  z-index: 10;
+  margin-top: -28px;
+  margin-bottom: -28px;
+}
+.seam-marquee {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(38 92% 58%) 0%, hsl(32 88% 50%) 50%, hsl(38 92% 58%) 100%);
+  border-top: 2px solid hsl(28 70% 32% / 0.55);
+  border-bottom: 2px solid hsl(28 70% 32% / 0.55);
+  box-shadow:
+    0 0 40px hsl(38 92% 58% / 0.45),
+    0 0 80px hsl(38 92% 58% / 0.25),
+    inset 0 1px 0 hsl(48 100% 75% / 0.4);
+  padding: 14px 0;
+}
+@media (min-width: 768px) {
+  .seam-marquee { padding: 18px 0; }
+}
+.seam-marquee-track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: seam-scroll 30s linear infinite;
+  will-change: transform;
+}
+.seam-marquee-track > span {
+  flex-shrink: 0;
+  font-weight: 900;
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  color: hsl(20 60% 15%);
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 hsl(48 100% 80% / 0.5);
+}
+@media (min-width: 768px) {
+  .seam-marquee-track > span { font-size: 1.15rem; }
+}
+@keyframes seam-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .seam-marquee-track { animation: none; }
+}

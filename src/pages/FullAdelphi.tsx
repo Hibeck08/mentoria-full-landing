@@ -10,12 +10,12 @@ import {
   Zap, Target, Sparkles, Languages, Globe, Star, Flame, TrendingUp, Search, FileText, Crown, Headphones, PenLine
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogo from "@/assets/mentoria-logo.png";
-import adelphiHero from "@/assets/adelphi-hero.png";
-import adelphiBanner2 from "@/assets/adelphi-banner-2.png";
-import bryanPhoto from "@/assets/bryan-photo.jpg";
-import fontesPhoto from "@/assets/fontes-photo.png";
-import teixeiraPhoto from "@/assets/teixeira-photo.png";
+import mentoriaLogo from "@/assets/mentoria-logo.webp";
+import adelphiHero from "@/assets/adelphi-hero.webp";
+import adelphiBanner2 from "@/assets/adelphi-banner-2.webp";
+import bryanPhoto from "@/assets/bryan-photo.webp";
+import fontesPhoto from "@/assets/fontes-photo.webp";
+import teixeiraPhoto from "@/assets/teixeira-photo.webp";
 
 const FloatingWhatsApp = () => {
   const [visible, setVisible] = React.useState(false);

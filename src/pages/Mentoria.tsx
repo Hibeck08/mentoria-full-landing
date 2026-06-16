@@ -191,7 +191,6 @@ const Mentoria = () => {
         </div>
       </section>
 
-      <div className="seam-to-purple" aria-hidden="true" />
       <SeamMarquee text="FULL HIBECK" />
 
       {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
@@ -372,7 +371,6 @@ const Mentoria = () => {
       </section>
 
       <SeamMarquee text="FULL HIBECK" />
-      <div className="seam-to-navy" aria-hidden="true" />
 
       {/* 3 PILARES */}
       <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">

@@ -183,7 +183,7 @@ const Mentoria = () => {
               </p>
               <p className="mt-4 text-lg md:text-2xl font-black leading-snug">
                 <span className="text-foreground">A aprovação vira consequência. </span>
-                <span className="bg-gradient-primary bg-clip-text text-transparent">E é pra isso que existe a Mentoria FULL.</span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Isso é MENTORIA FULL.</span>
               </p>
             </div>
           </ScrollReveal>

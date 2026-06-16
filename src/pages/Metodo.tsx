@@ -6,13 +6,13 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Lightbulb, BarChart3, Repeat, Home } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogo from "@/assets/mentoria-logo.png";
+import mentoriaLogo from "@/assets/mentoria-logo.webp";
 import heroPhoto from "@/assets/hero-photo.jpg";
 import bryanPhoto from "@/assets/bryan-photo.jpg";
-import militaryWallpaper from "@/assets/military-wallpaper.png";
-import metodoHeroWallpaper from "@/assets/metodo-hero-wallpaper.jpg";
-import flashcardsWallpaper from "@/assets/flashcards-wallpaper.png";
-import benefitsWallpaper from "@/assets/benefits-wallpaper.png";
+import militaryWallpaper from "@/assets/military-wallpaper.webp";
+import metodoHeroWallpaper from "@/assets/metodo-hero-wallpaper.webp";
+import flashcardsWallpaper from "@/assets/flashcards-wallpaper.webp";
+import benefitsWallpaper from "@/assets/benefits-wallpaper.webp";
 const Metodo = () => {
   const scrollToPlans = () => {
     const plansSection = document.getElementById('planos-metodo');

@@ -1,11 +1,11 @@
 import { ArrowRight, Clock, Sparkles, CheckCircle, Users, Star, Infinity, Zap, MessageCircle, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogo from "@/assets/mentoria-logo.png";
-import lobbyWallpaper from "@/assets/lobby-wallpaper.png";
-import mentoriaBanner from "@/assets/mentoria-banner.png";
+import mentoriaLogo from "@/assets/mentoria-logo.webp";
+import lobbyWallpaper from "@/assets/lobby-wallpaper.webp";
+import mentoriaBanner from "@/assets/mentoria-banner.webp";
 
-import questoesBanner from "@/assets/questoes-banner.png";
-import adelphiBanner from "@/assets/adelphi-banner.png";
+import questoesBanner from "@/assets/questoes-banner.webp";
+import adelphiBanner from "@/assets/adelphi-banner.webp";
 
 interface ProductCardProps {
   title: string;

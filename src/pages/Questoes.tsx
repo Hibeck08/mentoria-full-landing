@@ -134,7 +134,7 @@ const Questoes = () => {
 
             <div className="flex flex-col items-center gap-3 pt-2 animate-fade-in-up w-full" style={{ animationDelay: "0.45s" }}>
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                 QUERO UM BANCO DE QUESTÕES →
+                QUERO UMA ORGANIZAÇÃO →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground/90">
                 Garantia de 7 dias

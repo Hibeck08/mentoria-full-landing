@@ -394,8 +394,8 @@ All colors MUST be HSL.
 .seam-marquee-wrap {
   position: relative;
   z-index: 10;
-  margin-top: -28px;
-  margin-bottom: -28px;
+  margin-top: -72px;
+  margin-bottom: -72px;
 }
 .seam-marquee {
   position: relative;

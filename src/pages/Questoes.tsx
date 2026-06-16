@@ -230,7 +230,6 @@ const Questoes = () => {
     </section>
 
     {/* VSL - VÍDEO DE VENDAS (escopo roxo) */}
-    <div className="seam-to-purple" aria-hidden="true" />
     <SeamMarquee text="FULL QUESTÕES" />
     <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] bg-accent rounded-full blur-[180px] opacity-[0.08]" />
@@ -409,7 +408,6 @@ const Questoes = () => {
     </section>
 
     <SeamMarquee text="FULL QUESTÕES" />
-    <div className="seam-to-amber" aria-hidden="true" />
     {/* 3 PILARES */}
     <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
       <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />

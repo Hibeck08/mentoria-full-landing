@@ -16,18 +16,28 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Optimize build output
+    target: "es2020",
+    cssCodeSplit: true,
+    minify: "esbuild",
+    sourcemap: false,
+    reportCompressedSize: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          // Split vendor chunks for better caching
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-slot'],
+          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-slot', '@radix-ui/react-tooltip'],
+          'icons': ['lucide-react'],
+          'query': ['@tanstack/react-query'],
         },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
       },
     },
-    // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+  },
+  esbuild: {
+    drop: mode === "production" ? ["console", "debugger"] : [],
   },
   // Optimize dependencies
   optimizeDeps: {

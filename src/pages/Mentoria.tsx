@@ -115,7 +115,7 @@ const Mentoria = () => {
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
                 <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  QUERO SER CLASSIFICADO →
+                  QUERO ESSES BENEFÍCIOS →
                 </Button>
                 <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Garantia de 7 dias · Acesso imediato</p>
               </div>
@@ -183,7 +183,7 @@ const Mentoria = () => {
               </p>
               <p className="mt-4 text-lg md:text-2xl font-black leading-snug">
                 <span className="text-foreground">A aprovação vira consequência. </span>
-                <span className="bg-gradient-primary bg-clip-text text-transparent">E é pra isso que existe a Mentoria FULL.</span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">Isso é MENTORIA FULL.</span>
               </p>
             </div>
           </ScrollReveal>

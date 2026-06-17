@@ -572,7 +572,17 @@ const Questoes = () => {
 
         <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto items-stretch">
           {planos.map((plano, i) => (
-            <ScrollReveal key={i} delay={i * 100}>
+            <ScrollReveal
+              key={i}
+              delay={i * 100}
+              className={
+                i === 0
+                  ? "order-3 lg:order-1"
+                  : i === 2
+                  ? "order-1 lg:order-3"
+                  : "order-2 lg:order-2"
+              }
+            >
               <div className={`relative h-full rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 ${
                 plano.destaque
                   ? "bg-gradient-beige-premium border-2 border-accent shadow-glow-beige md:scale-[1.04]"

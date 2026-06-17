@@ -342,6 +342,7 @@ const FullAdelphi = () => {
 
       {/* COMO FUNCIONA */}
       {/* BANCO FULL QUESTÕES SHOWCASE */}
+      <SeamMarquee text="FULL ADELPHI" />
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
@@ -453,6 +454,7 @@ const FullAdelphi = () => {
       </section>
 
       {/* PLANOS */}
+      <SeamMarquee text="FULL ADELPHI" />
       <section id="planos-adelphi" className="py-14 md:py-24 bg-background scroll-mt-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />

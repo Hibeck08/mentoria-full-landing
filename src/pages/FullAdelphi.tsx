@@ -4,6 +4,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { FAQItem } from "@/components/FAQItem";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
+import { SeamMarquee } from "@/components/SeamMarquee";
 import {
   Home, Instagram, BookOpen, Video, Database, Layers, Calendar,
   Trophy, CheckCircle2, GraduationCap, MessageCircle, Award, Shield,
@@ -12,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.webp";
 import adelphiHero from "@/assets/adelphi-hero.webp";
+import adelphiHeroMobile from "@/assets/adelphi-hero-mobile.png.asset.json";
 import adelphiBanner2 from "@/assets/adelphi-banner-2.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import fontesPhoto from "@/assets/fontes-photo.webp";
@@ -103,11 +105,12 @@ const FullAdelphi = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="theme-adelphi min-h-screen bg-background text-foreground">
       {/* HERO */}
       <section className="relative min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={adelphiHero} alt="FULL Adelphi" className="w-full h-full object-cover object-[center_top] brightness-[0.55] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
+          <img src={adelphiHeroMobile.url} alt="FULL Adelphi" className="lg:hidden w-full h-full object-cover object-[center_top] brightness-[0.6] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
+          <img src={adelphiHero} alt="FULL Adelphi" className="hidden lg:block w-full h-full object-cover object-[center_top] brightness-[0.55] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/55 to-background/95 md:bg-gradient-to-r md:from-background/95 md:via-background/55 md:to-background/20" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,hsl(var(--background))_95%)]" />
           <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
@@ -339,6 +342,7 @@ const FullAdelphi = () => {
 
       {/* COMO FUNCIONA */}
       {/* BANCO FULL QUESTÕES SHOWCASE */}
+      <SeamMarquee text="FULL ADELPHI" />
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
         <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
@@ -450,6 +454,7 @@ const FullAdelphi = () => {
       </section>
 
       {/* PLANOS */}
+      <SeamMarquee text="FULL ADELPHI" />
       <section id="planos-adelphi" className="py-14 md:py-24 bg-background scroll-mt-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />

@@ -316,6 +316,9 @@ const FullAdelphi = () => {
         </div>
       </section>
 
+      {/* ━━━ FAIXA: FECHA O VSL ━━━ */}
+      <SeamMarquee text="FULL ADELPHI" />
+
       {/* BANCO FULL QUESTÕES SHOWCASE (dentro do bloco roxo) */}
       {/* BENEFÍCIOS FULL */}
       <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">

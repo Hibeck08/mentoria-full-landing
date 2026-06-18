@@ -388,6 +388,62 @@ All colors MUST be HSL.
 }
 
 /* =====================================================
+   FULL Adelphi — paleta scoped (azul-marinho profundo + cyan)
+   Sem dourado. "theme-purple" restaura o dark purple nas
+   seções de plataforma (VSL + showcase + benefícios).
+   ===================================================== */
+.theme-adelphi {
+  --background: 218 65% 5%;
+  --foreground: 0 0% 98%;
+  --card: 218 55% 8%;
+  --card-foreground: 0 0% 98%;
+  --secondary: 218 50% 9%;
+  --muted: 218 35% 14%;
+  --muted-foreground: 210 14% 76%;
+  --border: 215 45% 20%;
+  --primary: 215 80% 38%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 200 95% 62%;
+  --accent-foreground: 218 65% 8%;
+  --accent-dark: 210 75% 30%;
+  --ring: 215 80% 38%;
+
+  --gradient-primary: linear-gradient(135deg, hsl(200 95% 62%) 0%, hsl(215 85% 38%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(195 95% 70%) 0%, hsl(205 90% 52%) 50%, hsl(220 85% 28%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(218 65% 5%) 0%, hsl(218 55% 8%) 50%, hsl(218 65% 5%) 100%);
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(200 95% 72%) 100%);
+
+  --shadow-premium: 0 20px 60px -10px hsl(200 85% 40% / 0.35), 0 10px 30px -10px hsl(215 85% 40% / 0.3), 0 0 80px hsl(200 85% 50% / 0.18);
+  --glow-beige: 0 0 60px hsl(200 95% 62% / 0.5), 0 0 100px hsl(200 95% 62% / 0.3), 0 0 140px hsl(215 80% 45% / 0.2);
+  --shadow-glow-beige: 0 10px 40px hsl(200 95% 62% / 0.45), 0 0 80px hsl(200 88% 52% / 0.28), 0 0 120px hsl(215 75% 40% / 0.18);
+}
+
+.theme-adelphi .theme-purple {
+  --background: 260 28% 5%;
+  --foreground: 0 0% 98%;
+  --card: 260 24% 8%;
+  --card-foreground: 0 0% 98%;
+  --secondary: 260 22% 7%;
+  --muted: 260 16% 12%;
+  --muted-foreground: 260 8% 70%;
+  --border: 260 20% 16%;
+  --primary: 268 65% 42%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 268 82% 66%;
+  --accent-foreground: 0 0% 100%;
+  --accent-dark: 268 60% 32%;
+  --ring: 268 65% 42%;
+
+  --gradient-primary: linear-gradient(135deg, hsl(268 80% 62%) 0%, hsl(268 65% 38%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(268 80% 65%) 0%, hsl(268 70% 48%) 50%, hsl(268 60% 30%) 100%);
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(268 85% 75%) 100%);
+
+  --shadow-premium: 0 20px 60px -10px hsl(268 70% 45% / 0.45), 0 10px 30px -10px hsl(268 80% 55% / 0.35), 0 0 80px hsl(268 70% 40% / 0.2);
+  --glow-beige: 0 0 50px hsl(268 80% 58% / 0.45), 0 0 100px hsl(268 80% 58% / 0.25);
+  --shadow-glow-beige: 0 10px 40px hsl(268 80% 55% / 0.4), 0 0 80px hsl(268 75% 45% / 0.25);
+}
+
+/* =====================================================
    Seam Marquee Banner — faixa dourada com texto rolando
    sobreposta ao seam para disfarçar a transição amarelo↔roxo
    ===================================================== */

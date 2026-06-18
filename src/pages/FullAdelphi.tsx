@@ -253,7 +253,7 @@ const FullAdelphi = () => {
                 <span className="text-xs font-bold uppercase tracking-wider">Assista antes de decidir</span>
               </div>
               <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
-                Conheça o <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Adelphi</span> por dentro
+                Conheça o <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Questões</span> por dentro
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Em poucos minutos a gente te mostra <strong className="text-foreground">cada ferramenta</strong> aulas, banco de questões, flashcards e como tudo se conecta para te aprovar em Português e Inglês.

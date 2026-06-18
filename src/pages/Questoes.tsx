@@ -257,7 +257,7 @@ const Questoes = () => {
               {vslPlaying ? (
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/qoa3CiyRrNU?autoplay=1&rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/q0UI_9flCFQ?autoplay=1&rel=0&modestbranding=1"
                   title="Conheça a plataforma FULL Questões"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -270,7 +270,7 @@ const Questoes = () => {
                   aria-label="Assistir ao vídeo da plataforma"
                 >
                   <img
-                    src="https://img.youtube.com/vi/qoa3CiyRrNU/maxresdefault.jpg"
+                    src="https://img.youtube.com/vi/q0UI_9flCFQ/maxresdefault.jpg"
                     alt="Tour pela plataforma FULL Questões"
                     className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
                     loading="lazy"

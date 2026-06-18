@@ -103,6 +103,9 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     overflow-x: hidden;
   }
+  html {
+    overflow-x: clip;
+  }
 }
 
 /* Scroll Reveal Animations */
@@ -393,24 +396,24 @@ All colors MUST be HSL.
    seções de plataforma (VSL + showcase + benefícios).
    ===================================================== */
 .theme-adelphi {
-  --background: 218 65% 5%;
+  --background: 220 75% 8%;
   --foreground: 0 0% 98%;
-  --card: 218 55% 8%;
+  --card: 220 65% 11%;
   --card-foreground: 0 0% 98%;
-  --secondary: 218 50% 9%;
-  --muted: 218 35% 14%;
-  --muted-foreground: 210 14% 76%;
-  --border: 215 45% 20%;
+  --secondary: 220 60% 12%;
+  --muted: 218 45% 17%;
+  --muted-foreground: 210 14% 78%;
+  --border: 215 55% 24%;
   --primary: 215 80% 38%;
   --primary-foreground: 0 0% 100%;
   --accent: 200 95% 62%;
-  --accent-foreground: 218 65% 8%;
+  --accent-foreground: 220 75% 8%;
   --accent-dark: 210 75% 30%;
   --ring: 215 80% 38%;
 
   --gradient-primary: linear-gradient(135deg, hsl(200 95% 62%) 0%, hsl(215 85% 38%) 100%);
   --gradient-beige-premium: linear-gradient(135deg, hsl(195 95% 70%) 0%, hsl(205 90% 52%) 50%, hsl(220 85% 28%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsl(218 65% 5%) 0%, hsl(218 55% 8%) 50%, hsl(218 65% 5%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(220 75% 8%) 0%, hsl(220 65% 11%) 50%, hsl(220 75% 8%) 100%);
   --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(200 95% 72%) 100%);
 
   --shadow-premium: 0 20px 60px -10px hsl(200 85% 40% / 0.35), 0 10px 30px -10px hsl(215 85% 40% / 0.3), 0 0 80px hsl(200 85% 50% / 0.18);

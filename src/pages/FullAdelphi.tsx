@@ -8,7 +8,8 @@ import { SeamMarquee } from "@/components/SeamMarquee";
 import {
   Home, Instagram, BookOpen, Video, Database, Layers, Calendar,
   Trophy, CheckCircle2, GraduationCap, MessageCircle, Award, Shield,
-  Zap, Target, Sparkles, Languages, Globe, Star, Flame, TrendingUp, Search, FileText, Crown, Headphones, PenLine
+  Zap, Target, Sparkles, Star, Flame, TrendingUp, Search, Crown,
+  AlertTriangle, XCircle, Play, Brain, Languages,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/mentoria-logo.webp";
@@ -38,7 +39,7 @@ const FloatingWhatsApp = () => {
 const beneficios = [
   { icon: Video, title: "Aulas gravadas, do zero ao topo", desc: "Cursos completos de Português e Inglês. Gramática, interpretação, redação e vocabulário. Assista no seu ritmo, revise quantas vezes precisar e nunca mais fique travado num assunto." },
   { icon: Calendar, title: "Encontros ao vivo toda semana", desc: "Aulas ao vivo com os professores tirando dúvidas em tempo real, corrigindo questões da semana e aprofundando o que mais cai." },
-  { icon: Database, title: "Banco FULL Questões liberado", desc: "+20.000 questões resolvidas com filtro por banca, assunto e dificuldade. Português e Inglês inclusos, com resolução comentada passo a passo você não fica mais travado quando erra." },
+  { icon: Database, title: "Banco FULL Questões liberado", desc: "+20.000 questões resolvidas com filtro por banca, assunto e dificuldade. Português e Inglês inclusos, com resolução comentada passo a passo você não fica mais travado quando erra." },
   { icon: Layers, title: "Flashcards de tudo que cai", desc: "Gramática, vocabulário, falsos cognatos, reading, revisão espaçada que fixa de verdade. Os mesmos flashcards que aprovaram alunos em EFOMM, ESA, ESPCEX e EPCAr." },
   { icon: Trophy, title: "Metas semanais prontas", desc: "Toda segunda você abre a plataforma e já sabe o que estudar: aulas, questões, flashcards. Zero tempo perdido decidindo, você só executa e vê a nota subir." },
   { icon: Shield, title: "Suporte direto com os professores", desc: "Travou numa questão às 22h? Manda no grupo. A gente está ali pra destravar e te empurrar pra frente, nada de ficar esperando dias por uma resposta." },
@@ -100,6 +101,8 @@ const planos = [
 ];
 
 const FullAdelphi = () => {
+  const [vslPlaying, setVslPlaying] = React.useState(false);
+
   const scrollToContact = () => {
     document.getElementById("planos-adelphi")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -113,8 +116,8 @@ const FullAdelphi = () => {
           <img src={adelphiHero} alt="FULL Adelphi" className="hidden lg:block w-full h-full object-cover object-[center_top] brightness-[0.55] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/55 to-background/95 md:bg-gradient-to-r md:from-background/95 md:via-background/55 md:to-background/20" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,hsl(var(--background))_95%)]" />
-          <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
-          <div className="absolute bottom-1/4 right-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />
+          <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[120px] opacity-40" />
+          <div className="absolute bottom-1/4 right-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-30" />
         </div>
 
         <div className="container relative z-10 mx-auto px-6 pt-24 pb-12 md:py-20">
@@ -164,188 +167,159 @@ const FullAdelphi = () => {
         </div>
       </section>
 
-      {/* INTRO / PROBLEMA */}
-      <section className="py-14 md:py-20 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
-        <div className="container relative z-10 mx-auto px-6 max-w-4xl">
+      {/* 3 ERROS QUE TRAVAM */}
+      <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-[160px]" />
+
+        <div className="container relative z-10 mx-auto px-6 max-w-6xl">
           <ScrollReveal>
-            <div className="text-center space-y-5">
-              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2">
-                <Flame className="w-4 h-4 text-accent" />
-                <span className="text-xs font-bold text-accent uppercase tracking-wider">A real do concurso</span>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-5 backdrop-blur-sm">
+                <AlertTriangle className="w-4 h-4 text-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">Por que tanta gente trava</span>
               </div>
-              <h2 className="text-[1.6rem] md:text-4xl font-bold leading-tight">
-                Vaga se ganha, ou se perde, em <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>.
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-4 leading-tight">
+                Português e Inglês <br className="hidden md:block" />
+                <span className="bg-gradient-primary bg-clip-text text-transparent">não se passa no chute.</span>
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                São as matérias com <strong className="text-foreground">maior peso de desempate</strong> nas principais bancas e justamente as que mais candidato deixa pra depois. Interpretação sob pressão, regência, vocabulário...
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Quase toda reprovação em prova de letras cai num destes três erros e o problema raramente é falta de esforço.
               </p>
-              <p className="text-base md:text-lg text-foreground font-semibold">
-                No FULL Adelphi você estuda Português e Inglês com método, ao vivo, com quem acabou de passar nos concursos que você quer.
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+            {[
+              {
+                n: "01",
+                title: "Deixa Português e Inglês pra depois",
+                desc: "Acha que vai compensar nas exatas. Não compensa. Português e Inglês são as matérias com maior peso de desempate e quem domina elas sobe colocação na classificação final.",
+              },
+              {
+                n: "02",
+                title: "Estuda gramática solta, sem ver cair",
+                desc: "Decora regra que nunca apareceu em prova, ignora a que cai todo ano. Sem treino no padrão da banca, você chega no dia sabendo teoria, mas errando questão.",
+              },
+              {
+                n: "03",
+                title: "Lê inglês decorando, sem método de leitura",
+                desc: "Tradução palavra por palavra, vocabulário disperso, zero estratégia de skimming e scanning. Resultado: trava no reading, perde tempo e zera questão fácil.",
+              },
+            ].map((e, i) => (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="relative h-full bg-card/85 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-7 hover:border-accent/60 transition-all duration-300">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg">
+                      <span className="text-2xl font-black text-accent-foreground">{e.n}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[10px] font-bold text-accent uppercase tracking-wider mt-3">
+                      <XCircle className="w-3 h-3" />
+                      Erro {e.n} de 03
+                    </div>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 leading-snug">{e.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{e.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12 md:mt-16 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-foreground font-semibold">
+                E quando alguém junta <span className="text-accent">direção</span>, <span className="text-accent">constância</span> e <span className="text-accent">treino no padrão da banca</span>?
+              </p>
+              <p className="mt-4 text-lg md:text-2xl font-black leading-snug">
+                <span className="text-foreground">A aprovação vem. </span>
+                <span className="bg-gradient-primary bg-clip-text text-transparent">É pra isso que existe o FULL Adelphi.</span>
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* COMO FUNCIONA - Cycle (moved above benefits) */}
-      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+      {/* ━━━ FAIXA: ABRE O BLOCO VSL + PLATAFORMA + BENEFÍCIOS ━━━ */}
+      <SeamMarquee text="FULL ADELPHI" />
+
+      {/* VSL - VÍDEO APRESENTANDO O BANCO/PLATAFORMA */}
+      <section className="theme-purple py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 w-[420px] h-[420px] bg-accent rounded-full blur-[180px] opacity-[0.08]" />
+        <div className="absolute bottom-0 right-1/4 w-[360px] h-[360px] bg-primary/20 rounded-full blur-[160px] opacity-[0.12]" />
         <div className="container relative z-10 mx-auto px-6 max-w-5xl">
           <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Crown className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+            <div className="text-center mb-8 md:mb-12">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-5 shadow-glow-beige">
+                <Play className="w-4 h-4 fill-current" />
+                <span className="text-xs font-bold uppercase tracking-wider">Assista antes de decidir</span>
               </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que se alimenta sozinho
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Cada peça do FULL Adelphi puxa a outra. Você aprende, treina, fixa e mede sem furo no ciclo.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ConnectedBenefits
-            items={[
-              { icon: Video, title: "Aula ao vivo", desc: "Fontes e Teixeira destrinchando o conteúdo da semana, você ouve, anota e tira dúvida em tempo real.", next: "alimenta as listas" },
-              { icon: Database, title: "Banco FULL Questões", desc: "Listas com as questões EXATAS do que foi visto na aula. Errou? A resolução te mostra o caminho.", next: "vira flashcard" },
-              { icon: Layers, title: "Flashcards de revisão", desc: "Os pontos que mais caem viram cards. Revisão espaçada que fixa de verdade sem reler tudo.", next: "entra na meta" },
-              { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda o ciclo recomeça com plano novo: aula → questão → flashcard → simulado.", next: "fecha o ciclo" },
-            ]}
-          />
-
-          <ScrollReveal>
-            <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                ENTRAR NO CICLO AGORA →
-              </Button>
-              <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Acesso imediato · Garantia de 7 dias</p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* BENEFÍCIOS */}
-      <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
-        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
-        <div className="container relative z-10 mx-auto px-6">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
-                <Award className="w-4 h-4 text-accent" />
-                <span className="text-xs font-bold text-accent uppercase tracking-wider">O que está incluso</span>
-              </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Tudo pra você dominar <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+                Conheça o <span className="bg-gradient-primary bg-clip-text text-transparent">FULL Adelphi</span> por dentro
               </h2>
               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Conteúdo direto, aulas conduzidas por aprovados e uma plataforma que faz o plano de estudo por você. Tudo num lugar só.
+                Em poucos minutos a gente te mostra <strong className="text-foreground">cada ferramenta</strong> aulas, banco de questões, flashcards e como tudo se conecta para te aprovar em Português e Inglês.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-            {beneficios.map((b, i) => (
-              <ScrollReveal key={i} delay={i * 80}>
-                <div className="h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 hover:border-accent hover:shadow-premium transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                    <b.icon className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">{b.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal>
+            <div className="relative max-w-4xl mx-auto">
+              <div className="absolute -inset-2 md:-inset-3 bg-gradient-primary rounded-3xl blur-3xl opacity-[0.18]" />
+              <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/40 shadow-premium bg-black">
+                {vslPlaying ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/qoa3CiyRrNU?autoplay=1&rel=0&modestbranding=1"
+                    title="Conheça o FULL Adelphi"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setVslPlaying(true)}
+                    className="group absolute inset-0 w-full h-full cursor-pointer"
+                    aria-label="Assistir ao vídeo do FULL Adelphi"
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/qoa3CiyRrNU/maxresdefault.jpg"
+                      alt="Tour pelo FULL Adelphi"
+                      className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                      <div className="relative">
+                        <div className="absolute inset-0 bg-accent rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity animate-pulse" />
+                        <div className="relative w-20 h-20 md:w-28 md:h-28 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow-beige group-hover:scale-110 transition-transform duration-300">
+                          <Play className="w-9 h-9 md:w-12 md:h-12 text-accent-foreground fill-current ml-1.5" />
+                        </div>
+                      </div>
+                      <div className="text-center px-4">
+                        <p className="text-white font-bold text-base md:text-2xl drop-shadow-lg">Clique para assistir o tour completo</p>
+                        <p className="text-white/80 text-xs md:text-sm mt-1 drop-shadow">⏱ Vídeo curto · sem enrolação</p>
+                      </div>
+                    </div>
+                  </button>
+                )}
+              </div>
+            </div>
+          </ScrollReveal>
 
           <ScrollReveal>
-            <div className="text-center mt-12">
+            <div className="text-center mt-10 md:mt-12">
               <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ME ORGANIZAR →
+                QUERO ACESSAR O FULL ADELPHI →
               </Button>
+              <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* BANNER ESCOLAS MILITARES */}
-      <section className="relative overflow-hidden">
-        <div className="relative h-[280px] md:h-[420px]">
-          <img src={adelphiBanner2} alt="Escolas Militares" className="absolute inset-0 w-full h-full object-cover brightness-75 contrast-110 saturate-105" loading="lazy" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80" />
-          <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-primary/30 rounded-full blur-[120px] opacity-40" />
-
-          <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-6">
-              <div className="max-w-2xl space-y-3 md:space-y-5">
-                <div className="inline-flex items-center gap-2 bg-accent/15 backdrop-blur-sm border border-accent/40 rounded-full px-4 py-2">
-                  <Star className="w-4 h-4 text-accent" />
-                  <span className="text-xs font-bold text-accent uppercase tracking-wider">Aprovados de verdade</span>
-                </div>
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight">
-                  <span className="text-foreground">Aulas com quem já </span>
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">cruzou esse portão.</span>
-                </h2>
-                <p className="text-sm md:text-lg text-muted-foreground max-w-xl">
-                  Aprovados em EFOMM, ESA, ESPCEX e EPCAr ensinando o que realmente cai e como passar. Sem teoria solta.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* QUEM SOMOS */}
-      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[140px] opacity-30" />
-        <div className="container relative z-10 mx-auto px-6">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14">
-              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
-                <Trophy className="w-4 h-4 text-accent" />
-                <span className="text-xs font-bold text-accent uppercase tracking-wider">Quem vai te ensinar</span>
-              </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Quem <span className="bg-gradient-primary bg-clip-text text-transparent">somos</span>
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Três aprovados, três histórias diferentes, um método que funciona. Quem está aqui na frente sabe exatamente o que você está sentindo aí na cadeira.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-5 md:gap-7">
-            {equipe.map((p, i) => (
-              <ScrollReveal key={i} delay={i * 120}>
-                <div className="h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-8 hover:border-accent hover:shadow-premium transition-all duration-300">
-                  <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-5">
-                    <div className="absolute -inset-2 bg-gradient-primary rounded-full blur-2xl opacity-40" />
-                    <img src={p.foto} alt={p.nome} className="relative w-full h-full rounded-full object-cover object-center border-2 border-accent/50 shadow-premium" loading="lazy" />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1 text-center">{p.nome}</h3>
-                  <p className="text-xs md:text-sm text-accent font-bold mb-4 text-center uppercase tracking-wider">{p.funcao}</p>
-                  <div className="space-y-2.5">
-                    {p.paragrafos.map((par, idx) => (
-                      <p key={idx} className="text-sm text-muted-foreground leading-relaxed text-left">{par}</p>
-                    ))}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COMO FUNCIONA */}
-      {/* BANCO FULL QUESTÕES SHOWCASE */}
-      <SeamMarquee text="FULL ADELPHI" />
-      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-10" />
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+      {/* BANCO FULL QUESTÕES SHOWCASE (dentro do bloco roxo) */}
+      <section className="theme-purple py-14 md:py-24 bg-gradient-to-b from-background via-secondary/15 to-background relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[160px] opacity-[0.08]" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-[0.18]" />
         <div className="container relative z-10 mx-auto px-6">
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
@@ -400,16 +374,223 @@ const FullAdelphi = () => {
                 </div>
               </div>
             </ScrollReveal>
+
+            <div className="grid grid-cols-3 gap-3 md:gap-4 pt-4">
+              <div className="text-center bg-card/60 backdrop-blur-sm border border-accent/20 rounded-xl py-5">
+                <p className="text-2xl md:text-4xl font-black text-accent">20k+</p>
+                <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider mt-1">Questões</p>
+              </div>
+              <div className="text-center bg-card/60 backdrop-blur-sm border border-accent/20 rounded-xl py-5">
+                <p className="text-2xl md:text-4xl font-black text-accent">2k+</p>
+                <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider mt-1">Flashcards</p>
+              </div>
+              <div className="text-center bg-card/60 backdrop-blur-sm border border-accent/20 rounded-xl py-5">
+                <p className="text-2xl md:text-4xl font-black text-accent">2</p>
+                <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider mt-1">Idiomas</p>
+              </div>
+            </div>
           </div>
 
           <ScrollReveal>
             <div className="text-center mt-12">
               <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO UM BANCO DE QUESTÕES →
+                QUERO O BANCO LIBERADO →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Acesso imediato · Garantia de 7 dias</p>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* BENEFÍCIOS FULL */}
+      <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
+        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
+                <Award className="w-4 h-4 text-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">O que está incluso</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Tudo pra você dominar <span className="bg-gradient-primary bg-clip-text text-transparent">Português e Inglês</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Conteúdo direto, aulas conduzidas por aprovados e uma plataforma que faz o plano de estudo por você. Tudo num lugar só.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+            {beneficios.map((b, i) => (
+              <ScrollReveal key={i} delay={i * 80}>
+                <div className="h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 hover:border-accent hover:shadow-premium transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                    <b.icon className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">{b.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO ME ORGANIZAR →
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ━━━ FAIXA: FECHA O BLOCO VSL + PLATAFORMA + BENEFÍCIOS ━━━ */}
+      <SeamMarquee text="FULL ADELPHI" />
+
+      {/* 3 PILARES */}
+      <section className="py-14 md:py-24 bg-gradient-to-b from-background to-secondary/10 relative">
+        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[140px]" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center mb-3">
+              Três pilares para você <span className="bg-gradient-primary bg-clip-text text-transparent">passar</span>
+            </h2>
+            <p className="text-base md:text-lg text-center text-muted-foreground mb-10 md:mb-14 max-w-2xl mx-auto">
+              Aula, treino e revisão conectados num ciclo que te leva do zero ao nível de aprovação.
+            </p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: Video, badge: "ENSINA", title: "Aulas ao vivo + gravadas", desc: "Fontes (Português) e Teixeira (Inglês) destrinchando o que cai. Você acompanha ao vivo ou revê quando quiser." },
+              { icon: Database, badge: "TREINA", title: "Banco FULL Questões", desc: "+20.000 questões de Português e Inglês comentadas passo a passo. Filtros por banca, assunto e dificuldade." },
+              { icon: Layers, badge: "FIXA", title: "Flashcards Anki", desc: "Gramática, vocabulário e falsos cognatos em revisão espaçada. Você fixa de verdade, sem reler tudo de novo." },
+            ].map((p, i) => (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="relative h-full bg-card/70 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-7 hover:border-accent hover:shadow-premium transition-all duration-300">
+                  <div className="absolute -top-3 right-4 bg-gradient-primary text-accent-foreground text-[10px] font-black px-3 py-1 rounded-full shadow-glow-beige tracking-wider">
+                    {p.badge}
+                  </div>
+                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                    <p.icon className="w-7 h-7 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{p.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{p.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CICLO — ConnectedBenefits */}
+      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-15" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Crown className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Tudo conectado</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Um <span className="bg-gradient-primary bg-clip-text text-transparent">ciclo de estudo</span> que se alimenta sozinho
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Cada peça do FULL Adelphi puxa a outra. Você aprende, treina, fixa e mede sem furo no ciclo.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ConnectedBenefits
+            items={[
+              { icon: Video, title: "Aula ao vivo", desc: "Fontes e Teixeira destrinchando o conteúdo da semana, você ouve, anota e tira dúvida em tempo real.", next: "alimenta as listas" },
+              { icon: Database, title: "Banco FULL Questões", desc: "Listas com as questões EXATAS do que foi visto na aula. Errou? A resolução te mostra o caminho.", next: "vira flashcard" },
+              { icon: Layers, title: "Flashcards de revisão", desc: "Os pontos que mais caem viram cards. Revisão espaçada que fixa de verdade sem reler tudo.", next: "entra na meta" },
+              { icon: Calendar, title: "Meta semanal pronta", desc: "Toda segunda o ciclo recomeça com plano novo: aula → questão → flashcard → simulado.", next: "fecha o ciclo" },
+            ]}
+          />
+
+          <ScrollReveal>
+            <div className="text-center mt-12">
+              <Button variant="gold" size="lg" onClick={scrollToContact} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                ENTRAR NO CICLO AGORA →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground/90 mt-3">⚡ Acesso imediato · Garantia de 7 dias</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* QUEM SOMOS */}
+      <section className="py-14 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[140px] opacity-30" />
+        <div className="container relative z-10 mx-auto px-6">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 mb-4">
+                <Trophy className="w-4 h-4 text-accent" />
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">Quem vai te ensinar</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
+                Quem <span className="bg-gradient-primary bg-clip-text text-transparent">somos</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Três aprovados, três histórias diferentes, um método que funciona. Quem está aqui na frente sabe exatamente o que você está sentindo aí na cadeira.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-5 md:gap-7">
+            {equipe.map((p, i) => (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-6 md:p-8 hover:border-accent hover:shadow-premium transition-all duration-300">
+                  <div className="relative w-36 h-36 md:w-44 md:h-44 mx-auto mb-5">
+                    <div className="absolute -inset-2 bg-gradient-primary rounded-full blur-2xl opacity-40" />
+                    <img src={p.foto} alt={p.nome} className="relative w-full h-full rounded-full object-cover object-center border-2 border-accent/50 shadow-premium" loading="lazy" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1 text-center">{p.nome}</h3>
+                  <p className="text-xs md:text-sm text-accent font-bold mb-4 text-center uppercase tracking-wider">{p.funcao}</p>
+                  <div className="space-y-2.5">
+                    {p.paragrafos.map((par, idx) => (
+                      <p key={idx} className="text-sm text-muted-foreground leading-relaxed text-left">{par}</p>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BANNER ESCOLAS MILITARES */}
+      <section className="relative overflow-hidden">
+        <div className="relative h-[280px] md:h-[420px]">
+          <img src={adelphiBanner2} alt="Escolas Militares" className="absolute inset-0 w-full h-full object-cover brightness-75 contrast-110 saturate-105" loading="lazy" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80" />
+          <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-primary/30 rounded-full blur-[120px] opacity-40" />
+
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-6">
+              <div className="max-w-2xl space-y-3 md:space-y-5">
+                <div className="inline-flex items-center gap-2 bg-accent/15 backdrop-blur-sm border border-accent/40 rounded-full px-4 py-2">
+                  <Star className="w-4 h-4 text-accent" />
+                  <span className="text-xs font-bold text-accent uppercase tracking-wider">Aprovados de verdade</span>
+                </div>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight">
+                  <span className="text-foreground">Aulas com quem já </span>
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">cruzou esse portão.</span>
+                </h2>
+                <p className="text-sm md:text-lg text-muted-foreground max-w-xl">
+                  Aprovados em EFOMM, ESA, ESPCEX e EPCAr ensinando o que realmente cai e como passar. Sem teoria solta.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -454,7 +635,6 @@ const FullAdelphi = () => {
       </section>
 
       {/* PLANOS */}
-      <SeamMarquee text="FULL ADELPHI" />
       <section id="planos-adelphi" className="py-14 md:py-24 bg-background scroll-mt-8 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
@@ -476,7 +656,15 @@ const FullAdelphi = () => {
 
           <div className="grid md:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto items-stretch">
             {planos.map((plano, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
+              <ScrollReveal
+                key={i}
+                delay={i * 100}
+                className={
+                  i === 0
+                    ? "order-2 lg:order-1"
+                    : "order-1 lg:order-2"
+                }
+              >
                 <div className={`relative h-full rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 ${
                   plano.destaque
                     ? "bg-gradient-beige-premium border-2 border-accent shadow-glow-beige md:scale-[1.04]"

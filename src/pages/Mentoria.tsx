@@ -694,12 +694,112 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mb-10 md:mb-14 max-w-2xl mx-auto">
               <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Escolha seu <span className="text-accent">plano</span>
+                Escolha o seu <span className="text-accent">momento</span>
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Mesmo acesso, mesmo método. <strong className="text-accent">Quanto mais tempo, mais você economiza.</strong>
+                Dois caminhos, o <strong className="text-accent">mesmo método</strong>. Escolha o que combina com onde você está hoje.
               </p>
-              <p className="text-sm text-muted-foreground/80 mt-3 max-w-xl mx-auto">
+            </div>
+          </ScrollReveal>
+
+          {/* COMPARATIVO LADO A LADO */}
+          <ScrollReveal>
+            <div className="max-w-5xl mx-auto mb-10 md:mb-14 grid md:grid-cols-2 gap-4 md:gap-6">
+              {[
+                {
+                  mode: "standard" as const,
+                  tag: "PLANO STANDARD",
+                  title: "Já tenho um preparatório",
+                  desc: "Você já estuda em um curso e quer o método, a rotina e o acompanhamento que faltam pra virar aprovação.",
+                  para: "Ideal pra AFA · EN · EFOMM · EEAR · EPCAR",
+                  bullets: [
+                    "Acompanhamento e direcionamento 1:1",
+                    "Banco FULL Questões + flashcards",
+                    "Plano de metas e organização de rotina",
+                    "Encontros ao vivo de estudo",
+                  ],
+                  excludes: ["Aulas ao vivo de matérias", "Aulas gravadas de matérias"],
+                },
+                {
+                  mode: "ultra" as const,
+                  tag: "PLANO ULTRA",
+                  title: "Quero TUDO incluso",
+                  desc: "Você não tem curso preparatório (ou quer trocar por algo direto ao ponto) e quer o pacote fechado de estudo.",
+                  para: "Ideal pra quem parte do zero ou quer o método completo",
+                  bullets: [
+                    "Tudo do Standard",
+                    "Aulas AO VIVO de Mat, Fís, Port e Ing",
+                    "Aulas GRAVADAS de todas as matérias",
+                    "Mentoria 1:1 aprofundada",
+                  ],
+                  excludes: [],
+                },
+              ].map((c) => {
+                const active = planMode === c.mode;
+                return (
+                  <button
+                    key={c.mode}
+                    type="button"
+                    onClick={() => setPlanMode(c.mode)}
+                    className={`text-left rounded-2xl md:rounded-3xl p-5 md:p-7 border-2 transition-all duration-300 ${
+                      active
+                        ? "bg-gradient-beige-premium border-accent shadow-glow-beige md:scale-[1.02]"
+                        : "bg-card/70 backdrop-blur-sm border-accent/25 hover:border-accent/60"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <span className={`text-[10px] md:text-xs font-black tracking-widest px-3 py-1 rounded-full ${
+                        active ? "bg-background/20 text-background" : "bg-accent/15 text-accent"
+                      }`}>
+                        {c.tag}
+                      </span>
+                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-black ${
+                        active ? "bg-background text-accent" : "border-2 border-accent/40 text-accent/60"
+                      }`}>
+                        {active ? "✓" : ""}
+                      </span>
+                    </div>
+                    <h3 className={`text-xl md:text-2xl font-black mb-1.5 ${active ? "text-background" : "text-foreground"}`}>
+                      {c.title}
+                    </h3>
+                    <p className={`text-xs md:text-sm mb-3 ${active ? "text-background/85" : "text-muted-foreground"}`}>
+                      {c.desc}
+                    </p>
+                    <p className={`text-[11px] md:text-xs font-semibold uppercase tracking-wide mb-4 ${active ? "text-background/80" : "text-accent/90"}`}>
+                      {c.para}
+                    </p>
+                    <ul className="space-y-1.5 mb-3">
+                      {c.bullets.map((b, i) => (
+                        <li key={i} className={`flex items-start gap-2 text-sm ${active ? "text-background" : "text-foreground"}`}>
+                          <CheckCircle2 className={`w-4 h-4 mt-0.5 flex-shrink-0 ${active ? "text-background" : "text-accent"}`} />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                      {c.excludes.map((b, i) => (
+                        <li key={`x${i}`} className={`flex items-start gap-2 text-sm ${active ? "text-background/70" : "text-muted-foreground/70"}`}>
+                          <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0 opacity-70" />
+                          <span className="line-through">{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <span className={`inline-block mt-2 text-xs font-bold ${active ? "text-background" : "text-accent"}`}>
+                      {active ? "✓ Este é o meu plano" : "→ Escolher este plano"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="text-center mb-8 md:mb-10">
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">
+                  Preços do {planMode === "ultra" ? "Plano Ultra" : "Plano Standard"}
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground/80 mt-4 max-w-xl mx-auto">
                 💡 O <strong className="text-accent">trimestral</strong> é o mínimo pra ver evolução real. Em 1 mês, você ainda está se adaptando ao método.
               </p>
             </div>
@@ -744,14 +844,7 @@ const Mentoria = () => {
                     </div>
                   </div>
                   <ul className={`space-y-2.5 mb-6 flex-grow text-sm ${plano.destaque ? "text-background" : "text-foreground"}`}>
-                    {[
-                      "Mentoria 1:1 personalizada",
-                      "Aulas ao vivo (mat/física)",
-                      "+2.000 flashcards Anki",
-                      "Banco FULL Questões",
-                      "Plano de metas pronto",
-                      "Suporte direto comigo",
-                    ].map((f, idx) => (
+                    {featuresPorPlano.map((f, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plano.destaque ? "text-background" : "text-accent"}`} />
                         <span>{f}</span>

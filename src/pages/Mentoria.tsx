@@ -47,6 +47,7 @@ const Mentoria = () => {
   };
 
   const [vslPlaying, setVslPlaying] = React.useState(false);
+  const [planMode, setPlanMode] = React.useState<"standard" | "ultra">("ultra");
 
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },
@@ -54,7 +55,7 @@ const Mentoria = () => {
     { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
-  const planos = [
+  const planosUltra = [
     {
       nome: "Trimestral", destaque: false, preco: "R$ 134,54", precoAntigo: "R$ 159,90",
       periodo: "/mês", parcela: "ou 1x de R$ 377,00 /trimestre",
@@ -71,6 +72,45 @@ const Mentoria = () => {
       total: "Economize a cada mês", link: "https://pay.kiwify.com.br/TifHiat", cta: "QUERO O SEMESTRAL",
     },
   ];
+  // TODO: substituir preços/links reais do Plano Standard
+  const planosStandard = [
+    {
+      nome: "Trimestral", destaque: false, preco: "R$ 87,50", precoAntigo: "R$ 109,90",
+      periodo: "/mês", parcela: "ou 1x de R$ 247,00 /trimestre",
+      total: "3 meses de acompanhamento", link: "https://pay.kiwify.com.br/HPQnlLY", cta: "QUERO O TRIMESTRAL",
+    },
+    {
+      nome: "Anual", destaque: true, preco: "R$ 79,90", precoAntigo: "R$ 109,90",
+      periodo: "/mês", parcela: "ou 1x de R$ 767,00 /ano",
+      total: "Melhor custo-benefício", link: "https://pay.kiwify.com.br/Vv3N6zi", cta: "QUERO O ANUAL",
+    },
+    {
+      nome: "Semestral", destaque: false, preco: "R$ 81,50", precoAntigo: "R$ 109,90",
+      periodo: "/mês", parcela: "ou 1x de R$ 437,00 /semestre",
+      total: "Economize a cada mês", link: "https://pay.kiwify.com.br/TifHiat", cta: "QUERO O SEMESTRAL",
+    },
+  ];
+  const planos = planMode === "ultra" ? planosUltra : planosStandard;
+  const featuresUltra = [
+    "Acompanhamento 1:1 personalizado",
+    "Aulas AO VIVO (Mat/Fís/Port/Ing)",
+    "Aulas GRAVADAS de todas as matérias",
+    "+2.000 flashcards Anki",
+    "Banco FULL Questões liberado",
+    "Plano de metas semanal",
+    "Encontros ao vivo de estudo",
+    "Suporte direto comigo",
+  ];
+  const featuresStandard = [
+    "Acompanhamento 1:1 e direcionamento",
+    "+2.000 flashcards Anki",
+    "Banco FULL Questões liberado",
+    "Plano de metas semanal",
+    "Encontros ao vivo de estudo",
+    "Organização de rotina",
+    "Suporte direto comigo",
+  ];
+  const featuresPorPlano = planMode === "ultra" ? featuresUltra : featuresStandard;
 
   return (
     <div className="theme-mentoria min-h-screen bg-background text-foreground">

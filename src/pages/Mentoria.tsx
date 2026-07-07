@@ -18,7 +18,7 @@ import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import ankiCardExample from "@/assets/anki-card-example.webp";
-import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop.png.asset.json";
+import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop-v2.jpg.asset.json";
 import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
 import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
 import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";

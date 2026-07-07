@@ -232,33 +232,6 @@ const Lobby = () => {
                 backgroundImage={mentoriaBanner}
               />
               
-              {/* FULL QUESTÕES + MÉTODO */}
-              <div className="relative">
-                <ProductCard
-                  title="FULL QUESTÕES"
-                  subtitle="Banco de Questões + Método de Estudo Completo"
-                  features={[
-                    { text: "Método FULL de estudos incluso", highlight: true },
-                    { text: "+20.000 questões resolvidas em detalhes", highlight: true },
-                    { text: "+2000 flashcards de todas as matérias" },
-                    { text: "Filtros avançados por matéria e banca" },
-                    { text: "Simulados cronometrados com ranking" },
-                    { text: "Painel de desempenho detalhado" },
-                    { text: "Listas personalizadas de estudo" },
-                    { text: "Suporte direto com professores" },
-                  ]}
-                  to="/questoes"
-                  backgroundImage={questoesBanner}
-                  backgroundPosition="right 30% top 20%"
-                />
-                {/* +método full badge */}
-                <div className="absolute top-4 right-4 md:top-6 md:right-8 z-20">
-                  <span className="bg-card/80 backdrop-blur-sm border border-accent/40 text-accent px-3 py-1 rounded-full text-[10px] md:text-xs font-bold shadow-lg">
-                    +método full
-                  </span>
-                </div>
-              </div>
-
               {/* FULL ADELPHI */}
               <ProductCard
                 title="FULL ADELPHI"

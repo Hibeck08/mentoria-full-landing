@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const Lobby = lazy(() => import("./pages/Lobby"));
 const Mentoria = lazy(() => import("./pages/Mentoria"));
 const FullAdelphi = lazy(() => import("./pages/FullAdelphi"));
-const Catalogo = lazy(() => import("./pages/Catalogo"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -30,7 +29,6 @@ const App = () => (
             <Route path="/" element={<Lobby />} />
             <Route path="/mentoria" element={<Mentoria />} />
             <Route path="/adelphi" element={<FullAdelphi />} />
-            <Route path="/catalogo" element={<Catalogo />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

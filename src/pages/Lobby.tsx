@@ -204,6 +204,15 @@ const Lobby = () => {
                   <span>@hibeck_</span>
                 </a>
               </div>
+
+              {/* Novo — catálogo por concurso (teste) */}
+              <Link
+                to="/catalogo"
+                className="mt-5 inline-flex items-center gap-2 text-xs md:text-sm text-accent/90 hover:text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors"
+              >
+                Novo: ver catálogo de mentorias por concurso
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
         </section>

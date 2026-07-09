@@ -6,6 +6,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { SeamMarquee } from "@/components/SeamMarquee";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
   Target, BookOpen, Trophy, CheckCircle2, Zap, Instagram, Brain, Rocket,
   Shield, Home, Layers, Award, Users, Play, MessageCircle, Calendar, TrendingUp,
@@ -35,7 +36,7 @@ const FloatingWhatsApp = () => {
   return (
     <div className={`fixed bottom-6 right-4 md:bottom-8 md:right-8 z-50 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}>
       <Button variant="gold" size="lg" className="rounded-full shadow-glow-beige px-4 py-3 md:px-8 md:py-6 text-xs md:text-base font-bold whitespace-nowrap" onClick={() => window.open("https://api.whatsapp.com/send?phone=5521992104885", "_blank")}>
-        💬 Fale Comigo
+        <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2 inline-block" /> Fale Comigo
       </Button>
     </div>
   );
@@ -47,7 +48,7 @@ const Mentoria = () => {
   };
 
   const [vslPlaying, setVslPlaying] = React.useState(false);
-  const [planMode, setPlanMode] = React.useState<"standard" | "ultra">("ultra");
+  const [openPlan, setOpenPlan] = React.useState<null | "standard" | "ultra">(null);
 
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },
@@ -62,7 +63,7 @@ const Mentoria = () => {
     tag: "PLANO STANDARD",
     titulo: "Mentoria FULL Hibeck — Standard",
     subtitulo: "Pra quem já tem preparatório e quer o método, a rotina e o acompanhamento que faltam pra virar aprovação.",
-    para: "Ideal pra AFA · EN · EFOMM · EEAR · EPCAR",
+    para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
     grupos: [
       {
         titulo: "Acompanhamento 1:1",
@@ -106,7 +107,7 @@ const Mentoria = () => {
     tag: "PLANO ULTRA",
     titulo: "Mentoria FULL Hibeck — Ultra",
     subtitulo: "O pacote fechado: mentoria, método, aulas ao vivo e gravadas de todas as matérias. Você não precisa de mais nada além disso.",
-    para: "Ideal pra quem parte do zero ou quer substituir o preparatório",
+    para: "EXCLUSIVO para AFA · EN · EFOMM",
     grupos: [
       {
         titulo: "Aulas AO VIVO comigo e minha equipe",
@@ -155,7 +156,7 @@ const Mentoria = () => {
     link: WPP_ULTRA,
   };
 
-  const detalhe = planMode === "ultra" ? detalheUltra : detalheStandard;
+  const detalhe = openPlan === "ultra" ? detalheUltra : detalheStandard;
 
   return (
     <div className="theme-mentoria min-h-screen bg-background text-foreground">

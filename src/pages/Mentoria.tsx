@@ -55,62 +55,107 @@ const Mentoria = () => {
     { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
-  const planosUltra = [
-    {
-      nome: "Trimestral", destaque: false, preco: "R$ 134,54", precoAntigo: "R$ 159,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 377,00 /trimestre",
-      total: "3 meses para ver evolução real", link: "https://pay.kiwify.com.br/HPQnlLY", cta: "QUERO O TRIMESTRAL",
-    },
-    {
-      nome: "Anual", destaque: true, preco: "R$ 122,76", precoAntigo: "R$ 159,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 1.187,00 /ano",
-      total: "Melhor custo-benefício", link: "https://pay.kiwify.com.br/Vv3N6zi", cta: "QUERO O ANUAL",
-    },
-    {
-      nome: "Semestral", destaque: false, preco: "R$ 125,13", precoAntigo: "R$ 159,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 667,00 /semestre",
-      total: "Economize a cada mês", link: "https://pay.kiwify.com.br/TifHiat", cta: "QUERO O SEMESTRAL",
-    },
-  ];
-  // TODO: substituir preços/links reais do Plano Standard
-  const planosStandard = [
-    {
-      nome: "Trimestral", destaque: false, preco: "R$ 87,50", precoAntigo: "R$ 109,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 247,00 /trimestre",
-      total: "3 meses de acompanhamento", link: "https://pay.kiwify.com.br/HPQnlLY", cta: "QUERO O TRIMESTRAL",
-    },
-    {
-      nome: "Anual", destaque: true, preco: "R$ 79,90", precoAntigo: "R$ 109,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 767,00 /ano",
-      total: "Melhor custo-benefício", link: "https://pay.kiwify.com.br/Vv3N6zi", cta: "QUERO O ANUAL",
-    },
-    {
-      nome: "Semestral", destaque: false, preco: "R$ 81,50", precoAntigo: "R$ 109,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 437,00 /semestre",
-      total: "Economize a cada mês", link: "https://pay.kiwify.com.br/TifHiat", cta: "QUERO O SEMESTRAL",
-    },
-  ];
-  const planos = planMode === "ultra" ? planosUltra : planosStandard;
-  const featuresUltra = [
-    "Acompanhamento 1:1 personalizado",
-    "Aulas AO VIVO (Mat/Fís/Port/Ing)",
-    "Aulas GRAVADAS de todas as matérias",
-    "+2.000 flashcards Anki",
-    "Banco FULL Questões liberado",
-    "Plano de metas semanal",
-    "Encontros ao vivo de estudo",
-    "Suporte direto comigo",
-  ];
-  const featuresStandard = [
-    "Acompanhamento 1:1 e direcionamento",
-    "+2.000 flashcards Anki",
-    "Banco FULL Questões liberado",
-    "Plano de metas semanal",
-    "Encontros ao vivo de estudo",
-    "Organização de rotina",
-    "Suporte direto comigo",
-  ];
-  const featuresPorPlano = planMode === "ultra" ? featuresUltra : featuresStandard;
+  const WPP_STANDARD = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20FULL%20Standard.";
+  const WPP_ULTRA = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20FULL%20Ultra.";
+
+  const detalheStandard = {
+    tag: "PLANO STANDARD",
+    titulo: "Mentoria FULL Hibeck — Standard",
+    subtitulo: "Pra quem já tem preparatório e quer o método, a rotina e o acompanhamento que faltam pra virar aprovação.",
+    para: "Ideal pra AFA · EN · EFOMM · EEAR · EPCAR",
+    grupos: [
+      {
+        titulo: "Acompanhamento 1:1",
+        icon: Users,
+        itens: [
+          "Direcionamento individual comigo, semana a semana",
+          "Plano de metas personalizado pra sua realidade e concurso",
+          "Ajuste de rotina de estudos (matérias, horários, pesos)",
+          "Suporte direto no WhatsApp pra tirar dúvidas de estratégia",
+        ],
+      },
+      {
+        titulo: "Plataforma completa",
+        icon: Layers,
+        itens: [
+          "Banco FULL Questões liberado (+10.000 questões resolvidas)",
+          "+2.000 flashcards Anki de todas as matérias",
+          "Nivelamento automático de questões por assunto",
+          "Livro do Método Hibeck em PDF",
+        ],
+      },
+      {
+        titulo: "Comunidade & rotina",
+        icon: Calendar,
+        itens: [
+          "Encontros ao vivo semanais de estudo em grupo",
+          "Comunidade fechada de alunos da Mentoria FULL",
+          "Cronograma de revisões inteligente (curva do esquecimento)",
+        ],
+      },
+    ],
+    naoInclui: [
+      "Aulas AO VIVO de matérias específicas (Mat / Fís / Port / Ing)",
+      "Aulas GRAVADAS de conteúdo de matérias",
+    ],
+    cta: "QUERO O PLANO STANDARD",
+    link: WPP_STANDARD,
+  };
+
+  const detalheUltra = {
+    tag: "PLANO ULTRA",
+    titulo: "Mentoria FULL Hibeck — Ultra",
+    subtitulo: "O pacote fechado: mentoria, método, aulas ao vivo e gravadas de todas as matérias. Você não precisa de mais nada além disso.",
+    para: "Ideal pra quem parte do zero ou quer substituir o preparatório",
+    grupos: [
+      {
+        titulo: "Aulas AO VIVO comigo e minha equipe",
+        icon: Play,
+        itens: [
+          "Matemática ao vivo toda semana",
+          "Física ao vivo toda semana",
+          "Português ao vivo toda semana",
+          "Inglês ao vivo toda semana",
+          "Aulas gravadas e disponíveis pra rever quando quiser",
+        ],
+      },
+      {
+        titulo: "Aulas GRAVADAS de todas as matérias",
+        icon: BookOpen,
+        itens: [
+          "Videoaulas completas do zero ao avançado",
+          "Resolução comentada de questões-chave por assunto",
+          "Acesso ao acervo completo do Método Hibeck",
+        ],
+      },
+      {
+        titulo: "Mentoria 1:1 aprofundada",
+        icon: Users,
+        itens: [
+          "Acompanhamento individual comigo, com foco em performance",
+          "Plano de metas semanal ajustado ao seu ritmo",
+          "Análise de simulados e correção de rota",
+          "Suporte direto no WhatsApp",
+        ],
+      },
+      {
+        titulo: "Plataforma & comunidade",
+        icon: Layers,
+        itens: [
+          "Banco FULL Questões (+10.000 questões) liberado",
+          "+2.000 flashcards Anki de todas as matérias",
+          "Encontros ao vivo semanais de estudo em grupo",
+          "Comunidade fechada de alunos da Mentoria FULL",
+          "Livro do Método Hibeck em PDF",
+        ],
+      },
+    ],
+    naoInclui: [],
+    cta: "QUERO O PLANO ULTRA",
+    link: WPP_ULTRA,
+  };
+
+  const detalhe = planMode === "ultra" ? detalheUltra : detalheStandard;
 
   return (
     <div className="theme-mentoria min-h-screen bg-background text-foreground">
@@ -791,86 +836,90 @@ const Mentoria = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal>
-            <div className="text-center mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">
-                  Preços do {planMode === "ultra" ? "Plano Ultra" : "Plano Standard"}
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground/80 mt-4 max-w-xl mx-auto">
-                💡 O <strong className="text-accent">trimestral</strong> é o mínimo pra ver evolução real. Em 1 mês, você ainda está se adaptando ao método.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto items-stretch">
-            {planos.map((plano, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className={`relative h-full rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 ${
-                  plano.destaque
-                    ? "bg-gradient-beige-premium border-2 border-accent shadow-glow-beige md:scale-[1.04]"
-                    : "bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/50"
-                }`}>
-                  {plano.destaque && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-xs font-black shadow-glow-beige whitespace-nowrap">
-                        ⭐ MAIS ESCOLHIDO
-                      </div>
-                    </div>
-                  )}
-                  <h3 className={`text-2xl md:text-3xl font-black mb-2 text-center mt-2 ${plano.destaque ? "text-background" : "text-foreground"}`}>
-                    {plano.nome}
-                  </h3>
-                  <div className="text-center mb-5">
-                    {plano.precoAntigo && (
-                      <p className={`text-sm line-through mb-1 ${plano.destaque ? "text-background/60" : "text-muted-foreground/70"}`}>
-                        De {plano.precoAntigo}{plano.periodo}
-                      </p>
-                    )}
-                    <p className={`text-4xl md:text-5xl font-black ${plano.destaque ? "text-background" : "text-accent"}`}>
-                      {plano.preco}
-                      <span className={`text-sm font-medium ${plano.destaque ? "text-background/80" : "text-muted-foreground"}`}>{plano.periodo}</span>
-                    </p>
-                    {plano.parcela && (
-                      <p className={`text-xs md:text-sm mt-1 font-semibold ${plano.destaque ? "text-background/90" : "text-muted-foreground"}`}>
-                        {plano.parcela}
-                      </p>
-                    )}
-                    <div className={`inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full text-xs font-bold ${plano.destaque ? "bg-background/20 text-background" : "bg-accent/15 text-accent"}`}>
-                      <Zap className="w-3 h-3" />
-                      {plano.total}
-                    </div>
-                  </div>
-                  <ul className={`space-y-2.5 mb-6 flex-grow text-sm ${plano.destaque ? "text-background" : "text-foreground"}`}>
-                    {featuresPorPlano.map((f, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plano.destaque ? "text-background" : "text-accent"}`} />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    variant={plano.destaque ? "default" : "gold"}
-                    className={`w-full py-5 text-sm md:text-base font-bold ${plano.destaque ? "bg-background text-accent hover:bg-background/90" : ""}`}
-                    onClick={() => window.open(plano.link, "_blank")}
-                  >
-                    {plano.cta} →
-                  </Button>
-                  <div className={`mt-3 flex items-center justify-center gap-1.5 text-xs ${plano.destaque ? "text-background" : "text-muted-foreground"}`}>
-                    <Shield className="w-3.5 h-3.5" />
-                    <span className="font-semibold">Garantia de 7 dias</span>
+          <ScrollReveal key={planMode}>
+            <div className="max-w-5xl mx-auto">
+              <div className="relative rounded-2xl md:rounded-3xl border-2 border-accent/40 bg-card/80 backdrop-blur-sm p-6 md:p-10 shadow-glow-beige">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-[11px] md:text-xs font-black shadow-glow-beige whitespace-nowrap tracking-widest">
+                    {detalhe.tag} — TUDO QUE VOCÊ RECEBE
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
 
-          <ScrollReveal>
-            <p className="text-center text-muted-foreground mt-8 text-sm">
-              🔒 Pagamento 100% seguro • Cartão, PIX ou Boleto • Acesso imediato
-            </p>
+                <div className="text-center mt-3 mb-6 md:mb-8">
+                  <h3 className="text-2xl md:text-4xl font-black text-foreground mb-2">
+                    {detalhe.titulo}
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+                    {detalhe.subtitulo}
+                  </p>
+                  <p className="mt-3 inline-block text-[11px] md:text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 rounded-full px-3 py-1">
+                    {detalhe.para}
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-5 md:gap-6 mb-6 md:mb-8">
+                  {detalhe.grupos.map((g, i) => {
+                    const Icon = g.icon;
+                    return (
+                      <div key={i} className="rounded-xl md:rounded-2xl bg-background/50 border border-accent/20 p-5 md:p-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-11 h-11 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow-beige flex-shrink-0">
+                            <Icon className="w-5 h-5 text-accent-foreground" />
+                          </div>
+                          <h4 className="text-base md:text-lg font-black text-foreground leading-tight">{g.titulo}</h4>
+                        </div>
+                        <ul className="space-y-2">
+                          {g.itens.map((it, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-sm text-foreground/90">
+                              <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                              <span>{it}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {detalhe.naoInclui.length > 0 && (
+                  <div className="rounded-xl border border-destructive/30 bg-destructive/10 p-4 md:p-5 mb-6 md:mb-8">
+                    <p className="text-xs md:text-sm font-bold text-destructive uppercase tracking-wider mb-2 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4" /> O que NÃO está incluso neste plano
+                    </p>
+                    <ul className="space-y-1.5">
+                      {detalhe.naoInclui.map((it, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <XCircle className="w-4 h-4 text-destructive/70 flex-shrink-0 mt-0.5" />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs text-muted-foreground/80 mt-2">
+                      Se você quer aulas de matérias específicas incluídas, escolha o <button type="button" onClick={() => setPlanMode("ultra")} className="text-accent font-bold underline underline-offset-2">Plano Ultra</button>.
+                    </p>
+                  </div>
+                )}
+
+                <div className="text-center">
+                  <p className="text-sm md:text-base text-foreground/90 mb-4 max-w-xl mx-auto">
+                    Fale direto comigo no WhatsApp pra tirar dúvidas, entender se o plano é pra você e garantir sua vaga.
+                  </p>
+                  <Button
+                    variant="gold"
+                    size="lg"
+                    onClick={() => window.open(detalhe.link, "_blank")}
+                    className="text-sm md:text-lg font-black px-8 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    {detalhe.cta}
+                  </Button>
+                  <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
+                    <Shield className="w-4 h-4 text-accent" />
+                    <span className="font-semibold">Atendimento humano · sem compromisso</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -894,7 +943,7 @@ const Mentoria = () => {
                 <FAQItem value="item-1" question="Por que o mínimo é trimestral e não mensal?" answer="Em 1 mês você ainda está se adaptando ao método. A evolução real (dominar matérias, ganhar ritmo de questões, ver a nota subir) aparece a partir do 2º/3º mês. O trimestral existe pra você conseguir ver resultado de verdade." />
                 <FAQItem value="item-2" question="O que está incluso na mentoria?" answer="Mentoria 1:1 personalizada, aulas ao vivo de matemática e física, vídeo-aulas do método, +2.000 flashcards Anki, acesso ao Banco FULL Questões com +10.000 questões resolvidas, plano de metas pronto, livro do Método Hibeck e suporte direto comigo." />
                 <FAQItem value="item-3" question="Serve pra qualquer concurso militar?" answer="Sim. O método é o mesmo que me aprovou na AFA (01º), EFOMM (08º), EEAr (15º) e EPCAr. Funciona pra AFA, EN, EFOMM, EEAR, EPCAR, ESPCEX, ESA, EAM, IME, ITA e CN." />
-                <FAQItem value="item-4" question="Qual a diferença entre os planos?" answer="O acesso é exatamente o mesmo. A diferença é o preço: o anual sai R$ 122,76/mês (1x de R$ 1.187,00), o semestral R$ 125,13/mês (1x de R$ 667,00) e o trimestral R$ 134,54/mês (1x de R$ 377,00)." />
+                <FAQItem value="item-4" question="Qual a diferença entre o Standard e o Ultra?" answer="O Standard é pra quem já tem um preparatório e quer só o acompanhamento, o método e a plataforma. O Ultra inclui, além de tudo isso, as aulas AO VIVO e GRAVADAS de Matemática, Física, Português e Inglês. Pra saber qual faz mais sentido pra você, é só clicar no plano e falar comigo no WhatsApp." />
                 <FAQItem value="item-5" question="Tem garantia?" answer="Sim, 7 dias incondicionais. Se não gostar por qualquer motivo, devolvemos 100% do valor sem perguntas." />
                 <FAQItem value="item-6" question="Sirvo se sou iniciante?" answer="Sim. A mentoria começa do zero vídeos ensinando como estudar cada matéria, sem assumir que você já sabe alguma coisa." />
               </Accordion>

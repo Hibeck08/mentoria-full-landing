@@ -55,62 +55,107 @@ const Mentoria = () => {
     { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
-  const planosUltra = [
-    {
-      nome: "Trimestral", destaque: false, preco: "R$ 134,54", precoAntigo: "R$ 159,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 377,00 /trimestre",
-      total: "3 meses para ver evolução real", link: "https://pay.kiwify.com.br/HPQnlLY", cta: "QUERO O TRIMESTRAL",
-    },
-    {
-      nome: "Anual", destaque: true, preco: "R$ 122,76", precoAntigo: "R$ 159,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 1.187,00 /ano",
-      total: "Melhor custo-benefício", link: "https://pay.kiwify.com.br/Vv3N6zi", cta: "QUERO O ANUAL",
-    },
-    {
-      nome: "Semestral", destaque: false, preco: "R$ 125,13", precoAntigo: "R$ 159,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 667,00 /semestre",
-      total: "Economize a cada mês", link: "https://pay.kiwify.com.br/TifHiat", cta: "QUERO O SEMESTRAL",
-    },
-  ];
-  // TODO: substituir preços/links reais do Plano Standard
-  const planosStandard = [
-    {
-      nome: "Trimestral", destaque: false, preco: "R$ 87,50", precoAntigo: "R$ 109,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 247,00 /trimestre",
-      total: "3 meses de acompanhamento", link: "https://pay.kiwify.com.br/HPQnlLY", cta: "QUERO O TRIMESTRAL",
-    },
-    {
-      nome: "Anual", destaque: true, preco: "R$ 79,90", precoAntigo: "R$ 109,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 767,00 /ano",
-      total: "Melhor custo-benefício", link: "https://pay.kiwify.com.br/Vv3N6zi", cta: "QUERO O ANUAL",
-    },
-    {
-      nome: "Semestral", destaque: false, preco: "R$ 81,50", precoAntigo: "R$ 109,90",
-      periodo: "/mês", parcela: "ou 1x de R$ 437,00 /semestre",
-      total: "Economize a cada mês", link: "https://pay.kiwify.com.br/TifHiat", cta: "QUERO O SEMESTRAL",
-    },
-  ];
-  const planos = planMode === "ultra" ? planosUltra : planosStandard;
-  const featuresUltra = [
-    "Acompanhamento 1:1 personalizado",
-    "Aulas AO VIVO (Mat/Fís/Port/Ing)",
-    "Aulas GRAVADAS de todas as matérias",
-    "+2.000 flashcards Anki",
-    "Banco FULL Questões liberado",
-    "Plano de metas semanal",
-    "Encontros ao vivo de estudo",
-    "Suporte direto comigo",
-  ];
-  const featuresStandard = [
-    "Acompanhamento 1:1 e direcionamento",
-    "+2.000 flashcards Anki",
-    "Banco FULL Questões liberado",
-    "Plano de metas semanal",
-    "Encontros ao vivo de estudo",
-    "Organização de rotina",
-    "Suporte direto comigo",
-  ];
-  const featuresPorPlano = planMode === "ultra" ? featuresUltra : featuresStandard;
+  const WPP_STANDARD = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20FULL%20Standard.";
+  const WPP_ULTRA = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20FULL%20Ultra.";
+
+  const detalheStandard = {
+    tag: "PLANO STANDARD",
+    titulo: "Mentoria FULL Hibeck — Standard",
+    subtitulo: "Pra quem já tem preparatório e quer o método, a rotina e o acompanhamento que faltam pra virar aprovação.",
+    para: "Ideal pra AFA · EN · EFOMM · EEAR · EPCAR",
+    grupos: [
+      {
+        titulo: "Acompanhamento 1:1",
+        icon: Users,
+        itens: [
+          "Direcionamento individual comigo, semana a semana",
+          "Plano de metas personalizado pra sua realidade e concurso",
+          "Ajuste de rotina de estudos (matérias, horários, pesos)",
+          "Suporte direto no WhatsApp pra tirar dúvidas de estratégia",
+        ],
+      },
+      {
+        titulo: "Plataforma completa",
+        icon: Layers,
+        itens: [
+          "Banco FULL Questões liberado (+10.000 questões resolvidas)",
+          "+2.000 flashcards Anki de todas as matérias",
+          "Nivelamento automático de questões por assunto",
+          "Livro do Método Hibeck em PDF",
+        ],
+      },
+      {
+        titulo: "Comunidade & rotina",
+        icon: Calendar,
+        itens: [
+          "Encontros ao vivo semanais de estudo em grupo",
+          "Comunidade fechada de alunos da Mentoria FULL",
+          "Cronograma de revisões inteligente (curva do esquecimento)",
+        ],
+      },
+    ],
+    naoInclui: [
+      "Aulas AO VIVO de matérias específicas (Mat / Fís / Port / Ing)",
+      "Aulas GRAVADAS de conteúdo de matérias",
+    ],
+    cta: "QUERO O PLANO STANDARD",
+    link: WPP_STANDARD,
+  };
+
+  const detalheUltra = {
+    tag: "PLANO ULTRA",
+    titulo: "Mentoria FULL Hibeck — Ultra",
+    subtitulo: "O pacote fechado: mentoria, método, aulas ao vivo e gravadas de todas as matérias. Você não precisa de mais nada além disso.",
+    para: "Ideal pra quem parte do zero ou quer substituir o preparatório",
+    grupos: [
+      {
+        titulo: "Aulas AO VIVO comigo e minha equipe",
+        icon: Play,
+        itens: [
+          "Matemática ao vivo toda semana",
+          "Física ao vivo toda semana",
+          "Português ao vivo toda semana",
+          "Inglês ao vivo toda semana",
+          "Aulas gravadas e disponíveis pra rever quando quiser",
+        ],
+      },
+      {
+        titulo: "Aulas GRAVADAS de todas as matérias",
+        icon: BookOpen,
+        itens: [
+          "Videoaulas completas do zero ao avançado",
+          "Resolução comentada de questões-chave por assunto",
+          "Acesso ao acervo completo do Método Hibeck",
+        ],
+      },
+      {
+        titulo: "Mentoria 1:1 aprofundada",
+        icon: Users,
+        itens: [
+          "Acompanhamento individual comigo, com foco em performance",
+          "Plano de metas semanal ajustado ao seu ritmo",
+          "Análise de simulados e correção de rota",
+          "Suporte direto no WhatsApp",
+        ],
+      },
+      {
+        titulo: "Plataforma & comunidade",
+        icon: Layers,
+        itens: [
+          "Banco FULL Questões (+10.000 questões) liberado",
+          "+2.000 flashcards Anki de todas as matérias",
+          "Encontros ao vivo semanais de estudo em grupo",
+          "Comunidade fechada de alunos da Mentoria FULL",
+          "Livro do Método Hibeck em PDF",
+        ],
+      },
+    ],
+    naoInclui: [],
+    cta: "QUERO O PLANO ULTRA",
+    link: WPP_ULTRA,
+  };
+
+  const detalhe = planMode === "ultra" ? detalheUltra : detalheStandard;
 
   return (
     <div className="theme-mentoria min-h-screen bg-background text-foreground">

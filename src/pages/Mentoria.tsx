@@ -836,86 +836,90 @@ const Mentoria = () => {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal>
-            <div className="text-center mb-8 md:mb-10">
-              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">
-                  Preços do {planMode === "ultra" ? "Plano Ultra" : "Plano Standard"}
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground/80 mt-4 max-w-xl mx-auto">
-                💡 O <strong className="text-accent">trimestral</strong> é o mínimo pra ver evolução real. Em 1 mês, você ainda está se adaptando ao método.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto items-stretch">
-            {planos.map((plano, i) => (
-              <ScrollReveal key={i} delay={i * 100}>
-                <div className={`relative h-full rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-300 ${
-                  plano.destaque
-                    ? "bg-gradient-beige-premium border-2 border-accent shadow-glow-beige md:scale-[1.04]"
-                    : "bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/50"
-                }`}>
-                  {plano.destaque && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-xs font-black shadow-glow-beige whitespace-nowrap">
-                        ⭐ MAIS ESCOLHIDO
-                      </div>
-                    </div>
-                  )}
-                  <h3 className={`text-2xl md:text-3xl font-black mb-2 text-center mt-2 ${plano.destaque ? "text-background" : "text-foreground"}`}>
-                    {plano.nome}
-                  </h3>
-                  <div className="text-center mb-5">
-                    {plano.precoAntigo && (
-                      <p className={`text-sm line-through mb-1 ${plano.destaque ? "text-background/60" : "text-muted-foreground/70"}`}>
-                        De {plano.precoAntigo}{plano.periodo}
-                      </p>
-                    )}
-                    <p className={`text-4xl md:text-5xl font-black ${plano.destaque ? "text-background" : "text-accent"}`}>
-                      {plano.preco}
-                      <span className={`text-sm font-medium ${plano.destaque ? "text-background/80" : "text-muted-foreground"}`}>{plano.periodo}</span>
-                    </p>
-                    {plano.parcela && (
-                      <p className={`text-xs md:text-sm mt-1 font-semibold ${plano.destaque ? "text-background/90" : "text-muted-foreground"}`}>
-                        {plano.parcela}
-                      </p>
-                    )}
-                    <div className={`inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full text-xs font-bold ${plano.destaque ? "bg-background/20 text-background" : "bg-accent/15 text-accent"}`}>
-                      <Zap className="w-3 h-3" />
-                      {plano.total}
-                    </div>
-                  </div>
-                  <ul className={`space-y-2.5 mb-6 flex-grow text-sm ${plano.destaque ? "text-background" : "text-foreground"}`}>
-                    {featuresPorPlano.map((f, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <CheckCircle2 className={`w-4 h-4 flex-shrink-0 mt-0.5 ${plano.destaque ? "text-background" : "text-accent"}`} />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    variant={plano.destaque ? "default" : "gold"}
-                    className={`w-full py-5 text-sm md:text-base font-bold ${plano.destaque ? "bg-background text-accent hover:bg-background/90" : ""}`}
-                    onClick={() => window.open(plano.link, "_blank")}
-                  >
-                    {plano.cta} →
-                  </Button>
-                  <div className={`mt-3 flex items-center justify-center gap-1.5 text-xs ${plano.destaque ? "text-background" : "text-muted-foreground"}`}>
-                    <Shield className="w-3.5 h-3.5" />
-                    <span className="font-semibold">Garantia de 7 dias</span>
+          <ScrollReveal key={planMode}>
+            <div className="max-w-5xl mx-auto">
+              <div className="relative rounded-2xl md:rounded-3xl border-2 border-accent/40 bg-card/80 backdrop-blur-sm p-6 md:p-10 shadow-glow-beige">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-[11px] md:text-xs font-black shadow-glow-beige whitespace-nowrap tracking-widest">
+                    {detalhe.tag} — TUDO QUE VOCÊ RECEBE
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
 
-          <ScrollReveal>
-            <p className="text-center text-muted-foreground mt-8 text-sm">
-              🔒 Pagamento 100% seguro • Cartão, PIX ou Boleto • Acesso imediato
-            </p>
+                <div className="text-center mt-3 mb-6 md:mb-8">
+                  <h3 className="text-2xl md:text-4xl font-black text-foreground mb-2">
+                    {detalhe.titulo}
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+                    {detalhe.subtitulo}
+                  </p>
+                  <p className="mt-3 inline-block text-[11px] md:text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 border border-accent/30 rounded-full px-3 py-1">
+                    {detalhe.para}
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-5 md:gap-6 mb-6 md:mb-8">
+                  {detalhe.grupos.map((g, i) => {
+                    const Icon = g.icon;
+                    return (
+                      <div key={i} className="rounded-xl md:rounded-2xl bg-background/50 border border-accent/20 p-5 md:p-6">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-11 h-11 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow-beige flex-shrink-0">
+                            <Icon className="w-5 h-5 text-accent-foreground" />
+                          </div>
+                          <h4 className="text-base md:text-lg font-black text-foreground leading-tight">{g.titulo}</h4>
+                        </div>
+                        <ul className="space-y-2">
+                          {g.itens.map((it, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-sm text-foreground/90">
+                              <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                              <span>{it}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {detalhe.naoInclui.length > 0 && (
+                  <div className="rounded-xl border border-destructive/30 bg-destructive/10 p-4 md:p-5 mb-6 md:mb-8">
+                    <p className="text-xs md:text-sm font-bold text-destructive uppercase tracking-wider mb-2 flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4" /> O que NÃO está incluso neste plano
+                    </p>
+                    <ul className="space-y-1.5">
+                      {detalhe.naoInclui.map((it, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <XCircle className="w-4 h-4 text-destructive/70 flex-shrink-0 mt-0.5" />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs text-muted-foreground/80 mt-2">
+                      Se você quer aulas de matérias específicas incluídas, escolha o <button type="button" onClick={() => setPlanMode("ultra")} className="text-accent font-bold underline underline-offset-2">Plano Ultra</button>.
+                    </p>
+                  </div>
+                )}
+
+                <div className="text-center">
+                  <p className="text-sm md:text-base text-foreground/90 mb-4 max-w-xl mx-auto">
+                    Fale direto comigo no WhatsApp pra tirar dúvidas, entender se o plano é pra você e garantir sua vaga.
+                  </p>
+                  <Button
+                    variant="gold"
+                    size="lg"
+                    onClick={() => window.open(detalhe.link, "_blank")}
+                    className="text-sm md:text-lg font-black px-8 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    {detalhe.cta}
+                  </Button>
+                  <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
+                    <Shield className="w-4 h-4 text-accent" />
+                    <span className="font-semibold">Atendimento humano · sem compromisso</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>

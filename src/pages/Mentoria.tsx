@@ -56,8 +56,8 @@ const Mentoria = () => {
     { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
-  const WPP_STANDARD = "https://api.whatsapp.com/send/?phone=5521992104885&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Mentoria+FULL+Standard&type=phone_number&app_absent=0";
-  const WPP_ULTRA = "https://api.whatsapp.com/send/?phone=5521992104885&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Mentoria+FULL+Ultra&type=phone_number&app_absent=0";
+  const WPP_STANDARD = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%21";
+  const WPP_ULTRA = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra%21";
 
   const detalheStandard = {
     tag: "PLANO STANDARD",
@@ -824,16 +824,16 @@ const Mentoria = () => {
           </ScrollReveal>
 
           <Dialog open={openPlan !== null} onOpenChange={(o) => !o && setOpenPlan(null)}>
-            <DialogContent className="w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-3xl max-h-[88vh] overflow-y-auto rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
-              <div className="relative p-5 pt-8 md:p-10 md:pt-12">
-                <div className="flex justify-center mb-4 md:mb-5 md:absolute md:-top-3 md:left-1/2 md:-translate-x-1/2 md:mb-0">
-                  <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full">
+            <DialogContent className="w-[calc(100vw-2rem)] sm:w-[calc(100vw-3rem)] max-w-4xl max-h-[82dvh] md:max-h-[86vh] overflow-hidden rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
+              <div className="max-h-[82dvh] md:max-h-[86vh] overflow-y-auto px-4 pb-5 pt-10 sm:px-6 md:px-10 md:pb-10 md:pt-12">
+                <div className="flex justify-center mb-4 md:mb-5 pr-8 sm:pr-0">
+                  <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full leading-tight">
                     {detalhe.tag} — TUDO QUE VOCÊ RECEBE
                   </div>
                 </div>
 
-                <div className="text-center mt-3 mb-6 md:mb-8">
-                  <h3 className="text-2xl md:text-4xl font-black text-foreground mb-2">
+                <div className="text-center mb-6 md:mb-8">
+                  <h3 className="text-xl sm:text-2xl md:text-4xl font-black text-foreground mb-2 leading-tight">
                     {detalhe.titulo}
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">

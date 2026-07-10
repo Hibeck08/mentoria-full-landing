@@ -56,8 +56,8 @@ const Mentoria = () => {
     { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
-  const WPP_STANDARD = "https://api.whatsapp.com/send/?phone=5521992104885&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Mentoria+FULL+Standard&type=phone_number&app_absent=0";
-  const WPP_ULTRA = "https://api.whatsapp.com/send/?phone=5521992104885&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Mentoria+FULL+Ultra&type=phone_number&app_absent=0";
+  const WPP_STANDARD = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%21";
+  const WPP_ULTRA = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra%21";
 
   const detalheStandard = {
     tag: "PLANO STANDARD",
@@ -824,16 +824,16 @@ const Mentoria = () => {
           </ScrollReveal>
 
           <Dialog open={openPlan !== null} onOpenChange={(o) => !o && setOpenPlan(null)}>
-            <DialogContent className="w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-3xl max-h-[88vh] overflow-y-auto rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
-              <div className="relative p-5 pt-8 md:p-10 md:pt-12">
-                <div className="flex justify-center mb-4 md:mb-5 md:absolute md:-top-3 md:left-1/2 md:-translate-x-1/2 md:mb-0">
-                  <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full">
+            <DialogContent className="w-[calc(100vw-2rem)] sm:w-[calc(100vw-3rem)] max-w-5xl max-h-[82dvh] md:max-h-[84vh] overflow-hidden rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
+              <div className="max-h-[82dvh] md:max-h-[84vh] overflow-y-auto px-4 pb-28 pt-10 sm:px-6 md:px-8 md:pb-32 md:pt-10">
+                <div className="flex justify-center mb-4 pr-8 sm:pr-0">
+                  <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full leading-tight">
                     {detalhe.tag} — TUDO QUE VOCÊ RECEBE
                   </div>
                 </div>
 
-                <div className="text-center mt-3 mb-6 md:mb-8">
-                  <h3 className="text-2xl md:text-4xl font-black text-foreground mb-2">
+                <div className="text-center mb-5 md:mb-6">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-foreground mb-2 leading-tight">
                     {detalhe.titulo}
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -844,20 +844,20 @@ const Mentoria = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5 md:gap-6 mb-6 md:mb-8">
+                <div className={`grid gap-4 mb-5 md:mb-6 ${openPlan === "standard" ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
                   {detalhe.grupos.map((g, i) => {
                     const Icon = g.icon;
                     return (
-                      <div key={i} className="rounded-xl md:rounded-2xl bg-background/50 border border-accent/20 p-5 md:p-6">
-                        <div className="flex items-center gap-3 mb-4">
+                      <div key={i} className="rounded-xl md:rounded-2xl bg-background/50 border border-accent/20 p-5 md:p-5">
+                        <div className="flex items-center gap-3 mb-3">
                           <div className="w-11 h-11 rounded-xl bg-gradient-primary flex items-center justify-center shadow-glow-beige flex-shrink-0">
                             <Icon className="w-5 h-5 text-accent-foreground" />
                           </div>
-                          <h4 className="text-base md:text-lg font-black text-foreground leading-tight">{g.titulo}</h4>
+                          <h4 className="text-base font-black text-foreground leading-tight">{g.titulo}</h4>
                         </div>
                         <ul className="space-y-2">
                           {g.itens.map((it, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-sm text-foreground/90">
+                            <li key={idx} className="flex items-start gap-2 text-sm md:text-[13px] text-foreground/90">
                               <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                               <span>{it}</span>
                             </li>
@@ -869,7 +869,7 @@ const Mentoria = () => {
                 </div>
 
                 {detalhe.naoInclui.length > 0 && (
-                  <div className="rounded-xl border border-destructive/30 bg-destructive/10 p-4 md:p-5 mb-6 md:mb-8">
+                  <div className="rounded-xl border border-destructive/30 bg-destructive/10 p-4 md:p-5 mb-5 md:mb-6">
                     <p className="text-xs md:text-sm font-bold text-destructive uppercase tracking-wider mb-2 flex items-center gap-2">
                       <AlertTriangle className="w-4 h-4" /> O que NÃO está incluso neste plano
                     </p>
@@ -887,20 +887,14 @@ const Mentoria = () => {
                   </div>
                 )}
 
-                <div className="text-center">
-                  <p className="text-sm md:text-base text-foreground/90 mb-4 max-w-xl mx-auto">
-                    Fale direto comigo no WhatsApp pra tirar dúvidas, entender se o plano é pra você e garantir sua vaga.
-                  </p>
-                  <Button
-                    variant="gold"
-                    size="lg"
-                    onClick={() => window.open(detalhe.link, "_blank")}
-                    className="text-sm md:text-lg font-black px-8 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md"
-                  >
-                    <span className="inline-flex items-center justify-center gap-2">
-                      <MessageCircle className="w-5 h-5" />
-                      <span>{detalhe.cta}</span>
-                    </span>
+                <div className="absolute inset-x-0 bottom-0 border-t border-accent/20 bg-card/95 px-4 py-4 backdrop-blur-md md:px-8 md:py-5">
+                  <Button asChild variant="gold" size="lg" className="mx-auto text-sm md:text-lg font-black px-6 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md">
+                    <a href={detalhe.link} target="_blank" rel="noopener noreferrer">
+                      <span className="inline-flex items-center justify-center gap-2">
+                        <MessageCircle className="w-5 h-5" />
+                        <span>{detalhe.cta}</span>
+                      </span>
+                    </a>
                   </Button>
                   <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
                     <Shield className="w-4 h-4 text-accent" />

@@ -56,8 +56,8 @@ const Mentoria = () => {
     { icon: Layers, badge: "+10K", title: "Plataforma Completa", desc: "Banco FULL Questões com nivelamento automático + 2.000 flashcards Anki de todas as matérias." },
   ];
 
-  const WPP_STANDARD = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20FULL%20Standard.";
-  const WPP_ULTRA = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Mentoria%20FULL%20Ultra.";
+  const WPP_STANDARD = "https://api.whatsapp.com/send/?phone=5521992104885&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Mentoria+FULL+Standard&type=phone_number&app_absent=0";
+  const WPP_ULTRA = "https://api.whatsapp.com/send/?phone=5521992104885&text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Mentoria+FULL+Ultra&type=phone_number&app_absent=0";
 
   const detalheStandard = {
     tag: "PLANO STANDARD",
@@ -824,10 +824,10 @@ const Mentoria = () => {
           </ScrollReveal>
 
           <Dialog open={openPlan !== null} onOpenChange={(o) => !o && setOpenPlan(null)}>
-            <DialogContent className="max-w-3xl max-h-[92vh] overflow-y-auto p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
-              <div className="relative p-6 md:p-10 pt-10 md:pt-12">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-primary text-accent-foreground px-4 py-1.5 rounded-full text-[11px] md:text-xs font-black shadow-glow-beige whitespace-nowrap tracking-widest">
+            <DialogContent className="w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-3xl max-h-[88vh] overflow-y-auto rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
+              <div className="relative p-5 pt-8 md:p-10 md:pt-12">
+                <div className="flex justify-center mb-4 md:mb-5 md:absolute md:-top-3 md:left-1/2 md:-translate-x-1/2 md:mb-0">
+                  <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full">
                     {detalhe.tag} — TUDO QUE VOCÊ RECEBE
                   </div>
                 </div>
@@ -904,7 +904,7 @@ const Mentoria = () => {
                   </Button>
                   <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
                     <Shield className="w-4 h-4 text-accent" />
-                    <span className="font-semibold">Atendimento humano · sem compromisso</span>
+                    <span className="font-semibold">Atendimento humano</span>
                   </div>
                 </div>
               </div>

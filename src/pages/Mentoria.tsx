@@ -605,56 +605,6 @@ const Mentoria = () => {
       </section>
 
       {/* PLANO DE METAS SEMANAL */}
-      <section className="py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-[460px] h-[460px] bg-accent rounded-full blur-[160px] opacity-10" />
-        <div className="absolute bottom-0 left-1/4 w-[380px] h-[380px] bg-primary/30 rounded-full blur-[140px] opacity-25" style={{ animationDelay: "2s" }} />
-        <div className="container relative z-10 mx-auto px-6 max-w-6xl">
-          <ScrollReveal>
-            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
-                <Calendar className="w-4 h-4" />
-                <span className="text-xs font-bold uppercase tracking-wider">Plano de metas semanal</span>
-              </div>
-              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-3">
-                Sua semana inteira <span className="bg-gradient-primary bg-clip-text text-transparent">mastigada</span>
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Toda segunda você abre a plataforma e já tem o que estudar. Matéria, flashcards, listas por nível, simulado semanal e feedback de onde investir mais tempo.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-            {[
-              { icon: BookOpen, t: "Matérias da semana", d: "A gente diz exatamente quais assuntos atacar Português, Inglês, Matemática ou Física sem você decidir nada." },
-              { icon: Layers, t: "Flashcards por assunto", d: "Os flashcards do conteúdo da semana já liberados. Revisão espaçada que fixa de verdade." },
-              { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado pra cada assunto. Você sobe de nível conforme acerta." },
-              { icon: Trophy, t: "Simulado semanal", d: "Toda semana fecha com simulado pra avançar no conteúdo e medir sua evolução real." },
-              { icon: BarChart3, t: "Gráficos com tendência", d: "Questões feitas no dia, no mês, no geral. Acerto por matéria e linha de evolução semanal." },
-              { icon: Target, t: "Feedback do que estudar", d: "A plataforma aponta a matéria que mais precisa de atenção você ataca o gargalo certo." },
-            ].map((m, i) => (
-              <ScrollReveal key={i} delay={i * 80} variant="scale">
-                <div className="group h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-5 md:p-6 hover:border-accent hover:-translate-y-1 hover:shadow-glow-beige transition-all">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow-beige mb-3 group-hover:rotate-6 transition-transform">
-                    <m.icon className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <h4 className="text-base md:text-lg font-bold text-foreground mb-1.5">{m.t}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{m.d}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal>
-            <div className="text-center mt-12">
-              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO CLASSIFICAR →
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* QUEM SOU EU – compacto */}
       <section className="py-14 md:py-24 bg-background relative overflow-hidden">
         <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />

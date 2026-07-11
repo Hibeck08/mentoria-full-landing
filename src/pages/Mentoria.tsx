@@ -357,6 +357,139 @@ const Mentoria = () => {
         </div>
       </section>
 
+      {/* PLANO DE METAS SEMANAL – banners reais (após o vídeo) */}
+      <section className="theme-purple py-14 md:py-24 bg-secondary/10 relative overflow-hidden">
+        <div className="absolute top-1/3 right-1/4 w-[460px] h-[460px] bg-accent rounded-full blur-[160px] opacity-10" />
+        <div className="absolute bottom-0 left-1/4 w-[380px] h-[380px] bg-primary/30 rounded-full blur-[140px] opacity-25" />
+        <div className="container relative z-10 mx-auto px-6 max-w-6xl">
+          <ScrollReveal>
+            <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-gradient-primary text-accent-foreground rounded-full px-4 py-2 mb-4 shadow-glow-beige">
+                <Calendar className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider">Plano de metas semanal</span>
+              </div>
+              <h2 className="text-[1.75rem] md:text-4xl lg:text-5xl font-black mb-3 leading-tight">
+                Sua semana inteira <span className="bg-gradient-primary bg-clip-text text-transparent">mastigada</span>
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Toda segunda você abre a plataforma e o plano já está lá. <strong className="text-foreground">Missão, semanas, assuntos, atividades e meta</strong>. Zero tempo perdido decidindo o que estudar.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="space-y-8 md:space-y-10">
+            {/* Banner topo: missões por concurso */}
+            <ScrollReveal variant="left">
+              <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black">
+                <img
+                  src={planoMetasMissoes.url}
+                  alt="Missões FULL por concurso: Barbacena, EEAR e Oficialato AFA/EN/EFOMM"
+                  className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                    <Target className="w-3 h-3 text-accent" />
+                    <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Uma missão por concurso</span>
+                  </div>
+                  <h3 className="text-xl md:text-3xl font-black text-white mb-1">
+                    Você escolhe a missão. A plataforma <span className="text-accent">monta o caminho.</span>
+                  </h3>
+                  <p className="text-white/80 text-sm md:text-base">
+                    Barbacena, EEAR, AFA, EN, EFOMM. Cada concurso tem seu próprio trilho de estudo, com semanas, assuntos e atividades já organizados.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Grid: dashboard de semanas + card de features */}
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              <ScrollReveal variant="left">
+                <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black min-h-[340px] md:min-h-[420px]">
+                  <img
+                    src={planoMetasSemanas.url}
+                    alt="Progresso semanal da Missão FULL AFA/EN/EFOMM"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                    <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                      <BarChart3 className="w-3 h-3 text-accent" />
+                      <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Mapa de semanas</span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-black text-white mb-1">
+                      Semana a semana com <span className="text-accent">meta clara</span>
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      Progresso, aproveitamento e meta para concluir. Você vê exatamente onde está e o que falta pra desbloquear a próxima semana.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal variant="right">
+                <div className="relative h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-8 min-h-[340px] md:min-h-[420px] flex flex-col justify-between hover:border-accent/60 transition-all duration-300">
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center gap-1.5 bg-accent/15 border border-accent/40 rounded-full px-3 py-1">
+                      <Calendar className="w-3 h-3 text-accent" />
+                      <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">O que vem pronto toda semana</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">
+                      Você abre a plataforma e já sabe <span className="text-accent">o que estudar hoje</span>
+                    </h3>
+                    <ul className="space-y-2.5 pt-2">
+                      {[
+                        { icon: BookOpen, t: "Assuntos da semana", d: "Português, Inglês, Matemática ou Física — sem você decidir nada." },
+                        { icon: Layers, t: "Flashcards liberados por assunto", d: "Revisão espaçada que fixa de verdade." },
+                        { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado. Você sobe conforme acerta." },
+                        { icon: Trophy, t: "Simulado semanal", d: "Toda semana fecha com simulado pra medir evolução real." },
+                        { icon: Target, t: "Meta para concluir e desbloquear", d: "A próxima semana só libera quando você bate a meta." },
+                      ].map((f, idx) => {
+                        const Icon = f.icon;
+                        return (
+                          <li key={idx} className="flex items-start gap-3">
+                            <div className="w-8 h-8 rounded-lg bg-gradient-primary flex-shrink-0 flex items-center justify-center shadow-glow-beige mt-0.5">
+                              <Icon className="w-4 h-4 text-accent-foreground" />
+                            </div>
+                            <div>
+                              <p className="text-sm md:text-base font-bold text-foreground leading-snug">{f.t}</p>
+                              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{f.d}</p>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2 pt-5 mt-5 border-t border-accent/20">
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-black text-accent">6</p>
+                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Semanas por ciclo</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-black text-accent">100+</p>
+                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Assuntos mapeados</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-2xl md:text-3xl font-black text-accent">0</p>
+                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Tempo decidindo</p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center mt-12 md:mt-14">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
+                QUERO ENTRAR PRA MENTORIA →
+              </Button>
+              <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* DENTRO DA PLATAFORMA - banners reais (escopo roxo) */}
       <section className="theme-purple py-14 md:py-24 bg-gradient-to-b from-background via-secondary/15 to-background relative overflow-hidden">
         <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-accent rounded-full blur-[160px] opacity-[0.08]" />

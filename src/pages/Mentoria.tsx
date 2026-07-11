@@ -14,7 +14,8 @@ import {
   AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogo from "@/assets/mentoria-logo.webp";
+import mentoriaLogoAsset from "@/assets/logo-gold.png.asset.json";
+const mentoriaLogo = mentoriaLogoAsset.url;
 import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";

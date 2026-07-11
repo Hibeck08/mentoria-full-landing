@@ -1,6 +1,7 @@
 import { ArrowRight, Clock, Sparkles, CheckCircle, Users, Star, Infinity, Zap, MessageCircle, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogo from "@/assets/mentoria-logo.webp";
+import mentoriaLogoAsset from "@/assets/logo-silver.png.asset.json";
+const mentoriaLogo = mentoriaLogoAsset.url;
 import lobbyWallpaper from "@/assets/lobby-wallpaper.webp";
 import mentoriaBanner from "@/assets/mentoria-banner.webp";
 

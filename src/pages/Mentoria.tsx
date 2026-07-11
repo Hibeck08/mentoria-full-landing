@@ -14,7 +14,8 @@ import {
   AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogo from "@/assets/mentoria-logo.webp";
+import mentoriaLogoAsset from "@/assets/logo-gold.png.asset.json";
+const mentoriaLogo = mentoriaLogoAsset.url;
 import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
@@ -187,7 +188,7 @@ const Mentoria = () => {
             <div className="flex flex-col items-start md:items-start gap-5 md:gap-8 min-h-[88vh] md:min-h-[80vh] justify-end md:justify-center pb-24 md:pb-0">
               <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm animate-fade-in-up">
                 <Award className="w-4 h-4 text-accent" />
-                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Aprovado AFA · EFOMM · EEAr</span>
+                <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Aprovado AFA · EFOMM · EEAr · EPCAR</span>
               </div>
 
               <h1 className="text-[1.5rem] sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] max-w-3xl animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
@@ -734,6 +735,7 @@ const Mentoria = () => {
       </section>
 
       {/* PLANOS */}
+      <GuaranteeSection onScrollToPlans={scrollToPlans} />
       <section id="planos-mentoria" className="py-14 md:py-24 bg-background scroll-mt-8 relative overflow-hidden">
         <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-accent rounded-full blur-[150px] opacity-10" />
         <div className="container relative z-10 mx-auto px-6">
@@ -906,9 +908,6 @@ const Mentoria = () => {
           </Dialog>
         </div>
       </section>
-
-      {/* GARANTIA */}
-      <GuaranteeSection onScrollToPlans={scrollToPlans} />
 
       {/* FAQ */}
       <section className="py-12 md:py-20 bg-secondary/10">

@@ -888,14 +888,14 @@ const Mentoria = () => {
                 )}
 
                 <div className="absolute inset-x-0 bottom-0 border-t border-accent/20 bg-card/95 px-4 py-4 backdrop-blur-md md:px-8 md:py-5">
-                  <Button asChild variant="gold" size="lg" className="mx-auto text-sm md:text-lg font-black px-6 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md">
-                    <a href={detalhe.link} target="_blank" rel="noopener noreferrer">
-                      <span className="inline-flex items-center justify-center gap-2">
+                  <div className="flex justify-center">
+                    <Button asChild variant="gold" size="lg" className="text-sm md:text-lg font-black px-6 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md">
+                      <a href={detalhe.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2">
                         <MessageCircle className="w-5 h-5" />
                         <span>{detalhe.cta}</span>
-                      </span>
-                    </a>
-                  </Button>
+                      </a>
+                    </Button>
+                  </div>
                   <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
                     <Shield className="w-4 h-4 text-accent" />
                     <span className="font-semibold">Atendimento humano</span>

@@ -27,6 +27,7 @@ import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.as
 import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
 import planoMetasMissoes from "@/assets/plano-metas-missoes.png.asset.json";
 import planoMetasSemanas from "@/assets/plano-metas-semanas.png.asset.json";
+import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile.png.asset.json";
 import { GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {
@@ -381,23 +382,31 @@ const Mentoria = () => {
             {/* Banner topo: missões por concurso */}
             <ScrollReveal variant="left">
               <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black">
-                <img
-                  src={planoMetasMissoes.url}
-                  alt="Missões FULL por concurso: Barbacena, EEAR e Oficialato AFA/EN/EFOMM"
-                  className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
-                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
+                <div className="p-5 md:p-8">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-3 backdrop-blur-sm">
                     <Target className="w-3 h-3 text-accent" />
                     <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Uma missão por concurso</span>
                   </div>
-                  <h3 className="text-xl md:text-3xl font-black text-white mb-1">
+                  <h3 className="text-xl md:text-3xl font-black text-white mb-2">
                     Você escolhe a missão. A plataforma <span className="text-accent">monta o caminho.</span>
                   </h3>
-                  <p className="text-white/80 text-sm md:text-base">
+                  <p className="text-white/80 text-sm md:text-base mb-5 md:mb-6">
                     Barbacena, EEAR, AFA, EN, EFOMM. Cada concurso tem seu próprio trilho de estudo, com semanas, assuntos e atividades já organizados.
                   </p>
+                  {/* Mobile: imagem vertical auto-explicativa */}
+                  <img
+                    src={planoMetasMissoesMobile.url}
+                    alt="Missão FULL AFA/EN/EFOMM: objetivo, progresso e mapa de semanas"
+                    className="md:hidden w-full max-w-sm mx-auto h-auto rounded-xl"
+                    loading="lazy"
+                  />
+                  {/* Desktop: imagem larga completa (object-contain para não cortar) */}
+                  <img
+                    src={planoMetasMissoes.url}
+                    alt="Missões FULL por concurso: Barbacena, EEAR e Oficialato AFA/EN/EFOMM"
+                    className="hidden md:block w-full h-auto rounded-xl"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </ScrollReveal>
@@ -405,14 +414,8 @@ const Mentoria = () => {
             {/* Grid: dashboard de semanas + card de features */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <ScrollReveal variant="left">
-                <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black min-h-[340px] md:min-h-[420px]">
-                  <img
-                    src={planoMetasSemanas.url}
-                    alt="Progresso semanal da Missão FULL AFA/EN/EFOMM"
-                    className="w-full h-full object-cover object-top"
-                    loading="lazy"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black flex flex-col">
+                  <div className="p-5 md:p-7">
                     <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
                       <BarChart3 className="w-3 h-3 text-accent" />
                       <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Mapa de semanas</span>
@@ -423,6 +426,14 @@ const Mentoria = () => {
                     <p className="text-white/80 text-sm">
                       Progresso, aproveitamento e meta para concluir. Você vê exatamente onde está e o que falta pra desbloquear a próxima semana.
                     </p>
+                  </div>
+                  <div className="flex-1 flex items-end justify-center px-3 pb-3 md:px-4 md:pb-4">
+                    <img
+                      src={planoMetasSemanas.url}
+                      alt="Progresso semanal da Missão FULL AFA/EN/EFOMM"
+                      className="w-full h-auto max-h-[280px] md:max-h-[320px] object-contain rounded-lg"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </ScrollReveal>

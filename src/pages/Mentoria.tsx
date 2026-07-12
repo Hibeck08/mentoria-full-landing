@@ -382,112 +382,71 @@ const Mentoria = () => {
             {/* Banner topo: missões por concurso */}
             <ScrollReveal variant="left">
               <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black">
-                <div className="p-5 md:p-8">
-                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-3 backdrop-blur-sm">
+                {/* Mobile: imagem vertical auto-explicativa (sem overlay) */}
+                <img
+                  src={planoMetasMissoesMobile.url}
+                  alt="Categoria Militar da plataforma: Missão FULL Barbacena, EEAR e Oficialato"
+                  className="md:hidden w-full h-auto"
+                  loading="lazy"
+                />
+                {/* Tablet + Desktop: imagem larga com overlay */}
+                <img
+                  src={planoMetasMissoes.url}
+                  alt="Missões FULL por concurso: Barbacena, EEAR e Oficialato AFA/EN/EFOMM"
+                  className="hidden md:block w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
+                <div className="hidden md:block absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
                     <Target className="w-3 h-3 text-accent" />
-                    <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Uma missão por concurso</span>
+                    <span className="text-xs font-bold text-accent uppercase tracking-wider">Uma missão por concurso</span>
                   </div>
-                  <h3 className="text-xl md:text-3xl font-black text-white mb-2">
+                  <h3 className="text-2xl md:text-3xl font-black text-white mb-1">
                     Você escolhe a missão. A plataforma <span className="text-accent">monta o caminho.</span>
                   </h3>
-                  <p className="text-white/80 text-sm md:text-base mb-5 md:mb-6">
+                  <p className="text-white/80 text-sm md:text-base">
                     Barbacena, EEAR, AFA, EN, EFOMM. Cada concurso tem seu próprio trilho de estudo, com semanas, assuntos e atividades já organizados.
                   </p>
-                  {/* Mobile: imagem vertical auto-explicativa */}
-                  <img
-                    src={planoMetasMissoesMobile.url}
-                    alt="Missão FULL AFA/EN/EFOMM: objetivo, progresso e mapa de semanas"
-                    className="md:hidden w-full max-w-sm mx-auto h-auto rounded-xl"
-                    loading="lazy"
-                  />
-                  {/* Desktop: imagem larga completa (object-contain para não cortar) */}
-                  <img
-                    src={planoMetasMissoes.url}
-                    alt="Missões FULL por concurso: Barbacena, EEAR e Oficialato AFA/EN/EFOMM"
-                    className="hidden md:block w-full h-auto rounded-xl"
-                    loading="lazy"
-                  />
                 </div>
               </div>
             </ScrollReveal>
 
-            {/* Grid: dashboard de semanas + card de features */}
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <ScrollReveal variant="left">
-                <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black flex flex-col">
-                  <div className="p-5 md:p-7">
-                    <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
-                      <BarChart3 className="w-3 h-3 text-accent" />
-                      <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">Mapa de semanas</span>
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-black text-white mb-1">
-                      Semana a semana com <span className="text-accent">meta clara</span>
-                    </h3>
-                    <p className="text-white/80 text-sm">
-                      Progresso, aproveitamento e meta para concluir. Você vê exatamente onde está e o que falta pra desbloquear a próxima semana.
-                    </p>
+            {/* Card de features semanais (largura total) */}
+            <ScrollReveal variant="right">
+              <div className="relative bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-10 hover:border-accent/60 transition-all duration-300">
+                <div className="max-w-3xl mx-auto space-y-5">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/15 border border-accent/40 rounded-full px-3 py-1">
+                    <Calendar className="w-3 h-3 text-accent" />
+                    <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">O que vem pronto toda semana</span>
                   </div>
-                  <div className="flex-1 flex items-end justify-center px-3 pb-3 md:px-4 md:pb-4">
-                    <img
-                      src={planoMetasSemanas.url}
-                      alt="Progresso semanal da Missão FULL AFA/EN/EFOMM"
-                      className="w-full h-auto max-h-[280px] md:max-h-[320px] object-contain rounded-lg"
-                      loading="lazy"
-                    />
-                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">
+                    Você abre a plataforma e já sabe <span className="text-accent">o que estudar hoje</span>
+                  </h3>
+                  <ul className="space-y-3 pt-2 md:grid md:grid-cols-2 md:gap-x-6 md:gap-y-4 md:space-y-0">
+                    {[
+                      { icon: BookOpen, t: "Assuntos da semana", d: "Português, Inglês, Matemática ou Física — sem você decidir nada." },
+                      { icon: Layers, t: "Flashcards liberados por assunto", d: "Revisão espaçada que fixa de verdade." },
+                      { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado. Você sobe conforme acerta." },
+                      { icon: Trophy, t: "Simulado semanal", d: "Toda semana fecha com simulado pra medir evolução real." },
+                      { icon: Target, t: "Meta para concluir e desbloquear", d: "A próxima semana só libera quando você bate a meta." },
+                    ].map((f, idx) => {
+                      const Icon = f.icon;
+                      return (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="w-9 h-9 rounded-lg bg-gradient-primary flex-shrink-0 flex items-center justify-center shadow-glow-beige mt-0.5">
+                            <Icon className="w-4 h-4 text-accent-foreground" />
+                          </div>
+                          <div>
+                            <p className="text-sm md:text-base font-bold text-foreground leading-snug">{f.t}</p>
+                            <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{f.d}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
-              </ScrollReveal>
-
-              <ScrollReveal variant="right">
-                <div className="relative h-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 rounded-2xl md:rounded-3xl p-6 md:p-8 min-h-[340px] md:min-h-[420px] flex flex-col justify-between hover:border-accent/60 transition-all duration-300">
-                  <div className="space-y-4">
-                    <div className="inline-flex items-center gap-1.5 bg-accent/15 border border-accent/40 rounded-full px-3 py-1">
-                      <Calendar className="w-3 h-3 text-accent" />
-                      <span className="text-[10px] md:text-xs font-bold text-accent uppercase tracking-wider">O que vem pronto toda semana</span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-foreground leading-tight">
-                      Você abre a plataforma e já sabe <span className="text-accent">o que estudar hoje</span>
-                    </h3>
-                    <ul className="space-y-2.5 pt-2">
-                      {[
-                        { icon: BookOpen, t: "Assuntos da semana", d: "Português, Inglês, Matemática ou Física — sem você decidir nada." },
-                        { icon: Layers, t: "Flashcards liberados por assunto", d: "Revisão espaçada que fixa de verdade." },
-                        { icon: FileText, t: "Listas por nível", d: "Base, intermediário e avançado. Você sobe conforme acerta." },
-                        { icon: Trophy, t: "Simulado semanal", d: "Toda semana fecha com simulado pra medir evolução real." },
-                        { icon: Target, t: "Meta para concluir e desbloquear", d: "A próxima semana só libera quando você bate a meta." },
-                      ].map((f, idx) => {
-                        const Icon = f.icon;
-                        return (
-                          <li key={idx} className="flex items-start gap-3">
-                            <div className="w-8 h-8 rounded-lg bg-gradient-primary flex-shrink-0 flex items-center justify-center shadow-glow-beige mt-0.5">
-                              <Icon className="w-4 h-4 text-accent-foreground" />
-                            </div>
-                            <div>
-                              <p className="text-sm md:text-base font-bold text-foreground leading-snug">{f.t}</p>
-                              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{f.d}</p>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                  <div className="grid grid-cols-3 gap-2 pt-5 mt-5 border-t border-accent/20">
-                    <div className="text-center">
-                      <p className="text-2xl md:text-3xl font-black text-accent">6</p>
-                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Semanas por ciclo</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-2xl md:text-3xl font-black text-accent">100+</p>
-                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Assuntos mapeados</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-2xl md:text-3xl font-black text-accent">0</p>
-                      <p className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Tempo decidindo</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
 
           <ScrollReveal>

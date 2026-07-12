@@ -349,7 +349,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-10 md:mt-12">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ENTRAR PRA MENTORIA →
+                COMEÇAR MINHA APROVAÇÃO →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
             </div>
@@ -451,7 +451,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-12 md:mt-14">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ENTRAR PRA MENTORIA →
+                TRAVAR MINHA VAGA AGORA →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
             </div>
@@ -553,7 +553,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-12 md:mt-14">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO ENTRAR PRA MENTORIA →
+                BORA COMEÇAR HOJE →
               </Button>
               <p className="text-xs md:text-sm text-muted-foreground mt-3">⚡ Acesso imediato · 7 dias de garantia</p>
             </div>
@@ -699,7 +699,7 @@ const Mentoria = () => {
           <ScrollReveal>
             <div className="text-center mt-12">
               <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg font-bold px-8 py-6 md:px-10 md:py-7 rounded-full shadow-glow-beige w-full max-w-sm md:w-auto">
-                QUERO SER CLASSIFICADO →
+                É ISSO QUE EU QUERO →
               </Button>
             </div>
           </ScrollReveal>

@@ -27,7 +27,7 @@ import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.as
 import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
 import planoMetasMissoes from "@/assets/plano-metas-missoes.png.asset.json";
 import planoMetasSemanas from "@/assets/plano-metas-semanas.png.asset.json";
-import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile.png.asset.json";
+import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png.asset.json";
 import { GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {

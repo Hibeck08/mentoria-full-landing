@@ -9,7 +9,7 @@ import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { Target, BookOpen, Trophy, CheckCircle2, FileText, Zap, Instagram, TrendingUp, Brain, Rocket, Shield, Database, MessageCircle, LineChart, Search, Home, Calendar, Layers, GraduationCap, Award, Crown, Play, AlertTriangle, Flame, Sparkles, Clock, XCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogoAsset from "@/assets/logo-silver.png";
-const mentoriaLogo = mentoriaLogoAsset.url;
+const mentoriaLogo = mentoriaLogoAsset;
 import heroPhoto from "@/assets/hero-photo.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import bryanUniform from "@/assets/bryan-uniform.jpg";
@@ -158,7 +158,7 @@ const Questoes = () => {
     {/* SEÇÃO PAS - 3 ERROS QUE TRAVAM SUA APROVAÇÃO */}
     <section className="py-14 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
       <div className="absolute inset-0 opacity-30">
-        <img src={militaryCollageBanner.url} alt="" className="w-full h-full object-cover object-center" loading="lazy" />
+        <img src={militaryCollageBanner} alt="" className="w-full h-full object-cover object-center" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
       </div>
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-amber-500/15 rounded-full blur-[160px]" />
@@ -328,7 +328,7 @@ const Questoes = () => {
         <div className="space-y-8 md:space-y-10">
           <ScrollReveal variant="left">
             <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300">
-              <img src={metodoGridBanner.url} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
+              <img src={metodoGridBanner} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
               <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                 <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
                   <GraduationCap className="w-3 h-3 text-accent" />
@@ -343,7 +343,7 @@ const Questoes = () => {
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             <ScrollReveal variant="left">
               <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 min-h-[340px] md:min-h-[420px]">
-                <img src={flashcardsCloseupBanner.url} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                <img src={flashcardsCloseupBanner} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
                   <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">

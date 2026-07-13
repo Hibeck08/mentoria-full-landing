@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Lightbulb, BarChart3, Repeat, Home } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-silver.png.asset.json";
+import mentoriaLogoAsset from "@/assets/logo-silver.png";
 const mentoriaLogo = mentoriaLogoAsset.url;
 import heroPhoto from "@/assets/hero-photo.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";

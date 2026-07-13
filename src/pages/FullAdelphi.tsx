@@ -12,10 +12,10 @@ import {
   AlertTriangle, XCircle, Play, Brain, Languages,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-silver.png.asset.json";
+import mentoriaLogoAsset from "@/assets/logo-silver.png";
 const mentoriaLogo = mentoriaLogoAsset.url;
 import adelphiHero from "@/assets/adelphi-hero.webp";
-import adelphiHeroMobile from "@/assets/adelphi-hero-mobile.png.asset.json";
+import adelphiHeroMobile from "@/assets/adelphi-hero-mobile.png";
 import adelphiBanner2 from "@/assets/adelphi-banner-2.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import fontesPhoto from "@/assets/fontes-photo.webp";

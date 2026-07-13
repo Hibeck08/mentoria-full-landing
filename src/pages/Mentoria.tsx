@@ -14,19 +14,19 @@ import {
   AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-gold.png.asset.json";
+import mentoriaLogoAsset from "@/assets/logo-gold.png";
 const mentoriaLogo = mentoriaLogoAsset.url;
 import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import ankiCardExample from "@/assets/anki-card-example.webp";
-import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop-v2.jpg.asset.json";
-import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
-import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
-import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
-import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
-import planoMetasMissoes from "@/assets/plano-metas-missoes.png.asset.json";
-import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png.asset.json";
+import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop-v2.jpg";
+import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.png";
+import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg";
+import militaryCollageBanner from "@/assets/questoes-military-collage.png";
+import planoMetasMissoes from "@/assets/plano-metas-missoes.png";
+import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png";
 import { GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {

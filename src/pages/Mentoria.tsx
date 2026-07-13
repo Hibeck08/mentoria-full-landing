@@ -14,19 +14,19 @@ import {
   AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-gold.png.asset.json";
-const mentoriaLogo = mentoriaLogoAsset.url;
+import mentoriaLogoAsset from "@/assets/logo-gold.png";
+const mentoriaLogo = mentoriaLogoAsset;
 import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import ankiCardExample from "@/assets/anki-card-example.webp";
-import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop-v2.jpg.asset.json";
-import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png.asset.json";
-import metodoGridBanner from "@/assets/questoes-metodo-grid.png.asset.json";
-import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg.asset.json";
-import militaryCollageBanner from "@/assets/questoes-military-collage.png.asset.json";
-import planoMetasMissoes from "@/assets/plano-metas-missoes.png.asset.json";
-import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png.asset.json";
+import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop-v2.jpg";
+import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.png";
+import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg";
+import militaryCollageBanner from "@/assets/questoes-military-collage.png";
+import planoMetasMissoes from "@/assets/plano-metas-missoes.png";
+import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png";
 import { GraduationCap } from "lucide-react";
 
 const FloatingWhatsApp = () => {
@@ -166,8 +166,8 @@ const Mentoria = () => {
       {/* HERO */}
       <section className="relative min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={mentoriaHeroMobile.url} alt="Background" className="block md:hidden w-full h-full object-cover object-center brightness-95 contrast-105 saturate-110" loading="eager" fetchPriority="high" />
-          <img src={mentoriaHeroDesktop.url} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-95 contrast-105 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={mentoriaHeroMobile} alt="Background" className="block md:hidden w-full h-full object-cover object-center brightness-95 contrast-105 saturate-110" loading="eager" fetchPriority="high" />
+          <img src={mentoriaHeroDesktop} alt="Background" className="hidden md:block w-full h-full object-cover object-center brightness-95 contrast-105 saturate-110" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/85 md:bg-gradient-to-br md:from-background/60 md:via-background/50 md:to-background/70" />
           <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
           <div className="absolute bottom-1/4 left-1/3 w-[350px] h-[350px] bg-accent/20 rounded-full blur-[100px] opacity-25" />
@@ -383,14 +383,14 @@ const Mentoria = () => {
               <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 bg-black">
                 {/* Mobile: imagem vertical auto-explicativa (sem overlay) */}
                 <img
-                  src={planoMetasMissoesMobile.url}
+                  src={planoMetasMissoesMobile}
                   alt="Categoria Militar da plataforma: Missão FULL Barbacena, EEAR e Oficialato"
                   className="md:hidden w-full h-auto"
                   loading="lazy"
                 />
                 {/* Tablet + Desktop: imagem larga com overlay */}
                 <img
-                  src={planoMetasMissoes.url}
+                  src={planoMetasMissoes}
                   alt="Missões FULL por concurso: Barbacena, EEAR e Oficialato AFA/EN/EFOMM"
                   className="hidden md:block w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
@@ -481,7 +481,7 @@ const Mentoria = () => {
           <div className="space-y-8 md:space-y-10">
             <ScrollReveal variant="left">
               <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300">
-                <img src={metodoGridBanner.url} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
+                <img src={metodoGridBanner} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
                   <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">
                     <GraduationCap className="w-3 h-3 text-accent" />
@@ -496,7 +496,7 @@ const Mentoria = () => {
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <ScrollReveal variant="left">
                 <div className="relative h-full group rounded-2xl md:rounded-3xl overflow-hidden border-2 border-accent/30 hover:border-accent/60 transition-all duration-300 min-h-[340px] md:min-h-[420px]">
-                  <img src={flashcardsCloseupBanner.url} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                  <img src={flashcardsCloseupBanner} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
                     <div className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/40 rounded-full px-3 py-1 mb-2 backdrop-blur-sm">

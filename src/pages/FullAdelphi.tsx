@@ -12,10 +12,10 @@ import {
   AlertTriangle, XCircle, Play, Brain, Languages,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-silver.png.asset.json";
-const mentoriaLogo = mentoriaLogoAsset.url;
+import mentoriaLogoAsset from "@/assets/logo-silver.png";
+const mentoriaLogo = mentoriaLogoAsset;
 import adelphiHero from "@/assets/adelphi-hero.webp";
-import adelphiHeroMobile from "@/assets/adelphi-hero-mobile.png.asset.json";
+import adelphiHeroMobile from "@/assets/adelphi-hero-mobile.png";
 import adelphiBanner2 from "@/assets/adelphi-banner-2.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import fontesPhoto from "@/assets/fontes-photo.webp";
@@ -113,7 +113,7 @@ const FullAdelphi = () => {
       {/* HERO */}
       <section className="relative min-h-[100vh] flex items-end md:items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src={adelphiHeroMobile.url} alt="FULL Adelphi" className="lg:hidden w-full h-full object-cover object-[center_top] brightness-[0.6] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
+          <img src={adelphiHeroMobile} alt="FULL Adelphi" className="lg:hidden w-full h-full object-cover object-[center_top] brightness-[0.6] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
           <img src={adelphiHero} alt="FULL Adelphi" className="hidden lg:block w-full h-full object-cover object-[center_top] brightness-[0.55] contrast-110 saturate-105" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/55 to-background/95 md:bg-gradient-to-r md:from-background/95 md:via-background/55 md:to-background/20" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,hsl(var(--background))_95%)]" />

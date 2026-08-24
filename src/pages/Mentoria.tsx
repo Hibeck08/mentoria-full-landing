@@ -1013,18 +1013,56 @@ const Mentoria = () => {
                   </div>
                 )}
 
-                <div className="absolute inset-x-0 bottom-0 border-t border-accent/20 bg-card/95 px-4 py-4 backdrop-blur-md md:px-8 md:py-5">
-                  <div className="flex justify-center">
-                    <Button asChild variant="gold" size="lg" className="text-sm md:text-lg font-black px-6 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md">
-                      <a href={detalhe.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2">
-                        <MessageCircle className="w-5 h-5" />
-                        <span>{detalhe.cta}</span>
+                {/* PLANOS DE ASSINATURA */}
+                <div className="rounded-2xl border border-accent/25 bg-background/50 p-4 md:p-6">
+                  <p className="text-center text-xs md:text-sm font-black uppercase tracking-widest text-accent mb-4">
+                    Escolha o seu plano de assinatura
+                  </p>
+                  <div className="grid gap-3 md:grid-cols-3 md:gap-4">
+                    {detalhe.precos.map((p: any) => (
+                      <div
+                        key={p.nome}
+                        className={`relative rounded-xl border-2 p-4 flex flex-col ${
+                          p.melhor ? "border-accent bg-accent/10 shadow-glow-beige" : "border-accent/20 bg-card/60"
+                        }`}
+                      >
+                        {p.promo && (
+                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-primary px-3 py-1 text-[9px] md:text-[10px] font-black tracking-widest text-accent-foreground shadow-glow-beige">
+                            {p.promo}
+                          </span>
+                        )}
+                        <p className="text-sm font-black uppercase tracking-wider text-foreground mt-1">{p.nome}</p>
+                        <p className="text-[11px] text-muted-foreground mb-2">{p.nota}</p>
+                        {p.de && (
+                          <p className="text-xs text-muted-foreground line-through">{p.de}/mês</p>
+                        )}
+                        <p className="text-2xl md:text-3xl font-black text-accent leading-none">
+                          {p.mes}
+                          <span className="text-sm font-bold text-muted-foreground">/mês</span>
+                        </p>
+                        {p.economia && (
+                          <p className="mt-1 text-[11px] font-bold text-accent">{p.economia}</p>
+                        )}
+                        <Button asChild variant="gold" className="mt-4 w-full rounded-full font-black">
+                          <a href={p.link} target="_blank" rel="noopener noreferrer">
+                            ASSINAR {p.nome.toUpperCase()}
+                          </a>
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 flex flex-col items-center gap-3">
+                    <Button asChild variant="outline" className="rounded-full border-accent/50 font-bold text-accent hover:bg-accent/10">
+                      <a href={WPP_DUVIDAS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                        <MessageCircle className="w-4 h-4" />
+                        Tenho dúvidas — falar no WhatsApp
                       </a>
                     </Button>
-                  </div>
-                  <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
-                    <Shield className="w-4 h-4 text-accent" />
-                    <span className="font-semibold">Atendimento humano</span>
+                    <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
+                      <Shield className="w-4 h-4 text-accent" />
+                      <span className="font-semibold">Garantia de 7 dias · Atendimento humano</span>
+                    </div>
                   </div>
                 </div>
               </div>

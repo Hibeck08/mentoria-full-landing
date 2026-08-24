@@ -862,7 +862,7 @@ const Mentoria = () => {
 
           {/* COMPARATIVO LADO A LADO */}
           <ScrollReveal>
-            <div className="max-w-5xl mx-auto mb-10 md:mb-14 grid md:grid-cols-2 gap-4 md:gap-6">
+            <div className="max-w-6xl mx-auto mb-10 md:mb-14 grid md:grid-cols-3 gap-4 md:gap-6">
               {[
                 {
                   mode: "standard" as const,
@@ -879,16 +879,30 @@ const Mentoria = () => {
                   excludes: ["Aulas ao vivo de matérias", "Aulas gravadas de matérias"],
                 },
                 {
+                  mode: "standardplus" as const,
+                  tag: "STANDARD +",
+                  title: "Quero também as aulas gravadas",
+                  desc: "Tudo do Standard e mais o acervo de aulas gravadas de todas as matérias pra estudar conteúdo no seu ritmo.",
+                  para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
+                  bullets: [
+                    "Tudo do Standard",
+                    "Aulas GRAVADAS de todas as matérias",
+                    "Resoluções comentadas por assunto",
+                    "Assiste quando e quantas vezes quiser",
+                  ],
+                  excludes: ["Aulas ao vivo de matérias"],
+                },
+                {
                   mode: "ultra" as const,
                   tag: "PLANO ULTRA",
                   title: "Quero TUDO incluso",
                   desc: "Você não tem curso preparatório (ou quer trocar por algo direto ao ponto) e quer o pacote fechado de estudo.",
                   para: "EXCLUSIVO para AFA · EN · EFOMM",
                   bullets: [
-                    "Tudo do Standard",
+                    "Tudo do Standard +",
                     "Aulas AO VIVO de Mat, Fís, Port e Ing",
-                    "Aulas GRAVADAS de todas as matérias",
                     "Mentoria 1:1 aprofundada",
+                    "SUPER DESCONTO no anual até 10/09",
                   ],
                   excludes: [],
                 },

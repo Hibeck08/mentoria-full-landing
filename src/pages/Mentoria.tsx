@@ -51,7 +51,7 @@ const Mentoria = () => {
   };
 
   const [vslPlaying, setVslPlaying] = React.useState(false);
-  const [openPlan, setOpenPlan] = React.useState<null | "standard" | "ultra">(null);
+  const [openPlan, setOpenPlan] = React.useState<null | "standard" | "standardplus" | "ultra">(null);
 
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },
@@ -60,7 +60,36 @@ const Mentoria = () => {
   ];
 
   const WPP_STANDARD = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%21";
+  const WPP_STANDARD_PLUS = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%20%2B%20Aulas%20Gravadas%21";
   const WPP_ULTRA = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra%21";
+  const WPP_DUVIDAS = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
+
+  const planosStandard = [
+    { nome: "Trimestral", mes: "R$ 97,00", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/F3otYDP" },
+    { nome: "Semestral", mes: "R$ 93,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/ctdmAcT" },
+    { nome: "Anual", mes: "R$ 87,50", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/9LgKsvN", melhor: true },
+  ];
+
+  const planosStandardPlus = [
+    { nome: "Trimestral", mes: "R$ 112,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/vJtM1hN" },
+    { nome: "Semestral", mes: "R$ 106,00", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/MYxkoYR" },
+    { nome: "Anual", mes: "R$ 98,98", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/dOPN2bl", melhor: true },
+  ];
+
+  const planosUltra = [
+    { nome: "Trimestral", mes: "R$ 129,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/4ZJ8Z86" },
+    { nome: "Semestral", mes: "R$ 124,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/zJh6ROb" },
+    {
+      nome: "Anual",
+      mes: "R$ 90,68",
+      de: "R$ 120,90",
+      nota: "12 meses de acesso",
+      link: "https://pay.kiwify.com.br/Ph1n0Af?coupon=ANUALFULL",
+      melhor: true,
+      promo: "SUPER DESCONTO até 10/09",
+      economia: "25% OFF · cupom ANUALFULL já aplicado",
+    },
+  ];
 
   const detalheStandard = {
     tag: "PLANO STANDARD",
@@ -104,7 +133,32 @@ const Mentoria = () => {
     ],
     cta: "QUERO O PLANO STANDARD",
     link: WPP_STANDARD,
+    precos: planosStandard,
   };
+
+  const detalheStandardPlus = {
+    ...detalheStandard,
+    tag: "STANDARD + AULAS GRAVADAS",
+    titulo: "Mentoria FULL Hibeck — Standard +",
+    subtitulo: "Tudo do Standard e mais o acervo completo de aulas gravadas pra você estudar conteúdo no seu ritmo.",
+    grupos: [
+      ...detalheStandard.grupos,
+      {
+        titulo: "Aulas GRAVADAS de todas as matérias",
+        icon: BookOpen,
+        itens: [
+          "Videoaulas completas do zero ao avançado",
+          "Resolução comentada de questões-chave por assunto",
+          "Assiste quando quiser, quantas vezes quiser",
+        ],
+      },
+    ],
+    naoInclui: ["Aulas AO VIVO de matérias específicas (Mat / Fís / Port / Ing)"],
+    cta: "QUERO O STANDARD +",
+    link: WPP_STANDARD_PLUS,
+    precos: planosStandardPlus,
+  };
+
 
   const detalheUltra = {
     tag: "PLANO ULTRA",
@@ -157,9 +211,11 @@ const Mentoria = () => {
     naoInclui: [],
     cta: "QUERO O PLANO ULTRA",
     link: WPP_ULTRA,
+    precos: planosUltra,
   };
 
-  const detalhe = openPlan === "ultra" ? detalheUltra : detalheStandard;
+  const detalhe =
+    openPlan === "ultra" ? detalheUltra : openPlan === "standardplus" ? detalheStandardPlus : detalheStandard;
 
   return (
     <div className="theme-mentoria min-h-screen bg-background text-foreground">
@@ -806,7 +862,7 @@ const Mentoria = () => {
 
           {/* COMPARATIVO LADO A LADO */}
           <ScrollReveal>
-            <div className="max-w-5xl mx-auto mb-10 md:mb-14 grid md:grid-cols-2 gap-4 md:gap-6">
+            <div className="max-w-6xl mx-auto mb-10 md:mb-14 grid md:grid-cols-3 gap-4 md:gap-6">
               {[
                 {
                   mode: "standard" as const,
@@ -823,16 +879,30 @@ const Mentoria = () => {
                   excludes: ["Aulas ao vivo de matérias", "Aulas gravadas de matérias"],
                 },
                 {
+                  mode: "standardplus" as const,
+                  tag: "STANDARD +",
+                  title: "Quero também as aulas gravadas",
+                  desc: "Tudo do Standard e mais o acervo de aulas gravadas de todas as matérias pra estudar conteúdo no seu ritmo.",
+                  para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
+                  bullets: [
+                    "Tudo do Standard",
+                    "Aulas GRAVADAS de todas as matérias",
+                    "Resoluções comentadas por assunto",
+                    "Assiste quando e quantas vezes quiser",
+                  ],
+                  excludes: ["Aulas ao vivo de matérias"],
+                },
+                {
                   mode: "ultra" as const,
                   tag: "PLANO ULTRA",
                   title: "Quero TUDO incluso",
                   desc: "Você não tem curso preparatório (ou quer trocar por algo direto ao ponto) e quer o pacote fechado de estudo.",
                   para: "EXCLUSIVO para AFA · EN · EFOMM",
                   bullets: [
-                    "Tudo do Standard",
+                    "Tudo do Standard +",
                     "Aulas AO VIVO de Mat, Fís, Port e Ing",
-                    "Aulas GRAVADAS de todas as matérias",
                     "Mentoria 1:1 aprofundada",
+                    "SUPER DESCONTO no anual até 10/09",
                   ],
                   excludes: [],
                 },
@@ -881,7 +951,7 @@ const Mentoria = () => {
 
           <Dialog open={openPlan !== null} onOpenChange={(o) => !o && setOpenPlan(null)}>
             <DialogContent className="w-[calc(100vw-2rem)] sm:w-[calc(100vw-3rem)] max-w-5xl max-h-[82dvh] md:max-h-[84vh] overflow-hidden rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
-              <div className="max-h-[82dvh] md:max-h-[84vh] overflow-y-auto px-4 pb-28 pt-10 sm:px-6 md:px-8 md:pb-32 md:pt-10">
+              <div className="max-h-[82dvh] md:max-h-[84vh] overflow-y-auto px-4 pb-6 pt-10 sm:px-6 md:px-8 md:pb-8 md:pt-10">
                 <div className="flex justify-center mb-4 pr-8 sm:pr-0">
                   <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full leading-tight">
                     {detalhe.tag} — TUDO QUE VOCÊ RECEBE
@@ -900,7 +970,7 @@ const Mentoria = () => {
                   </p>
                 </div>
 
-                <div className={`grid gap-4 mb-5 md:mb-6 ${openPlan === "standard" ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
+                <div className={`grid gap-4 mb-5 md:mb-6 ${openPlan === "ultra" ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
                   {detalhe.grupos.map((g, i) => {
                     const Icon = g.icon;
                     return (
@@ -943,18 +1013,56 @@ const Mentoria = () => {
                   </div>
                 )}
 
-                <div className="absolute inset-x-0 bottom-0 border-t border-accent/20 bg-card/95 px-4 py-4 backdrop-blur-md md:px-8 md:py-5">
-                  <div className="flex justify-center">
-                    <Button asChild variant="gold" size="lg" className="text-sm md:text-lg font-black px-6 py-6 md:px-12 md:py-7 rounded-full shadow-glow-beige w-full max-w-md">
-                      <a href={detalhe.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2">
-                        <MessageCircle className="w-5 h-5" />
-                        <span>{detalhe.cta}</span>
+                {/* PLANOS DE ASSINATURA */}
+                <div className="rounded-2xl border border-accent/25 bg-background/50 p-4 md:p-6">
+                  <p className="text-center text-xs md:text-sm font-black uppercase tracking-widest text-accent mb-4">
+                    Escolha o seu plano de assinatura
+                  </p>
+                  <div className="grid gap-3 md:grid-cols-3 md:gap-4">
+                    {detalhe.precos.map((p: any) => (
+                      <div
+                        key={p.nome}
+                        className={`relative rounded-xl border-2 p-4 flex flex-col ${
+                          p.melhor ? "border-accent bg-accent/10 shadow-glow-beige" : "border-accent/20 bg-card/60"
+                        }`}
+                      >
+                        {p.promo && (
+                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-primary px-3 py-1 text-[9px] md:text-[10px] font-black tracking-widest text-accent-foreground shadow-glow-beige">
+                            {p.promo}
+                          </span>
+                        )}
+                        <p className="text-sm font-black uppercase tracking-wider text-foreground mt-1">{p.nome}</p>
+                        <p className="text-[11px] text-muted-foreground mb-2">{p.nota}</p>
+                        {p.de && (
+                          <p className="text-xs text-muted-foreground line-through">{p.de}/mês</p>
+                        )}
+                        <p className="text-2xl md:text-3xl font-black text-accent leading-none">
+                          {p.mes}
+                          <span className="text-sm font-bold text-muted-foreground">/mês</span>
+                        </p>
+                        {p.economia && (
+                          <p className="mt-1 text-[11px] font-bold text-accent">{p.economia}</p>
+                        )}
+                        <Button asChild variant="gold" className="mt-4 w-full rounded-full font-black">
+                          <a href={p.link} target="_blank" rel="noopener noreferrer">
+                            ASSINAR {p.nome.toUpperCase()}
+                          </a>
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 flex flex-col items-center gap-3">
+                    <Button asChild variant="outline" className="rounded-full border-accent/50 font-bold text-accent hover:bg-accent/10">
+                      <a href={WPP_DUVIDAS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                        <MessageCircle className="w-4 h-4" />
+                        Tenho dúvidas — falar no WhatsApp
                       </a>
                     </Button>
-                  </div>
-                  <div className="mt-4 flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
-                    <Shield className="w-4 h-4 text-accent" />
-                    <span className="font-semibold">Atendimento humano</span>
+                    <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
+                      <Shield className="w-4 h-4 text-accent" />
+                      <span className="font-semibold">Garantia de 7 dias · Atendimento humano</span>
+                    </div>
                   </div>
                 </div>
               </div>

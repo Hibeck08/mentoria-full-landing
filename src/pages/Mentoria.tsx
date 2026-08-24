@@ -211,9 +211,11 @@ const Mentoria = () => {
     naoInclui: [],
     cta: "QUERO O PLANO ULTRA",
     link: WPP_ULTRA,
+    precos: planosUltra,
   };
 
-  const detalhe = openPlan === "ultra" ? detalheUltra : detalheStandard;
+  const detalhe =
+    openPlan === "ultra" ? detalheUltra : openPlan === "standardplus" ? detalheStandardPlus : detalheStandard;
 
   return (
     <div className="theme-mentoria min-h-screen bg-background text-foreground">

@@ -970,7 +970,7 @@ const Mentoria = () => {
                   </p>
                 </div>
 
-                <div className={`grid gap-4 mb-5 md:mb-6 ${openPlan === "standard" ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
+                <div className={`grid gap-4 mb-5 md:mb-6 ${openPlan === "ultra" ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
                   {detalhe.grupos.map((g, i) => {
                     const Icon = g.icon;
                     return (

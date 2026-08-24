@@ -951,7 +951,7 @@ const Mentoria = () => {
 
           <Dialog open={openPlan !== null} onOpenChange={(o) => !o && setOpenPlan(null)}>
             <DialogContent className="w-[calc(100vw-2rem)] sm:w-[calc(100vw-3rem)] max-w-5xl max-h-[82dvh] md:max-h-[84vh] overflow-hidden rounded-2xl p-0 border-2 border-accent/40 bg-card/95 backdrop-blur-md shadow-glow-beige">
-              <div className="max-h-[82dvh] md:max-h-[84vh] overflow-y-auto px-4 pb-28 pt-10 sm:px-6 md:px-8 md:pb-32 md:pt-10">
+              <div className="max-h-[82dvh] md:max-h-[84vh] overflow-y-auto px-4 pb-6 pt-10 sm:px-6 md:px-8 md:pb-8 md:pt-10">
                 <div className="flex justify-center mb-4 pr-8 sm:pr-0">
                   <div className="bg-gradient-primary text-accent-foreground px-3 py-1.5 rounded-full text-[10px] md:text-xs font-black shadow-glow-beige tracking-widest text-center max-w-full leading-tight">
                     {detalhe.tag} — TUDO QUE VOCÊ RECEBE

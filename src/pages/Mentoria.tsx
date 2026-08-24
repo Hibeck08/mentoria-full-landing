@@ -51,7 +51,7 @@ const Mentoria = () => {
   };
 
   const [vslPlaying, setVslPlaying] = React.useState(false);
-  const [openPlan, setOpenPlan] = React.useState<null | "standard" | "ultra">(null);
+  const [openPlan, setOpenPlan] = React.useState<null | "standard" | "standardplus" | "ultra">(null);
 
   const pillars = [
     { icon: Brain, badge: "MÉTODO", title: "Método FULL Validado", desc: "O mesmo passo a passo que me levou ao 01º da AFA e 08º da EFOMM. Plano de metas pronto, sem furos." },

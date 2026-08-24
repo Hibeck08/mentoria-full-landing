@@ -133,7 +133,32 @@ const Mentoria = () => {
     ],
     cta: "QUERO O PLANO STANDARD",
     link: WPP_STANDARD,
+    precos: planosStandard,
   };
+
+  const detalheStandardPlus = {
+    ...detalheStandard,
+    tag: "STANDARD + AULAS GRAVADAS",
+    titulo: "Mentoria FULL Hibeck — Standard +",
+    subtitulo: "Tudo do Standard e mais o acervo completo de aulas gravadas pra você estudar conteúdo no seu ritmo.",
+    grupos: [
+      ...detalheStandard.grupos,
+      {
+        titulo: "Aulas GRAVADAS de todas as matérias",
+        icon: BookOpen,
+        itens: [
+          "Videoaulas completas do zero ao avançado",
+          "Resolução comentada de questões-chave por assunto",
+          "Assiste quando quiser, quantas vezes quiser",
+        ],
+      },
+    ],
+    naoInclui: ["Aulas AO VIVO de matérias específicas (Mat / Fís / Port / Ing)"],
+    cta: "QUERO O STANDARD +",
+    link: WPP_STANDARD_PLUS,
+    precos: planosStandardPlus,
+  };
+
 
   const detalheUltra = {
     tag: "PLANO ULTRA",

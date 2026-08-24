@@ -60,7 +60,36 @@ const Mentoria = () => {
   ];
 
   const WPP_STANDARD = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%21";
+  const WPP_STANDARD_PLUS = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%20%2B%20Aulas%20Gravadas%21";
   const WPP_ULTRA = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra%21";
+  const WPP_DUVIDAS = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
+
+  const planosStandard = [
+    { nome: "Trimestral", mes: "R$ 97,00", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/F3otYDP" },
+    { nome: "Semestral", mes: "R$ 93,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/ctdmAcT" },
+    { nome: "Anual", mes: "R$ 87,50", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/9LgKsvN", melhor: true },
+  ];
+
+  const planosStandardPlus = [
+    { nome: "Trimestral", mes: "R$ 112,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/vJtM1hN" },
+    { nome: "Semestral", mes: "R$ 106,00", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/MYxkoYR" },
+    { nome: "Anual", mes: "R$ 98,98", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/dOPN2bl", melhor: true },
+  ];
+
+  const planosUltra = [
+    { nome: "Trimestral", mes: "R$ 129,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/4ZJ8Z86" },
+    { nome: "Semestral", mes: "R$ 124,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/zJh6ROb" },
+    {
+      nome: "Anual",
+      mes: "R$ 90,68",
+      de: "R$ 120,90",
+      nota: "12 meses de acesso",
+      link: "https://pay.kiwify.com.br/Ph1n0Af?coupon=ANUALFULL",
+      melhor: true,
+      promo: "SUPER DESCONTO até 10/09",
+      economia: "25% OFF · cupom ANUALFULL já aplicado",
+    },
+  ];
 
   const detalheStandard = {
     tag: "PLANO STANDARD",

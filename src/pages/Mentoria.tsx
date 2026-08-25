@@ -297,7 +297,7 @@ const Mentoria = () => {
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-20">
           <div className="bg-gradient-primary py-2 md:py-4 border-y-2 border-accent-dark/30">
             <p className="text-center text-accent-foreground font-bold text-xs md:text-base tracking-wider px-4">
-              ⭐ MENTORIA FULL · AFA · EFOMM · EN · EEAR · EPCAR ⭐
+              {PROMO_ON ? "⚡ SUPER DESCONTO ULTRA ANUAL · 25% OFF ATÉ 10/09 ⚡" : "⭐ MENTORIA FULL · AFA · EFOMM · EN · EEAR · EPCAR ⭐"}
             </p>
           </div>
         </div>

@@ -289,10 +289,9 @@ const Mentoria = () => {
                 </p>
               </div>
             </div>
-
-            </div>
           </div>
         </div>
+
 
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-20">
           <div className="bg-gradient-primary py-2 md:py-4 border-y-2 border-accent-dark/30">

@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
 import { Target, BookOpen, Users, Trophy, CheckCircle2, FileText, Zap, Award, Instagram, TrendingUp, Brain, Clock, Rocket, Shield, ChevronDown, ArrowDown, Lightbulb, BarChart3, Repeat, Home } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-silver.png";
+import mentoriaLogoAsset from "@/assets/logo-silver.webp";
 const mentoriaLogo = mentoriaLogoAsset;
 import heroPhoto from "@/assets/hero-photo.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
@@ -246,7 +246,7 @@ const Metodo = () => {
             <ScrollReveal variant="right">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-                <img alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.png" loading="lazy" decoding="async" />
+                <img alt="Setup de estudos premium" className="relative rounded-3xl shadow-premium border border-accent/20" src="/lovable-uploads/7f4563c1-e84f-4543-88ac-c6bcd4a0b0a8.webp" loading="lazy" decoding="async" />
               </div>
             </ScrollReveal>
           </div>

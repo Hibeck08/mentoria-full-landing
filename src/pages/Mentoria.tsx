@@ -885,6 +885,31 @@ const Mentoria = () => {
             </div>
           </ScrollReveal>
 
+          {PROMO_ON && (
+            <ScrollReveal>
+              <div className="max-w-3xl mx-auto mb-8 md:mb-12 rounded-2xl border-2 border-accent bg-gradient-primary/15 p-4 md:p-6 text-center shadow-glow-beige">
+                <p className="inline-flex items-center gap-2 text-[11px] md:text-xs font-black uppercase tracking-widest text-accent">
+                  <Zap className="w-4 h-4" /> Promoção por tempo limitado — até 10/09
+                </p>
+                <p className="mt-2 text-lg md:text-2xl font-black leading-tight text-foreground">
+                  ULTRA ANUAL com <span className="text-accent">25% OFF</span>: de R$ 120,90 por{" "}
+                  <span className="text-accent">R$ 90,68/mês</span>
+                </p>
+                <p className="mt-1 text-xs md:text-sm text-muted-foreground">
+                  Cupom ANUALFULL já aplicado no checkout. Depois de 10/09 o valor volta ao normal.
+                </p>
+                <Button
+                  variant="gold"
+                  onClick={() => setOpenPlan("ultra")}
+                  className="mt-4 w-full sm:w-auto rounded-full px-6 font-black"
+                >
+                  PEGAR O SUPER DESCONTO →
+                </Button>
+              </div>
+            </ScrollReveal>
+          )}
+
+
           {/* COMPARATIVO LADO A LADO */}
           <ScrollReveal>
             <div className="max-w-6xl mx-auto mb-10 md:mb-14 grid md:grid-cols-3 gap-4 md:gap-6">

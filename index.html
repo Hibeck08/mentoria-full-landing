@@ -39,20 +39,11 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Performance optimization: Defer non-critical scripts -->
+    <!-- Prefetch de depoimentos quando o navegador estiver ocioso -->
     <script>
-      // Preload critical resources
       if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-          // Preload feedback images when browser is idle
-          const feedbackImages = [
-            '/lovable-uploads/feedback-1.png',
-            '/lovable-uploads/feedback-2.png',
-            '/lovable-uploads/feedback-3.png',
-            '/lovable-uploads/feedback-4.png',
-            '/lovable-uploads/feedback-5.png'
-          ];
-          feedbackImages.forEach(src => {
+          ['/lovable-uploads/feedback-1.jpg', '/lovable-uploads/feedback-2.jpg', '/lovable-uploads/feedback-3.jpg'].forEach(src => {
             const link = document.createElement('link');
             link.rel = 'prefetch';
             link.as = 'image';

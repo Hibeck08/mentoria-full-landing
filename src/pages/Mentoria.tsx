@@ -14,19 +14,19 @@ import {
   AlertTriangle, XCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import mentoriaLogoAsset from "@/assets/logo-gold.png";
+import mentoriaLogoAsset from "@/assets/logo-gold.webp";
 const mentoriaLogo = mentoriaLogoAsset;
 import heroPhoto from "@/assets/hero-photo.webp";
 import heroMain from "@/assets/hero-main.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import ankiCardExample from "@/assets/anki-card-example.webp";
 import mentoriaHeroDesktop from "@/assets/mentoria-hero-desktop-v2.jpg";
-import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.png";
-import metodoGridBanner from "@/assets/questoes-metodo-grid.png";
+import mentoriaHeroMobile from "@/assets/mentoria-hero-mobile.webp";
+import metodoGridBanner from "@/assets/questoes-metodo-grid.webp";
 import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg";
-import militaryCollageBanner from "@/assets/questoes-military-collage.png";
-import planoMetasMissoes from "@/assets/plano-metas-missoes.png";
-import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png";
+import militaryCollageBanner from "@/assets/questoes-military-collage.webp";
+import planoMetasMissoes from "@/assets/plano-metas-missoes.webp";
+import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.webp";
 import { GraduationCap } from "lucide-react";
 
 /**

@@ -243,7 +243,20 @@ const Mentoria = () => {
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
 
-            <div className="flex flex-col items-start md:items-start gap-5 md:gap-8 min-h-[88vh] md:min-h-[80vh] justify-end md:justify-center pb-24 md:pb-0">
+            <div className="flex flex-col items-start md:items-start gap-4 md:gap-7 min-h-[88vh] md:min-h-[80vh] justify-end md:justify-center pb-24 md:pb-0">
+              {PROMO_ON && (
+                <button
+                  type="button"
+                  onClick={scrollToPlans}
+                  className="inline-flex max-w-full items-center gap-2 rounded-full bg-gradient-primary px-3.5 py-2 text-left shadow-glow-beige animate-fade-in-up"
+                >
+                  <Zap className="w-4 h-4 text-accent-foreground flex-shrink-0" />
+                  <span className="text-[11px] md:text-sm font-black uppercase tracking-wider text-accent-foreground leading-tight">
+                    {PROMO_LABEL}
+                  </span>
+                </button>
+              )}
+
               <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm animate-fade-in-up">
                 <Award className="w-4 h-4 text-accent" />
                 <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Aprovado AFA · EFOMM · EEAr · EPCAR</span>
@@ -256,15 +269,19 @@ const Mentoria = () => {
               </h1>
 
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> e é exatamente isso que você terá dentro da Mentoria FULL.
+                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> e é exatamente isso que você terá dentro da Mentoria FULL.
               </p>
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
                 <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  QUERO ESSES BENEFÍCIOS →
+                  {PROMO_ON ? "QUERO O SUPER DESCONTO →" : "QUERO ESSES BENEFÍCIOS →"}
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Garantia de 7 dias · Acesso imediato</p>
+                <p className="text-xs md:text-sm text-muted-foreground/90">
+                  {PROMO_ON ? "⚡ Ultra Anual por R$ 90,68/mês · só até 10/09" : "⚡ Garantia de 7 dias · Acesso imediato"}
+                </p>
               </div>
+            </div>
+
             </div>
           </div>
         </div>

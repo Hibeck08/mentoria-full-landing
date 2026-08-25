@@ -29,7 +29,15 @@ import planoMetasMissoes from "@/assets/plano-metas-missoes.png";
 import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png";
 import { GraduationCap } from "lucide-react";
 
+/**
+ * PROMOÇÃO ULTRA ANUAL — para desativar todos os destaques do desconto,
+ * basta trocar PROMO_ON para false (previsto para 10/09).
+ */
+export const PROMO_ON = true;
+const PROMO_LABEL = "SUPER DESCONTO · ULTRA ANUAL 25% OFF — ATÉ 10/09";
+
 const FloatingWhatsApp = () => {
+
   const [visible, setVisible] = React.useState(false);
   React.useEffect(() => {
     const handleScroll = () => setVisible(window.scrollY > 600);
@@ -243,7 +251,20 @@ const Mentoria = () => {
               <span className="text-sm font-semibold text-foreground">@hibeck_</span>
             </div>
 
-            <div className="flex flex-col items-start md:items-start gap-5 md:gap-8 min-h-[88vh] md:min-h-[80vh] justify-end md:justify-center pb-24 md:pb-0">
+            <div className="flex flex-col items-start md:items-start gap-4 md:gap-7 min-h-[88vh] md:min-h-[80vh] justify-end md:justify-center pb-24 md:pb-0">
+              {PROMO_ON && (
+                <button
+                  type="button"
+                  onClick={scrollToPlans}
+                  className="inline-flex max-w-full items-center gap-2 rounded-full bg-gradient-primary px-3.5 py-2 text-left shadow-glow-beige animate-fade-in-up"
+                >
+                  <Zap className="w-4 h-4 text-accent-foreground flex-shrink-0" />
+                  <span className="text-[11px] md:text-sm font-black uppercase tracking-wider text-accent-foreground leading-tight">
+                    {PROMO_LABEL}
+                  </span>
+                </button>
+              )}
+
               <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/40 rounded-full px-4 py-2 backdrop-blur-sm animate-fade-in-up">
                 <Award className="w-4 h-4 text-accent" />
                 <span className="text-xs md:text-sm font-bold text-accent uppercase tracking-wider">Aprovado AFA · EFOMM · EEAr · EPCAR</span>
@@ -256,23 +277,26 @@ const Mentoria = () => {
               </h1>
 
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed max-w-2xl animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> e é exatamente isso que você terá dentro da Mentoria FULL.
+                Você não precisa ser o mais inteligente da turma. Precisa de <strong className="text-foreground">METODOLOGIA</strong> e é exatamente isso que você terá dentro da Mentoria FULL.
               </p>
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
                 <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  QUERO ESSES BENEFÍCIOS →
+                  {PROMO_ON ? "QUERO O SUPER DESCONTO →" : "QUERO ESSES BENEFÍCIOS →"}
                 </Button>
-                <p className="text-xs md:text-sm text-muted-foreground/90">⚡ Garantia de 7 dias · Acesso imediato</p>
+                <p className="text-xs md:text-sm text-muted-foreground/90">
+                  {PROMO_ON ? "⚡ Ultra Anual por R$ 90,68/mês · só até 10/09" : "⚡ Garantia de 7 dias · Acesso imediato"}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
+
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-20">
           <div className="bg-gradient-primary py-2 md:py-4 border-y-2 border-accent-dark/30">
             <p className="text-center text-accent-foreground font-bold text-xs md:text-base tracking-wider px-4">
-              ⭐ MENTORIA FULL · AFA · EFOMM · EN · EEAR · EPCAR ⭐
+              {PROMO_ON ? "⚡ SUPER DESCONTO ULTRA ANUAL · 25% OFF ATÉ 10/09 ⚡" : "⭐ MENTORIA FULL · AFA · EFOMM · EN · EEAR · EPCAR ⭐"}
             </p>
           </div>
         </div>
@@ -860,6 +884,31 @@ const Mentoria = () => {
             </div>
           </ScrollReveal>
 
+          {PROMO_ON && (
+            <ScrollReveal>
+              <div className="max-w-3xl mx-auto mb-8 md:mb-12 rounded-2xl border-2 border-accent bg-gradient-primary/15 p-4 md:p-6 text-center shadow-glow-beige">
+                <p className="inline-flex items-center gap-2 text-[11px] md:text-xs font-black uppercase tracking-widest text-accent">
+                  <Zap className="w-4 h-4" /> Promoção por tempo limitado — até 10/09
+                </p>
+                <p className="mt-2 text-lg md:text-2xl font-black leading-tight text-foreground">
+                  ULTRA ANUAL com <span className="text-accent">25% OFF</span>: de R$ 120,90 por{" "}
+                  <span className="text-accent">R$ 90,68/mês</span>
+                </p>
+                <p className="mt-1 text-xs md:text-sm text-muted-foreground">
+                  Cupom ANUALFULL já aplicado no checkout. Depois de 10/09 o valor volta ao normal.
+                </p>
+                <Button
+                  variant="gold"
+                  onClick={() => setOpenPlan("ultra")}
+                  className="mt-4 w-full sm:w-auto rounded-full px-6 font-black"
+                >
+                  PEGAR O SUPER DESCONTO →
+                </Button>
+              </div>
+            </ScrollReveal>
+          )}
+
+
           {/* COMPARATIVO LADO A LADO */}
           <ScrollReveal>
             <div className="max-w-6xl mx-auto mb-10 md:mb-14 grid md:grid-cols-3 gap-4 md:gap-6">
@@ -1027,7 +1076,7 @@ const Mentoria = () => {
                         }`}
                       >
                         {p.promo && (
-                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-primary px-3 py-1 text-[9px] md:text-[10px] font-black tracking-widest text-accent-foreground shadow-glow-beige">
+                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-[92%] text-center rounded-full bg-gradient-primary px-2 py-1 text-[9px] md:text-[10px] font-black tracking-wider text-accent-foreground shadow-glow-beige leading-tight">
                             {p.promo}
                           </span>
                         )}
@@ -1043,8 +1092,8 @@ const Mentoria = () => {
                         {p.economia && (
                           <p className="mt-1 text-[11px] font-bold text-accent">{p.economia}</p>
                         )}
-                        <Button asChild variant="gold" className="mt-4 w-full rounded-full font-black">
-                          <a href={p.link} target="_blank" rel="noopener noreferrer">
+                        <Button asChild variant="gold" className="mt-4 w-full min-w-0 rounded-full font-black px-3 text-xs sm:text-sm">
+                          <a href={p.link} target="_blank" rel="noopener noreferrer" className="block w-full truncate text-center">
                             ASSINAR {p.nome.toUpperCase()}
                           </a>
                         </Button>
@@ -1053,12 +1102,13 @@ const Mentoria = () => {
                   </div>
 
                   <div className="mt-5 flex flex-col items-center gap-3">
-                    <Button asChild variant="outline" className="rounded-full border-accent/50 font-bold text-accent hover:bg-accent/10">
-                      <a href={WPP_DUVIDAS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4" />
+                    <Button asChild variant="outline" className="w-full max-w-sm min-w-0 h-auto whitespace-normal rounded-full border-accent/50 px-4 py-2.5 text-xs sm:text-sm font-bold text-accent hover:bg-accent/10">
+                      <a href={WPP_DUVIDAS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 text-center">
+                        <MessageCircle className="w-4 h-4 flex-shrink-0" />
                         Tenho dúvidas — falar no WhatsApp
                       </a>
                     </Button>
+
                     <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
                       <Shield className="w-4 h-4 text-accent" />
                       <span className="font-semibold">Garantia de 7 dias · Atendimento humano</span>

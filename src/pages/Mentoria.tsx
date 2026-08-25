@@ -29,7 +29,15 @@ import planoMetasMissoes from "@/assets/plano-metas-missoes.png";
 import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.png";
 import { GraduationCap } from "lucide-react";
 
+/**
+ * PROMOÇÃO ULTRA ANUAL — para desativar todos os destaques do desconto,
+ * basta trocar PROMO_ON para false (previsto para 10/09).
+ */
+export const PROMO_ON = true;
+const PROMO_LABEL = "SUPER DESCONTO · ULTRA ANUAL 25% OFF — ATÉ 10/09";
+
 const FloatingWhatsApp = () => {
+
   const [visible, setVisible] = React.useState(false);
   React.useEffect(() => {
     const handleScroll = () => setVisible(window.scrollY > 600);

@@ -1027,7 +1027,7 @@ const Mentoria = () => {
                         }`}
                       >
                         {p.promo && (
-                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-primary px-3 py-1 text-[9px] md:text-[10px] font-black tracking-widest text-accent-foreground shadow-glow-beige">
+                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-[92%] text-center rounded-full bg-gradient-primary px-2 py-1 text-[9px] md:text-[10px] font-black tracking-wider text-accent-foreground shadow-glow-beige leading-tight">
                             {p.promo}
                           </span>
                         )}
@@ -1043,8 +1043,8 @@ const Mentoria = () => {
                         {p.economia && (
                           <p className="mt-1 text-[11px] font-bold text-accent">{p.economia}</p>
                         )}
-                        <Button asChild variant="gold" className="mt-4 w-full rounded-full font-black">
-                          <a href={p.link} target="_blank" rel="noopener noreferrer">
+                        <Button asChild variant="gold" className="mt-4 w-full min-w-0 rounded-full font-black px-3 text-xs sm:text-sm">
+                          <a href={p.link} target="_blank" rel="noopener noreferrer" className="block w-full truncate text-center">
                             ASSINAR {p.nome.toUpperCase()}
                           </a>
                         </Button>
@@ -1053,12 +1053,13 @@ const Mentoria = () => {
                   </div>
 
                   <div className="mt-5 flex flex-col items-center gap-3">
-                    <Button asChild variant="outline" className="rounded-full border-accent/50 font-bold text-accent hover:bg-accent/10">
-                      <a href={WPP_DUVIDAS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
-                        <MessageCircle className="w-4 h-4" />
+                    <Button asChild variant="outline" className="w-full max-w-sm min-w-0 h-auto whitespace-normal rounded-full border-accent/50 px-4 py-2.5 text-xs sm:text-sm font-bold text-accent hover:bg-accent/10">
+                      <a href={WPP_DUVIDAS} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 text-center">
+                        <MessageCircle className="w-4 h-4 flex-shrink-0" />
                         Tenho dúvidas — falar no WhatsApp
                       </a>
                     </Button>
+
                     <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-muted-foreground">
                       <Shield className="w-4 h-4 text-accent" />
                       <span className="font-semibold">Garantia de 7 dias · Atendimento humano</span>

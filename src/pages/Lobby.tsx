@@ -205,6 +205,15 @@ const Lobby = () => {
                   <span>@hibeck_</span>
                 </a>
               </div>
+
+              {/* Botão minimalista para a Masterclass (VSL) */}
+              <Link
+                to="/masterclass"
+                className="mt-4 inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-4 py-1.5 text-[11px] md:text-xs font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+              >
+                <Play className="w-3 h-3 fill-current" />
+                <span>Masterclass da Aprovação</span>
+              </Link>
             </div>
           </div>
         </section>

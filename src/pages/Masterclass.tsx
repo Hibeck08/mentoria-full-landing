@@ -16,19 +16,24 @@ const VSL_ID = "aRHlGzwQ2oU";
 const WPP_DUVIDAS =
   "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
 
-const planosStandard = [
+type Preco = {
+  nome: string; mes: string; nota: string; link: string;
+  melhor?: boolean; de?: string; promo?: string; economia?: string;
+};
+
+const planosStandard: Preco[] = [
   { nome: "Trimestral", mes: "R$ 97,00", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/F3otYDP" },
   { nome: "Semestral", mes: "R$ 93,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/ctdmAcT" },
   { nome: "Anual", mes: "R$ 87,50", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/9LgKsvN", melhor: true },
 ];
 
-const planosStandardPlus = [
+const planosStandardPlus: Preco[] = [
   { nome: "Trimestral", mes: "R$ 112,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/vJtM1hN" },
   { nome: "Semestral", mes: "R$ 106,00", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/MYxkoYR" },
   { nome: "Anual", mes: "R$ 98,98", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/dOPN2bl", melhor: true },
 ];
 
-const planosUltra = [
+const planosUltra: Preco[] = [
   { nome: "Trimestral", mes: "R$ 129,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/4ZJ8Z86" },
   { nome: "Semestral", mes: "R$ 124,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/zJh6ROb" },
   {
@@ -48,7 +53,7 @@ type PlanMode = "standard" | "standardplus" | "ultra";
 const detalhes: Record<PlanMode, {
   tag: string; titulo: string; subtitulo: string; para: string;
   grupos: { titulo: string; icon: React.ElementType; itens: string[] }[];
-  naoInclui: string[]; precos: typeof planosStandard;
+  naoInclui: string[]; precos: Preco[];
 }> = {
   standard: {
     tag: "PLANO STANDARD",
@@ -399,18 +404,18 @@ const Masterclass = () => {
                   key={p.nome}
                   className={`rounded-xl border p-4 flex flex-col ${p.melhor ? "border-accent bg-accent/5" : "border-border bg-card/60"}`}
                 >
-                  {"promo" in p && p.promo && (
+                  {p.promo && (
                     <span className="mb-2 text-[9px] font-black tracking-wider px-2 py-1 rounded-full bg-accent text-accent-foreground self-start">
                       {p.promo}
                     </span>
                   )}
                   <p className="text-xs font-bold text-muted-foreground">{p.nome}</p>
-                  {"de" in p && p.de && (
+                  {p.de && (
                     <p className="text-[11px] text-muted-foreground/60 line-through">{p.de}/mês</p>
                   )}
                   <p className="text-xl font-black text-accent leading-tight">{p.mes}<span className="text-xs font-semibold text-muted-foreground">/mês</span></p>
                   <p className="text-[11px] text-muted-foreground mt-0.5">{p.nota}</p>
-                  {"economia" in p && p.economia && (
+                  {p.economia && (
                     <p className="text-[10px] text-accent font-semibold mt-1">{p.economia}</p>
                   )}
                   <Button asChild variant="gold" className="mt-3 w-full rounded-full text-xs font-black h-9">

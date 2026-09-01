@@ -62,7 +62,7 @@ const detalhes: Record<PlanMode, {
 }> = {
   standard: {
     tag: "PLANO STANDARD",
-    titulo: "Mentoria FULL — Standard",
+    titulo: "Mentoria FULL | Standard",
     subtitulo: "Pra quem já tem preparatório e quer método, rotina e acompanhamento pra virar aprovação.",
     para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
     grupos: [
@@ -89,7 +89,7 @@ const detalhes: Record<PlanMode, {
   },
   standardplus: {
     tag: "STANDARD +",
-    titulo: "Mentoria FULL — Standard +",
+    titulo: "Mentoria FULL | Standard +",
     subtitulo: "Tudo do Standard mais o acervo completo de aulas gravadas pra estudar no seu ritmo.",
     para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
     grupos: [
@@ -110,7 +110,7 @@ const detalhes: Record<PlanMode, {
   },
   ultra: {
     tag: "PLANO ULTRA",
-    titulo: "Mentoria FULL — Ultra",
+    titulo: "Mentoria FULL | Ultra",
     subtitulo: "O pacote fechado: mentoria, método, aulas ao vivo e gravadas de todas as matérias.",
     para: "EXCLUSIVO para AFA · EN · EFOMM",
     grupos: [
@@ -143,7 +143,7 @@ const cards: { mode: PlanMode; tag: string; title: string; desc: string; bullets
     mode: "standard",
     tag: "PLANO STANDARD",
     title: "Já tenho preparatório",
-    desc: "Falta direção, rotina e acompanhamento — não mais conteúdo.",
+    desc: "Falta direção, rotina e acompanhamento, não mais conteúdo.",
     bullets: ["Acompanhamento 1:1", "Banco FULL Questões + flashcards", "Plano de metas semanal"],
   },
   {
@@ -163,12 +163,15 @@ const cards: { mode: PlanMode; tag: string; title: string; desc: string; bullets
 ];
 
 const depoimentos = [
-  { nome: "Rafael M.", info: "Aprovado EFOMM", img: "/lovable-uploads/feedback-1.jpg" },
-  { nome: "Lucas P.", info: "Aprovado AFA", img: "/lovable-uploads/feedback-2.jpg" },
-  { nome: "Gabriel S.", info: "Aprovado EN", img: "/lovable-uploads/feedback-3.jpg" },
-  { nome: "Bruno C.", info: "Aprovado EEAR", img: "/lovable-uploads/feedback-4.jpg" },
-  { nome: "Enzo A.", info: "Aprovado EPCAr", img: "/lovable-uploads/feedback-5.jpg" },
-  { nome: "Thiago R.", info: "Aprovado EFOMM", img: "/lovable-uploads/feedback-6.jpg" },
+  "/lovable-uploads/feedback-1.jpg",
+  "/lovable-uploads/feedback-2.jpg",
+  "/lovable-uploads/feedback-3.jpg",
+  "/lovable-uploads/feedback-4.jpg",
+  "/lovable-uploads/feedback-5.jpg",
+  "/lovable-uploads/feedback-6.jpg",
+  "/lovable-uploads/feedback-7.jpg",
+  "/lovable-uploads/feedback-8.jpg",
+  "/lovable-uploads/feedback-9.jpg",
 ];
 
 const Masterclass = () => {
@@ -274,42 +277,108 @@ const Masterclass = () => {
             </h2>
             <p className="text-sm md:text-base text-muted-foreground mt-4">
               Método validado, banco de questões, flashcards, plano de metas e acompanhamento direto.
-              Tudo em um lugar só — pra você parar de adivinhar o que estudar.
+              Tudo em um lugar só, pra você parar de adivinhar o que estudar.
             </p>
             <Button variant="gold" size="lg" onClick={scrollToPlans} className="mt-8 rounded-full px-8 font-black">
-              QUERO FAZER PARTE DA MENTORIA <ArrowRight className="w-4 h-4 ml-2" />
+              <span className="inline-flex items-center justify-center gap-2">
+                QUERO FAZER PARTE DA MENTORIA <ArrowRight className="w-4 h-4" />
+              </span>
             </Button>
           </ScrollReveal>
         </div>
       </section>
 
+      {/* BENEFÍCIOS 01 */}
+      <section className="py-14 md:py-20 border-y border-border/40">
+        <div className="container mx-auto px-5 grid md:grid-cols-[1.08fr_.92fr] gap-8 md:gap-14 items-center">
+          <ScrollReveal variant="left">
+            <div className="overflow-hidden rounded-2xl border border-accent/25 bg-card shadow-premium">
+              <img src={bannerMentoria} alt="Visão geral da Mentoria FULL" loading="lazy" className="w-full aspect-[16/7] object-cover" />
+            </div>
+            <div className="mt-3 overflow-hidden rounded-xl border border-accent/20 bg-card">
+              <img src={bannerMetas} alt="Plano de metas e missões da Mentoria FULL" loading="lazy" className="w-full aspect-[16/4] object-cover" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal variant="right">
+            <span className="text-[10px] font-black tracking-[0.2em] text-accent">DIREÇÃO TODOS OS DIAS</span>
+            <h2 className="mt-3 text-2xl md:text-4xl font-black leading-tight">Sua preparação deixa de depender da sorte</h2>
+            <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed">
+              Você recebe um caminho claro para estudar, revisar e medir sua evolução, com acompanhamento para corrigir a rota antes de perder tempo.
+            </p>
+            <ul className="mt-6 grid gap-3">
+              {[
+                "Plano de metas ajustado ao seu momento",
+                "Rotina organizada por prioridades reais",
+                "Acompanhamento próximo para manter constância",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-foreground/90">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> {item}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* BENEFÍCIOS 02 */}
+      <section className="py-14 md:py-20 bg-secondary/30">
+        <div className="container mx-auto px-5 grid md:grid-cols-[.92fr_1.08fr] gap-8 md:gap-14 items-center">
+          <ScrollReveal variant="left" className="md:order-2">
+            <div className="overflow-hidden rounded-2xl border border-accent/25 bg-card shadow-premium">
+              <img src={bannerQuestoes} alt="Banco FULL Questões da Mentoria FULL" loading="lazy" className="w-full aspect-[16/9] object-cover" />
+            </div>
+            <div className="mt-3 overflow-hidden rounded-xl border border-accent/20 bg-card">
+              <img src={bannerFlashcards} alt="Flashcards de revisão da Mentoria FULL" loading="lazy" className="w-full aspect-[16/6] object-cover" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal variant="right" className="md:order-1">
+            <span className="text-[10px] font-black tracking-[0.2em] text-accent">TREINO QUE GERA RESULTADO</span>
+            <h2 className="mt-3 text-2xl md:text-4xl font-black leading-tight">Conteúdo certo, no momento certo</h2>
+            <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed">
+              A plataforma concentra as ferramentas que transformam teoria em desempenho: questões, revisões e materiais para você avançar com confiança.
+            </p>
+            <ul className="mt-6 grid gap-3">
+              {[
+                "Banco de questões com resolução e nivelamento",
+                "Flashcards Anki para revisões inteligentes",
+                "Aulas e encontros para acelerar sua evolução",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-foreground/90">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> {item}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* DEPOIMENTOS */}
-      <section className="py-14 md:py-20 bg-secondary/40 border-y border-border/40">
+      <section className="py-14 md:py-20 border-y border-border/40 overflow-hidden">
         <div className="container mx-auto px-5">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
             <h2 className="text-xl md:text-3xl font-black max-w-lg leading-tight">
-              A mentoria não mudou só a nota — mudou a rotina e a cabeça de quem entrou
+              A mentoria não mudou só a nota, mudou a rotina e a cabeça de quem entrou
             </h2>
             <ArrowRight className="hidden md:block w-10 h-10 text-accent" />
           </div>
 
-          <div className="flex gap-4 overflow-x-auto pb-4 snap-x">
-            {depoimentos.map((d) => (
-              <div key={d.nome} className="snap-start shrink-0 w-[220px] md:w-[240px]">
-                <div className="rounded-2xl overflow-hidden border border-accent/25 bg-card">
-                  <img src={d.img} alt={`Depoimento de ${d.nome}`} loading="lazy" className="w-full h-[280px] object-cover" />
+          <div className="relative -mx-5 overflow-hidden">
+            <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
+              {[...depoimentos, ...depoimentos].map((img, index) => (
+                <div key={`${img}-${index}`} className="mx-2 w-[190px] shrink-0 md:w-[240px]">
+                  <div className="aspect-[9/14] overflow-hidden rounded-2xl border border-accent/25 bg-card">
+                    <img src={img} alt="Feedback de aluno da Mentoria FULL" loading="lazy" className="h-full w-full object-cover" />
+                  </div>
                 </div>
-                <div className="mt-2 px-1">
-                  <p className="text-xs font-bold text-foreground">{d.nome}</p>
-                  <p className="text-[11px] text-accent font-semibold">{d.info}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="mt-8 flex justify-center md:justify-end">
             <Button variant="gold" size="lg" onClick={scrollToPlans} className="rounded-full px-8 font-black">
-              QUERO MUDAR MINHA PREPARAÇÃO
+              <span className="inline-flex items-center justify-center gap-2">
+                QUERO MUDAR MINHA PREPARAÇÃO <ArrowRight className="w-4 h-4" />
+              </span>
             </Button>
           </div>
         </div>
@@ -343,7 +412,7 @@ const Masterclass = () => {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-5 inline-flex items-center gap-2 text-xs font-black text-accent">
+                <span className="mt-5 flex items-center justify-center gap-2 text-center text-xs font-black text-accent">
                   VER PLANOS E VALORES <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </button>
@@ -455,7 +524,7 @@ const Masterclass = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-semibold text-accent hover:underline"
               >
-                <MessageCircle className="w-4 h-4" /> Tenho dúvidas — falar no WhatsApp
+                <MessageCircle className="w-4 h-4" /> Tenho dúvidas, falar no WhatsApp
               </a>
             </div>
           </div>

@@ -193,13 +193,30 @@ const Masterclass = () => {
 
       {/* HERO + VSL */}
       <section className="relative overflow-hidden pt-16 pb-14 md:pt-20 md:pb-20">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/25 via-background to-background" />
-        <div className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-accent/20 blur-[160px] rounded-full opacity-40" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-b from-primary/25 via-background to-background" />
+
+        {/* banner espelhado no topo */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] md:h-[560px] flex">
+          <img
+            src={heroBw}
+            alt=""
+            aria-hidden
+            className="h-full w-1/2 object-cover object-right grayscale opacity-40"
+          />
+          <img
+            src={heroBw}
+            alt=""
+            aria-hidden
+            className="h-full w-1/2 object-cover object-right grayscale opacity-40 scale-x-[-1]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--accent)/0.22),transparent_65%)]" />
+        </div>
 
         <div className="container mx-auto px-5">
           <img src={logoSilver} alt="FULL" className="h-10 md:h-12 w-auto mx-auto mb-6 opacity-90" />
 
-          <h1 className="max-w-4xl mx-auto text-center text-2xl md:text-4xl lg:text-5xl font-black leading-tight">
+          <h1 className="max-w-4xl mx-auto text-center text-2xl md:text-4xl lg:text-5xl font-black leading-tight drop-shadow-[0_2px_20px_rgba(0,0,0,0.9)]">
             <span className="bg-accent/90 text-accent-foreground px-2 rounded-md box-decoration-clone">
               Um método único e comprovado
             </span>{" "}
@@ -209,6 +226,7 @@ const Masterclass = () => {
             Assista ao vídeo abaixo e entenda como a Mentoria FULL transforma rotina bagunçada em
             aprovação nas Forças Armadas.
           </p>
+
 
           {/* VSL 9:16 */}
           <div className="mt-8 md:mt-10 flex justify-center">

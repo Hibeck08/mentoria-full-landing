@@ -10,6 +10,11 @@ import {
   MessageCircle, Users, Layers, BookOpen, Play, Calendar, Crown,
 } from "lucide-react";
 import logoSilver from "@/assets/logo-silver.webp";
+import heroBw from "@/assets/masterclass-hero-bw.webp";
+import bannerMentoria from "@/assets/mentoria-banner.webp";
+import bannerQuestoes from "@/assets/questoes-banner.webp";
+import bannerMetas from "@/assets/plano-metas-missoes.webp";
+import bannerFlashcards from "@/assets/flashcards-wallpaper.webp";
 
 const VSL_ID = "aRHlGzwQ2oU";
 

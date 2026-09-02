@@ -235,7 +235,7 @@ const Masterclass = () => {
           {/* VSL 9:16 com wallpaper P&B atrás */}
           <div className="relative mt-8 md:mt-10 -mx-5 md:mx-0">
             {/* wallpaper com efeitos */}
-            <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
               {/* imagem P&B clareada: as partes escuras caem no fundo, as claras ganham o duotone roxo */}
               <img
                 src={wallBw}
@@ -251,7 +251,7 @@ const Masterclass = () => {
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_50%,hsl(var(--accent)/0.30),transparent_70%)]" />
             </div>
 
-            <div className="flex justify-center px-5 py-6 md:py-10">
+            <div className="relative z-10 flex justify-center px-5 py-6 md:py-10">
               <div className="relative w-full max-w-[330px] sm:max-w-[380px] md:max-w-[420px]">
                 <div className="absolute -inset-4 bg-accent/30 blur-3xl rounded-[2rem] -z-10" />
                 <div className="relative rounded-[1.75rem] border-2 border-accent/40 bg-card/80 backdrop-blur-sm p-2 shadow-premium">

@@ -232,30 +232,60 @@ const Masterclass = () => {
           </p>
 
 
-          {/* VSL 9:16 */}
-          <div className="mt-8 md:mt-10 flex justify-center">
-            <div className="relative w-full max-w-[330px] sm:max-w-[380px] md:max-w-[420px]">
-              <div className="absolute -inset-4 bg-accent/25 blur-3xl rounded-[2rem] -z-10" />
-              <div className="relative rounded-[1.75rem] border-2 border-accent/40 bg-card p-2 shadow-premium">
-                <div className="relative w-full aspect-[9/16] overflow-hidden rounded-[1.25rem] bg-black">
-                  <iframe
-                    key={muted ? "muted" : "unmuted"}
-                    src={src}
-                    title="Masterclass FULL"
-                    className="absolute inset-0 w-full h-full"
-                    allow="autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                  />
+          {/* VSL 9:16 com wallpaper P&B atrás */}
+          <div className="relative mt-8 md:mt-10 -mx-5 md:mx-0">
+            {/* wallpaper com efeitos */}
+            <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+              <img
+                src={wallBw}
+                alt=""
+                aria-hidden
+                className="h-full w-full object-cover grayscale animate-ken-burns opacity-45 will-change-transform"
+              />
+              {/* duotone roxo */}
+              <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-accent/20 mix-blend-color" />
+              {/* vinheta nas bordas */}
+              <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+              {/* glow central atrás do vídeo */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_50%,hsl(var(--accent)/0.35),transparent_70%)]" />
+            </div>
+
+            <div className="flex justify-center px-5 py-6 md:py-10">
+              <div className="relative w-full max-w-[330px] sm:max-w-[380px] md:max-w-[420px]">
+                <div className="absolute -inset-4 bg-accent/30 blur-3xl rounded-[2rem] -z-10" />
+                <div className="relative rounded-[1.75rem] border-2 border-accent/40 bg-card/80 backdrop-blur-sm p-2 shadow-premium">
+                  <div className="relative w-full aspect-[9/16] overflow-hidden rounded-[1.25rem] bg-black">
+                    <iframe
+                      key={muted ? "muted" : "unmuted"}
+                      src={src}
+                      title="Masterclass FULL"
+                      className="absolute inset-0 w-full h-full"
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
                 </div>
+                <button
+                  type="button"
+                  onClick={() => setMuted((m) => !m)}
+                  className="mt-3 mx-auto flex items-center gap-2 rounded-full border border-accent/40 bg-card/80 backdrop-blur px-4 py-2 text-xs font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                  {muted ? "Clique para ativar o som" : "Som ativado"}
+                </button>
               </div>
-              <button
-                type="button"
-                onClick={() => setMuted((m) => !m)}
-                className="mt-3 mx-auto flex items-center gap-2 rounded-full border border-accent/40 bg-card px-4 py-2 text-xs font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
-              >
-                {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                {muted ? "Clique para ativar o som" : "Som ativado"}
-              </button>
+            </div>
+
+            {/* CTA logo abaixo do vídeo */}
+            <div className="px-5 pb-6 md:pb-10 text-center">
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="rounded-full px-8 font-black shadow-glow-beige">
+                <span className="inline-flex items-center justify-center gap-2">
+                  QUERO MINHA VAGA NA MENTORIA <ArrowRight className="w-4 h-4" />
+                </span>
+              </Button>
+              <p className="mt-3 text-[11px] text-muted-foreground">Vagas limitadas · garantia incondicional de 7 dias</p>
             </div>
           </div>
         </div>
@@ -366,9 +396,9 @@ const Masterclass = () => {
           <div className="relative -mx-5 overflow-hidden">
             <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
               {[...depoimentos, ...depoimentos].map((img, index) => (
-                <div key={`${img}-${index}`} className="mx-2 w-[190px] shrink-0 md:w-[240px]">
-                  <div className="aspect-[9/14] overflow-hidden rounded-2xl border border-accent/25 bg-card">
-                    <img src={img} alt="Feedback de aluno da Mentoria FULL" loading="lazy" className="h-full w-full object-cover" />
+                <div key={`${img}-${index}`} className="mx-2.5 w-[280px] shrink-0 md:w-[360px]">
+                  <div className="overflow-hidden rounded-2xl border border-accent/25 bg-card shadow-premium">
+                    <img src={img} alt="Feedback de aluno da Mentoria FULL" loading="lazy" className="w-full h-auto object-contain" />
                   </div>
                 </div>
               ))}

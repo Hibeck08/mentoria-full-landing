@@ -240,16 +240,15 @@ const Masterclass = () => {
                 src={wallBw}
                 alt=""
                 aria-hidden
-                className="h-full w-full object-cover grayscale animate-ken-burns opacity-45 will-change-transform"
+                className="h-full w-full object-cover grayscale contrast-125 animate-ken-burns opacity-60 will-change-transform"
               />
               {/* duotone roxo */}
-              <div className="absolute inset-0 bg-primary/70 mix-blend-multiply" />
-              <div className="absolute inset-0 bg-accent/20 mix-blend-color" />
-              {/* vinheta nas bordas */}
-              <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+              <div className="absolute inset-0 bg-primary/45 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-accent/25 mix-blend-color" />
+              {/* vinheta suave só no topo e na base */}
+              <div className="absolute inset-0 bg-gradient-to-b from-background via-background/10 to-background" />
               {/* glow central atrás do vídeo */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_50%,hsl(var(--accent)/0.35),transparent_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_50%,hsl(var(--accent)/0.30),transparent_70%)]" />
             </div>
 
             <div className="flex justify-center px-5 py-6 md:py-10">

@@ -234,21 +234,20 @@ const Masterclass = () => {
 
           {/* VSL 9:16 com wallpaper P&B atrás */}
           <div className="relative mt-8 md:mt-10 -mx-5 md:mx-0">
-            {/* wallpaper com efeitos */}
+            {/* wallpaper escuro em qualidade original preenchendo o fundo */}
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
-              {/* imagem P&B clareada: as partes escuras caem no fundo, as claras ganham o duotone roxo */}
               <img
                 src={wallBw}
                 alt=""
                 aria-hidden
-                className="h-full w-full object-cover grayscale brightness-150 contrast-125 animate-ken-burns opacity-70 mix-blend-screen will-change-transform"
+                className="h-full w-full object-cover"
               />
-              {/* duotone roxo sobre os tons claros */}
-              <div className="absolute inset-0 bg-[hsl(268_85%_55%)] mix-blend-color opacity-80" />
-              {/* vinheta suave só no topo e na base */}
-              <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-              {/* glow central atrás do vídeo */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_50%,hsl(var(--accent)/0.30),transparent_70%)]" />
+              {/* escurecimento peso para manter o contraste do conteúdo */}
+              <div className="absolute inset-0 bg-black/75" />
+              {/* tom roxo sutil unificado */}
+              <div className="absolute inset-0 bg-[hsl(268_60%_25%)]/40" />
+              {/* vinheta nas bordas para esconder qualquer corte */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_70%_at_50%_50%,transparent_40%,hsl(var(--background))_95%)]" />
             </div>
 
             <div className="relative z-10 flex justify-center px-5 py-6 md:py-10">

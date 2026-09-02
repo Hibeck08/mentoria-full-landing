@@ -236,17 +236,17 @@ const Masterclass = () => {
           <div className="relative mt-8 md:mt-10 -mx-5 md:mx-0">
             {/* wallpaper com efeitos */}
             <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+              {/* imagem P&B clareada: as partes escuras caem no fundo, as claras ganham o duotone roxo */}
               <img
                 src={wallBw}
                 alt=""
                 aria-hidden
-                className="h-full w-full object-cover grayscale contrast-125 animate-ken-burns opacity-60 will-change-transform"
+                className="h-full w-full object-cover grayscale brightness-150 contrast-125 animate-ken-burns opacity-70 mix-blend-screen will-change-transform"
               />
-              {/* duotone roxo */}
-              <div className="absolute inset-0 bg-primary/45 mix-blend-multiply" />
-              <div className="absolute inset-0 bg-accent/25 mix-blend-color" />
+              {/* duotone roxo sobre os tons claros */}
+              <div className="absolute inset-0 bg-[hsl(268_85%_55%)] mix-blend-color opacity-80" />
               {/* vinheta suave só no topo e na base */}
-              <div className="absolute inset-0 bg-gradient-to-b from-background via-background/10 to-background" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
               {/* glow central atrás do vídeo */}
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_50%_50%,hsl(var(--accent)/0.30),transparent_70%)]" />
             </div>

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import logoSilver from "@/assets/logo-silver.webp";
 import heroBw from "@/assets/masterclass-hero-bw.webp";
+import wallBw from "@/assets/masterclass-wallpaper-bw.webp";
 import bannerMentoria from "@/assets/mentoria-banner.webp";
 import bannerQuestoes from "@/assets/questoes-banner.webp";
 import bannerMetas from "@/assets/plano-metas-missoes.webp";

@@ -233,7 +233,7 @@ const Masterclass = () => {
 
 
           {/* VSL 9:16 com wallpaper P&B atrás */}
-          <div className="relative mt-8 md:mt-10 -mx-5 md:mx-0">
+          <div className="relative mt-8 md:mt-10 left-1/2 -translate-x-1/2 w-screen">
             {/* wallpaper escuro em qualidade original preenchendo o fundo */}
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
               <img
@@ -242,12 +242,12 @@ const Masterclass = () => {
                 aria-hidden
                 className="h-full w-full object-cover"
               />
-              {/* escurecimento peso para manter o contraste do conteúdo */}
+              {/* escurecimento pesado para manter o contraste do conteúdo */}
               <div className="absolute inset-0 bg-black/75" />
               {/* tom roxo sutil unificado */}
               <div className="absolute inset-0 bg-[hsl(268_60%_25%)]/40" />
-              {/* vinheta nas bordas para esconder qualquer corte */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_70%_at_50%_50%,transparent_40%,hsl(var(--background))_95%)]" />
+              {/* transição suave apenas no topo e na base, sem vinheta lateral */}
+              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
             </div>
 
             <div className="relative z-10 flex justify-center px-5 py-6 md:py-10">

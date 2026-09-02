@@ -147,6 +147,11 @@ export default {
           "0%, 100%": { opacity: "0.8", transform: "scale(1)" },
           "50%": { opacity: "1", transform: "scale(1.15)" },
         },
+        "ken-burns": {
+          "0%": { transform: "scale(1) translateY(0)" },
+          "50%": { transform: "scale(1.12) translateY(-2%)" },
+          "100%": { transform: "scale(1) translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -160,6 +165,7 @@ export default {
         "tilt-in": "tilt-in 0.7s ease-out both",
         "line-flow": "line-flow 3.5s linear infinite",
         "pulse-soft": "pulse-soft 2.4s ease-in-out infinite",
+        "ken-burns": "ken-burns 24s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",

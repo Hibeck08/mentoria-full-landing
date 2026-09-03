@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
   Home, Volume2, VolumeX, ArrowRight, CheckCircle2, XCircle,
-  MessageCircle, Users, Layers, BookOpen, Play, Calendar, Crown,
+  MessageCircle, Users, Layers, BookOpen, Play, Calendar, Crown, Shield,
 } from "lucide-react";
 import logoSilver from "@/assets/logo-silver.webp";
 import heroBw from "@/assets/masterclass-hero-bw.webp";

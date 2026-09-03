@@ -23,31 +23,33 @@ const WPP_DUVIDAS =
   "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
 
 type Preco = {
-  nome: string; mes: string; nota: string; link: string;
+  nome: string; mes: string; total: string; nota: string; link: string; cta: string;
   melhor?: boolean; de?: string; promo?: string; economia?: string;
 };
 
 const planosStandard: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 97,00", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/F3otYDP" },
-  { nome: "Semestral", mes: "R$ 93,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/ctdmAcT" },
-  { nome: "Anual", mes: "R$ 87,50", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/9LgKsvN", melhor: true },
+  { nome: "Trimestral", mes: "R$ 97,00", total: "R$ 291 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/F3otYDP", cta: "COMEÇAR AGORA" },
+  { nome: "Semestral", mes: "R$ 93,90", total: "R$ 563,40 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/ctdmAcT", cta: "GARANTIR 6 MESES" },
+  { nome: "Anual", mes: "R$ 87,50", total: "R$ 1.050 à vista", nota: "12 meses de acesso total", link: "https://pay.kiwify.com.br/9LgKsvN", cta: "QUERO O ANUAL", melhor: true, economia: "Melhor custo por mês" },
 ];
 
 const planosStandardPlus: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 112,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/vJtM1hN" },
-  { nome: "Semestral", mes: "R$ 106,00", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/MYxkoYR" },
-  { nome: "Anual", mes: "R$ 98,98", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/dOPN2bl", melhor: true },
+  { nome: "Trimestral", mes: "R$ 112,90", total: "R$ 338,70 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/vJtM1hN", cta: "COMEÇAR AGORA" },
+  { nome: "Semestral", mes: "R$ 106,00", total: "R$ 636 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/MYxkoYR", cta: "GARANTIR 6 MESES" },
+  { nome: "Anual", mes: "R$ 98,98", total: "R$ 1.187,76 à vista", nota: "12 meses de acesso total", link: "https://pay.kiwify.com.br/dOPN2bl", cta: "QUERO O ANUAL", melhor: true, economia: "Melhor custo por mês" },
 ];
 
 const planosUltra: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 129,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/4ZJ8Z86" },
-  { nome: "Semestral", mes: "R$ 124,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/zJh6ROb" },
+  { nome: "Trimestral", mes: "R$ 129,90", total: "R$ 389,70 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/4ZJ8Z86", cta: "COMEÇAR AGORA" },
+  { nome: "Semestral", mes: "R$ 124,90", total: "R$ 749,40 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/zJh6ROb", cta: "GARANTIR 6 MESES" },
   {
     nome: "Anual",
     mes: "R$ 90,68",
     de: "R$ 120,90",
-    nota: "12 meses de acesso",
+    total: "R$ 1.088,16 à vista",
+    nota: "12 meses de acesso total",
     link: "https://pay.kiwify.com.br/Ph1n0Af?coupon=ANUALFULL",
+    cta: "QUERO O DESCONTO",
     melhor: true,
     promo: "SUPER DESCONTO",
     economia: "25% OFF · cupom ANUALFULL já aplicado",

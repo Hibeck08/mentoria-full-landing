@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import {
   Home, Volume2, VolumeX, ArrowRight, CheckCircle2, XCircle,
-  MessageCircle, Users, Layers, BookOpen, Play, Calendar, Crown,
+  MessageCircle, Users, Layers, BookOpen, Play, Calendar, Crown, Shield,
 } from "lucide-react";
 import logoSilver from "@/assets/logo-silver.webp";
 import heroBw from "@/assets/masterclass-hero-bw.webp";
@@ -23,31 +23,33 @@ const WPP_DUVIDAS =
   "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
 
 type Preco = {
-  nome: string; mes: string; nota: string; link: string;
+  nome: string; mes: string; total: string; nota: string; link: string; cta: string;
   melhor?: boolean; de?: string; promo?: string; economia?: string;
 };
 
 const planosStandard: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 97,00", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/F3otYDP" },
-  { nome: "Semestral", mes: "R$ 93,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/ctdmAcT" },
-  { nome: "Anual", mes: "R$ 87,50", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/9LgKsvN", melhor: true },
+  { nome: "Trimestral", mes: "R$ 97,00", total: "R$ 291 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/F3otYDP", cta: "COMEÇAR AGORA" },
+  { nome: "Semestral", mes: "R$ 93,90", total: "R$ 563,40 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/ctdmAcT", cta: "GARANTIR 6 MESES" },
+  { nome: "Anual", mes: "R$ 87,50", total: "R$ 1.050 à vista", nota: "12 meses de acesso total", link: "https://pay.kiwify.com.br/9LgKsvN", cta: "QUERO O ANUAL", melhor: true, economia: "Melhor custo por mês" },
 ];
 
 const planosStandardPlus: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 112,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/vJtM1hN" },
-  { nome: "Semestral", mes: "R$ 106,00", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/MYxkoYR" },
-  { nome: "Anual", mes: "R$ 98,98", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/dOPN2bl", melhor: true },
+  { nome: "Trimestral", mes: "R$ 112,90", total: "R$ 338,70 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/vJtM1hN", cta: "COMEÇAR AGORA" },
+  { nome: "Semestral", mes: "R$ 106,00", total: "R$ 636 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/MYxkoYR", cta: "GARANTIR 6 MESES" },
+  { nome: "Anual", mes: "R$ 98,98", total: "R$ 1.187,76 à vista", nota: "12 meses de acesso total", link: "https://pay.kiwify.com.br/dOPN2bl", cta: "QUERO O ANUAL", melhor: true, economia: "Melhor custo por mês" },
 ];
 
 const planosUltra: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 129,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/4ZJ8Z86" },
-  { nome: "Semestral", mes: "R$ 124,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/zJh6ROb" },
+  { nome: "Trimestral", mes: "R$ 129,90", total: "R$ 389,70 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/4ZJ8Z86", cta: "COMEÇAR AGORA" },
+  { nome: "Semestral", mes: "R$ 124,90", total: "R$ 749,40 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/zJh6ROb", cta: "GARANTIR 6 MESES" },
   {
     nome: "Anual",
     mes: "R$ 90,68",
     de: "R$ 120,90",
-    nota: "12 meses de acesso",
+    total: "R$ 1.088,16 à vista",
+    nota: "12 meses de acesso total",
     link: "https://pay.kiwify.com.br/Ph1n0Af?coupon=ANUALFULL",
+    cta: "QUERO O DESCONTO",
     melhor: true,
     promo: "SUPER DESCONTO",
     economia: "25% OFF · cupom ANUALFULL já aplicado",
@@ -68,21 +70,22 @@ const detalhes: Record<PlanMode, {
     para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
     grupos: [
       { titulo: "Acompanhamento 1:1", icon: Users, itens: [
-        "Direcionamento individual comigo, semana a semana",
-        "Plano de metas personalizado pro seu concurso",
-        "Ajuste de rotina de estudos (matérias, horários, pesos)",
-        "Suporte direto no WhatsApp",
+        "Direcionamento individual comigo, semana a semana, sem resposta automática",
+        "Plano de metas montado pro SEU edital, SEU tempo disponível e SEU nível atual",
+        "Ajuste de rotina de estudos: matérias, horários, pesos e revisões na medida",
+        "Suporte direto no WhatsApp pra destravar dúvida e corrigir rota rápido",
       ] },
       { titulo: "Plataforma completa", icon: Layers, itens: [
-        "Banco FULL Questões (+10.000 questões resolvidas)",
-        "+2.000 flashcards Anki de todas as matérias",
-        "Nivelamento automático por assunto",
-        "Livro do Método Hibeck em PDF",
+        "Banco FULL Questões com +10.000 questões resolvidas e comentadas",
+        "+2.000 flashcards Anki prontos de todas as matérias",
+        "Nivelamento automático por assunto: a plataforma mostra onde você tá fraco",
+        "Livro do Método Hibeck em PDF, o passo a passo completo",
       ] },
       { titulo: "Comunidade & rotina", icon: Calendar, itens: [
-        "Encontros ao vivo semanais de estudo em grupo",
-        "Comunidade fechada de alunos",
-        "Cronograma de revisões inteligente",
+        "Encontros ao vivo semanais de estudo em grupo (ficam gravados)",
+        "Comunidade fechada de alunos com a mesma missão que você",
+        "Cronograma de revisões inteligente pra não esquecer o que estudou",
+        "Cobrança e constância: você não estuda mais sozinho",
       ] },
     ],
     naoInclui: ["Aulas AO VIVO de matérias", "Aulas GRAVADAS de matérias"],
@@ -95,15 +98,16 @@ const detalhes: Record<PlanMode, {
     para: "Serve pra QUALQUER concurso · inclusive CN e EPCAr",
     grupos: [
       { titulo: "Tudo do Standard", icon: Users, itens: [
-        "Acompanhamento e direcionamento 1:1",
-        "Banco FULL Questões + flashcards Anki",
-        "Plano de metas e organização de rotina",
-        "Encontros ao vivo de estudo",
+        "Acompanhamento e direcionamento 1:1 semana a semana",
+        "Banco FULL Questões (+10.000 questões) + flashcards Anki",
+        "Plano de metas personalizado e organização de rotina",
+        "Encontros ao vivo de estudo e comunidade fechada",
       ] },
       { titulo: "Aulas GRAVADAS de todas as matérias", icon: BookOpen, itens: [
-        "Videoaulas completas do zero ao avançado",
-        "Resolução comentada de questões-chave",
-        "Assiste quando e quantas vezes quiser",
+        "Videoaulas completas do zero ao avançado, organizadas por assunto",
+        "Resolução comentada de questões-chave das provas anteriores",
+        "Assiste quando e quantas vezes quiser, no seu ritmo",
+        "Ideal pra revisar conteúdo do cursinho ou suprir o que falta",
       ] },
     ],
     naoInclui: ["Aulas AO VIVO de matérias"],
@@ -116,22 +120,26 @@ const detalhes: Record<PlanMode, {
     para: "EXCLUSIVO para AFA · EN · EFOMM",
     grupos: [
       { titulo: "Aulas AO VIVO comigo e minha equipe", icon: Play, itens: [
-        "Matemática, Física, Português e Inglês toda semana",
-        "Gravadas e disponíveis pra rever quando quiser",
+        "Matemática, Física, Português e Inglês toda semana, ao vivo",
+        "Tira-dúvidas em tempo real durante a aula",
+        "Todas ficam gravadas pra rever quando quiser",
       ] },
       { titulo: "Aulas GRAVADAS de todas as matérias", icon: BookOpen, itens: [
         "Videoaulas completas do zero ao avançado",
-        "Acervo completo do Método Hibeck",
+        "Acervo completo do Método Hibeck organizado por assunto",
+        "Resoluções comentadas das provas AFA, EN e EFOMM",
       ] },
       { titulo: "Mentoria 1:1 aprofundada", icon: Users, itens: [
-        "Acompanhamento individual com foco em performance",
-        "Análise de simulados e correção de rota",
+        "Acompanhamento individual com foco em performance e nota",
+        "Análise de simulados com correção de rota imediata",
+        "Plano de metas personalizado pro seu edital",
         "Suporte direto no WhatsApp",
       ] },
       { titulo: "Plataforma & comunidade", icon: Layers, itens: [
-        "Banco FULL Questões + 2.000 flashcards Anki",
-        "Encontros ao vivo semanais",
-        "Comunidade fechada de alunos",
+        "Banco FULL Questões (+10.000) + 2.000 flashcards Anki",
+        "Nivelamento automático por assunto",
+        "Encontros ao vivo semanais de estudo",
+        "Comunidade fechada de alunos AFA, EN e EFOMM",
       ] },
     ],
     naoInclui: [],
@@ -139,27 +147,31 @@ const detalhes: Record<PlanMode, {
   },
 };
 
-const cards: { mode: PlanMode; tag: string; title: string; desc: string; bullets: string[] }[] = [
+const cards: { mode: PlanMode; tag: string; title: string; desc: string; aPartir: string; destaque?: string; bullets: string[] }[] = [
   {
     mode: "standard",
     tag: "PLANO STANDARD",
     title: "Já tenho preparatório",
     desc: "Falta direção, rotina e acompanhamento, não mais conteúdo.",
-    bullets: ["Acompanhamento 1:1", "Banco FULL Questões + flashcards", "Plano de metas semanal"],
+    aPartir: "R$ 87,50",
+    bullets: ["Acompanhamento 1:1 semanal", "Banco FULL Questões + flashcards Anki", "Plano de metas personalizado", "Qualquer concurso · CN e EPCAr"],
   },
   {
     mode: "standardplus",
     tag: "STANDARD +",
     title: "Quero também as gravadas",
     desc: "Tudo do Standard mais o acervo de aulas gravadas de todas as matérias.",
-    bullets: ["Tudo do Standard", "Aulas gravadas completas", "Resoluções comentadas"],
+    aPartir: "R$ 98,98",
+    bullets: ["Tudo do Standard incluso", "Aulas gravadas completas", "Resoluções comentadas", "Estuda no seu ritmo"],
   },
   {
     mode: "ultra",
     tag: "PLANO ULTRA",
     title: "Quero TUDO incluso",
     desc: "O pacote fechado com aulas ao vivo semanais e mentoria aprofundada.",
-    bullets: ["Aulas AO VIVO semanais", "Mentoria 1:1 aprofundada", "SUPER DESCONTO no anual"],
+    aPartir: "R$ 90,68",
+    destaque: "25% OFF no anual",
+    bullets: ["Aulas AO VIVO semanais", "Aulas gravadas de tudo", "Mentoria 1:1 aprofundada", "Exclusivo AFA · EN · EFOMM"],
   },
 ];
 
@@ -418,7 +430,7 @@ const Masterclass = () => {
         <div className="container mx-auto px-5">
           <h2 className="text-center text-2xl md:text-4xl font-black mb-3">Escolha o seu plano</h2>
           <p className="text-center text-sm text-muted-foreground mb-10">
-            Clique no plano pra ver todos os benefícios e os valores.
+            Clique no plano pra ver todos os benefícios, valores e garantir sua vaga.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
@@ -427,13 +439,27 @@ const Masterclass = () => {
                 key={c.mode}
                 type="button"
                 onClick={() => setOpenPlan(c.mode)}
-                className="text-left rounded-2xl p-5 md:p-7 border-2 bg-card/70 backdrop-blur-sm border-accent/25 hover:border-accent hover:shadow-glow-beige hover:-translate-y-0.5 transition-all duration-300"
+                className={`relative text-left rounded-2xl p-5 md:p-7 border-2 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+                  c.mode === "ultra"
+                    ? "border-accent shadow-glow-beige hover:shadow-glow-beige"
+                    : "border-accent/25 hover:border-accent hover:shadow-glow-beige"
+                }`}
               >
+                {c.destaque && (
+                  <span className="absolute -top-3 right-4 text-[9px] font-black tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground animate-pulse-soft">
+                    {c.destaque}
+                  </span>
+                )}
                 <span className="text-[10px] font-black tracking-widest px-3 py-1 rounded-full bg-accent/15 text-accent">
                   {c.tag}
                 </span>
                 <h3 className="text-xl md:text-2xl font-black mt-3 mb-1.5">{c.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{c.desc}</p>
+                <p className="text-sm text-muted-foreground mb-3">{c.desc}</p>
+                <p className="mb-4 text-sm">
+                  <span className="text-muted-foreground">a partir de </span>
+                  <span className="text-xl font-black text-accent">{c.aPartir}</span>
+                  <span className="text-xs text-muted-foreground">/mês</span>
+                </p>
                 <ul className="space-y-2">
                   {c.bullets.map((b) => (
                     <li key={b} className="flex gap-2 text-xs md:text-sm text-foreground/90">
@@ -441,12 +467,19 @@ const Masterclass = () => {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-5 flex items-center justify-center gap-2 text-center text-xs font-black text-accent">
-                  VER PLANOS E VALORES <ArrowRight className="w-3.5 h-3.5" />
+                <span className={`mt-5 flex items-center justify-center gap-2 rounded-full py-3 text-xs font-black transition-colors ${
+                  c.mode === "ultra"
+                    ? "bg-accent text-accent-foreground shadow-glow-beige"
+                    : "border border-accent/50 text-accent"
+                }`}>
+                  VER TUDO QUE ESTÁ INCLUSO <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </button>
             ))}
           </div>
+          <p className="text-center text-[11px] text-muted-foreground mt-6">
+            🔒 Compra segura · garantia incondicional de 7 dias em todos os planos
+          </p>
         </div>
       </section>
 
@@ -519,31 +552,55 @@ const Masterclass = () => {
               </ul>
             )}
 
-            <div className="grid sm:grid-cols-3 gap-3 mt-6">
+            <p className="mt-6 mb-3 text-xs font-black tracking-widest text-muted-foreground uppercase text-center">
+              Escolha a duração do seu acesso
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3">
               {detalhe.precos.map((p) => (
                 <div
                   key={p.nome}
-                  className={`rounded-xl border p-4 flex flex-col ${p.melhor ? "border-accent bg-accent/5" : "border-border bg-card/60"}`}
+                  className={`relative rounded-xl border-2 p-4 flex flex-col transition-all duration-300 ${
+                    p.melhor
+                      ? "border-accent bg-accent/10 shadow-glow-beige sm:-translate-y-1"
+                      : "border-border bg-card/60 hover:border-accent/50"
+                  }`}
                 >
-                  {p.promo && (
-                    <span className="mb-2 text-[9px] font-black tracking-wider px-2 py-1 rounded-full bg-accent text-accent-foreground self-start">
-                      {p.promo}
+                  {p.melhor && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-black tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground">
+                      {p.promo ?? "MAIS ESCOLHIDO"}
                     </span>
                   )}
-                  <p className="text-xs font-bold text-muted-foreground">{p.nome}</p>
+                  <p className="text-xs font-bold text-muted-foreground mt-1">{p.nome}</p>
                   {p.de && (
                     <p className="text-[11px] text-muted-foreground/60 line-through">{p.de}/mês</p>
                   )}
-                  <p className="text-xl font-black text-accent leading-tight">{p.mes}<span className="text-xs font-semibold text-muted-foreground">/mês</span></p>
+                  <p className="text-2xl font-black text-accent leading-tight">
+                    {p.mes}<span className="text-xs font-semibold text-muted-foreground">/mês</span>
+                  </p>
                   <p className="text-[11px] text-muted-foreground mt-0.5">{p.nota}</p>
+                  <p className="text-[11px] font-semibold text-foreground/80 mt-1">{p.total}</p>
                   {p.economia && (
-                    <p className="text-[10px] text-accent font-semibold mt-1">{p.economia}</p>
+                    <p className="text-[10px] text-accent font-bold mt-1">{p.economia}</p>
                   )}
-                  <Button asChild variant="gold" className="mt-3 w-full rounded-full text-xs font-black h-9">
-                    <a href={p.link} target="_blank" rel="noopener noreferrer">ASSINAR</a>
+                  <Button
+                    asChild
+                    variant="gold"
+                    className={`mt-3 w-full rounded-full font-black h-10 ${p.melhor ? "text-sm animate-gold-shimmer" : "text-xs"}`}
+                  >
+                    <a href={p.link} target="_blank" rel="noopener noreferrer">
+                      <span className="inline-flex items-center justify-center gap-1.5">
+                        {p.cta} <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </a>
                   </Button>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-[11px] text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5"><Shield className="w-3.5 h-3.5 text-accent" /> Garantia incondicional de 7 dias</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Pagamento seguro pela Kiwify</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Acesso imediato após a compra</span>
             </div>
 
             <div className="mt-5 flex justify-center">
@@ -551,9 +608,9 @@ const Masterclass = () => {
                 href={WPP_DUVIDAS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-accent hover:underline"
+                className="inline-flex items-center gap-2 rounded-full border border-accent/40 px-5 py-2.5 text-xs font-bold text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
               >
-                <MessageCircle className="w-4 h-4" /> Tenho dúvidas, falar no WhatsApp
+                <MessageCircle className="w-4 h-4" /> Ficou com dúvida? Fala comigo no WhatsApp
               </a>
             </div>
           </div>

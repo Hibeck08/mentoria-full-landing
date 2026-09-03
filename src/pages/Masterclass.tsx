@@ -430,7 +430,7 @@ const Masterclass = () => {
         <div className="container mx-auto px-5">
           <h2 className="text-center text-2xl md:text-4xl font-black mb-3">Escolha o seu plano</h2>
           <p className="text-center text-sm text-muted-foreground mb-10">
-            Clique no plano pra ver todos os benefícios e os valores.
+            Clique no plano pra ver todos os benefícios, valores e garantir sua vaga.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
@@ -439,13 +439,27 @@ const Masterclass = () => {
                 key={c.mode}
                 type="button"
                 onClick={() => setOpenPlan(c.mode)}
-                className="text-left rounded-2xl p-5 md:p-7 border-2 bg-card/70 backdrop-blur-sm border-accent/25 hover:border-accent hover:shadow-glow-beige hover:-translate-y-0.5 transition-all duration-300"
+                className={`relative text-left rounded-2xl p-5 md:p-7 border-2 bg-card/70 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 ${
+                  c.mode === "ultra"
+                    ? "border-accent shadow-glow-beige hover:shadow-glow-beige"
+                    : "border-accent/25 hover:border-accent hover:shadow-glow-beige"
+                }`}
               >
+                {c.destaque && (
+                  <span className="absolute -top-3 right-4 text-[9px] font-black tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground animate-pulse-soft">
+                    {c.destaque}
+                  </span>
+                )}
                 <span className="text-[10px] font-black tracking-widest px-3 py-1 rounded-full bg-accent/15 text-accent">
                   {c.tag}
                 </span>
                 <h3 className="text-xl md:text-2xl font-black mt-3 mb-1.5">{c.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{c.desc}</p>
+                <p className="text-sm text-muted-foreground mb-3">{c.desc}</p>
+                <p className="mb-4 text-sm">
+                  <span className="text-muted-foreground">a partir de </span>
+                  <span className="text-xl font-black text-accent">{c.aPartir}</span>
+                  <span className="text-xs text-muted-foreground">/mês</span>
+                </p>
                 <ul className="space-y-2">
                   {c.bullets.map((b) => (
                     <li key={b} className="flex gap-2 text-xs md:text-sm text-foreground/90">
@@ -453,12 +467,19 @@ const Masterclass = () => {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-5 flex items-center justify-center gap-2 text-center text-xs font-black text-accent">
-                  VER PLANOS E VALORES <ArrowRight className="w-3.5 h-3.5" />
+                <span className={`mt-5 flex items-center justify-center gap-2 rounded-full py-3 text-xs font-black transition-colors ${
+                  c.mode === "ultra"
+                    ? "bg-accent text-accent-foreground shadow-glow-beige"
+                    : "border border-accent/50 text-accent"
+                }`}>
+                  VER TUDO QUE ESTÁ INCLUSO <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </button>
             ))}
           </div>
+          <p className="text-center text-[11px] text-muted-foreground mt-6">
+            🔒 Compra segura · garantia incondicional de 7 dias em todos os planos
+          </p>
         </div>
       </section>
 

@@ -303,28 +303,56 @@ const Masterclass = () => {
 
       {/* PROPOSTA + CTA */}
       <section className="py-14 md:py-20 border-t border-border/40">
-        <div className="container mx-auto px-5 text-center max-w-3xl">
-          <div className="flex justify-center gap-1.5 mb-6">
-            {[0, 1, 2].map((i) => (
-              <span key={i} className="h-2 w-8 rounded-full bg-accent/70 -skew-x-12" />
-            ))}
+        <div className="container mx-auto px-5 max-w-5xl">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="flex justify-center gap-1.5 mb-6">
+              {[0, 1, 2].map((i) => (
+                <span key={i} className="h-2 w-8 rounded-full bg-accent/70 -skew-x-12" />
+              ))}
+            </div>
+            <ScrollReveal>
+              <h2 className="text-2xl md:text-4xl font-black leading-tight">
+                <span className="bg-accent/90 text-accent-foreground px-2 rounded-md box-decoration-clone">
+                  Condensamos anos de preparação
+                </span>{" "}
+                em um sistema rápido e prático
+              </h2>
+              <p className="text-sm md:text-base text-muted-foreground mt-4">
+                Método validado, banco de questões, flashcards, plano de metas e acompanhamento direto.
+                Tudo em um lugar só, pra você parar de adivinhar o que estudar.
+              </p>
+              <Button variant="gold" size="lg" onClick={scrollToPlans} className="mt-8 rounded-full px-8 font-black">
+                <span className="inline-flex items-center justify-center gap-2">
+                  QUERO FAZER PARTE DA MENTORIA <ArrowRight className="w-4 h-4" />
+                </span>
+              </Button>
+            </ScrollReveal>
           </div>
-          <ScrollReveal>
-            <h2 className="text-2xl md:text-4xl font-black leading-tight">
-              <span className="bg-accent/90 text-accent-foreground px-2 rounded-md box-decoration-clone">
-                Condensamos anos de preparação
-              </span>{" "}
-              em um sistema rápido e prático
-            </h2>
-            <p className="text-sm md:text-base text-muted-foreground mt-4">
-              Método validado, banco de questões, flashcards, plano de metas e acompanhamento direto.
-              Tudo em um lugar só, pra você parar de adivinhar o que estudar.
-            </p>
-            <Button variant="gold" size="lg" onClick={scrollToPlans} className="mt-8 rounded-full px-8 font-black">
-              <span className="inline-flex items-center justify-center gap-2">
-                QUERO FAZER PARTE DA MENTORIA <ArrowRight className="w-4 h-4" />
-              </span>
-            </Button>
+
+          <ScrollReveal className="mt-10 md:mt-14">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { icon: Users, title: "Acompanhamento 1:1", desc: "Direcionamento semanal personalizado, sem resposta automática." },
+                { icon: Layers, title: "Plataforma completa", desc: "Banco FULL Questões, flashcards Anki e nivelamento por assunto." },
+                { icon: Calendar, title: "Rotina mastigada", desc: "Plano de metas e cronograma feitos pro seu edital e tempo." },
+                { icon: BookOpen, title: "Aulas gravadas", desc: "Acervo completo de videoaulas pra estudar no seu ritmo (Standard + e Ultra)." },
+                { icon: Play, title: "Aulas ao vivo", desc: "Matemática, Física, Português e Inglês toda semana com tira-dúvidas (Ultra)." },
+                { icon: Shield, title: "Garantia de 7 dias", desc: "Testa a mentoria durante uma semana. Não gostou? Devolvemos 100%." },
+              ].map((b) => (
+                <div
+                  key={b.title}
+                  className="flex items-start gap-4 rounded-2xl border border-accent/20 bg-card/60 p-4 md:p-5 backdrop-blur-sm hover:border-accent/40 transition-colors"
+                >
+                  <div className="shrink-0 rounded-xl bg-accent/15 p-2.5">
+                    <b.icon className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm md:text-base font-black leading-tight">{b.title}</h3>
+                    <p className="mt-1 text-xs md:text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
       </section>

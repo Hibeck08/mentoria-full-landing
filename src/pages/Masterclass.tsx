@@ -120,22 +120,26 @@ const detalhes: Record<PlanMode, {
     para: "EXCLUSIVO para AFA · EN · EFOMM",
     grupos: [
       { titulo: "Aulas AO VIVO comigo e minha equipe", icon: Play, itens: [
-        "Matemática, Física, Português e Inglês toda semana",
-        "Gravadas e disponíveis pra rever quando quiser",
+        "Matemática, Física, Português e Inglês toda semana, ao vivo",
+        "Tira-dúvidas em tempo real durante a aula",
+        "Todas ficam gravadas pra rever quando quiser",
       ] },
       { titulo: "Aulas GRAVADAS de todas as matérias", icon: BookOpen, itens: [
         "Videoaulas completas do zero ao avançado",
-        "Acervo completo do Método Hibeck",
+        "Acervo completo do Método Hibeck organizado por assunto",
+        "Resoluções comentadas das provas AFA, EN e EFOMM",
       ] },
       { titulo: "Mentoria 1:1 aprofundada", icon: Users, itens: [
-        "Acompanhamento individual com foco em performance",
-        "Análise de simulados e correção de rota",
+        "Acompanhamento individual com foco em performance e nota",
+        "Análise de simulados com correção de rota imediata",
+        "Plano de metas personalizado pro seu edital",
         "Suporte direto no WhatsApp",
       ] },
       { titulo: "Plataforma & comunidade", icon: Layers, itens: [
-        "Banco FULL Questões + 2.000 flashcards Anki",
-        "Encontros ao vivo semanais",
-        "Comunidade fechada de alunos",
+        "Banco FULL Questões (+10.000) + 2.000 flashcards Anki",
+        "Nivelamento automático por assunto",
+        "Encontros ao vivo semanais de estudo",
+        "Comunidade fechada de alunos AFA, EN e EFOMM",
       ] },
     ],
     naoInclui: [],
@@ -143,27 +147,31 @@ const detalhes: Record<PlanMode, {
   },
 };
 
-const cards: { mode: PlanMode; tag: string; title: string; desc: string; bullets: string[] }[] = [
+const cards: { mode: PlanMode; tag: string; title: string; desc: string; aPartir: string; destaque?: string; bullets: string[] }[] = [
   {
     mode: "standard",
     tag: "PLANO STANDARD",
     title: "Já tenho preparatório",
     desc: "Falta direção, rotina e acompanhamento, não mais conteúdo.",
-    bullets: ["Acompanhamento 1:1", "Banco FULL Questões + flashcards", "Plano de metas semanal"],
+    aPartir: "R$ 87,50",
+    bullets: ["Acompanhamento 1:1 semanal", "Banco FULL Questões + flashcards Anki", "Plano de metas personalizado", "Qualquer concurso · CN e EPCAr"],
   },
   {
     mode: "standardplus",
     tag: "STANDARD +",
     title: "Quero também as gravadas",
     desc: "Tudo do Standard mais o acervo de aulas gravadas de todas as matérias.",
-    bullets: ["Tudo do Standard", "Aulas gravadas completas", "Resoluções comentadas"],
+    aPartir: "R$ 98,98",
+    bullets: ["Tudo do Standard incluso", "Aulas gravadas completas", "Resoluções comentadas", "Estuda no seu ritmo"],
   },
   {
     mode: "ultra",
     tag: "PLANO ULTRA",
     title: "Quero TUDO incluso",
     desc: "O pacote fechado com aulas ao vivo semanais e mentoria aprofundada.",
-    bullets: ["Aulas AO VIVO semanais", "Mentoria 1:1 aprofundada", "SUPER DESCONTO no anual"],
+    aPartir: "R$ 90,68",
+    destaque: "25% OFF no anual",
+    bullets: ["Aulas AO VIVO semanais", "Aulas gravadas de tudo", "Mentoria 1:1 aprofundada", "Exclusivo AFA · EN · EFOMM"],
   },
 ];
 

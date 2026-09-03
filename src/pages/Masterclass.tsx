@@ -552,31 +552,55 @@ const Masterclass = () => {
               </ul>
             )}
 
-            <div className="grid sm:grid-cols-3 gap-3 mt-6">
+            <p className="mt-6 mb-3 text-xs font-black tracking-widest text-muted-foreground uppercase text-center">
+              Escolha a duração do seu acesso
+            </p>
+            <div className="grid sm:grid-cols-3 gap-3">
               {detalhe.precos.map((p) => (
                 <div
                   key={p.nome}
-                  className={`rounded-xl border p-4 flex flex-col ${p.melhor ? "border-accent bg-accent/5" : "border-border bg-card/60"}`}
+                  className={`relative rounded-xl border-2 p-4 flex flex-col transition-all duration-300 ${
+                    p.melhor
+                      ? "border-accent bg-accent/10 shadow-glow-beige sm:-translate-y-1"
+                      : "border-border bg-card/60 hover:border-accent/50"
+                  }`}
                 >
-                  {p.promo && (
-                    <span className="mb-2 text-[9px] font-black tracking-wider px-2 py-1 rounded-full bg-accent text-accent-foreground self-start">
-                      {p.promo}
+                  {p.melhor && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-black tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground">
+                      {p.promo ?? "MAIS ESCOLHIDO"}
                     </span>
                   )}
-                  <p className="text-xs font-bold text-muted-foreground">{p.nome}</p>
+                  <p className="text-xs font-bold text-muted-foreground mt-1">{p.nome}</p>
                   {p.de && (
                     <p className="text-[11px] text-muted-foreground/60 line-through">{p.de}/mês</p>
                   )}
-                  <p className="text-xl font-black text-accent leading-tight">{p.mes}<span className="text-xs font-semibold text-muted-foreground">/mês</span></p>
+                  <p className="text-2xl font-black text-accent leading-tight">
+                    {p.mes}<span className="text-xs font-semibold text-muted-foreground">/mês</span>
+                  </p>
                   <p className="text-[11px] text-muted-foreground mt-0.5">{p.nota}</p>
+                  <p className="text-[11px] font-semibold text-foreground/80 mt-1">{p.total}</p>
                   {p.economia && (
-                    <p className="text-[10px] text-accent font-semibold mt-1">{p.economia}</p>
+                    <p className="text-[10px] text-accent font-bold mt-1">{p.economia}</p>
                   )}
-                  <Button asChild variant="gold" className="mt-3 w-full rounded-full text-xs font-black h-9">
-                    <a href={p.link} target="_blank" rel="noopener noreferrer">ASSINAR</a>
+                  <Button
+                    asChild
+                    variant="gold"
+                    className={`mt-3 w-full rounded-full font-black h-10 ${p.melhor ? "text-sm animate-gold-shimmer" : "text-xs"}`}
+                  >
+                    <a href={p.link} target="_blank" rel="noopener noreferrer">
+                      <span className="inline-flex items-center justify-center gap-1.5">
+                        {p.cta} <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </a>
                   </Button>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-[11px] text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5"><Shield className="w-3.5 h-3.5 text-accent" /> Garantia incondicional de 7 dias</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Pagamento seguro pela Kiwify</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Acesso imediato após a compra</span>
             </div>
 
             <div className="mt-5 flex justify-center">
@@ -584,9 +608,9 @@ const Masterclass = () => {
                 href={WPP_DUVIDAS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-semibold text-accent hover:underline"
+                className="inline-flex items-center gap-2 rounded-full border border-accent/40 px-5 py-2.5 text-xs font-bold text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
               >
-                <MessageCircle className="w-4 h-4" /> Tenho dúvidas, falar no WhatsApp
+                <MessageCircle className="w-4 h-4" /> Ficou com dúvida? Fala comigo no WhatsApp
               </a>
             </div>
           </div>

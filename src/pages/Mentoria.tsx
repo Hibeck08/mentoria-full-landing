@@ -29,10 +29,7 @@ import planoMetasMissoes from "@/assets/plano-metas-missoes.webp";
 import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.webp";
 import { GraduationCap } from "lucide-react";
 
-/**
- * PROMOÇÃO ULTRA ANUAL — para desativar todos os destaques do desconto,
- * basta trocar PROMO_ON para false (previsto para 10/09).
- */
+/** Use esta chave para ativar ou remover todos os destaques promocionais. */
 export const PROMO_ON = true;
 const PROMO_LABEL = "DESCONTO IMPERDÍVEL POR TEMPO LIMITADO";
 
@@ -68,7 +65,6 @@ const Mentoria = () => {
   ];
 
   const WPP_STANDARD = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%21";
-  const WPP_STANDARD_PLUS = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%20%2B%20Aulas%20Gravadas%21";
   const WPP_ULTRA = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra%21";
   const WPP_DUVIDAS = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
 
@@ -135,7 +131,7 @@ const Mentoria = () => {
     ],
     naoInclui: ["Aulas AO VIVO de matérias específicas (Mat / Fís / Port / Ing)"],
     cta: "QUERO O STANDARD +",
-    link: WPP_STANDARD_PLUS,
+    link: WPP_STANDARD,
   };
 
 

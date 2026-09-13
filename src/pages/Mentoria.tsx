@@ -29,12 +29,9 @@ import planoMetasMissoes from "@/assets/plano-metas-missoes.webp";
 import planoMetasMissoesMobile from "@/assets/plano-metas-missoes-mobile-v2.webp";
 import { GraduationCap } from "lucide-react";
 
-/**
- * PROMOÇÃO ULTRA ANUAL — para desativar todos os destaques do desconto,
- * basta trocar PROMO_ON para false (previsto para 10/09).
- */
+/** Use esta chave para ativar ou remover todos os destaques promocionais. */
 export const PROMO_ON = true;
-const PROMO_LABEL = "SUPER DESCONTO · ULTRA ANUAL 25% OFF — ATÉ 10/09";
+const PROMO_LABEL = "DESCONTO IMPERDÍVEL POR TEMPO LIMITADO";
 
 const FloatingWhatsApp = () => {
 
@@ -68,36 +65,8 @@ const Mentoria = () => {
   ];
 
   const WPP_STANDARD = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%21";
-  const WPP_STANDARD_PLUS = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard%20%2B%20Aulas%20Gravadas%21";
   const WPP_ULTRA = "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra%21";
   const WPP_DUVIDAS = "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
-
-  const planosStandard = [
-    { nome: "Trimestral", mes: "R$ 97,00", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/F3otYDP" },
-    { nome: "Semestral", mes: "R$ 93,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/ctdmAcT" },
-    { nome: "Anual", mes: "R$ 87,50", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/9LgKsvN", melhor: true },
-  ];
-
-  const planosStandardPlus = [
-    { nome: "Trimestral", mes: "R$ 112,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/vJtM1hN" },
-    { nome: "Semestral", mes: "R$ 106,00", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/MYxkoYR" },
-    { nome: "Anual", mes: "R$ 98,98", nota: "12 meses de acesso", link: "https://pay.kiwify.com.br/dOPN2bl", melhor: true },
-  ];
-
-  const planosUltra = [
-    { nome: "Trimestral", mes: "R$ 129,90", nota: "3 meses de acesso", link: "https://pay.kiwify.com.br/4ZJ8Z86" },
-    { nome: "Semestral", mes: "R$ 124,90", nota: "6 meses de acesso", link: "https://pay.kiwify.com.br/zJh6ROb" },
-    {
-      nome: "Anual",
-      mes: "R$ 90,68",
-      de: "R$ 120,90",
-      nota: "12 meses de acesso",
-      link: "https://pay.kiwify.com.br/Ph1n0Af?coupon=ANUALFULL",
-      melhor: true,
-      promo: "SUPER DESCONTO até 10/09",
-      economia: "25% OFF · cupom ANUALFULL já aplicado",
-    },
-  ];
 
   const detalheStandard = {
     tag: "PLANO STANDARD",
@@ -141,7 +110,6 @@ const Mentoria = () => {
     ],
     cta: "QUERO O PLANO STANDARD",
     link: WPP_STANDARD,
-    precos: planosStandard,
   };
 
   const detalheStandardPlus = {
@@ -163,8 +131,7 @@ const Mentoria = () => {
     ],
     naoInclui: ["Aulas AO VIVO de matérias específicas (Mat / Fís / Port / Ing)"],
     cta: "QUERO O STANDARD +",
-    link: WPP_STANDARD_PLUS,
-    precos: planosStandardPlus,
+    link: WPP_STANDARD,
   };
 
 
@@ -219,7 +186,6 @@ const Mentoria = () => {
     naoInclui: [],
     cta: "QUERO O PLANO ULTRA",
     link: WPP_ULTRA,
-    precos: planosUltra,
   };
 
   const detalhe =
@@ -282,10 +248,10 @@ const Mentoria = () => {
 
               <div className="flex flex-col items-start gap-3 pt-2 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.45s" }}>
                 <Button variant="gold" size="lg" onClick={scrollToPlans} className="text-sm md:text-lg shadow-glow-beige rounded-full font-bold px-6 py-5 md:px-12 md:py-8 w-full sm:w-auto">
-                  {PROMO_ON ? "QUERO O SUPER DESCONTO →" : "QUERO ESSES BENEFÍCIOS →"}
+                  {PROMO_ON ? "QUERO O DESCONTO IMPERDÍVEL →" : "QUERO ESSES BENEFÍCIOS →"}
                 </Button>
                 <p className="text-xs md:text-sm text-muted-foreground/90">
-                  {PROMO_ON ? "⚡ Ultra Anual por R$ 90,68/mês · só até 10/09" : "⚡ Garantia de 7 dias · Acesso imediato"}
+                  {PROMO_ON ? "⚡ Condição especial por tempo limitado" : "⚡ Garantia de 7 dias · Acesso imediato"}
                 </p>
               </div>
             </div>
@@ -296,7 +262,7 @@ const Mentoria = () => {
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-20">
           <div className="bg-gradient-primary py-2 md:py-4 border-y-2 border-accent-dark/30">
             <p className="text-center text-accent-foreground font-bold text-xs md:text-base tracking-wider px-4">
-              {PROMO_ON ? "⚡ SUPER DESCONTO ULTRA ANUAL · 25% OFF ATÉ 10/09 ⚡" : "⭐ MENTORIA FULL · AFA · EFOMM · EN · EEAR · EPCAR ⭐"}
+              {PROMO_ON ? "⚡ DESCONTO IMPERDÍVEL POR TEMPO LIMITADO ⚡" : "⭐ MENTORIA FULL · AFA · EFOMM · EN · EEAR · EPCAR ⭐"}
             </p>
           </div>
         </div>
@@ -891,18 +857,17 @@ const Mentoria = () => {
                   <Zap className="w-4 h-4" /> Promoção por tempo limitado — até 10/09
                 </p>
                 <p className="mt-2 text-lg md:text-2xl font-black leading-tight text-foreground">
-                  ULTRA ANUAL com <span className="text-accent">25% OFF</span>: de R$ 120,90 por{" "}
-                  <span className="text-accent">R$ 90,68/mês</span>
+                  Mentoria FULL com <span className="text-accent">desconto imperdível</span>
                 </p>
                 <p className="mt-1 text-xs md:text-sm text-muted-foreground">
-                  Cupom ANUALFULL já aplicado no checkout. Depois de 10/09 o valor volta ao normal.
+                  Fale com nossa equipe para conhecer a condição especial disponível agora.
                 </p>
                 <Button
                   variant="gold"
                   onClick={() => setOpenPlan("ultra")}
                   className="mt-4 w-full sm:w-auto rounded-full px-6 font-black"
                 >
-                  PEGAR O SUPER DESCONTO →
+                  QUERO O DESCONTO IMPERDÍVEL →
                 </Button>
               </div>
             </ScrollReveal>
@@ -951,7 +916,7 @@ const Mentoria = () => {
                     "Tudo do Standard +",
                     "Aulas AO VIVO de Mat, Fís, Port e Ing",
                     "Mentoria 1:1 aprofundada",
-                    "SUPER DESCONTO no anual até 10/09",
+                    "Desconto imperdível por tempo limitado",
                   ],
                   excludes: [],
                 },
@@ -1062,43 +1027,21 @@ const Mentoria = () => {
                   </div>
                 )}
 
-                {/* PLANOS DE ASSINATURA */}
+                {/* INSCRIÇÃO PELO WHATSAPP */}
                 <div className="rounded-2xl border border-accent/25 bg-background/50 p-4 md:p-6">
                   <p className="text-center text-xs md:text-sm font-black uppercase tracking-widest text-accent mb-4">
-                    Escolha o seu plano de assinatura
+                    Desconto imperdível por tempo limitado
                   </p>
-                  <div className="grid gap-3 md:grid-cols-3 md:gap-4">
-                    {detalhe.precos.map((p: any) => (
-                      <div
-                        key={p.nome}
-                        className={`relative rounded-xl border-2 p-4 flex flex-col ${
-                          p.melhor ? "border-accent bg-accent/10 shadow-glow-beige" : "border-accent/20 bg-card/60"
-                        }`}
-                      >
-                        {p.promo && (
-                          <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-[92%] text-center rounded-full bg-gradient-primary px-2 py-1 text-[9px] md:text-[10px] font-black tracking-wider text-accent-foreground shadow-glow-beige leading-tight">
-                            {p.promo}
-                          </span>
-                        )}
-                        <p className="text-sm font-black uppercase tracking-wider text-foreground mt-1">{p.nome}</p>
-                        <p className="text-[11px] text-muted-foreground mb-2">{p.nota}</p>
-                        {p.de && (
-                          <p className="text-xs text-muted-foreground line-through">{p.de}/mês</p>
-                        )}
-                        <p className="text-2xl md:text-3xl font-black text-accent leading-none">
-                          {p.mes}
-                          <span className="text-sm font-bold text-muted-foreground">/mês</span>
-                        </p>
-                        {p.economia && (
-                          <p className="mt-1 text-[11px] font-bold text-accent">{p.economia}</p>
-                        )}
-                        <Button asChild variant="gold" className="mt-4 w-full min-w-0 rounded-full font-black px-3 text-xs sm:text-sm">
-                          <a href={p.link} target="_blank" rel="noopener noreferrer" className="block w-full truncate text-center">
-                            ASSINAR {p.nome.toUpperCase()}
-                          </a>
-                        </Button>
-                      </div>
-                    ))}
+                  <p className="mx-auto max-w-xl text-center text-sm text-muted-foreground">
+                    Envie sua mensagem para conhecer as condições atuais e concluir sua inscrição com atendimento humano.
+                  </p>
+                  <div className="mt-4 flex justify-center">
+                    <Button asChild variant="gold" className="w-full max-w-md h-auto whitespace-normal rounded-full px-5 py-3 text-sm font-black">
+                      <a href={detalhe.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 text-center">
+                        <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                        QUERO FAZER MINHA INSCRIÇÃO
+                      </a>
+                    </Button>
                   </div>
 
                   <div className="mt-5 flex flex-col items-center gap-3">

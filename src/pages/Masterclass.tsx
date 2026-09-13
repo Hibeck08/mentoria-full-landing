@@ -19,49 +19,19 @@ import bannerFlashcards from "@/assets/flashcards-wallpaper.webp";
 
 const VSL_ID = "aRHlGzwQ2oU";
 
+const WPP_STANDARD =
+  "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Standard";
+const WPP_ULTRA =
+  "https://wa.me/5521992104885?text=Quero%20fazer%20minha%20inscri%C3%A7%C3%A3o%20na%20Mentoria%20FULL%20Ultra";
 const WPP_DUVIDAS =
   "https://wa.me/5521992104885?text=Ol%C3%A1%21%20Quero%20tirar%20umas%20d%C3%BAvidas%20antes%20de%20escolher%20meu%20plano%20na%20Mentoria%20FULL%21";
-
-type Preco = {
-  nome: string; mes: string; total: string; nota: string; link: string; cta: string;
-  melhor?: boolean; de?: string; promo?: string; economia?: string;
-};
-
-const planosStandard: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 97,00", total: "R$ 291 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/F3otYDP", cta: "COMEÇAR AGORA" },
-  { nome: "Semestral", mes: "R$ 93,90", total: "R$ 563,40 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/ctdmAcT", cta: "GARANTIR 6 MESES" },
-  { nome: "Anual", mes: "R$ 87,50", total: "R$ 1.050 à vista", nota: "12 meses de acesso total", link: "https://pay.kiwify.com.br/9LgKsvN", cta: "QUERO O ANUAL", melhor: true, economia: "Melhor custo por mês" },
-];
-
-const planosStandardPlus: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 112,90", total: "R$ 338,70 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/vJtM1hN", cta: "COMEÇAR AGORA" },
-  { nome: "Semestral", mes: "R$ 106,00", total: "R$ 636 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/MYxkoYR", cta: "GARANTIR 6 MESES" },
-  { nome: "Anual", mes: "R$ 98,98", total: "R$ 1.187,76 à vista", nota: "12 meses de acesso total", link: "https://pay.kiwify.com.br/dOPN2bl", cta: "QUERO O ANUAL", melhor: true, economia: "Melhor custo por mês" },
-];
-
-const planosUltra: Preco[] = [
-  { nome: "Trimestral", mes: "R$ 129,90", total: "R$ 389,70 à vista", nota: "3 meses de acesso total", link: "https://pay.kiwify.com.br/4ZJ8Z86", cta: "COMEÇAR AGORA" },
-  { nome: "Semestral", mes: "R$ 124,90", total: "R$ 749,40 à vista", nota: "6 meses de acesso total", link: "https://pay.kiwify.com.br/zJh6ROb", cta: "GARANTIR 6 MESES" },
-  {
-    nome: "Anual",
-    mes: "R$ 90,68",
-    de: "R$ 120,90",
-    total: "R$ 1.088,16 à vista",
-    nota: "12 meses de acesso total",
-    link: "https://pay.kiwify.com.br/Ph1n0Af?coupon=ANUALFULL",
-    cta: "QUERO O DESCONTO",
-    melhor: true,
-    promo: "SUPER DESCONTO",
-    economia: "25% OFF · cupom ANUALFULL já aplicado",
-  },
-];
 
 type PlanMode = "standard" | "standardplus" | "ultra";
 
 const detalhes: Record<PlanMode, {
   tag: string; titulo: string; subtitulo: string; para: string;
   grupos: { titulo: string; icon: React.ElementType; itens: string[] }[];
-  naoInclui: string[]; precos: Preco[];
+  naoInclui: string[]; link: string;
 }> = {
   standard: {
     tag: "PLANO STANDARD",
@@ -89,7 +59,7 @@ const detalhes: Record<PlanMode, {
       ] },
     ],
     naoInclui: ["Aulas AO VIVO de matérias", "Aulas GRAVADAS de matérias"],
-    precos: planosStandard,
+    link: WPP_STANDARD,
   },
   standardplus: {
     tag: "STANDARD +",
@@ -111,7 +81,7 @@ const detalhes: Record<PlanMode, {
       ] },
     ],
     naoInclui: ["Aulas AO VIVO de matérias"],
-    precos: planosStandardPlus,
+    link: WPP_STANDARD,
   },
   ultra: {
     tag: "PLANO ULTRA",
@@ -143,17 +113,16 @@ const detalhes: Record<PlanMode, {
       ] },
     ],
     naoInclui: [],
-    precos: planosUltra,
+    link: WPP_ULTRA,
   },
 };
 
-const cards: { mode: PlanMode; tag: string; title: string; desc: string; aPartir: string; destaque?: string; bullets: string[] }[] = [
+const cards: { mode: PlanMode; tag: string; title: string; desc: string; destaque?: string; bullets: string[] }[] = [
   {
     mode: "standard",
     tag: "PLANO STANDARD",
     title: "Já tenho preparatório",
     desc: "Falta direção, rotina e acompanhamento, não mais conteúdo.",
-    aPartir: "R$ 87,50",
     bullets: ["Acompanhamento 1:1 semanal", "Banco FULL Questões + flashcards Anki", "Plano de metas personalizado", "Qualquer concurso · CN e EPCAr"],
   },
   {
@@ -161,7 +130,6 @@ const cards: { mode: PlanMode; tag: string; title: string; desc: string; aPartir
     tag: "STANDARD +",
     title: "Quero também as gravadas",
     desc: "Tudo do Standard mais o acervo de aulas gravadas de todas as matérias.",
-    aPartir: "R$ 98,98",
     bullets: ["Tudo do Standard incluso", "Aulas gravadas completas", "Resoluções comentadas", "Estuda no seu ritmo"],
   },
   {
@@ -169,8 +137,7 @@ const cards: { mode: PlanMode; tag: string; title: string; desc: string; aPartir
     tag: "PLANO ULTRA",
     title: "Quero TUDO incluso",
     desc: "O pacote fechado com aulas ao vivo semanais e mentoria aprofundada.",
-    aPartir: "R$ 90,68",
-    destaque: "25% OFF no anual",
+    destaque: "DESCONTO IMPERDÍVEL",
     bullets: ["Aulas AO VIVO semanais", "Aulas gravadas de tudo", "Mentoria 1:1 aprofundada", "Exclusivo AFA · EN · EFOMM"],
   },
 ];
@@ -458,7 +425,7 @@ const Masterclass = () => {
         <div className="container mx-auto px-5">
           <h2 className="text-center text-2xl md:text-4xl font-black mb-3">Escolha o seu plano</h2>
           <p className="text-center text-sm text-muted-foreground mb-10">
-            Clique no plano pra ver todos os benefícios, valores e garantir sua vaga.
+            Clique no plano pra ver todos os benefícios e solicitar sua inscrição.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
@@ -483,11 +450,6 @@ const Masterclass = () => {
                 </span>
                 <h3 className="text-xl md:text-2xl font-black mt-3 mb-1.5">{c.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{c.desc}</p>
-                <p className="mb-4 text-sm">
-                  <span className="text-muted-foreground">a partir de </span>
-                  <span className="text-xl font-black text-accent">{c.aPartir}</span>
-                  <span className="text-xs text-muted-foreground">/mês</span>
-                </p>
                 <ul className="space-y-2">
                   {c.bullets.map((b) => (
                     <li key={b} className="flex gap-2 text-xs md:text-sm text-foreground/90">
@@ -506,7 +468,7 @@ const Masterclass = () => {
             ))}
           </div>
           <p className="text-center text-[11px] text-muted-foreground mt-6">
-            🔒 Compra segura · garantia incondicional de 7 dias em todos os planos
+            Desconto imperdível por tempo limitado · fale conosco para fazer sua inscrição
           </p>
         </div>
       </section>
@@ -525,7 +487,7 @@ const Masterclass = () => {
             <FAQItem value="q2" question="Em quanto tempo vejo resultado?" answer="A partir do 2º/3º mês, quando a rotina engrena e o volume de questões começa a aparecer na nota. Por isso o plano mínimo é trimestral." />
             <FAQItem value="q3" question="Preciso já estar estudando pra entrar?" answer="Não. O plano Ultra é o pacote fechado com aulas ao vivo e gravadas pra quem começa do zero. O Standard é ideal pra quem já tem preparatório." />
             <FAQItem value="q4" question="Serve pra qual concurso?" answer="Standard e Standard + servem pra qualquer concurso, inclusive CN e EPCAr. O Ultra é exclusivo para AFA, EN e EFOMM." />
-            <FAQItem value="q5" question="Como funciona o acesso depois da compra?" answer="Acesso imediato à plataforma após a confirmação do pagamento, com garantia de 7 dias." />
+            <FAQItem value="q5" question="Como faço minha inscrição?" answer="Escolha seu plano e envie a mensagem pelo WhatsApp. Nossa equipe explica as condições atuais e conclui sua inscrição." />
             <FAQItem value="q6" question="E se eu não puder participar dos encontros ao vivo?" answer="Todos os encontros e aulas ficam gravados na plataforma pra você assistir quando quiser." />
           </Accordion>
         </div>
@@ -580,55 +542,21 @@ const Masterclass = () => {
               </ul>
             )}
 
-            <p className="mt-6 mb-3 text-xs font-black tracking-widest text-muted-foreground uppercase text-center">
-              Escolha a duração do seu acesso
-            </p>
-            <div className="grid sm:grid-cols-3 gap-3">
-              {detalhe.precos.map((p) => (
-                <div
-                  key={p.nome}
-                  className={`relative rounded-xl border-2 p-4 flex flex-col transition-all duration-300 ${
-                    p.melhor
-                      ? "border-accent bg-accent/10 shadow-glow-beige sm:-translate-y-1"
-                      : "border-border bg-card/60 hover:border-accent/50"
-                  }`}
-                >
-                  {p.melhor && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-black tracking-wider px-3 py-1 rounded-full bg-accent text-accent-foreground">
-                      {p.promo ?? "MAIS ESCOLHIDO"}
-                    </span>
-                  )}
-                  <p className="text-xs font-bold text-muted-foreground mt-1">{p.nome}</p>
-                  {p.de && (
-                    <p className="text-[11px] text-muted-foreground/60 line-through">{p.de}/mês</p>
-                  )}
-                  <p className="text-2xl font-black text-accent leading-tight">
-                    {p.mes}<span className="text-xs font-semibold text-muted-foreground">/mês</span>
-                  </p>
-                  <p className="text-[11px] text-muted-foreground mt-0.5">{p.nota}</p>
-                  <p className="text-[11px] font-semibold text-foreground/80 mt-1">{p.total}</p>
-                  {p.economia && (
-                    <p className="text-[10px] text-accent font-bold mt-1">{p.economia}</p>
-                  )}
-                  <Button
-                    asChild
-                    variant="gold"
-                    className={`mt-3 w-full rounded-full font-black h-10 ${p.melhor ? "text-sm animate-gold-shimmer" : "text-xs"}`}
-                  >
-                    <a href={p.link} target="_blank" rel="noopener noreferrer">
-                      <span className="inline-flex items-center justify-center gap-1.5">
-                        {p.cta} <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </a>
-                  </Button>
-                </div>
-              ))}
+            <div className="mt-6 rounded-xl border-2 border-accent/40 bg-accent/10 p-4 text-center">
+              <p className="text-xs font-black uppercase tracking-widest text-accent">Desconto imperdível por tempo limitado</p>
+              <p className="mt-2 text-sm text-muted-foreground">Fale diretamente com nossa equipe para conhecer as condições e concluir sua inscrição.</p>
+              <Button asChild variant="gold" className="mt-4 w-full sm:w-auto rounded-full px-6 font-black">
+                <a href={detalhe.link} target="_blank" rel="noopener noreferrer">
+                  <span className="inline-flex items-center justify-center gap-2">
+                    QUERO FAZER MINHA INSCRIÇÃO <MessageCircle className="w-4 h-4" />
+                  </span>
+                </a>
+              </Button>
             </div>
 
             <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-[11px] text-muted-foreground">
               <span className="inline-flex items-center gap-1.5"><Shield className="w-3.5 h-3.5 text-accent" /> Garantia incondicional de 7 dias</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Pagamento seguro pela Kiwify</span>
-              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Acesso imediato após a compra</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-accent" /> Atendimento humano pelo WhatsApp</span>
             </div>
 
             <div className="mt-5 flex justify-center">

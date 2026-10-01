@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const Lobby = lazy(() => import("./pages/Lobby"));
 const Mentoria = lazy(() => import("./pages/Mentoria"));
 const FullAdelphi = lazy(() => import("./pages/FullAdelphi"));
+const Questoes = lazy(() => import("./pages/Questoes"));
 const Masterclass = lazy(() => import("./pages/Masterclass"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 

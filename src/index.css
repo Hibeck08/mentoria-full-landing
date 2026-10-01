@@ -172,28 +172,49 @@ All colors MUST be HSL.
 }
 
 /* =====================================================
-   FULL Questões — paleta scoped (teal + âmbar)
-   "theme-purple" dentro do escopo restaura o dark purple
+   FULL Questões — tema terminal (estética NLE / broadcast)
+   Preto quase absoluto, branco puro, tipografia mono.
+   "theme-purple" dentro do escopo continua disponível
    apenas nas seções da plataforma.
    ===================================================== */
 .theme-questoes {
-  --primary: 178 55% 26%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 200 18% 8%;
-  --accent: 38 92% 58%;
-  --accent-foreground: 200 30% 10%;
-  --accent-dark: 38 75% 38%;
-  --ring: 178 55% 26%;
+  --primary: 0 0% 96%;
+  --primary-foreground: 0 0% 4%;
+  --secondary: 0 0% 7%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 4%;
+  --accent-dark: 0 0% 70%;
+  --ring: 0 0% 96%;
 
-  --gradient-primary: linear-gradient(135deg, hsl(38 92% 60%) 0%, hsl(28 85% 45%) 100%);
-  --gradient-beige-premium: linear-gradient(135deg, hsl(42 95% 65%) 0%, hsl(38 90% 55%) 50%, hsl(28 80% 40%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(200 18% 8%) 50%, hsl(0 0% 4%) 100%);
-  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(38 92% 65%) 100%);
+  --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 76%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 80%) 50%, hsl(0 0% 64%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 7%) 50%, hsl(0 0% 4%) 100%);
+  --gradient-hero-text: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 55%) 100%);
 
-  --shadow-premium: 0 20px 60px -10px hsl(38 80% 45% / 0.35), 0 10px 30px -10px hsl(38 80% 50% / 0.3), 0 0 80px hsl(38 80% 45% / 0.15);
-  --glow-beige: 0 0 60px hsl(38 92% 58% / 0.55), 0 0 100px hsl(38 92% 58% / 0.35), 0 0 140px hsl(38 92% 58% / 0.2);
-  --shadow-glow-beige: 0 10px 40px hsl(38 92% 58% / 0.5), 0 0 80px hsl(38 92% 58% / 0.3), 0 0 120px hsl(38 92% 58% / 0.18);
+  --shadow-premium: 0 20px 60px -10px hsl(0 0% 0% / 0.7), 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+  --glow-beige: 0 0 40px hsl(0 0% 100% / 0.14), 0 0 80px hsl(0 0% 100% / 0.08);
+  --shadow-glow-beige: 0 0 30px hsl(0 0% 100% / 0.12), 0 0 60px hsl(0 0% 100% / 0.06);
 }
+
+/* Grade fina de linhas (fundo de monitor de edição) */
+.theme-questoes .term-grid {
+  background-image:
+    linear-gradient(hsl(0 0% 100% / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(0 0% 100% / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Glows radiais discretos do hero — vermelho/azul bem escuros */
+.theme-questoes .term-hero-bg {
+  background:
+    radial-gradient(60% 55% at 10% 100%, hsl(0 45% 18% / 0.55) 0%, transparent 70%),
+    radial-gradient(55% 60% at 90% 25%, hsl(215 60% 16% / 0.5) 0%, transparent 70%),
+    hsl(0 0% 3%);
+}
+
+/* Ponto de gravação */
+.theme-questoes .term-rec { color: hsl(0 70% 55%); }
+
 
 .theme-questoes .theme-purple {
   /* Dark purple bem escuro, quase preto com toque roxo + glow vibrante */

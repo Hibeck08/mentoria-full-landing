@@ -202,7 +202,12 @@ All colors MUST be HSL.
 .theme-questoes .questoes-hero-shade { background: var(--questoes-overlay); }
 .theme-questoes button > span.relative { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; }
 .theme-questoes button.bg-gradient-primary { color: hsl(var(--primary-foreground)); }
-.theme-questoes .term-grid { display: none; }
+.theme-questoes .term-grid {
+  background-image:
+    linear-gradient(hsl(0 0% 100% / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(0 0% 100% / 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
 .theme-questoes .seam-marquee {
   background: hsl(var(--secondary));
   border-top: 1px solid hsl(var(--accent) / 0.3);

@@ -143,12 +143,13 @@ const Questoes = () => {
       <section className="questoes-hero relative flex items-center overflow-hidden">
         <img src={questoesHero} alt="Bryan Hibeck e os conteúdos do Método FULL" className="questoes-hero-image absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
         <div className="questoes-hero-shade absolute inset-0" />
+        <div className="absolute inset-0 z-[1] term-grid opacity-80 pointer-events-none" />
         <div className="container relative z-10 mx-auto px-4 md:px-8 py-24">
           <div className="max-w-2xl">
             <p className="font-mono text-xs uppercase text-accent mb-5">Método, direção e treino de verdade</p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase leading-[1.02] mb-6">
               FULL QUESTÕES
-              <span className="block text-accent mt-3 text-3xl sm:text-4xl md:text-5xl">Toda aprovação é feita de questões.</span>
+              <span className="block bg-gradient-hero-text bg-clip-text text-transparent mt-3 text-3xl sm:text-4xl md:text-5xl">Toda aprovação é feita de questões.</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
               Chega de estudar perdido e sem material. O <strong className="text-foreground">Banco FULL</strong> te entrega um plano de metas pronto, flashcards de todos os assuntos e questões comentadas em vários níveis.

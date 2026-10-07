@@ -259,7 +259,6 @@ const Questoes = () => {
                 )}
               </div>
             </div>
-            </div>
           </ScrollReveal>
 
           <ScrollReveal>

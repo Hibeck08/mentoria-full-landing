@@ -6,39 +6,23 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { SeamMarquee } from "@/components/SeamMarquee";
 import { ConnectedBenefits } from "@/components/ConnectedBenefits";
 import { GuaranteeSection } from "@/components/GuaranteeSection";
-import { Play, CheckCircle2, Database, Layers, GraduationCap, TrendingUp, Brain, Calendar, XCircle, Shield, Instagram, Home, MessageCircle } from "lucide-react";
+import { Play, CheckCircle2, Database, Layers, GraduationCap, TrendingUp, Brain, Calendar, XCircle, Shield, Instagram, Home, MessageCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import mentoriaLogo from "@/assets/logo-silver.webp";
 import bryanPhoto from "@/assets/bryan-photo.webp";
 import metodoGridBanner from "@/assets/questoes-metodo-grid.webp";
+import questoesHero from "/public/lovable-uploads/questoes-hero-wallpaper.jpg";
 import flashcardsCloseupBanner from "@/assets/questoes-flashcards-closeup.jpg";
 
 const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=5521992104885";
 
-/* ---------- utilidades de terminal ---------- */
-
-const useTimecode = () => {
-  const [tc, setTc] = React.useState("00:00:00:00");
-  React.useEffect(() => {
-    const start = Date.now();
-    const id = setInterval(() => {
-      const e = Date.now() - start;
-      const p = (n: number) => String(n).padStart(2, "0");
-      setTc(`${p(Math.floor(e / 3600000))}:${p(Math.floor(e / 60000) % 60)}:${p(Math.floor(e / 1000) % 60)}:${p(Math.floor((e % 1000) / 250))}`);
-    }, 250);
-    return () => clearInterval(id);
-  }, []);
-  return tc;
-};
-
-const SectionHead = ({ index, label, title, desc }: { index: string; label: string; title: React.ReactNode; desc?: string }) => (
+const SectionHead = ({ label, title, desc }: { label: string; title: React.ReactNode; desc?: string }) => (
   <div className="mb-10 md:mb-14">
     <div className="flex items-center gap-3 mb-5">
-      <span className="font-mono text-xs text-muted-foreground">{index}</span>
-      <span className="h-px w-10 bg-foreground/40" />
-      <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] text-muted-foreground">{label}</span>
+      <span className="h-px w-10 bg-accent/70" />
+      <span className="font-mono text-[10px] md:text-xs uppercase tracking-normal text-muted-foreground">{label}</span>
     </div>
-    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-[1.02]">{title}</h2>
+    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-normal leading-[1.02]">{title}</h2>
     {desc && <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-2xl">{desc}</p>}
   </div>
 );
@@ -54,7 +38,7 @@ const FloatingWhatsApp = () => {
     <div className={`fixed bottom-6 right-4 md:bottom-8 md:right-8 z-50 transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}>
       <Button
         size="lg"
-        className="rounded-none font-mono text-xs md:text-sm font-bold tracking-wider px-5 py-6 shadow-glow-beige"
+        className="rounded-lg font-mono text-xs md:text-sm font-bold tracking-normal px-5 py-6 shadow-glow-beige"
         onClick={() => window.open(WHATSAPP_URL, "_blank")}
       >
         <MessageCircle className="w-4 h-4" />
@@ -74,10 +58,8 @@ const Questoes = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const tc = useTimecode();
   const [vslPlaying, setVslPlaying] = React.useState(false);
 
-  const waveform = [38, 62, 45, 80, 55, 92, 40, 68, 30, 74, 50, 88, 42, 60, 35, 78, 52, 95, 48, 65, 28, 70, 44, 82, 36, 58, 66, 90, 32, 72];
 
   const erros = [
     {
@@ -138,21 +120,18 @@ const Questoes = () => {
       {/* ===== NAV ===== */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-background/85 backdrop-blur-md border-b border-border/60">
         <div className="max-w-7xl mx-auto px-4 md:px-8 h-12 md:h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <span className="w-5 h-5 border border-foreground flex items-center justify-center">
-              <span className="w-1.5 h-1.5 bg-foreground" />
-            </span>
-            <span className="font-mono text-[10px] md:text-xs tracking-[0.2em] uppercase">FULL / QUESTÕES</span>
-          </div>
-          <div className="hidden md:flex items-center gap-6 font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
-            <button onClick={scrollTo("metodo")} className="hover:text-foreground transition-colors">Método</button>
-            <button onClick={scrollTo("plataforma")} className="hover:text-foreground transition-colors">Plataforma</button>
-            <button onClick={scrollTo("planos-questoes")} className="hover:text-foreground transition-colors">Planos</button>
-            <button onClick={scrollTo("faq")} className="hover:text-foreground transition-colors">FAQ</button>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={mentoriaLogo} alt="FULL" className="h-10 w-10 object-contain" />
+            <span className="font-mono text-xs uppercase">FULL QUESTÕES</span>
+          </Link>
+          <div className="hidden md:flex items-center gap-6 font-mono text-[11px] uppercase tracking-normal text-muted-foreground">
+            <Button variant="ghost" onClick={scrollTo("metodo")} className="h-auto px-0 text-xs hover:text-accent">Método</Button>
+            <Button variant="ghost" onClick={scrollTo("plataforma")} className="h-auto px-0 text-xs hover:text-accent">Plataforma</Button>
+            <Button variant="ghost" onClick={scrollTo("planos-questoes")} className="h-auto px-0 text-xs hover:text-accent">Planos</Button>
+            <Button variant="ghost" onClick={scrollTo("faq")} className="h-auto px-0 text-xs hover:text-accent">FAQ</Button>
           </div>
           <div className="flex items-center gap-4">
-            <span className="hidden md:inline font-mono text-[11px] text-muted-foreground">■ {tc}</span>
-            <Link to="/" className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest hover:text-accent transition-colors">
+            <Link to="/" className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-normal hover:text-accent transition-colors">
               <Home className="w-3.5 h-3.5" />
               <span>Menu</span>
             </Link>
@@ -161,103 +140,33 @@ const Questoes = () => {
       </nav>
 
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden pt-12">
-        <div className="absolute inset-0 z-0 term-hero-bg" />
-        <div className="absolute inset-0 z-0 term-grid" />
-
-        {/* cantos REC / TC */}
-        <div className="absolute top-16 md:top-20 left-4 md:left-8 z-10 font-mono text-[10px] md:text-xs tracking-widest">
-          <span className="term-rec">●</span> <span className="text-muted-foreground">REC / V.2026</span>
-        </div>
-        <div className="absolute top-16 md:top-20 right-4 md:right-8 z-10 font-mono text-[10px] md:text-xs tracking-widest text-muted-foreground">
-          TC {tc}
-        </div>
-
-        <div className="container relative z-10 mx-auto px-4 md:px-8 pt-16 pb-24">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_320px] gap-10 items-center">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-foreground/50" />
-                <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground">FULL / BANCO DE QUESTÕES</span>
-              </div>
-
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.95] tracking-tight mb-6 md:mb-8">
-                Toda aprovação
-                <br />
-                <span className="bg-gradient-hero-text bg-clip-text text-transparent">é feita de questões</span>
-              </h1>
-
-              <p className="text-sm md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
-                Chega de estudar perdido e sem material. O <strong className="text-foreground">Banco FULL</strong> te entrega um plano de metas pronto, flashcards de todos os assuntos e questões comentadas em vários níveis.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
-                <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-wider rounded-none px-8 py-6">
-                  ▶ VER PLANOS
-                </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open(WHATSAPP_URL, "_blank")} className="font-mono text-xs md:text-sm font-bold tracking-wider rounded-none px-8 py-6 border-foreground/30 hover:border-foreground">
-                  ✈ FALAR NO WHATSAPP
-                </Button>
-              </div>
-
-              {/* barra de progresso */}
-              <div className="max-w-md">
-                <div className="flex justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">
-                  <span>Carregando banco de questões</span>
-                  <span>100%</span>
-                </div>
-                <div className="h-px bg-foreground/20 relative">
-                  <div className="absolute left-0 top-0 h-px w-full bg-foreground" />
-                </div>
-              </div>
+      <section className="questoes-hero relative flex items-center overflow-hidden">
+        <img src={questoesHero} alt="Bryan Hibeck e os conteúdos do Método FULL" className="questoes-hero-image absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
+        <div className="questoes-hero-shade absolute inset-0" />
+        <div className="container relative z-10 mx-auto px-4 md:px-8 py-24">
+          <div className="max-w-2xl">
+            <p className="font-mono text-xs uppercase text-accent mb-5">Método, direção e treino de verdade</p>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black uppercase leading-[1.02] mb-6">
+              FULL QUESTÕES
+              <span className="block text-accent mt-3 text-3xl sm:text-4xl md:text-5xl">Toda aprovação é feita de questões.</span>
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
+              Chega de estudar perdido e sem material. O <strong className="text-foreground">Banco FULL</strong> te entrega um plano de metas pronto, flashcards de todos os assuntos e questões comentadas em vários níveis.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs font-bold rounded-lg px-7 py-6">
+                QUERO ESTUDAR COM O FULL <ArrowRight className="w-4 h-4 shrink-0" />
+              </Button>
+              <Button variant="outline" size="lg" onClick={() => window.open(WHATSAPP_URL, "_blank")} className="font-mono text-xs font-bold rounded-lg px-7 py-6 border-accent/40 bg-background/50">
+                <MessageCircle className="w-4 h-4 shrink-0" /> FALAR COMIGO
+              </Button>
             </div>
-
-            {/* painel MONITOR */}
-            <div className="hidden lg:block border border-border/80 bg-card/60 backdrop-blur-sm">
-              <div className="flex items-center justify-between px-4 py-3 border-b border-border/60">
-                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Monitor</span>
-                <span className="font-mono text-[10px] tracking-widest">■ LIVE</span>
-              </div>
-              <div className="p-4 space-y-4 font-mono text-[11px]">
-                <div>
-                  <p className="text-muted-foreground uppercase tracking-widest mb-1">SRC</p>
-                  <p className="uppercase tracking-wider">Bancas civis / militares</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground uppercase tracking-widest mb-1">Questões</p>
-                  <p className="uppercase tracking-wider">+10.000 resolvidas</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground uppercase tracking-widest mb-1">Flashcards</p>
-                  <p className="uppercase tracking-wider">+2.000 cards Anki</p>
-                </div>
-                <div>
-                  <p className="text-muted-foreground uppercase tracking-widest mb-1">Status</p>
-                  <p className="uppercase tracking-wider">Acesso imediato</p>
-                </div>
-              </div>
-              <div className="px-4 pb-4">
-                <div className="border-t border-border/60 pt-4">
-                  <div className="flex items-end gap-[3px] h-10">
-                    {waveform.map((h, i) => (
-                      <span key={i} className="flex-1 bg-foreground/70" style={{ height: `${h}%` }} />
-                    ))}
-                  </div>
-                  <div className="flex justify-between mt-2 font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
-                    <span>Banco / Questões</span>
-                    <span>-0 DB</span>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 mt-8 text-xs font-mono text-muted-foreground">
+              <span>+10.000 questões comentadas</span>
+              <span>+2.000 flashcards</span>
+              <span>7 dias de garantia</span>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-6 left-4 md:left-8 z-10 font-mono text-[10px] md:text-xs tracking-widest text-muted-foreground uppercase">
-          Scroll to continue ↓
-        </div>
-        <div className="absolute bottom-6 right-4 md:right-8 z-10 font-mono text-[10px] md:text-xs tracking-widest text-muted-foreground uppercase hidden md:block">
-          FULL / QUESTÕES / V.2026
         </div>
       </section>
 
@@ -270,7 +179,6 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-6xl">
           <ScrollReveal>
             <SectionHead
-              index="01"
               label="Por que tanta gente trava"
               title={<>Não é talento.<br />É técnica e esforço.</>}
               desc="Quem classifica não estuda mais. Estuda diferente. Quase toda reprovação cai em um destes três erros, e o problema raramente é falta de esforço."
@@ -282,10 +190,9 @@ const Questoes = () => {
               <ScrollReveal key={i} delay={i * 120}>
                 <div className="h-full border border-border bg-card/60 p-6 hover:border-foreground/50 transition-all duration-300">
                   <div className="flex items-center justify-between mb-5 pb-3 border-b border-border/60">
-                    <span className="font-mono text-xs text-muted-foreground">ERRO {e.n}/03</span>
+                    <span className="font-mono text-xs text-accent">O QUE TE TRAVA</span>
                     <XCircle className="w-4 h-4 text-muted-foreground" />
                   </div>
-                  <span className="font-mono text-3xl font-bold text-foreground/20 block mb-3">{e.n}</span>
                   <h3 className="text-lg font-bold mb-2 leading-snug">{e.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{e.desc}</p>
                 </div>
@@ -295,7 +202,7 @@ const Questoes = () => {
 
           <ScrollReveal>
             <div className="mt-14 md:mt-20 max-w-3xl">
-              <p className="font-mono text-xs md:text-sm text-muted-foreground uppercase tracking-widest mb-4">// E quando alguém junta direção, constância e treino no lugar certo?</p>
+              <p className="font-mono text-xs md:text-sm text-muted-foreground uppercase tracking-normal mb-4">E quando alguém junta direção, constância e treino no lugar certo?</p>
               <p className="text-2xl md:text-4xl font-black uppercase leading-tight">
                 A aprovação vem. <span className="bg-gradient-hero-text bg-clip-text text-transparent">E é pra isso que existe o FULL Questões.</span>
               </p>
@@ -311,8 +218,7 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-5xl">
           <ScrollReveal>
             <SectionHead
-              index="02"
-              label="Preview / Monitor"
+              label="Seu próximo passo"
               title={<>Conheça a plataforma<br />por dentro</>}
               desc="Em poucos minutos eu te mostro cada ferramenta, como o nivelamento funciona e por que ele encurta meses de estudo no escuro."
             />
@@ -320,11 +226,7 @@ const Questoes = () => {
 
           <ScrollReveal>
             <div className="relative max-w-4xl mx-auto border border-border bg-card/60">
-              <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/60 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                <span><span className="term-rec">●</span> Preview / VSL</span>
-                <span>TC {tc}</span>
-              </div>
-              <div className="relative aspect-video bg-black">
+              <div className="relative aspect-video bg-background">
                 {vslPlaying ? (
                   <iframe
                     className="absolute inset-0 w-full h-full"
@@ -346,29 +248,26 @@ const Questoes = () => {
                       className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-500"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-background/40" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
                       <div className="w-16 h-16 md:w-20 md:h-20 bg-accent text-accent-foreground flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Play className="w-7 h-7 md:w-9 md:h-9 fill-current ml-1" />
                       </div>
-                      <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] text-white">Clique para assistir o tour completo</p>
+                      <p className="font-mono text-[10px] md:text-xs uppercase tracking-normal text-foreground">Clique para assistir o tour completo</p>
                     </div>
                   </button>
                 )}
               </div>
-              <div className="flex items-center justify-between px-4 py-2.5 border-t border-border/60 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                <span>OUT / 16:9</span>
-                <span>Vídeo curto · sem enrolação</span>
-              </div>
+            </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal>
             <div className="text-center mt-10">
-              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-wider rounded-none px-8 py-6">
+              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-normal rounded-lg px-8 py-6">
                 QUERO ACESSAR A PLATAFORMA →
               </Button>
-              <p className="font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest mt-3">Acesso imediato · 7 dias de garantia</p>
+              <p className="font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-normal mt-3">Acesso imediato · 7 dias de garantia</p>
             </div>
           </ScrollReveal>
         </div>
@@ -379,7 +278,6 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-6xl">
           <ScrollReveal>
             <SectionHead
-              index="02.1"
               label="O que você desbloqueia"
               title={<>Tudo o que você vê aqui<br />é real</>}
               desc="Não é mockup. É a plataforma que centenas de alunos já estão usando hoje pra estudar com método."
@@ -390,10 +288,10 @@ const Questoes = () => {
             <ScrollReveal variant="left">
               <div className="relative group border border-border hover:border-foreground/50 transition-all duration-300">
                 <img src={metodoGridBanner} alt="Método FULL: aulas e conteúdos da plataforma" className="w-full h-auto object-cover" loading="lazy" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
-                  <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/70 mb-2">Método FULL incluso</p>
-                  <h3 className="text-xl md:text-3xl font-black uppercase text-white mb-1">Aulas que ensinam como estudar</h3>
-                  <p className="text-white/80 text-sm md:text-base">Introdução ao método, como filtrar questões, como usar flashcards, como revisar e simular. Tudo destrinchado.</p>
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 bg-gradient-to-t from-background/95 via-background/70 to-transparent">
+                  <p className="font-mono text-[10px] md:text-xs uppercase tracking-normal text-foreground/70 mb-2">Método FULL incluso</p>
+                  <h3 className="text-xl md:text-3xl font-black uppercase text-foreground mb-1">Aulas que ensinam como estudar</h3>
+                  <p className="text-foreground/80 text-sm md:text-base">Introdução ao método, como filtrar questões, como usar flashcards, como revisar e simular. Tudo destrinchado.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -402,11 +300,11 @@ const Questoes = () => {
               <ScrollReveal variant="left">
                 <div className="relative h-full group border border-border hover:border-foreground/50 transition-all duration-300 min-h-[340px] md:min-h-[420px] overflow-hidden">
                   <img src={flashcardsCloseupBanner} alt="+2.000 flashcards Anki" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-background/20" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
-                    <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] text-white/70 mb-2">+2.000 cards</p>
-                    <h3 className="text-xl md:text-2xl font-black uppercase text-white mb-1">Flashcards Anki de tudo que cai</h3>
-                    <p className="text-white/80 text-sm">Revisão espaçada que fixa de verdade sem reler matéria de novo.</p>
+                    <p className="font-mono text-[10px] md:text-xs uppercase tracking-normal text-foreground/70 mb-2">+2.000 cards</p>
+                    <h3 className="text-xl md:text-2xl font-black uppercase text-foreground mb-1">Flashcards Anki de tudo que cai</h3>
+                    <p className="text-foreground/80 text-sm">Revisão espaçada que fixa de verdade sem reler matéria de novo.</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -414,7 +312,7 @@ const Questoes = () => {
               <ScrollReveal variant="right">
                 <div className="relative h-full border border-border bg-card/60 p-6 md:p-8 min-h-[340px] md:min-h-[420px] flex flex-col justify-between hover:border-foreground/50 transition-all duration-300">
                   <div className="space-y-4">
-                    <p className="font-mono text-[10px] md:text-xs uppercase tracking-[0.25em] text-muted-foreground">Banco completo</p>
+                    <p className="font-mono text-[10px] md:text-xs uppercase tracking-normal text-muted-foreground">Banco completo</p>
                     <h3 className="text-2xl md:text-3xl font-black uppercase leading-tight">+10.000 questões resolvidas, todas comentadas</h3>
                     <ul className="space-y-2 pt-2">
                       {[
@@ -433,15 +331,15 @@ const Questoes = () => {
                   <div className="grid grid-cols-3 gap-2 pt-5 mt-5 border-t border-border">
                     <div>
                       <p className="text-2xl md:text-3xl font-black">10k+</p>
-                      <p className="font-mono text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-widest">Questões</p>
+                      <p className="font-mono text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-normal">Questões</p>
                     </div>
                     <div>
                       <p className="text-2xl md:text-3xl font-black">2k+</p>
-                      <p className="font-mono text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-widest">Flashcards</p>
+                      <p className="font-mono text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-normal">Flashcards</p>
                     </div>
                     <div>
                       <p className="text-2xl md:text-3xl font-black">50+</p>
-                      <p className="font-mono text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-widest">Bancas</p>
+                      <p className="font-mono text-[9px] md:text-[10px] text-muted-foreground uppercase tracking-normal">Bancas</p>
                     </div>
                   </div>
                 </div>
@@ -451,10 +349,10 @@ const Questoes = () => {
 
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-wider rounded-none px-8 py-6">
+              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-normal rounded-lg px-8 py-6">
                 DESTRAVAR TUDO ISSO →
               </Button>
-              <p className="font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest mt-3">Acesso imediato · 7 dias de garantia</p>
+              <p className="font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-normal mt-3">Acesso imediato · 7 dias de garantia</p>
             </div>
           </ScrollReveal>
         </div>
@@ -466,8 +364,7 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-6xl">
           <ScrollReveal>
             <SectionHead
-              index="03"
-              label="Installed / Toolchain"
+              label="Os pilares do FULL"
               title={<>Tudo que você precisa<br />para passar</>}
               desc="Três pilares que se conectam para transformar estudo em aprovação."
             />
@@ -481,16 +378,16 @@ const Questoes = () => {
             ].map((p, i) => (
               <ScrollReveal key={i} delay={i * 120}>
                 <div className="h-full border border-border bg-card/60 hover:border-foreground/50 transition-all duration-300 flex flex-col">
-                  <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 font-mono text-[10px] uppercase tracking-widest">
-                    <span className="text-muted-foreground">{p.abbr}</span>
+                  <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 font-mono text-[10px] uppercase tracking-normal">
+                    <span className="text-muted-foreground">{p.title}</span>
                     <span className="text-foreground">{p.badge}</span>
                   </div>
                   <div className="p-6 flex-grow">
                     <h3 className="text-xl font-bold uppercase mb-2">{p.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
                   </div>
-                  <div className="px-5 py-3 border-t border-border/60 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                    Status: <span className="text-foreground">Ativo</span>
+                  <div className="px-5 py-3 border-t border-border/60 font-mono text-[10px] uppercase tracking-normal text-muted-foreground">
+                    <span className="text-accent">Incluso no seu acesso</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -504,7 +401,6 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-5xl">
           <ScrollReveal>
             <SectionHead
-              index="04"
               label="Tudo conectado"
               title={<>Um ciclo que te leva à<br />aprovação no automático</>}
               desc="Você não precisa pensar no que estudar hoje. A plataforma encaixa cada etapa. Você só executa e vê a nota subir toda semana."
@@ -523,10 +419,10 @@ const Questoes = () => {
 
           <ScrollReveal>
             <div className="text-center mt-12">
-              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-wider rounded-none px-8 py-6">
+              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-normal rounded-lg px-8 py-6">
                 QUERO ENTRAR NESSE CICLO →
               </Button>
-              <p className="font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest mt-4">Acesso imediato · Garantia de 7 dias</p>
+              <p className="font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-normal mt-4">Acesso imediato · Garantia de 7 dias</p>
             </div>
           </ScrollReveal>
         </div>
@@ -537,24 +433,19 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-5xl">
           <ScrollReveal>
             <SectionHead
-              index="05"
-              label="Profile / Operator"
+              label="Experiência de quem viveu a prova"
               title={<>Quem tá do seu lado</>}
             />
           </ScrollReveal>
 
           <ScrollReveal>
             <div className="border border-border bg-card/60">
-              <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                <span>OPERADOR.JPG</span>
-                <span>BRYAN / HIBECK / 01</span>
-              </div>
               <div className="grid md:grid-cols-[280px_1fr] gap-6 md:gap-10 p-6 md:p-10 items-center">
                 <div className="mx-auto md:mx-0 max-w-[260px]">
                   <img src={bryanPhoto} alt="Bryan Hibeck" className="w-full object-cover border border-border" loading="lazy" />
                 </div>
                 <div className="space-y-3">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Criador do Método FULL</p>
+                  <p className="font-mono text-[10px] uppercase tracking-normal text-muted-foreground">Criador do Método FULL</p>
                   <h3 className="text-2xl md:text-3xl font-black uppercase">Bryan Hibeck</h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     Meu nome é <strong className="text-foreground">Bryan Hibeck</strong>, nascido em 17/03/2004. Ganhei destaque no mundo dos concursos por ter resolvido <strong className="text-foreground">+10.000 questões</strong> durante meus <strong className="text-foreground">8 meses de preparação</strong> em 2024.
@@ -568,11 +459,11 @@ const Questoes = () => {
                   <p className="text-sm md:text-base text-foreground font-semibold">
                     Minha missão agora é simples: te entregar o passo a passo que me levou ao topo.
                   </p>
-                  <div className="flex flex-wrap gap-x-6 gap-y-1 pt-2 font-mono text-[10px] md:text-xs uppercase tracking-widest text-muted-foreground">
-                    <span>01 Aprovação AFA</span>
-                    <span>02 Aprovação EFOMM</span>
-                    <span>03 Aprovação EEAr</span>
-                    <span>04 Classificação EPCAr</span>
+                  <div className="flex flex-wrap gap-x-6 gap-y-1 pt-2 font-mono text-[10px] md:text-xs uppercase tracking-normal text-muted-foreground">
+                    <span>Aprovação AFA</span>
+                    <span>Aprovação EFOMM</span>
+                    <span>Aprovação EEAr</span>
+                    <span>Classificação EPCAr</span>
                   </div>
                 </div>
               </div>
@@ -586,8 +477,7 @@ const Questoes = () => {
         <div className="container mx-auto px-4 md:px-8 mb-6 md:mb-10">
           <ScrollReveal>
             <SectionHead
-              index="06"
-              label="Archive / Feedback"
+              label="Alunos FULL"
               title={<>Resultados que comprovam</>}
               desc="A prova de que o método funciona."
             />
@@ -609,7 +499,7 @@ const Questoes = () => {
         <div className="container mx-auto px-4 mt-8">
           <ScrollReveal>
             <div className="text-center">
-              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-wider rounded-none px-8 py-6">
+              <Button size="lg" onClick={scrollToPlans} className="font-mono text-xs md:text-sm font-bold tracking-normal rounded-lg px-8 py-6">
                 QUERO COMEÇAR AGORA →
               </Button>
             </div>
@@ -622,8 +512,7 @@ const Questoes = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-6xl">
           <ScrollReveal>
             <SectionHead
-              index="07"
-              label="Output / Planos"
+              label="Seu acesso ao FULL"
               title={<>Escolha seu plano</>}
               desc="Mesmo acesso completo. Quanto mais tempo, mais você economiza."
             />
@@ -647,7 +536,7 @@ const Questoes = () => {
                     ? "bg-accent text-accent-foreground md:scale-[1.03]"
                     : "border border-border bg-card/60 hover:border-foreground/50"
                 }`}>
-                  <div className={`flex items-center justify-between px-5 py-3 border-b font-mono text-[10px] uppercase tracking-widest ${
+                  <div className={`flex items-center justify-between px-5 py-3 border-b font-mono text-[10px] uppercase tracking-normal ${
                     plano.destaque ? "border-accent-foreground/20" : "border-border/60"
                   }`}>
                     <span className={plano.destaque ? "text-accent-foreground/70" : "text-muted-foreground"}>PLANO</span>
@@ -661,7 +550,7 @@ const Questoes = () => {
                           DE {plano.precoAntigo}{plano.periodo}
                         </p>
                       )}
-                      <p className="text-4xl md:text-5xl font-black tracking-tight">
+                      <p className="text-4xl md:text-5xl font-black tracking-normal">
                         {plano.preco}
                         <span className={`text-sm font-medium ${plano.destaque ? "text-accent-foreground/80" : "text-muted-foreground"}`}>{plano.periodo}</span>
                       </p>
@@ -670,8 +559,8 @@ const Questoes = () => {
                           {plano.parcela}
                         </p>
                       )}
-                      <p className={`font-mono text-[10px] uppercase tracking-widest mt-2 ${plano.destaque ? "text-accent-foreground" : "text-foreground"}`}>
-                        // {plano.total}
+                      <p className={`font-mono text-[10px] uppercase tracking-normal mt-2 ${plano.destaque ? "text-accent-foreground" : "text-foreground"}`}>
+                        {plano.total}
                       </p>
                     </div>
 
@@ -695,7 +584,7 @@ const Questoes = () => {
                   <div className="px-6 md:px-8 pb-6 md:pb-8">
                     <Button
                       variant={plano.destaque ? "default" : "outline"}
-                      className={`w-full py-5 font-mono text-xs md:text-sm font-bold tracking-wider rounded-none ${
+                      className={`w-full py-5 font-mono text-xs md:text-sm font-bold tracking-normal rounded-lg ${
                         plano.destaque
                           ? "bg-background text-foreground hover:bg-background/90 border border-foreground/20"
                           : "border-foreground/30 hover:border-foreground"
@@ -704,7 +593,7 @@ const Questoes = () => {
                     >
                       {plano.cta} →
                     </Button>
-                    <div className={`mt-3 flex items-center justify-center gap-1.5 font-mono text-[10px] uppercase tracking-widest ${plano.destaque ? "text-accent-foreground/80" : "text-muted-foreground"}`}>
+                    <div className={`mt-3 flex items-center justify-center gap-1.5 font-mono text-[10px] uppercase tracking-normal ${plano.destaque ? "text-accent-foreground/80" : "text-muted-foreground"}`}>
                       <Shield className="w-3.5 h-3.5" />
                       <span>Garantia de 7 dias</span>
                     </div>
@@ -715,8 +604,8 @@ const Questoes = () => {
           </div>
 
           <ScrollReveal>
-            <p className="text-center font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest mt-8">
-              ■ Pagamento 100% seguro · Cartão, PIX ou Boleto · Acesso imediato
+            <p className="text-center font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-normal mt-8">
+              Pagamento 100% seguro · Cartão, PIX ou Boleto · Acesso imediato
             </p>
           </ScrollReveal>
         </div>
@@ -730,8 +619,7 @@ const Questoes = () => {
         <div className="container mx-auto px-4 md:px-8">
           <ScrollReveal>
             <SectionHead
-              index="08"
-              label="System / FAQ"
+              label="Sem dúvidas"
               title={<>Perguntas frequentes</>}
               desc="Tire suas dúvidas antes de começar."
             />
@@ -761,27 +649,27 @@ const Questoes = () => {
             <div>
               <div className="flex items-center gap-2.5 mb-3">
                 <img src={mentoriaLogo} alt="FULL" className="w-10 h-10" loading="lazy" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">FULL / QUESTÕES</span>
+                <span className="font-mono text-[10px] uppercase tracking-normal text-muted-foreground">FULL / QUESTÕES</span>
               </div>
               <p className="text-sm text-muted-foreground italic">"Pratique com inteligência, aprove com excelência."</p>
             </div>
             <div>
-              <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Navegação</h3>
-              <ul className="space-y-1.5 font-mono text-xs uppercase tracking-widest">
+              <h3 className="font-mono text-[10px] uppercase tracking-normal text-muted-foreground mb-3">Navegação</h3>
+              <ul className="space-y-1.5 font-mono text-xs uppercase tracking-normal">
                 <li><Link to="/" className="hover:text-foreground transition-colors">Menu</Link></li>
                 <li><button onClick={scrollToPlans} className="hover:text-foreground transition-colors">Planos</button></li>
-                <li><button onClick={scrollTo("faq")} className="hover:text-foreground transition-colors">FAQ</button></li>
+                <li><Button variant="ghost" onClick={scrollTo("faq")} className="h-auto px-0 text-xs hover:text-accent">FAQ</Button></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">Contato</h3>
-              <a href="https://instagram.com/hibeck_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest hover:text-foreground transition-colors">
+              <h3 className="font-mono text-[10px] uppercase tracking-normal text-muted-foreground mb-3">Contato</h3>
+              <a href="https://instagram.com/hibeck_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-normal hover:text-foreground transition-colors">
                 <Instagram className="w-4 h-4" />
                 <span>@hibeck_</span>
               </a>
             </div>
           </div>
-          <div className="border-t border-border pt-6 flex flex-col md:flex-row justify-between gap-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+          <div className="border-t border-border pt-6 flex flex-col md:flex-row justify-between gap-2 font-mono text-[10px] uppercase tracking-normal text-muted-foreground">
             <span>&copy; {new Date().getFullYear()} FULL QUESTÕES + MÉTODO</span>
             <span>TODOS OS DIREITOS RESERVADOS</span>
           </div>

@@ -171,50 +171,50 @@ All colors MUST be HSL.
   }
 }
 
-/* =====================================================
-   FULL Questões — tema terminal (estética NLE / broadcast)
-   Preto quase absoluto, branco puro, tipografia mono.
-   "theme-purple" dentro do escopo continua disponível
-   apenas nas seções da plataforma.
-   ===================================================== */
+/* FULL Questões: identidade FULL com hierarquia editorial discreta. */
 .theme-questoes {
-  --primary: 0 0% 96%;
-  --primary-foreground: 0 0% 4%;
-  --secondary: 0 0% 7%;
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 4%;
-  --accent-dark: 0 0% 70%;
-  --ring: 0 0% 96%;
-
-  --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 76%) 100%);
-  --gradient-beige-premium: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 80%) 50%, hsl(0 0% 64%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 7%) 50%, hsl(0 0% 4%) 100%);
-  --gradient-hero-text: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 55%) 100%);
-
-  --shadow-premium: 0 20px 60px -10px hsl(0 0% 0% / 0.7), 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-  --glow-beige: 0 0 40px hsl(0 0% 100% / 0.14), 0 0 80px hsl(0 0% 100% / 0.08);
-  --shadow-glow-beige: 0 0 30px hsl(0 0% 100% / 0.12), 0 0 60px hsl(0 0% 100% / 0.06);
+  --background: 260 28% 5%;
+  --foreground: 0 0% 98%;
+  --card: 260 24% 8%;
+  --card-foreground: 0 0% 98%;
+  --secondary: 260 22% 7%;
+  --muted: 260 16% 12%;
+  --muted-foreground: 260 8% 78%;
+  --border: 260 20% 19%;
+  --primary: 268 65% 42%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 38 88% 65%;
+  --accent-foreground: 260 28% 5%;
+  --ring: 268 65% 42%;
+  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%), hsl(38 88% 65%));
+  --glow-beige: 0 8px 32px hsl(268 70% 45% / 0.25);
+  --questoes-overlay: linear-gradient(90deg, hsl(260 28% 5% / 0.97) 0%, hsl(260 28% 5% / 0.86) 32%, hsl(260 28% 5% / 0.18) 70%), linear-gradient(0deg, hsl(260 28% 5%), transparent 24%);
 }
-
-/* Grade fina de linhas (fundo de monitor de edição) */
-.theme-questoes .term-grid {
-  background-image:
-    linear-gradient(hsl(0 0% 100% / 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(0 0% 100% / 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
+.theme-questoes .questoes-hero { min-height: min(850px, 92svh); padding-top: 56px; }
+.theme-questoes .questoes-hero-image { object-position: center top; }
+.theme-questoes .questoes-hero-shade { background: var(--questoes-overlay); }
+.theme-questoes .term-grid { display: none; }
+.theme-questoes .seam-marquee {
+  background: hsl(var(--secondary));
+  border-top: 1px solid hsl(var(--accent) / 0.3);
+  border-bottom: 1px solid hsl(var(--accent) / 0.3);
+  box-shadow: none;
+  padding: 18px 0;
 }
-
-/* Glows radiais discretos do hero — vermelho/azul bem escuros */
-.theme-questoes .term-hero-bg {
-  background:
-    radial-gradient(60% 55% at 10% 100%, hsl(0 45% 18% / 0.55) 0%, transparent 70%),
-    radial-gradient(55% 60% at 90% 25%, hsl(215 60% 16% / 0.5) 0%, transparent 70%),
-    hsl(0 0% 3%);
+.theme-questoes .seam-marquee-track > span {
+  color: hsl(var(--accent));
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-shadow: none;
 }
-
-/* Ponto de gravação */
-.theme-questoes .term-rec { color: hsl(0 70% 55%); }
-
+.theme-questoes .seam-marquee-track { gap: 3rem; }
+@media (max-width: 767px) {
+  .theme-questoes .questoes-hero { min-height: 115svh; padding-top: 12rem; align-items: flex-end; }
+  .theme-questoes .questoes-hero-image { object-position: 72% top; }
+  .theme-questoes .questoes-hero-shade { background: linear-gradient(180deg, hsl(260 28% 5% / 0.12) 0%, hsl(260 28% 5% / 0.3) 30%, hsl(260 28% 5% / 0.95) 53%, hsl(260 28% 5%) 100%); }
+}
 
 .theme-questoes .theme-purple {
   /* Dark purple bem escuro, quase preto com toque roxo + glow vibrante */

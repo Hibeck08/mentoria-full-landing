@@ -171,24 +171,31 @@ All colors MUST be HSL.
   }
 }
 
-/* FULL Questões: identidade FULL com hierarquia editorial discreta. */
+/* FULL Questões: paleta monocromática original com identidade própria. */
 .theme-questoes {
-  --background: 260 28% 5%;
+  --background: 0 0% 4%;
   --foreground: 0 0% 98%;
-  --card: 260 24% 8%;
+  --card: 0 0% 6%;
   --card-foreground: 0 0% 98%;
-  --secondary: 260 22% 7%;
-  --muted: 260 16% 12%;
-  --muted-foreground: 260 8% 78%;
-  --border: 260 20% 19%;
-  --primary: 268 65% 42%;
-  --primary-foreground: 0 0% 100%;
-  --accent: 38 88% 65%;
-  --accent-foreground: 260 28% 5%;
-  --ring: 268 65% 42%;
-  --gradient-hero-text: linear-gradient(135deg, hsl(0 0% 100%), hsl(38 88% 65%));
-  --glow-beige: 0 8px 32px hsl(268 70% 45% / 0.25);
-  --questoes-overlay: linear-gradient(90deg, hsl(260 28% 5% / 0.97) 0%, hsl(260 28% 5% / 0.86) 32%, hsl(260 28% 5% / 0.18) 70%), linear-gradient(0deg, hsl(260 28% 5%), transparent 24%);
+  --secondary: 0 0% 7%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%;
+  --border: 0 0% 18%;
+  --primary: 0 0% 96%;
+  --primary-foreground: 0 0% 4%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 4%;
+  --accent-dark: 0 0% 70%;
+  --ring: 0 0% 96%;
+  --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 76%) 100%);
+  --gradient-beige-premium: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 80%) 50%, hsl(0 0% 64%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 7%) 50%, hsl(0 0% 4%) 100%);
+  --gradient-hero-text: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 55%) 100%);
+  --shadow-premium: 0 20px 60px -10px hsl(0 0% 0% / 0.7), 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+  --glow-beige: 0 0 40px hsl(0 0% 100% / 0.14), 0 0 80px hsl(0 0% 100% / 0.08);
+  --shadow-glow-beige: 0 0 30px hsl(0 0% 100% / 0.12), 0 0 60px hsl(0 0% 100% / 0.06);
+  --questoes-overlay: linear-gradient(90deg, hsl(0 0% 4% / 0.97) 0%, hsl(0 0% 4% / 0.86) 32%, hsl(0 0% 4% / 0.18) 70%), linear-gradient(0deg, hsl(0 0% 4%), transparent 24%);
 }
 .theme-questoes .questoes-hero { min-height: min(850px, 92svh); padding-top: 56px; }
 .theme-questoes .questoes-hero-image { object-position: center top; }
@@ -215,7 +222,7 @@ All colors MUST be HSL.
 @media (max-width: 767px) {
   .theme-questoes .questoes-hero { min-height: 115svh; padding-top: 12rem; align-items: flex-end; }
   .theme-questoes .questoes-hero-image { object-position: 95% top; }
-  .theme-questoes .questoes-hero-shade { background: linear-gradient(180deg, hsl(260 28% 5% / 0.12) 0%, hsl(260 28% 5% / 0.3) 30%, hsl(260 28% 5% / 0.95) 53%, hsl(260 28% 5%) 100%); }
+  .theme-questoes .questoes-hero-shade { background: linear-gradient(180deg, hsl(0 0% 4% / 0.12) 0%, hsl(0 0% 4% / 0.3) 30%, hsl(0 0% 4% / 0.95) 53%, hsl(0 0% 4%) 100%); }
 }
 
 .theme-questoes .theme-purple {

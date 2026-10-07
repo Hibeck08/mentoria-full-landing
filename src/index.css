@@ -193,6 +193,8 @@ All colors MUST be HSL.
 .theme-questoes .questoes-hero { min-height: min(850px, 92svh); padding-top: 56px; }
 .theme-questoes .questoes-hero-image { object-position: center top; }
 .theme-questoes .questoes-hero-shade { background: var(--questoes-overlay); }
+.theme-questoes button > span.relative { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.theme-questoes button.bg-gradient-primary { color: hsl(var(--primary-foreground)); }
 .theme-questoes .term-grid { display: none; }
 .theme-questoes .seam-marquee {
   background: hsl(var(--secondary));
@@ -212,7 +214,7 @@ All colors MUST be HSL.
 .theme-questoes .seam-marquee-track { gap: 3rem; }
 @media (max-width: 767px) {
   .theme-questoes .questoes-hero { min-height: 115svh; padding-top: 12rem; align-items: flex-end; }
-  .theme-questoes .questoes-hero-image { object-position: 72% top; }
+  .theme-questoes .questoes-hero-image { object-position: 95% top; }
   .theme-questoes .questoes-hero-shade { background: linear-gradient(180deg, hsl(260 28% 5% / 0.12) 0%, hsl(260 28% 5% / 0.3) 30%, hsl(260 28% 5% / 0.95) 53%, hsl(260 28% 5%) 100%); }
 }
 
